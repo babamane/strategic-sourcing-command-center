@@ -1,0 +1,184 @@
+.sidebar {
+    width: 260px;
+    background-color: white;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid var(--border-color);
+    padding: 1.5rem 1rem;
+    z-index: 100;
+}
+
+.sidebar-header {
+    margin-bottom: 1.5rem;
+    padding-left: 0.5rem;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--text-secondary);
+    transition: color 0.2s;
+}
+
+.logo-area:hover {
+    color: var(--text-color);
+}
+
+.logo-icon {
+    color: inherit;
+}
+
+.logo-text {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.company-badge {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+    border-radius: 0.75rem;
+    margin-bottom: 2rem;
+    border: 1px solid var(--border-color);
+}
+
+.company-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--accent-color);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: white;
+}
+
+.company-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.company-symbol {
+    font-weight: 700;
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.company-name {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}
+
+.nav-section {
+    margin-bottom: 2rem;
+}
+
+.nav-title {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    margin-bottom: 0.75rem;
+    padding-left: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    color: var(--text-secondary);
+    transition: all 0.2s ease;
+    margin-bottom: 0.25rem;
+    width: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-family: inherit;
+    font-size: 0.9rem;
+    position: relative;
+}
+
+.nav-item:hover {
+    background-color: var(--card-hover);
+    color: var(--text-color);
+}
+
+.nav-item.active {
+    background-color: rgba(99, 102, 241, 0.1);
+    color: var(--accent-color);
+}
+
+.nav-item-chevron {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    color: var(--text-secondary);
+    transition: transform 0.2s ease;
+}
+
+.nav-item.active .nav-item-chevron {
+    color: var(--accent-color);
+}
+
+/* Highlights Dropdown in Sidebar */
+.highlights-dropdown-wrapper {
+    position: relative;
+    width: 100%;
+    margin: 0.5rem 0 0.75rem 0.75rem;
+}
+
+.highlights-dropdown {
+    width: 100%;
+    background: white;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    padding: 0.5rem 2rem 0.5rem 0.75rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 500;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    transition: all 0.2s;
+    background-image: none;
+}
+
+.highlights-dropdown:hover {
+    border-color: var(--accent-color);
+    box-shadow: 0 2px 6px rgba(99, 102, 241, 0.1);
+}
+
+.highlights-dropdown:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.1);
+}
+
+.highlights-dropdown-wrapper .dropdown-icon {
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: var(--text-secondary);
+}
+
+.highlights-dropdown option {
+    padding: 0.5rem;
+    background: white;
+    color: var(--text-color);
+}

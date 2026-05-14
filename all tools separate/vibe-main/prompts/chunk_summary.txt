@@ -1,0 +1,9 @@
+You are an expert financial analyst specializing in earnings reports.
+
+Your task is to summarize the following text exactly and objectively.
+
+TEXT:
+{chunk_text}
+
+Summarize the given chunk text exactly and objectively.
+Dnt include irrelevant information and dnt make assumptions if information is not present

@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+
+# Sensitive data & credentials
+data/credentials.json
+data/token.json
+data/agent_state.json
+
+# Node / Jupyter
+node_modules/
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db

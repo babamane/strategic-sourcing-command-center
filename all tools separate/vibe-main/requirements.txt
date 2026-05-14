@@ -1,0 +1,38 @@
+# Stock Dashboard Dependencies
+yfinance>=0.2.66
+plotly>=5.18.0
+pandas>=3.0.0
+numpy>=2.0.0
+langchain-pymupdf4llm
+langchain-chroma
+
+# LangChain and LLM Dependencies
+langchain>=1.1.0
+google-ai-generativelanguage>=0.7.0
+langchain-google-genai>=3.0.2
+langchain-community>=0.4
+langchain-core>=1.1.0
+langchain-experimental
+# google-generativeai>=0.8.5
+
+langchain-ollama
+llamaapi
+langchain-openai
+langchain-huggingface
+sentence-transformers
+
+
+# Search Tools
+duckduckgo-search>= 8.1.1
+langchain-tavily
+
+# Configuration
+python-dotenv>=1.0.0
+fastapi
+uvicorn
+# Streamlit for web UI
+streamlit>=1.28.0
+earningscall==1.4.0
+
+# Ollama (for Llama models - optional)
+# Install Ollama separately from https://ollama.ai/

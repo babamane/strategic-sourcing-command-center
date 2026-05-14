@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vendor Risk Alert Review</title>
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg: #f4f5f7;
+      --surface: #ffffff;
+      --surface2: #f8f9fb;
+      --border: #e2e6ea;
+      --border2: #d0d5dd;
+      --text: #0f172a;
+      --text2: #64748b;
+      --text3: #94a3b8;
+      --teal: #1D9E75;
+      --teal-light: #e1f5ee;
+      --red: #E24B4A;
+      --red-light: #FCEBEB;
+      --amber: #EF9F27;
+      --amber-light: #FAEEDA;
+      --blue: #185FA5;
+      --blue-light: #E6F1FB;
+      --radius: 8px;
+      --radius-lg: 12px;
+      --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      --mono: 'Cascadia Code', 'Fira Code', monospace;
+    }
+
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* ── APP SHELL ── */
+    .app {
+      display: flex;
+      height: 100vh;
+    }
+
+    /* ── SIDEBAR ── */
+    .sidebar {
+      width: 280px;
+      flex-shrink: 0;
+      background: var(--surface);
+      border-right: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .sidebar-top {
+      padding: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .sidebar-brand {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+
+    .sidebar-brand svg {
+      color: var(--teal);
+    }
+
+    .search {
+      width: 100%;
+      padding: 8px 12px;
+      border: 1px solid var(--border2);
+      border-radius: var(--radius);
+      background: var(--surface2);
+      font-size: 13px;
+      color: var(--text);
+      outline: none;
+    }
+
+    .search:focus {
+      border-color: var(--teal);
+      box-shadow: 0 0 0 3px rgba(29, 158, 117, 0.1);
+    }
+
+    .filter-row {
+      display: flex;
+      gap: 6px;
+      margin-top: 8px;
+      flex-wrap: wrap;
+    }
+
+    .filter-chip {
+      font-size: 11px;
+      padding: 3px 10px;
+      border-radius: 99px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text2);
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .filter-chip.active {
+      background: var(--teal);
+      border-color: var(--teal);
+      color: #fff;
+    }
+
+    .vendor-list {
+      flex: 1;
+      overflow-y: auto;
+    }
+
+    .vendor-item {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      cursor: pointer;
+      transition: background 0.1s;
+      border-left: 3px solid transparent;
+    }
+
+    .vendor-item:hover {
+      background: var(--surface2);
+    }
+
+    .vendor-item.active {
+      background: var(--blue-light);
+      border-left-color: var(--blue);
+    }
+
+    .vi-name {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .vendor-item.active .vi-name {
+      color: var(--blue);
+    }
+
+    .vi-sub {
+      font-size: 11px;
+      color: var(--text2);
+      margin-top: 2px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .vi-footer {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 6px;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 99px;
+      letter-spacing: 0.03em;
+    }
+
+    .badge-high {
+      background: #FCEBEB;
+      color: #A32D2D;
+    }
+
+    .badge-medium {
+      background: #FAEEDA;
+      color: #854F0B;
+    }
+
+    .badge-low {
+      background: #EAF3DE;
+      color: #3B6D11;
+    }
+
+    .badge-unit {
+      background: var(--surface2);
+      color: var(--text2);
+      border: 1px solid var(--border);
+    }
+
+    /* ── MAIN ── */
+    .main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .topbar {
+      padding: 12px 24px;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-shrink: 0;
+    }
+
+    .topbar-left h2 {
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .topbar-left .alert-id {
+      font-size: 11px;
+      color: var(--text2);
+      font-family: var(--mono);
+      margin-top: 1px;
+    }
+
+    .topbar-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .ollama-status {
+      display: none;
+    }
+
+    .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #ccc;
+    }
+
+    .dot.on {
+      background: var(--teal);
+    }
+
+    .dot.off {
+      background: var(--red);
+    }
+
+    /* ── CONTENT ── */
+    .content {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      overflow: hidden;
+    }
+
+    .panel {
+      padding: 20px 22px;
+      overflow-y: auto;
+      border-right: 1px solid var(--border);
+    }
+
+    .panel:last-child {
+      border-right: none;
+    }
+
+    .panel-hdr {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .panel-hdr-icon {
+      width: 20px;
+      height: 20px;
+    }
+
+    .panel-hdr-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--text2);
+    }
+
+    /* Risk Analysis */
+    .field-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+
+    .field-label {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text3);
+      margin-bottom: 4px;
+    }
+
+    .field-value {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .field-value.no {
+      color: var(--red);
+    }
+
+    .confidence-bar {
+      height: 4px;
+      background: var(--border);
+      border-radius: 99px;
+      margin-top: 6px;
+      overflow: hidden;
+    }
+
+    .confidence-fill {
+      height: 100%;
+      background: var(--teal);
+      border-radius: 99px;
+      transition: width 0.6s ease;
+    }
+
+    .risk-summary-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 14px;
+    }
+
+    .rs-label {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text3);
+      margin-bottom: 8px;
+    }
+
+    .rs-text {
+      font-size: 13px;
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 12px;
+    }
+
+    .tag {
+      font-size: 11px;
+      padding: 3px 10px;
+      border-radius: 99px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      color: var(--text2);
+      font-family: var(--mono);
+    }
+
+    /* Remediation Plan */
+    .remedy-type-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 6px 14px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border2);
+      font-size: 12px;
+      font-weight: 600;
+      background: var(--surface2);
+      color: var(--text);
+      margin-bottom: 16px;
+      letter-spacing: 0.02em;
+    }
+
+    .rationale-box {
+      background: var(--surface2);
+      border-radius: var(--radius);
+      padding: 12px 14px;
+      margin-bottom: 16px;
+      border-left: 3px solid var(--teal);
+    }
+
+    .box-label {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text3);
+      margin-bottom: 6px;
+    }
+
+    .box-text {
+      font-size: 13px;
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .steps-list {
+      margin-bottom: 14px;
+    }
+
+    .step {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 10px;
+      align-items: flex-start;
+    }
+
+    .step-num {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text3);
+      font-family: var(--mono);
+      min-width: 22px;
+      padding-top: 1px;
+    }
+
+    .step-text {
+      font-size: 13px;
+      color: var(--text);
+      line-height: 1.55;
+    }
+
+    .success-box {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 12px 14px;
+      margin-bottom: 12px;
+    }
+
+    .sla-row {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .sla-badge {
+      font-size: 11px;
+      color: var(--text2);
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 3px 10px;
+    }
+
+    /* Loading */
+    .loading {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--text2);
+      font-size: 13px;
+      padding: 40px 0;
+    }
+
+    .spinner {
+      width: 18px;
+      height: 18px;
+      border: 2px solid var(--border);
+      border-top-color: var(--teal);
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* Action Bar */
+    .action-bar {
+      padding: 12px 24px;
+      border-top: 1px solid var(--border);
+      background: var(--surface);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .btn {
+      padding: 8px 18px;
+      border-radius: var(--radius);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1px solid var(--border2);
+      background: var(--surface2);
+      color: var(--text);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.15s;
+    }
+
+    .btn:hover {
+      background: var(--bg);
+    }
+
+    .btn-reject {
+      border-color: var(--red);
+      color: #A32D2D;
+      background: var(--red-light);
+    }
+
+    .btn-reject:hover {
+      background: #F7C1C1;
+    }
+
+    .btn-approve {
+      border: none;
+      background: var(--teal);
+      color: #fff;
+    }
+
+    .btn-approve:hover {
+      background: #0F6E56;
+    }
+
+    .btn-replan {
+      color: var(--text2);
+    }
+
+    /* Empty / error states */
+    .empty {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 8px;
+      color: var(--text2);
+      font-size: 14px;
+    }
+
+    .empty svg {
+      opacity: 0.3;
+    }
+
+    .error-msg {
+      background: var(--red-light);
+      border: 1px solid #F7C1C1;
+      border-radius: var(--radius);
+      padding: 12px 14px;
+      font-size: 13px;
+      color: #A32D2D;
+      margin-bottom: 16px;
+    }
+
+    /* Toast */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #0f172a;
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: var(--radius);
+      font-size: 13px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+      z-index: 999;
+    }
+
+    .toast.show {
+      opacity: 1;
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--border2);
+      border-radius: 3px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="app">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="sidebar-top">
+        <div class="sidebar-brand">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M10 2L2 6v8l8 4 8-4V6L10 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+            <path d="M2 6l8 4m0 0l8-4m-8 4v8" stroke="currentColor" stroke-width="1.5" />
+          </svg>
+          Vendor Risk Analyzer
+        </div>
+        <input class="search" id="searchBox" placeholder="🔍  Search vendors or alerts..." oninput="filterAlerts()" />
+        <div class="filter-row" id="filterRow">
+          <!-- <button class="btn" style="width:100%;margin-top:10px" onclick="generateAlert()">
+            ＋ Generate Alert
+          </button> -->
+          <button class="filter-chip active" data-risk="all" onclick="setRiskFilter('all', this)">All</button>
+          <button class="filter-chip" data-risk="high" onclick="setRiskFilter('high', this)">High</button>
+          <button class="filter-chip" data-risk="medium" onclick="setRiskFilter('medium', this)">Medium</button>
+          <button class="filter-chip" data-risk="low" onclick="setRiskFilter('low', this)">Low</button>
+        </div>
+      </div>
+      <div class="vendor-list" id="vendorList">
+        <div class="loading" style="padding:20px 16px">
+          <div class="spinner"></div>Loading alerts...
+        </div>
+      </div>
+    </div>
+
+    <!-- Main -->
+    <div class="main" id="mainArea">
+      <div class="empty">
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+          <rect x="8" y="8" width="32" height="32" rx="6" stroke="#64748b" stroke-width="2" />
+          <path d="M16 24h16M16 31h10" stroke="#64748b" stroke-width="2" stroke-linecap="round" />
+          <circle cx="36" cy="12" r="6" fill="#1D9E75" />
+          <path d="M33 12l2 2 4-4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <span>Select a vendor alert to begin review</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script>
+    const API = 'http://localhost:5000/api';
+    let allAlerts = [];
+    let planCache = {};
+    let selectedId = null;
+    let riskFilter = 'all';
+
+    const REMEDY_ICONS = {
+      CONTRACT_REVIEW: '📋',
+      VENDOR_AMENDMENT: '✏️',
+      ACCEPT_RISK: '✅',
+      DISABLE_FEATURE: '🚫',
+      ADJUST_CONFIGURATIONS: '⚙️',
+    };
+    // ✅ NEW: Generate Alert
+    async function generateAlert() {
+      try {
+        await fetch(`${API}/generate-alert`, { method: 'POST' });
+        showToast('New alert generated');
+        init(); // reload alerts
+      } catch (e) {
+        showToast('Failed to generate alert');
+      }
+    }
+
+    // ✅ NEW: Reject without  reason
+    async function reject(id) {
+      const plan = planCache[id];
+
+      await fetch(`${API}/decision`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          id: id,
+          decision: 'rejected',
+          plan: plan
+          // ❌ removed reason
+        })
+      });
+
+      showToast(`✕ Rejected`);
+    }
+
+    // ── Init ──────────────────────────────────────────────────
+    async function init() {
+      checkOllamaStatus();
+      try {
+        const res = await fetch(`${API}/alerts`);
+        allAlerts = await res.json();
+        renderList();
+        if (allAlerts.length) selectAlert(allAlerts[0].id);
+      } catch (e) {
+        document.getElementById('vendorList').innerHTML =
+          `<div style="padding:16px;font-size:13px;color:#A32D2D">⚠️ Cannot reach backend.<br>Run: <code>python backend.py</code></div>`;
+      }
+    }
+
+    async function checkOllamaStatus() {
+      try {
+        const res = await fetch(`${API}/status`);
+        const d = await res.json();
+        const bar = document.getElementById('ollamaStatus');
+        if (!bar) return;
+        bar.innerHTML = `
+      <div class="dot ${d.ollama ? 'on' : 'off'}"></div>
+      Ollama ${d.ollama ? 'connected · ' + d.selected : 'offline'}
+    `;
+      } catch { }
+    }
+
+    // ── Filter ────────────────────────────────────────────────
+    function setRiskFilter(risk, btn) {
+      riskFilter = risk;
+      document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+      btn.classList.add('active');
+      renderList();
+    }
+
+    function filterAlerts() { renderList(); }
+
+    function getFiltered() {
+      const q = document.getElementById('searchBox').value.toLowerCase();
+      return allAlerts.filter(a => {
+        const matchQ = !q || a.vendor.toLowerCase().includes(q) || a.title.toLowerCase().includes(q);
+        const matchR = riskFilter === 'all' || a.risk_level === riskFilter;
+        return matchQ && matchR;
+      });
+    }
+
+    // ── Render Sidebar ─────────────────────────────────────────
+    function renderList() {
+      const list = document.getElementById('vendorList');
+      const items = getFiltered();
+      if (!items.length) { list.innerHTML = '<div style="padding:16px;font-size:13px;color:#94a3b8">No results.</div>'; return; }
+      list.innerHTML = items.map(a => `
+    <div class="vendor-item ${selectedId === a.id ? 'active' : ''}" onclick="selectAlert('${a.id}')">
+      <div class="vi-name">${a.vendor}</div>
+      <div class="vi-sub">${a.title}</div>
+      <div class="vi-footer">
+        <span class="badge badge-${a.risk_level}">${a.risk_level.toUpperCase()}</span>
+        <span class="badge badge-unit">${a.resource_type}</span>
+        <span class="badge badge-unit">${a.business_unit}</span>
+      </div>
+    </div>
+  `).join('');
+    }
+
+    // ── Select Alert ───────────────────────────────────────────
+    function selectAlert(id) {
+      selectedId = id;
+      renderList();
+      const alert = allAlerts.find(a => a.id === id);
+      if (alert) renderMain(alert);
+    }
+
+    // ── Render Main Panel ──────────────────────────────────────
+    function renderMain(alert) {
+      const plan = planCache[alert.id] || null;
+      document.getElementById('mainArea').innerHTML = `
+    <div class="topbar">
+      <div class="topbar-left">
+        <h2>${alert.vendor}</h2>
+        <div class="alert-id">⊙ ${alert.id} &nbsp;·&nbsp; ⚙ Settings</div>
+      </div>
+      <div class="topbar-right">
+        <div class="ollama-status" id="ollamaStatus"><div class="dot"></div>Checking ...</div>
+        <span class="badge badge-${alert.risk_level}" style="font-size:11px;padding:4px 12px">${alert.risk_level.toUpperCase()} RISK</span>
+      </div>
+    </div>
+
+    <div class="content">
+      <!-- Risk Analysis -->
+      <div class="panel">
+        <div class="panel-hdr">
+          <svg class="panel-hdr-icon" viewBox="0 0 20 20" fill="none">
+            <circle cx="10" cy="10" r="8" stroke="#64748b" stroke-width="1.4"/>
+            <path d="M10 6v4.5l3 1.5" stroke="#64748b" stroke-width="1.4" stroke-linecap="round"/>
+          </svg>
+          <span class="panel-hdr-label">Risk Analysis</span>
+        </div>
+
+        <div class="field-grid">
+          <div>
+            <div class="field-label">Category</div>
+            <div class="field-value">${alert.risk_category}</div>
+          </div>
+          <div>
+            <div class="field-label">Type</div>
+            <div class="field-value">${alert.resource_type}</div>
+          </div>
+          <div>
+            <div class="field-label">Known Type</div>
+            <div class="field-value no">No</div>
+          </div>
+          <div>
+            <div class="field-label">AI Confidence</div>
+            <div class="field-value" id="confValue">${plan ? plan.confidence + '%' : '—'}</div>
+            <div class="confidence-bar"><div class="confidence-fill" id="confBar" style="width:${plan ? plan.confidence : 0}%"></div></div>
+          </div>
+        </div>
+
+        <div class="risk-summary-card">
+          <div class="rs-label">Risk Summary</div>
+          <div class="rs-text" id="rsSummary">${plan ? plan.summary : alert.description}</div>
+          <div class="tags" id="rsTags">
+            ${plan ? plan.tags.map(t => `<span class="tag">#${t.replace(/\s+/g, '-').toLowerCase()}</span>`).join('') : ''}
+          </div>
+        </div>
+      </div>
+
+      <!-- Remediation Plan -->
+      <div class="panel" id="remedyPanel">
+        <div class="panel-hdr">
+          <svg class="panel-hdr-icon" viewBox="0 0 20 20" fill="none">
+            <rect x="3" y="3" width="14" height="14" rx="3" stroke="#64748b" stroke-width="1.4"/>
+            <path d="M7 10l2.5 2.5L14 7" stroke="#64748b" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="panel-hdr-label">Remediation Plan</span>
+        </div>
+        ${plan ? renderRemedyBody(plan) : '<div class="loading"><div class="spinner"></div>Analyzing...</div>'}
+      </div>
+    </div>
+
+    <div class="action-bar">
+      <button class="btn btn-replan" onclick="replan('${alert.id}')">↺ Request Replan</button>
+      <button class="btn btn-reject" onclick="reject('${alert.id}')">✕ Reject</button>
+      <button class="btn btn-approve" onclick="approve('${alert.id}')">✓ Approve & Create Task</button>
+    </div>
+  `;
+
+      checkOllamaStatus();
+      if (!plan) analyzeAlert(alert);
+    }
+
+    function renderRemedyBody(plan) {
+      const icon = REMEDY_ICONS[plan.remedy_type] || '⚙️';
+      const steps = plan.steps || [];
+      return `
+    <div class="remedy-type-pill">${icon} ${plan.remedy_type.replace(/_/g, ' ')}</div>
+    <div class="rationale-box">
+      <div class="box-label">Rationale</div>
+      <div class="box-text">${plan.rationale}</div>
+    </div>
+    <div class="box-label" style="margin-bottom:10px">Steps</div>
+    <div class="steps-list">
+      ${steps.map((s, i) => `
+        <div class="step">
+          <div class="step-num">${String(i + 1).padStart(2, '0')}.</div>
+          <div class="step-text">${s}</div>
+        </div>`).join('')}
+    </div>
+    <div class="success-box">
+      <div class="box-label">Success Criteria</div>
+      <div class="box-text">${plan.success_criteria}</div>
+    </div>
+    <div class="sla-row" style="margin-top:12px">
+      <span class="sla-badge">SLA: ${plan.sla || '2 weeks'}</span>
+    </div>
+  `;
+    }
+
+    // ── Analyze with Ollama ────────────────────────────────────
+    async function analyzeAlert(alert) {
+      try {
+        const res = await fetch(`${API}/analyze`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ id: alert.id }),
+        });
+
+        if (!res.ok) throw new Error(await res.text());
+        const plan = await res.json();
+        planCache[alert.id] = plan;
+        updatePanelWithPlan(plan);
+      } catch (e) {
+        const rp = document.getElementById('remedyPanel');
+        if (rp) {
+          const hdr = rp.querySelector('.panel-hdr');
+          rp.innerHTML = '';
+          if (hdr) rp.appendChild(hdr);
+          rp.insertAdjacentHTML('beforeend', `
+        <div class="error-msg">⚠️ AI analysis failed.<br> running: <code>serve</code><br>And model is pulled: <code></code></div>
+      `);
+        }
+      }
+    }
+
+    function updatePanelWithPlan(plan) {
+      const confVal = document.getElementById('confValue');
+      const confBar = document.getElementById('confBar');
+      const summary = document.getElementById('rsSummary');
+      const tags = document.getElementById('rsTags');
+      const rp = document.getElementById('remedyPanel');
+
+      if (confVal) confVal.textContent = plan.confidence + '%';
+      if (confBar) confBar.style.width = plan.confidence + '%';
+      if (summary) summary.textContent = plan.summary;
+      if (tags) tags.innerHTML = (plan.tags || []).map(t => `<span class="tag">#${t.replace(/\s+/g, '-').toLowerCase()}</span>`).join('');
+
+      if (rp) {
+        const hdr = rp.querySelector('.panel-hdr');
+        rp.innerHTML = '';
+        if (hdr) rp.appendChild(hdr);
+        rp.insertAdjacentHTML('beforeend', renderRemedyBody(plan));
+      }
+    }
+
+    function replan(id) {
+      delete planCache[id];
+      const alert = allAlerts.find(a => a.id === id);
+      if (alert) renderMain(alert);
+    }
+
+    function approve(id) {
+      const plan = planCache[id];
+      const alert = allAlerts.find(a => a.id === id);
+      fetch(`${API}/decision`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          id: id,
+          decision: 'approved',
+          plan: plan
+        })
+      });
+      if (!plan) { showToast('Analysis still running — please wait.'); return; }
+      showToast(`✓ Task created for ${alert.vendor} — ${plan.remedy_type}`);
+    }
+
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      t.textContent = msg;
+      t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 3000);
+    }
+
+    init();
+  </script>
+</body>
+
+</html>

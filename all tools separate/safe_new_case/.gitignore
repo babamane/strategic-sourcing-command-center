@@ -1,0 +1,29 @@
+# ============================================================
+# Git Ignore — SAFE Project
+# ============================================================
+
+# Environment / secrets
+.env
+*.env
+
+# SQLite database file (runtime data — do not commit)
+saas_data.db
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE
+.cursor/
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

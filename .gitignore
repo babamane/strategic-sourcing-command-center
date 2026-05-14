@@ -1,0 +1,46 @@
+# ─── Python ───
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+**/*.pyd
+.venv/
+venv/
+ENV/
+env/
+
+# ─── Node.js ───
+**/node_modules/
+**/dist/
+**/build/
+.npm
+.eslintcache
+
+# ─── Sensitive Data ───
+**/.env
+**/.env.*
+**/credentials.json
+**/token.json
+**/*.pem
+**/*.key
+**/secrets/
+**/data/*.json
+!**/data/sample_*.json
+
+# ─── Heavy Files / Drivers ───
+**/*.xlsx
+**/*.csv
+**/*.pdf
+**/*.zip
+**/*.tar.gz
+**/*.log
+**/drivers/
+**/bin/
+**/*.exe
+**/*.dll
+
+# ─── IDEs & OS ───
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Risk Governance Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════════ HEADER ═══════════════════════════════════ -->
+  <header class="header">
+
+
+
+
+  </header>
+
+  <!-- ═══════════════════════════════════ SUMMARY CARDS ═══════════════════════════ -->
+  <section class="summary-bar">
+    <div class="summary-card" data-filter="critical" onclick="filterByRisk('critical')">
+      <div class="sc-icon" style="background:#fef2f2;">🔴</div>
+      <div class="sc-body">
+        <div class="sc-num" id="cnt-critical" style="color:#dc2626;">0</div>
+        <div class="sc-label">Critical</div>
+      </div>
+    </div>
+    <div class="summary-card" data-filter="high" onclick="filterByRisk('high')">
+      <div class="sc-icon" style="background:#fff7ed;">🟠</div>
+      <div class="sc-body">
+        <div class="sc-num" id="cnt-high" style="color:#ea580c;">0</div>
+        <div class="sc-label">High</div>
+      </div>
+    </div>
+    <div class="summary-card" data-filter="medium" onclick="filterByRisk('medium')">
+      <div class="sc-icon" style="background:#fffbeb;">🟡</div>
+      <div class="sc-body">
+        <div class="sc-num" id="cnt-medium" style="color:#d97706;">0</div>
+        <div class="sc-label">Medium</div>
+      </div>
+    </div>
+    <div class="summary-card" data-filter="low" onclick="filterByRisk('low')">
+      <div class="sc-icon" style="background:#f0fdf4;">🟢</div>
+      <div class="sc-body">
+        <div class="sc-num" id="cnt-low" style="color:#16a34a;">0</div>
+        <div class="sc-label">Low</div>
+      </div>
+    </div>
+    <div class="summary-card" data-filter="Accepted" onclick="filterByStatus('Accepted')">
+      <div class="sc-icon" style="background:#eff6ff;">✅</div>
+      <div class="sc-body">
+        <div class="sc-num" id="cnt-accepted" style="color:#2563eb;">0</div>
+        <div class="sc-label">Accepted</div>
+      </div>
+    </div>
+    <div class="summary-card" data-filter="Rejected" onclick="filterByStatus('Rejected')">
+      <div class="sc-icon" style="background:#fef2f2;">❌</div>
+      <div class="sc-body">
+        <div class="sc-num" id="cnt-rejected" style="color:#dc2626;">0</div>
+        <div class="sc-label">Rejected</div>
+      </div>
+    </div>
+    <div class="summary-card" data-filter="Pending" onclick="filterByStatus('Pending')">
+      <div class="sc-icon" style="background:#fffbeb;">⏳</div>
+      <div class="sc-body">
+        <div class="sc-num" id="cnt-pending" style="color:#d97706;">0</div>
+        <div class="sc-label">Pending</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ MAIN CONTENT ══════════════════════════════ -->
+  <div class="main-layout">
+
+    <!-- ── SIDEBAR ── -->
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-label">FILTERS</div>
+        <div class="search-wrap">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="searchInput" class="search-input" placeholder="Search alerts..."
+            oninput="applyFilters()" />
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-label">RISK LEVEL</div>
+        <div id="riskFilters" class="filter-list"></div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-label">ALERT TYPE</div>
+        <div id="typeFilters" class="filter-list"></div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-label">BUSINESS UNIT</div>
+        <div id="buFilters" class="filter-list"></div>
+      </div>
+
+      <div class="sidebar-section sidebar-reset">
+        <button class="btn-reset" onclick="resetFilters()">↺ Reset All Filters</button>
+      </div>
+    </aside>
+
+    <!-- ── TABLE AREA ── -->
+    <main class="table-wrapper">
+
+      <!-- Toolbar -->
+      <div class="table-toolbar">
+        <div class="bu-pills" id="buPills"></div>
+        <div class="toolbar-right">
+          <span class="result-label">Showing <strong id="resultCount">0</strong> records</span>
+          <select id="pageSizeSelect" class="page-size-select" onchange="changePageSize()">
+            <option value="25">25 / page</option>
+            <option value="50">50 / page</option>
+            <option value="100">100 / page</option>
+            <option value="all">All</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Table -->
+      <div class="table-scroll">
+        <table class="data-table" id="alertTable">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Vendor ID</th>
+              <th>Vendor</th>
+              <th>Alert Title</th>
+              <th>Risk Level</th>
+              <th>Type</th>
+              <th>Business Unit</th>
+              <th>Date</th>
+              <th>Status</th>
+              <th>Jira</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody">
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Pagination -->
+      <div class="pagination-bar" id="paginationBar"></div>
+
+    </main>
+  </div>
+
+  <!-- ═══════════════════════════════════ DETAIL MODAL ══════════════════════════════ -->
+  <div class="modal-overlay" id="modalOverlay" onclick="closeModal()">
+    <div class="modal" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <div>
+          <div id="m-vendor-id" class="m-vendor-id"></div>
+          <div id="m-title" class="m-title"></div>
+        </div>
+        <button class="modal-close" onclick="closeModal()">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="m-grid">
+          <div class="m-field">
+            <div class="m-label">Risk Level</div>
+            <div id="m-risk"></div>
+          </div>
+          <div class="m-field">
+            <div class="m-label">Status</div>
+            <div id="m-status"></div>
+          </div>
+          <div class="m-field">
+            <div class="m-label">Resource Type</div>
+            <div class="m-val" id="m-type"></div>
+          </div>
+          <div class="m-field">
+            <div class="m-label">Business Unit</div>
+            <div class="m-val" id="m-bu"></div>
+          </div>
+          <div class="m-field">
+            <div class="m-label">Vendor Domain</div>
+            <div class="m-val" id="m-domain"></div>
+          </div>
+          <div class="m-field">
+            <div class="m-label">Alert ID</div>
+            <div class="m-val" id="m-alert-id" style="font-family:monospace;font-size:12px;"></div>
+          </div>
+          <div class="m-field" style="grid-column:1/-1">
+            <div class="m-label">Date Submitted</div>
+            <div class="m-val" id="m-date"></div>
+          </div>
+        </div>
+        <div class="m-field" style="margin-top:12px">
+          <div class="m-label">Description</div>
+          <div class="m-val m-desc" id="m-desc"></div>
+        </div>
+        <div class="m-field" id="m-action-wrap" style="margin-top:12px">
+          <div class="m-label">Recommended Action</div>
+          <div class="m-val m-action" id="m-action"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
