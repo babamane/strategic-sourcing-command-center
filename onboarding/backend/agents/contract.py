@@ -6,11 +6,18 @@ from backend.config import OLLAMA_BASE_URL, OLLAMA_MODEL, SEARCH_MAX_RESULTS
 from backend.schemas import ContractResult, NegotiationPoint
 
 
+_COMPANY_MAP = {"claude": "Anthropic", "chatgpt": "OpenAI", "gemini": "Google DeepMind", "copilot": "Microsoft", "bard": "Google", "gpt-4": "OpenAI", "gpt4": "OpenAI", "llama": "Meta AI", "mistral": "Mistral AI"}
+
+def _resolve(name: str) -> str:
+    return _COMPANY_MAP.get(name.lower().strip(), name)
+
+
 def _ddg_contract_benchmarks(vendor_name: str) -> str:
+    company = _resolve(vendor_name)
     try:
         from duckduckgo_search import DDGS
         results = list(DDGS().text(
-            f"{vendor_name} SaaS contract MSA enterprise negotiation pricing SLA terms benchmarks 2024",
+            f'"{company}" SaaS contract MSA enterprise pricing SLA terms benchmarks 2024',
             max_results=SEARCH_MAX_RESULTS,
         ))
         return "\n\n".join(r.get("body", "") for r in results)
@@ -19,11 +26,13 @@ def _ddg_contract_benchmarks(vendor_name: str) -> str:
 
 
 def _llm_contract(vendor_name: str, context: str, risk_score: float = 3.0) -> dict | None:
+    company = _resolve(vendor_name)
     try:
         from langchain_ollama import OllamaLLM
         llm    = OllamaLLM(base_url=OLLAMA_BASE_URL, model=OLLAMA_MODEL, temperature=0)
-        prompt = f"""You are a senior contract negotiation expert reviewing a Master Services Agreement for "{vendor_name}".
+        prompt = f"""You are a senior contract negotiation expert reviewing a Master Services Agreement for "{company}".
 Vendor risk score: {risk_score}/10 (lower is better).
+CRITICAL: All contract terms and benchmarks must be specific to "{company}".
 
 === Market Benchmarks ===
 {context or 'Standard SaaS enterprise contract benchmarks apply.'}

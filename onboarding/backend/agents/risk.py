@@ -28,11 +28,18 @@ def _financial_monitoring_hooks(vendor_name: str) -> dict:
     }
 
 
+_COMPANY_MAP = {"claude": "Anthropic", "chatgpt": "OpenAI", "gemini": "Google DeepMind", "copilot": "Microsoft", "bard": "Google", "gpt-4": "OpenAI", "gpt4": "OpenAI", "llama": "Meta AI", "mistral": "Mistral AI"}
+
+def _resolve(name: str) -> str:
+    return _COMPANY_MAP.get(name.lower().strip(), name)
+
+
 def _ddg_risk(vendor_name: str) -> str:
+    company = _resolve(vendor_name)
     try:
         from duckduckgo_search import DDGS
         results = list(DDGS().text(
-            f"{vendor_name} financial risk security breach data leak layoffs revenue credit rating 2024 2025",
+            f'"{company}" financial risk security breach revenue credit rating 2024 2025',
             max_results=SEARCH_MAX_RESULTS,
         ))
         return "\n\n".join(r.get("body", "") for r in results)
@@ -41,13 +48,16 @@ def _ddg_risk(vendor_name: str) -> str:
 
 
 def _llm_risk(vendor_name: str, context: str) -> dict | None:
+    company = _resolve(vendor_name)
     try:
         from langchain_ollama import OllamaLLM
         llm    = OllamaLLM(base_url=OLLAMA_BASE_URL, model=OLLAMA_MODEL, temperature=0)
-        prompt = f"""You are a senior enterprise vendor risk analyst. Produce a comprehensive risk assessment for "{vendor_name}".
+        prompt = f"""You are a senior enterprise vendor risk analyst. Produce a comprehensive risk assessment ONLY for "{company}".
+
+CRITICAL: All data in your response must be about "{company}" specifically. Do not include risk data from any competitor or other company.
 
 === Risk Intelligence ===
-{context or f'{vendor_name} — no adverse findings in public sources.'}
+{context or f'{company} — no adverse findings in public sources.'}
 ========================
 
 Return ONLY a valid JSON object:

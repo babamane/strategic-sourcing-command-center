@@ -104,19 +104,12 @@ def health():
 
 @app.post("/sessions", response_model=dict)
 def create_session(req: StartOnboardingRequest, db: Session = Depends(get_db)):
-    """Create session row, kick off LangGraph, run discovery, pause at qualification HITL."""
+    """Create session record only. Step execution is driven by the wizard via /run/{step}."""
     name = req.vendor_name.strip()
     if not name:
         raise HTTPException(400, "vendor_name cannot be empty")
-
     session = crud.create_session(db, name)
-    try:
-        workflow.start_session(session.id, name)
-        _sync_graph_to_db(db, session.id)
-    except Exception as e:
-        crud.update_session_status(db, session.id, "error", "discovery")
-        raise HTTPException(500, f"Pipeline error: {e}")
-
+    crud.add_audit_log(db, session.id, "WORKFLOW_STARTED", "discovery", {"vendor": name})
     return crud.session_snapshot(db, session.id)
 
 
