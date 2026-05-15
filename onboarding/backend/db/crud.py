@@ -5,7 +5,7 @@ import uuid
 
 from backend.db.models import (
     VendorOnboardingSession, DiscoveryLog, ComplianceVerification,
-    RiskScore, ContractReview, ProductionVendor,
+    RiskScore, ContractReview, ProductionVendor, AuditLog,
 )
 from backend.schemas import (
     DiscoveryResult, QualificationResult, RiskResult, ContractResult, VerdictResult,
@@ -173,6 +173,16 @@ def promote_to_production(db: Session, session_id: str, verdict: VerdictResult):
         session.updated_at    = datetime.utcnow()
     db.commit()
     return pv
+
+
+def add_audit_log(db: Session, session_id: str, event_type: str, step: str = None, extra: dict = None):
+    row = AuditLog(session_id=session_id, event_type=event_type, step=step, extra=extra or {})
+    db.add(row)
+    db.commit()
+
+
+def get_audit_logs(db: Session, session_id: str) -> list[AuditLog]:
+    return db.query(AuditLog).filter_by(session_id=session_id).order_by(AuditLog.timestamp).all()
 
 
 def get_production_vendors(db: Session) -> list[ProductionVendor]:

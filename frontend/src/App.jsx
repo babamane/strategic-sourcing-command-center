@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import OnboardingWizard from './OnboardingWizard';
 import {
     Search, Send, ShieldAlert, TrendingUp, FileText, Users, Activity,
     ChevronRight, CheckCircle2, AlertCircle, Database, BrainCircuit,
@@ -1280,8 +1281,19 @@ const App = () => {
                                     </div>
                                 )}
 
-                                {/* STAGE: Pipeline Execution */}
-                                {['running', 'hitl', 'decision_terminal', 'completed'].includes(missionStatus) && (
+                                {/* STAGE: Onboarding Wizard (replaces pipeline for onboarding missions) */}
+                                {activeMissionKey === 'onboarding' && ['running', 'hitl', 'decision_terminal', 'completed'].includes(missionStatus) && (
+                                    <div className="mt-6 rounded-[2.5rem] overflow-hidden border border-slate-100 shadow-sm" style={{ height: '75vh' }}>
+                                        <OnboardingWizard
+                                            vendorName={onboardingVendor}
+                                            onComplete={() => setMissionStatus('completed')}
+                                            onAbort={() => { setView('dashboard'); setMissionStatus('idle'); setLogs([]); }}
+                                        />
+                                    </div>
+                                )}
+
+                                {/* STAGE: Pipeline Execution (non-onboarding missions) */}
+                                {activeMissionKey !== 'onboarding' && ['running', 'hitl', 'decision_terminal', 'completed'].includes(missionStatus) && (
                                     <div className="bg-white rounded-[3rem] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border-[3px] border-[#fdfbf7] p-10 pt-16 relative mt-12">
 
                                         {/* Dynamic Track Pill */}

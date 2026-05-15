@@ -108,6 +108,18 @@ class ContractReview(Base):
     created_at            = Column(DateTime, default=datetime.utcnow)
 
 
+class AuditLog(Base):
+    """Immutable audit trail — every state change and user action."""
+    __tablename__ = "audit_logs"
+
+    id         = Column(Integer, primary_key=True, autoincrement=True)
+    session_id = Column(String(16), nullable=False, index=True)
+    event_type = Column(String(64), nullable=False)   # WORKFLOW_STARTED | DATA_FETCHED | USER_CONTINUED | USER_CANCELLED
+    step       = Column(String(64), nullable=True)    # discovery | qualification | risk | contract | decision
+    timestamp  = Column(DateTime, default=datetime.utcnow)
+    extra      = Column(JSON, nullable=True)          # arbitrary context dict
+
+
 class ProductionVendor(Base):
     """Final table — vendors move here after GO verdict (Mission Accomplished)."""
     __tablename__ = "production_vendors"
