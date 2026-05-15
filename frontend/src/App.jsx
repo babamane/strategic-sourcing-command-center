@@ -887,6 +887,12 @@ const App = () => {
         setSessionData(null);
         setLogs([{ agent: 'Orchestrator', msg: "Mission Launched.", reason: `Executing step 1: ${currentBlueprint.steps[0].title}.`, time: "LIVE" }]);
 
+        // Onboarding goes to its own full-screen wizard
+        if (activeMissionKey === 'onboarding') {
+            setView('onboarding_wizard');
+            return;
+        }
+
         // Start real backend session for onboarding missions
         if (activeMissionKey === 'onboarding' && onboardingVendor) {
             fetch(`${ONBOARDING_API}/sessions`, {
@@ -1092,6 +1098,14 @@ const App = () => {
         }
     };
 
+    if (view === 'onboarding_wizard') return (
+        <OnboardingWizard
+            vendorName={onboardingVendor}
+            onComplete={() => { setView('dashboard'); setMissionStatus('idle'); }}
+            onAbort={() => { setView('dashboard'); setMissionStatus('idle'); setLogs([]); }}
+        />
+    );
+
     if (view === 'app_demand') return <DemandPlanningApp onBack={() => setView('dashboard')} />;
     if (view === 'app_vendor') return <VendorIntelligenceApp onBack={() => setView('dashboard')} />;
     if (view === 'app_risk') return <RiskGovernanceApp onBack={() => setView('dashboard')} />;
@@ -1281,19 +1295,8 @@ const App = () => {
                                     </div>
                                 )}
 
-                                {/* STAGE: Onboarding Wizard (replaces pipeline for onboarding missions) */}
-                                {activeMissionKey === 'onboarding' && ['running', 'hitl', 'decision_terminal', 'completed'].includes(missionStatus) && (
-                                    <div className="mt-6 rounded-[2.5rem] overflow-hidden border border-slate-100 shadow-sm" style={{ height: '75vh' }}>
-                                        <OnboardingWizard
-                                            vendorName={onboardingVendor}
-                                            onComplete={() => setMissionStatus('completed')}
-                                            onAbort={() => { setView('dashboard'); setMissionStatus('idle'); setLogs([]); }}
-                                        />
-                                    </div>
-                                )}
-
-                                {/* STAGE: Pipeline Execution (non-onboarding missions) */}
-                                {activeMissionKey !== 'onboarding' && ['running', 'hitl', 'decision_terminal', 'completed'].includes(missionStatus) && (
+                                {/* STAGE: Pipeline Execution */}
+                                {['running', 'hitl', 'decision_terminal', 'completed'].includes(missionStatus) && (
                                     <div className="bg-white rounded-[3rem] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border-[3px] border-[#fdfbf7] p-10 pt-16 relative mt-12">
 
                                         {/* Dynamic Track Pill */}

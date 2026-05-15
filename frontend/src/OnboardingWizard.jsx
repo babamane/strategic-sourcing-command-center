@@ -16,7 +16,7 @@ import {
   Search, ShieldCheck, AlertTriangle, FileText, Scale,
   CheckCircle2, XCircle, ChevronRight, Award, Zap,
   Building2, Users, DollarSign, Globe, Loader2,
-  CheckSquare, Ban, RotateCcw, Clock, Package,
+  CheckSquare, Ban, RotateCcw, Clock, Package, Globe2,
 } from 'lucide-react';
 
 const API = 'http://localhost:8090';
@@ -108,29 +108,144 @@ function Tag({ children, color = '#3b82f6' }) {
 
 function DiscoveryData({ data }) {
   return (
-    <div className="space-y-4">
-      <div className="bg-blue-50 border border-blue-100 rounded-2xl p-5">
+    <div className="space-y-5">
+      {/* Company overview banner */}
+      <div className="bg-blue-50 border border-blue-100 rounded-2xl p-6">
         <p className="text-[10px] font-black text-blue-400 uppercase tracking-widest mb-2">Company Overview</p>
         <p className="text-sm text-slate-700 leading-relaxed">{data.company_summary}</p>
       </div>
-      <div className="grid grid-cols-2 gap-3">
-        <Card label="Founded"      value={data.founded}        icon={Building2}  accent="#3b82f6" />
-        <Card label="Headquarters" value={data.headquarters}   icon={Globe}      accent="#3b82f6" />
-        <Card label="Employees"    value={data.employees}      icon={Users}      accent="#3b82f6" />
-        <Card label="Funding"      value={data.recent_funding} icon={DollarSign} accent="#3b82f6" />
+
+      {/* KPI strip */}
+      <div className="grid grid-cols-4 gap-3">
+        {[
+          { label: 'Founded',        value: data.founded,         icon: Building2  },
+          { label: 'Employees',      value: data.employees,       icon: Users      },
+          { label: 'Revenue (est.)', value: data.revenue_estimate,icon: DollarSign },
+          { label: 'Analyst Rating', value: data.analyst_rating,  icon: Award      },
+        ].map(({ label, value, icon: Icon }) => (
+          <div key={label} className="bg-white border border-slate-100 rounded-xl p-3 text-center">
+            <Icon size={14} className="text-blue-400 mx-auto mb-1" />
+            <p className="text-[9px] font-black text-slate-400 uppercase tracking-widest">{label}</p>
+            <p className="text-xs font-black text-slate-800 mt-0.5 leading-tight">{value || '—'}</p>
+          </div>
+        ))}
       </div>
+
+      {/* HQ + Growth */}
+      <div className="grid grid-cols-2 gap-3">
+        <Card label="Headquarters" value={data.headquarters}  icon={Globe}         accent="#3b82f6" />
+        <Card label="Growth Rate"  value={data.growth_rate}   icon={ChevronRight}  accent="#3b82f6" />
+        <Card label="Funding"      value={data.recent_funding} icon={DollarSign}   accent="#3b82f6" />
+        <Card label="Business Model" value={data.business_model} icon={Package}   accent="#3b82f6" />
+      </div>
+
+      {/* Products & descriptions */}
       {data.products?.length > 0 && (
-        <div className="bg-white border border-slate-100 rounded-xl p-4">
-          <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-3">Products</p>
-          <div className="flex flex-wrap gap-2">
-            {data.products.map((p, i) => <Tag key={i} color="#3b82f6">{p}</Tag>)}
+        <div className="bg-white border border-slate-100 rounded-2xl p-5">
+          <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-3">Products & Services</p>
+          <div className="space-y-2">
+            {data.products.map((p, i) => (
+              <div key={i} className="flex items-start space-x-3 py-2 border-b border-slate-50 last:border-0">
+                <span className="w-2 h-2 rounded-full bg-blue-400 mt-1.5 flex-shrink-0" />
+                <div>
+                  <p className="text-sm font-bold text-slate-800">{p}</p>
+                  {data.product_descriptions?.[p] && (
+                    <p className="text-xs text-slate-500 mt-0.5">{data.product_descriptions[p]}</p>
+                  )}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       )}
-      {data.market_position && (
-        <div className="bg-white border border-slate-100 rounded-xl p-4">
-          <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">Market Position</p>
-          <p className="text-sm text-slate-700">{data.market_position}</p>
+
+      {/* Technology stack */}
+      {data.tech_stack?.length > 0 && (
+        <div className="bg-white border border-slate-100 rounded-2xl p-5">
+          <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-3">Technology Stack</p>
+          <div className="flex flex-wrap gap-2">
+            {data.tech_stack.map((t, i) => <Tag key={i} color="#3b82f6">{t}</Tag>)}
+          </div>
+        </div>
+      )}
+
+      {/* Key executives */}
+      {data.key_executives?.length > 0 && (
+        <div className="bg-white border border-slate-100 rounded-2xl p-5">
+          <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-3">Key Executives</p>
+          <div className="space-y-2">
+            {data.key_executives.map((e, i) => (
+              <div key={i} className="flex items-center space-x-3 py-2 border-b border-slate-50 last:border-0">
+                <div className="w-7 h-7 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0">
+                  <Users size={12} className="text-blue-500" />
+                </div>
+                <p className="text-sm text-slate-700">{e}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Two-column: competitors + customer segments */}
+      <div className="grid grid-cols-2 gap-4">
+        {data.main_competitors?.length > 0 && (
+          <div className="bg-white border border-slate-100 rounded-2xl p-5">
+            <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-3">Main Competitors</p>
+            <div className="flex flex-wrap gap-2">
+              {data.main_competitors.map((c, i) => <Tag key={i} color="#94a3b8">{c}</Tag>)}
+            </div>
+          </div>
+        )}
+        {data.customer_segments?.length > 0 && (
+          <div className="bg-white border border-slate-100 rounded-2xl p-5">
+            <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-3">Customer Segments</p>
+            <div className="flex flex-wrap gap-2">
+              {data.customer_segments.map((s, i) => <Tag key={i} color="#8b5cf6">{s}</Tag>)}
+            </div>
+          </div>
+        )}
+      </div>
+
+      {/* Geographic presence */}
+      {data.geographic_presence?.length > 0 && (
+        <div className="bg-white border border-slate-100 rounded-2xl p-5">
+          <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-3">Geographic Presence</p>
+          <div className="flex flex-wrap gap-2">
+            {data.geographic_presence.map((g, i) => <Tag key={i} color="#10b981">{g}</Tag>)}
+          </div>
+        </div>
+      )}
+
+      {/* Recent developments */}
+      {data.recent_news?.length > 0 && (
+        <div className="bg-white border border-slate-100 rounded-2xl p-5">
+          <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-3">Recent Developments</p>
+          <ul className="space-y-2">
+            {data.recent_news.map((n, i) => (
+              <li key={i} className="flex items-start space-x-2 text-sm text-slate-700">
+                <span className="w-1.5 h-1.5 rounded-full bg-blue-400 mt-2 flex-shrink-0" />
+                <span>{n}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {/* Market position */}
+      <div className="bg-blue-50 border border-blue-100 rounded-2xl p-5">
+        <p className="text-[10px] font-black text-blue-400 uppercase tracking-widest mb-2">Market Position</p>
+        <p className="text-sm text-slate-700 leading-relaxed">{data.market_position}</p>
+      </div>
+
+      {/* Sources */}
+      {data.sources?.filter(Boolean).length > 0 && (
+        <div className="bg-slate-50 border border-slate-100 rounded-xl p-4">
+          <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2">Intelligence Sources</p>
+          <ul className="space-y-1">
+            {data.sources.filter(Boolean).slice(0, 5).map((s, i) => (
+              <li key={i} className="text-[11px] text-blue-500 truncate">{s}</li>
+            ))}
+          </ul>
         </div>
       )}
     </div>
@@ -138,38 +253,133 @@ function DiscoveryData({ data }) {
 }
 
 function QualificationData({ data }) {
-  const checks = [
-    { label: 'SOC2 Status', value: data.soc2_status, ok: data.soc2_status?.toLowerCase().includes('verified') },
-    { label: 'ISO 27001',   value: data.iso27001,    ok: data.iso27001?.toLowerCase().includes('certified') },
-    { label: 'GDPR',        value: data.gdpr_compliant ? 'Compliant' : 'Non-Compliant', ok: data.gdpr_compliant },
-    { label: 'ESG Grade',   value: `Grade ${data.esg_grade}`, ok: ['A+','A','A-','B+'].includes(data.esg_grade) },
+  const coreChecks = [
+    { label: 'SOC 2 Type II', value: data.soc2_status, ok: data.soc2_status?.toLowerCase().includes('verified') },
+    { label: 'ISO 27001',     value: data.iso27001,    ok: data.iso27001?.toLowerCase().includes('certified') },
+    { label: 'GDPR',          value: data.gdpr_compliant ? 'Compliant' : 'Non-Compliant', ok: data.gdpr_compliant },
+    { label: 'CCPA',          value: data.ccpa_compliant ? 'Compliant' : 'Non-Compliant', ok: data.ccpa_compliant },
+    { label: 'HIPAA',         value: data.hipaa_compliant ? 'Compliant' : 'Not Applicable', ok: data.hipaa_compliant },
+    { label: 'PCI-DSS',       value: data.pci_dss || 'Not Applicable', ok: true },
+  ];
+  const esgPillars = [
+    { label: 'Environmental', value: data.esg_environmental || '—' },
+    { label: 'Social',        value: data.esg_social        || '—' },
+    { label: 'Governance',    value: data.esg_governance    || '—' },
+    { label: 'Overall',       value: `Grade ${data.esg_grade}` },
   ];
   return (
-    <div className="space-y-4">
-      <div className="grid grid-cols-2 gap-3">
-        {checks.map(({ label, value, ok }) => (
-          <div key={label} className="bg-white border border-slate-100 rounded-xl p-4 flex items-start space-x-3">
-            {ok
-              ? <CheckCircle2 size={18} className="text-emerald-500 mt-0.5 flex-shrink-0" />
-              : <XCircle     size={18} className="text-red-400 mt-0.5 flex-shrink-0" />}
-            <div>
-              <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-0.5">{label}</p>
-              <p className="text-sm font-bold text-slate-800">{value}</p>
-            </div>
-          </div>
-        ))}
+    <div className="space-y-5">
+      {/* Compliance status banner */}
+      <div className="bg-emerald-50 border border-emerald-100 rounded-2xl p-5">
+        <p className="text-[10px] font-black text-emerald-500 uppercase tracking-widest mb-2">Overall Compliance Posture</p>
+        <p className="text-sm text-slate-700 leading-relaxed">{data.compliance_notes}</p>
       </div>
+
+      {/* Core compliance grid */}
+      <div className="bg-white border border-slate-100 rounded-2xl p-5">
+        <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-4">Regulatory Compliance Status</p>
+        <div className="grid grid-cols-2 gap-3">
+          {coreChecks.map(({ label, value, ok }) => (
+            <div key={label} className="flex items-center space-x-3 p-3 rounded-xl bg-slate-50">
+              {ok ? <CheckCircle2 size={16} className="text-emerald-500 flex-shrink-0" />
+                  : <XCircle     size={16} className="text-red-400 flex-shrink-0" />}
+              <div>
+                <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">{label}</p>
+                <p className="text-xs font-bold text-slate-800 mt-0.5">{value}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* SOC 2 details */}
+      <div className="bg-white border border-slate-100 rounded-2xl p-5">
+        <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-4">SOC 2 Audit Details</p>
+        <div className="grid grid-cols-2 gap-3">
+          <div className="bg-slate-50 rounded-xl p-3">
+            <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">Last Audit</p>
+            <p className="text-sm font-bold text-slate-800">{data.last_audit_date || '—'}</p>
+          </div>
+          <div className="bg-slate-50 rounded-xl p-3">
+            <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">Next Audit</p>
+            <p className="text-sm font-bold text-slate-800">{data.next_audit_date || '—'}</p>
+          </div>
+        </div>
+        {data.soc2_scope && (
+          <div className="mt-3 bg-slate-50 rounded-xl p-3">
+            <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">Audit Scope</p>
+            <p className="text-xs text-slate-700 leading-relaxed">{data.soc2_scope}</p>
+          </div>
+        )}
+        {data.audit_findings && (
+          <div className="mt-3 bg-amber-50 border border-amber-100 rounded-xl p-3">
+            <p className="text-[10px] font-black text-amber-500 uppercase tracking-widest mb-1">Audit Findings</p>
+            <p className="text-xs text-amber-900">{data.audit_findings}</p>
+          </div>
+        )}
+        {data.remediation_status && (
+          <div className="mt-2 bg-emerald-50 border border-emerald-100 rounded-xl p-3">
+            <p className="text-[10px] font-black text-emerald-500 uppercase tracking-widest mb-1">Remediation Status</p>
+            <p className="text-xs text-emerald-800">{data.remediation_status}</p>
+          </div>
+        )}
+      </div>
+
+      {/* ESG breakdown */}
+      <div className="bg-white border border-slate-100 rounded-2xl p-5">
+        <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-4">ESG Score Breakdown</p>
+        <div className="grid grid-cols-4 gap-3">
+          {esgPillars.map(({ label, value }) => (
+            <div key={label} className="bg-emerald-50 rounded-xl p-3 text-center">
+              <p className="text-[9px] font-black text-emerald-500 uppercase tracking-widest">{label}</p>
+              <p className="text-xl font-black text-emerald-800 mt-1">{value}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Certifications */}
       {data.certifications?.length > 0 && (
-        <div className="bg-white border border-slate-100 rounded-xl p-4">
-          <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-3">Certifications</p>
+        <div className="bg-white border border-slate-100 rounded-2xl p-5">
+          <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-3">Active Certifications</p>
           <div className="flex flex-wrap gap-2">
             {data.certifications.map((c, i) => <Tag key={i} color="#8b5cf6">{c}</Tag>)}
           </div>
         </div>
       )}
-      {data.compliance_notes && (
-        <div className="bg-emerald-50 border border-emerald-100 rounded-xl p-4 text-sm text-emerald-800 leading-relaxed">
-          {data.compliance_notes}
+
+      {/* Security programmes */}
+      <div className="grid grid-cols-2 gap-4">
+        <div className="bg-white border border-slate-100 rounded-2xl p-5">
+          <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2">Penetration Testing</p>
+          <p className="text-xs text-slate-700 leading-relaxed">{data.pentest_status || '—'}</p>
+        </div>
+        <div className="bg-white border border-slate-100 rounded-2xl p-5">
+          <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2">Bug Bounty Programme</p>
+          <p className="text-xs text-slate-700 leading-relaxed">{data.bug_bounty || '—'}</p>
+        </div>
+      </div>
+
+      {/* Sub-processors */}
+      {data.sub_processors?.length > 0 && (
+        <div className="bg-white border border-slate-100 rounded-2xl p-5">
+          <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-3">Approved Sub-Processors</p>
+          <ul className="space-y-2">
+            {data.sub_processors.map((s, i) => (
+              <li key={i} className="flex items-start space-x-2 text-xs text-slate-700">
+                <span className="w-1.5 h-1.5 rounded-full bg-purple-400 mt-1.5 flex-shrink-0" />
+                <span>{s}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {/* Data residency */}
+      {data.data_residency && (
+        <div className="bg-slate-800 rounded-2xl p-5">
+          <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2">Data Residency</p>
+          <p className="text-sm text-white leading-relaxed">{data.data_residency}</p>
         </div>
       )}
     </div>
@@ -177,31 +387,119 @@ function QualificationData({ data }) {
 }
 
 function RiskData({ data }) {
-  const levelColor = data.level === 'HIGH' ? '#ef4444' : data.level === 'MEDIUM' ? '#f59e0b' : '#10b981';
+  const lc = data.level === 'HIGH' ? '#ef4444' : data.level === 'MEDIUM' ? '#f59e0b' : '#10b981';
+  const subScores = [
+    { label: 'Financial Risk',   score: data.financial_risk_score,   color: '#3b82f6' },
+    { label: 'Cyber Risk',       score: data.cyber_risk_score,       color: '#8b5cf6' },
+    { label: 'Operational Risk', score: data.operational_risk_score, color: '#f59e0b' },
+  ];
   return (
-    <div className="space-y-4">
-      <div className="grid grid-cols-3 gap-3">
-        <div className="bg-white border border-slate-100 rounded-xl p-4 text-center">
-          <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2">Risk Score</p>
-          <p className="text-3xl font-black" style={{ color: levelColor }}>
-            {data.score}<span className="text-slate-300 text-sm">/10</span>
-          </p>
+    <div className="space-y-5">
+      {/* Risk score banner */}
+      <div className="rounded-2xl p-6 flex items-center justify-between" style={{ background: '#0f172a' }}>
+        <div>
+          <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-1">Overall Risk Score</p>
+          <div className="flex items-end space-x-2">
+            <p className="text-5xl font-black" style={{ color: lc }}>{data.score}</p>
+            <p className="text-slate-500 text-lg mb-1">/10</p>
+          </div>
+          <p className="font-black text-sm mt-1" style={{ color: lc }}>{data.level} RISK</p>
         </div>
-        <div className="bg-white border border-slate-100 rounded-xl p-4 text-center">
-          <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2">Level</p>
-          <p className="text-lg font-black" style={{ color: levelColor }}>{data.level}</p>
-        </div>
-        <div className="bg-white border border-slate-100 rounded-xl p-4 text-center">
-          <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2">Security</p>
-          <p className="text-2xl font-black text-slate-800">{data.security_rating}</p>
+        <div className="text-right">
+          <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-1">Security Rating</p>
+          <p className="text-4xl font-black text-white">{data.security_rating}</p>
+          <p className="text-xs text-slate-500 mt-1">{data.financial_stability}</p>
         </div>
       </div>
+
+      {/* Sub-score breakdown */}
+      <div className="grid grid-cols-3 gap-3">
+        {subScores.map(({ label, score, color }) => (
+          <div key={label} className="bg-white border border-slate-100 rounded-2xl p-4 text-center">
+            <p className="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-2">{label}</p>
+            <p className="text-2xl font-black" style={{ color }}>{score ?? '—'}</p>
+            <p className="text-[10px] text-slate-400 mt-0.5">/10</p>
+            <div className="mt-2 h-1.5 bg-slate-100 rounded-full overflow-hidden">
+              <div className="h-full rounded-full" style={{ width: `${((score ?? 0) / 10) * 100}%`, background: color }} />
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Financial intelligence */}
+      <div className="bg-white border border-slate-100 rounded-2xl p-5">
+        <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-4">Financial Intelligence</p>
+        <div className="grid grid-cols-2 gap-3">
+          {[
+            { label: 'Credit Rating',     value: data.credit_rating },
+            { label: 'Revenue Trend',     value: data.revenue_trend },
+            { label: 'YoY Growth',        value: data.revenue_growth_yoy },
+            { label: 'Debt Ratio',        value: data.debt_ratio },
+            { label: 'Cash Position',     value: data.cash_position },
+            { label: 'Financial Stability', value: data.financial_stability },
+          ].map(({ label, value }) => (
+            <div key={label} className="bg-slate-50 rounded-xl p-3">
+              <p className="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-1">{label}</p>
+              <p className="text-xs font-bold text-slate-800">{value || '—'}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Cyber security */}
+      <div className="bg-white border border-slate-100 rounded-2xl p-5">
+        <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-4">Cybersecurity Profile</p>
+        <div className="space-y-3">
+          {[
+            { label: 'CVE History',    value: data.cve_history },
+            { label: 'Patch Cadence',  value: data.patch_cadence },
+          ].map(({ label, value }) => (
+            <div key={label} className="bg-slate-50 rounded-xl p-3">
+              <p className="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-1">{label}</p>
+              <p className="text-xs text-slate-700">{value || '—'}</p>
+            </div>
+          ))}
+        </div>
+        {data.incident_history?.length > 0 && (
+          <div className="mt-3 bg-slate-50 rounded-xl p-3">
+            <p className="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-2">Incident History</p>
+            <ul className="space-y-1.5">
+              {data.incident_history.map((inc, i) => (
+                <li key={i} className="flex items-start space-x-2 text-xs text-slate-700">
+                  <span className="w-1.5 h-1.5 rounded-full bg-slate-400 mt-1.5 flex-shrink-0" />
+                  <span>{inc}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </div>
+
+      {/* Operational risk */}
+      <div className="bg-white border border-slate-100 rounded-2xl p-5">
+        <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-4">Operational Risk Factors</p>
+        <div className="grid grid-cols-2 gap-3">
+          {[
+            { label: 'Key Person Risk',   value: data.key_person_risk },
+            { label: 'Geographic Conc.',  value: data.geographic_concentration },
+            { label: 'Supply Chain',      value: data.supply_chain_risk },
+            { label: 'Regulatory Risk',   value: data.regulatory_risk },
+          ].map(({ label, value }) => (
+            <div key={label} className="bg-slate-50 rounded-xl p-3">
+              <p className="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-1">{label}</p>
+              <p className="text-xs text-slate-700">{value || '—'}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Risk factors */}
       {data.risk_factors?.length > 0 && (
-        <div className="bg-white border border-slate-100 rounded-xl p-4">
-          <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-3">Risk Factors</p>
+        <div className="bg-amber-50 border border-amber-100 rounded-2xl p-5">
+          <p className="text-[10px] font-black text-amber-500 uppercase tracking-widest mb-3">Identified Risk Factors</p>
           <ul className="space-y-2">
             {data.risk_factors.map((f, i) => (
-              <li key={i} className="flex items-start space-x-2 text-sm text-slate-700">
+              <li key={i} className="flex items-start space-x-2 text-sm text-amber-900">
                 <AlertTriangle size={14} className="text-amber-400 mt-0.5 flex-shrink-0" />
                 <span>{f}</span>
               </li>
@@ -209,59 +507,215 @@ function RiskData({ data }) {
           </ul>
         </div>
       )}
-      {data.recommendation && (
-        <div className="bg-amber-50 border border-amber-100 rounded-xl p-4 text-sm text-amber-900 leading-relaxed">
-          {data.recommendation}
+
+      {/* Risk mitigation actions */}
+      {data.risk_mitigation?.length > 0 && (
+        <div className="bg-white border border-slate-100 rounded-2xl p-5">
+          <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-3">Recommended Mitigations</p>
+          <ul className="space-y-2">
+            {data.risk_mitigation.map((m, i) => (
+              <li key={i} className="flex items-start space-x-2 text-sm text-slate-700">
+                <CheckCircle2 size={14} className="text-emerald-500 mt-0.5 flex-shrink-0" />
+                <span>{m}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       )}
+
+      {/* Industry benchmark */}
+      {data.industry_benchmark && (
+        <div className="bg-slate-800 rounded-2xl p-5">
+          <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2">Industry Benchmark</p>
+          <p className="text-sm text-white leading-relaxed">{data.industry_benchmark}</p>
+        </div>
+      )}
+
+      {/* Monitoring hooks */}
+      <div className="grid grid-cols-2 gap-4">
+        {[
+          { label: 'Cyber Monitoring',     hook: data.cyber_monitoring,     color: '#8b5cf6' },
+          { label: 'Financial Monitoring', hook: data.financial_monitoring, color: '#3b82f6' },
+        ].map(({ label, hook, color }) => hook?.status && (
+          <div key={label} className="bg-white border border-slate-100 rounded-2xl p-4">
+            <div className="flex items-center justify-between mb-3">
+              <p className="text-[9px] font-black text-slate-400 uppercase tracking-widest">{label}</p>
+              <span className="text-[9px] font-black px-2 py-0.5 rounded-full"
+                style={{ background: color + '18', color }}>
+                {hook.status}
+              </span>
+            </div>
+            <p className="text-[10px] text-slate-500 mb-1"><span className="font-bold">Provider:</span> {hook.provider}</p>
+            <p className="text-[10px] text-slate-500 mb-2"><span className="font-bold">Cadence:</span> {hook.cadence}</p>
+            {hook.signals?.length > 0 && (
+              <div className="flex flex-wrap gap-1">
+                {hook.signals.map((s, i) => (
+                  <span key={i} className="text-[9px] px-1.5 py-0.5 bg-slate-100 rounded text-slate-500">{s}</span>
+                ))}
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+
+      {/* Recommendation */}
+      <div className="bg-emerald-50 border border-emerald-100 rounded-2xl p-5">
+        <p className="text-[10px] font-black text-emerald-500 uppercase tracking-widest mb-2">Analyst Recommendation</p>
+        <p className="text-sm text-slate-700 leading-relaxed">{data.recommendation}</p>
+      </div>
     </div>
   );
 }
 
 function ContractData({ data }) {
+  const priorityColor = { High: '#ef4444', Medium: '#f59e0b', Low: '#10b981' };
   return (
-    <div className="space-y-4">
-      <div className="grid grid-cols-2 gap-3">
+    <div className="space-y-5">
+      {/* Contract status banner */}
+      <div className="bg-emerald-50 border border-emerald-100 rounded-2xl p-5 flex items-center justify-between">
+        <div>
+          <p className="text-[10px] font-black text-emerald-500 uppercase tracking-widest mb-1">MSA Status</p>
+          <p className="text-base font-black text-slate-800">{data.msa_status}</p>
+        </div>
+        <div className="bg-emerald-100 rounded-xl px-4 py-2 text-center">
+          <p className="text-[9px] font-black text-emerald-600 uppercase tracking-widest">Projected Savings</p>
+          <p className="text-sm font-black text-emerald-800 mt-0.5">{data.savings_opportunity}</p>
+        </div>
+      </div>
+
+      {/* Core terms KPI */}
+      <div className="grid grid-cols-4 gap-3">
         {[
-          { label: 'Contract Term',      value: data.suggested_term },
-          { label: 'Payment Terms',      value: data.payment_terms },
-          { label: 'SLA Uptime',         value: data.sla_uptime },
-          { label: 'Termination Notice', value: data.termination_notice },
+          { label: 'Term',      value: data.suggested_term },
+          { label: 'Payment',   value: data.payment_terms },
+          { label: 'SLA',       value: data.sla_uptime },
+          { label: 'Notice',    value: data.termination_notice },
         ].map(({ label, value }) => (
-          <div key={label} className="bg-white border border-slate-100 rounded-xl p-4">
-            <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">{label}</p>
-            <p className="text-sm font-bold text-slate-800">{value || '—'}</p>
+          <div key={label} className="bg-white border border-slate-100 rounded-xl p-3 text-center">
+            <p className="text-[9px] font-black text-slate-400 uppercase tracking-widest">{label}</p>
+            <p className="text-xs font-black text-slate-800 mt-1 leading-tight">{value || '—'}</p>
           </div>
         ))}
       </div>
+
+      {/* Price protection highlight */}
       {data.price_protection && (
-        <div className="bg-emerald-50 border-l-4 border-emerald-400 rounded-r-xl p-4 flex items-start space-x-3">
-          <Zap size={16} className="text-emerald-500 mt-0.5 flex-shrink-0" fill="currentColor" />
+        <div className="bg-emerald-50 border-l-4 border-emerald-500 rounded-r-2xl p-5 flex items-start space-x-3">
+          <Zap size={18} className="text-emerald-500 mt-0.5 flex-shrink-0" fill="currentColor" />
           <div>
-            <p className="text-[10px] font-black text-emerald-600 uppercase tracking-widest mb-1">Price Protection</p>
-            <p className="text-sm text-emerald-800">{data.price_protection}</p>
+            <p className="text-[10px] font-black text-emerald-600 uppercase tracking-widest mb-1">Price Protection Clause</p>
+            <p className="text-sm text-emerald-800 leading-relaxed">{data.price_protection}</p>
           </div>
         </div>
       )}
+
+      {/* SLA details */}
+      <div className="bg-white border border-slate-100 rounded-2xl p-5">
+        <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-4">SLA Details</p>
+        <div className="space-y-3">
+          <div className="bg-slate-50 rounded-xl p-3">
+            <p className="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-1">Response Times</p>
+            <p className="text-xs text-slate-700">{data.sla_response_time || '—'}</p>
+          </div>
+          <div className="bg-slate-50 rounded-xl p-3">
+            <p className="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-1">Service Credits</p>
+            <p className="text-xs text-slate-700">{data.sla_credits || '—'}</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Key clauses */}
+      {data.key_clauses?.length > 0 && (
+        <div className="bg-white border border-slate-100 rounded-2xl p-5">
+          <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-3">Key Contract Clauses</p>
+          <ul className="space-y-2">
+            {data.key_clauses.map((c, i) => (
+              <li key={i} className="flex items-start space-x-2 text-sm text-slate-700">
+                <CheckCircle2 size={14} className="text-emerald-500 mt-0.5 flex-shrink-0" />
+                <span>{c}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {/* Additional legal terms */}
+      <div className="bg-white border border-slate-100 rounded-2xl p-5">
+        <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-4">Legal & Operational Terms</p>
+        <div className="space-y-3">
+          {[
+            { label: 'Liability Cap',       value: data.liability_cap },
+            { label: 'IP Ownership',        value: data.ip_ownership },
+            { label: 'Auto-Renewal',        value: data.auto_renewal_terms },
+            { label: 'Data Portability',    value: data.data_portability },
+            { label: 'Governing Law',       value: data.governing_law },
+            { label: 'Dispute Resolution',  value: data.dispute_resolution },
+            { label: 'Audit Rights',        value: data.audit_rights },
+            { label: 'Exit Assistance',     value: data.exit_assistance },
+            { label: 'Sub-processor Rights', value: data.subcontractor_rights },
+          ].map(({ label, value }) => value && (
+            <div key={label} className="border-b border-slate-50 pb-3 last:border-0 last:pb-0">
+              <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">{label}</p>
+              <p className="text-xs text-slate-700 leading-relaxed">{value}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Negotiation blueprint */}
       {data.negotiation_blueprint?.length > 0 && (
-        <div className="bg-white border border-slate-100 rounded-xl p-4">
-          <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-3">Negotiation Blueprint</p>
-          <div className="space-y-3">
+        <div className="bg-white border border-slate-100 rounded-2xl p-5">
+          <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-4">Negotiation Blueprint</p>
+          <div className="space-y-4">
             {data.negotiation_blueprint.map((pt, i) => (
-              <div key={i} className="bg-slate-50 rounded-xl p-3 border border-slate-100">
-                <p className="text-xs font-black text-slate-700 uppercase tracking-wide mb-1">{pt.clause}</p>
-                <p className="text-xs text-slate-500 mb-0.5"><span className="font-bold">Current:</span> {pt.current}</p>
-                <p className="text-xs font-bold" style={{ color: '#10b981' }}>
-                  <span className="text-slate-400 font-normal">Target: </span>{pt.target}
-                </p>
+              <div key={i} className="border border-slate-100 rounded-xl overflow-hidden">
+                <div className="flex items-center justify-between px-4 py-2.5 bg-slate-50 border-b border-slate-100">
+                  <p className="text-xs font-black text-slate-700 uppercase tracking-wide">{pt.clause}</p>
+                  {pt.priority && (
+                    <span className="text-[9px] font-black px-2 py-0.5 rounded-full"
+                      style={{ background: (priorityColor[pt.priority] || '#94a3b8') + '18', color: priorityColor[pt.priority] || '#94a3b8' }}>
+                      {pt.priority} Priority
+                    </span>
+                  )}
+                </div>
+                <div className="p-4 space-y-2">
+                  <div>
+                    <p className="text-[9px] font-black text-red-400 uppercase tracking-widest mb-0.5">Current</p>
+                    <p className="text-xs text-slate-600">{pt.current}</p>
+                  </div>
+                  <div>
+                    <p className="text-[9px] font-black text-emerald-500 uppercase tracking-widest mb-0.5">Target</p>
+                    <p className="text-xs font-bold text-emerald-700">{pt.target}</p>
+                  </div>
+                  <div>
+                    <p className="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-0.5">Rationale</p>
+                    <p className="text-xs text-slate-600">{pt.rationale}</p>
+                  </div>
+                  {pt.talking_point && (
+                    <div className="bg-blue-50 rounded-lg p-2.5 mt-1">
+                      <p className="text-[9px] font-black text-blue-400 uppercase tracking-widest mb-0.5">Talking Point</p>
+                      <p className="text-xs text-blue-800 italic">"{pt.talking_point}"</p>
+                    </div>
+                  )}
+                </div>
               </div>
             ))}
           </div>
         </div>
       )}
-      {data.savings_opportunity && (
-        <div className="bg-blue-50 border border-blue-100 rounded-xl p-4 text-sm text-blue-800 font-medium">
-          <span className="font-black">Savings Opportunity: </span>{data.savings_opportunity}
+
+      {/* Savings breakdown */}
+      {data.savings_breakdown?.length > 0 && (
+        <div className="bg-blue-50 border border-blue-100 rounded-2xl p-5">
+          <p className="text-[10px] font-black text-blue-500 uppercase tracking-widest mb-3">Savings Breakdown</p>
+          <ul className="space-y-2">
+            {data.savings_breakdown.map((s, i) => (
+              <li key={i} className="flex items-start space-x-2 text-sm text-blue-800">
+                <DollarSign size={14} className="text-blue-400 mt-0.5 flex-shrink-0" />
+                <span>{s}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       )}
     </div>
@@ -269,30 +723,127 @@ function ContractData({ data }) {
 }
 
 function DecisionData({ data }) {
-  const map = { GO: '#10b981', CONDITIONAL_GO: '#f59e0b', NO_GO: '#ef4444' };
-  const color = map[data.verdict] || '#10b981';
-  const glow  = color + '30';
+  const map    = { GO: '#10b981', CONDITIONAL_GO: '#f59e0b', NO_GO: '#ef4444' };
+  const color  = map[data.verdict] || '#10b981';
+  const statusColor = { PASS: '#10b981', WARN: '#f59e0b', FAIL: '#ef4444' };
   return (
-    <div className="space-y-4">
-      <div className="rounded-2xl p-8 text-center" style={{ background: '#0f172a', boxShadow: `0 0 40px ${glow}` }}>
+    <div className="space-y-5">
+      {/* Verdict banner */}
+      <div className="rounded-2xl p-8 text-center" style={{ background: '#0f172a', boxShadow: `0 0 50px ${color}25` }}>
         <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-3">System Verdict</p>
-        <p className="text-4xl font-black tracking-wide" style={{ color }}>
-          {data.verdict?.replace(/_/g, ' ')}
-        </p>
+        <p className="text-5xl font-black tracking-wide" style={{ color }}>{data.verdict?.replace(/_/g, ' ')}</p>
+        {data.total_savings && data.verdict !== 'NO_GO' && (
+          <p className="text-emerald-400 text-sm font-black mt-3">{data.total_savings}</p>
+        )}
       </div>
-      <div className="bg-white border border-slate-100 rounded-xl p-5">
-        <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2">Summary</p>
+
+      {/* Executive summary */}
+      <div className="bg-white border border-slate-100 rounded-2xl p-5">
+        <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2">Executive Summary</p>
         <p className="text-sm text-slate-700 italic leading-relaxed">"{data.summary}"</p>
       </div>
+
+      {/* Scorecard */}
+      {data.scorecard?.length > 0 && (
+        <div className="bg-white border border-slate-100 rounded-2xl p-5">
+          <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-4">Decision Scorecard</p>
+          <div className="space-y-2">
+            {data.scorecard.map((row, i) => (
+              <div key={i} className="flex items-center justify-between py-2 border-b border-slate-50 last:border-0">
+                <div className="flex items-center space-x-3">
+                  <div className="w-2 h-2 rounded-full flex-shrink-0"
+                    style={{ background: statusColor[row.status] || '#94a3b8' }} />
+                  <p className="text-sm font-bold text-slate-700">{row.criterion}</p>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <p className="text-xs text-slate-500 text-right max-w-[180px]">{row.detail}</p>
+                  <span className="text-[10px] font-black px-2 py-0.5 rounded-full flex-shrink-0"
+                    style={{ background: (statusColor[row.status] || '#94a3b8') + '18', color: statusColor[row.status] || '#94a3b8' }}>
+                    {row.status}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Aggregated logic */}
       {data.aggregated_logic && (
-        <div className="bg-white border border-slate-100 rounded-xl p-5">
-          <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2">Aggregated Logic</p>
+        <div className="bg-slate-50 border border-slate-100 rounded-2xl p-5">
+          <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2">Aggregated Decision Logic</p>
           <p className="text-sm text-slate-700 leading-relaxed">{data.aggregated_logic}</p>
         </div>
       )}
-      {data.total_savings && (
-        <div className="bg-emerald-50 border border-emerald-100 rounded-xl p-4 text-sm text-emerald-800 font-bold">
-          {data.total_savings}
+
+      {/* Conditions (CONDITIONAL_GO) */}
+      {data.conditions?.length > 0 && (
+        <div className="bg-amber-50 border border-amber-100 rounded-2xl p-5">
+          <p className="text-[10px] font-black text-amber-500 uppercase tracking-widest mb-3">Conditions to Satisfy</p>
+          <ul className="space-y-2">
+            {data.conditions.map((c, i) => (
+              <li key={i} className="flex items-start space-x-2 text-sm text-amber-900">
+                <AlertTriangle size={14} className="text-amber-400 mt-0.5 flex-shrink-0" />
+                <span>{c}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {/* Next steps */}
+      {data.next_steps?.length > 0 && (
+        <div className="bg-white border border-slate-100 rounded-2xl p-5">
+          <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-3">Required Next Steps</p>
+          <ol className="space-y-2">
+            {data.next_steps.map((s, i) => (
+              <li key={i} className="flex items-start space-x-3 text-sm text-slate-700">
+                <span className="w-5 h-5 rounded-full bg-blue-100 text-blue-600 text-[10px] font-black flex items-center justify-center flex-shrink-0 mt-0.5">
+                  {i + 1}
+                </span>
+                <span>{s}</span>
+              </li>
+            ))}
+          </ol>
+        </div>
+      )}
+
+      {/* Approvals + timeline */}
+      <div className="grid grid-cols-2 gap-4">
+        {data.required_approvals?.length > 0 && (
+          <div className="bg-white border border-slate-100 rounded-2xl p-5">
+            <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-3">Required Approvals</p>
+            <ul className="space-y-1.5">
+              {data.required_approvals.map((a, i) => (
+                <li key={i} className="flex items-center space-x-2 text-xs text-slate-700">
+                  <CheckSquare size={12} className="text-blue-400 flex-shrink-0" />
+                  <span>{a}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+        <div className="space-y-3">
+          {data.onboarding_timeline && (
+            <div className="bg-white border border-slate-100 rounded-2xl p-4">
+              <p className="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-1">Onboarding Timeline</p>
+              <p className="text-sm font-bold text-slate-800">{data.onboarding_timeline}</p>
+            </div>
+          )}
+          {data.review_checkpoint && (
+            <div className="bg-white border border-slate-100 rounded-2xl p-4">
+              <p className="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-1">Review Checkpoint</p>
+              <p className="text-sm font-bold text-slate-800">{data.review_checkpoint}</p>
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* Integration notes */}
+      {data.integration_notes && (
+        <div className="bg-blue-50 border border-blue-100 rounded-2xl p-5">
+          <p className="text-[10px] font-black text-blue-400 uppercase tracking-widest mb-2">Integration Notes</p>
+          <p className="text-sm text-blue-900 leading-relaxed">{data.integration_notes}</p>
         </div>
       )}
     </div>
@@ -309,7 +860,7 @@ function ValidationGate({ stepMeta, data, onContinue, onCancel, isLast, verdict 
     : 'Confirm & Continue';
 
   return (
-    <div className="flex flex-col h-full">
+    <div>
       {/* Gate header */}
       <div className="flex items-center space-x-4 mb-6 pb-5 border-b border-slate-100">
         <div className="w-11 h-11 rounded-2xl flex items-center justify-center flex-shrink-0"
@@ -331,7 +882,7 @@ function ValidationGate({ stepMeta, data, onContinue, onCancel, isLast, verdict 
       </div>
 
       {/* Fetched data */}
-      <div className="flex-1 overflow-y-auto pr-1 space-y-1">
+      <div className="mb-6">
         {stepMeta.key === 'discovery'     && <DiscoveryData     data={data} />}
         {stepMeta.key === 'qualification' && <QualificationData data={data} />}
         {stepMeta.key === 'risk'          && <RiskData          data={data} />}
@@ -340,7 +891,7 @@ function ValidationGate({ stepMeta, data, onContinue, onCancel, isLast, verdict 
       </div>
 
       {/* Action buttons — the explicit user gate */}
-      <div className="flex space-x-3 mt-6 pt-5 border-t border-slate-100 flex-shrink-0">
+      <div className="flex space-x-3 pt-5 border-t border-slate-100">
         <button
           onClick={onCancel}
           className="flex items-center justify-center space-x-2 px-5 py-3.5 rounded-xl border-2 border-slate-200 text-slate-500 font-black text-xs uppercase tracking-widest hover:bg-red-50 hover:border-red-200 hover:text-red-600 transition-all"
@@ -719,23 +1270,26 @@ export default function OnboardingWizard({ vendorName, onComplete, onAbort }) {
   const currentStep = stepIndex >= 0 ? STEPS[stepIndex] : STEPS[0];
 
   return (
-    <div className="flex flex-col h-full bg-[#f8fafc]">
-      {/* Header */}
-      <div className="bg-white border-b border-slate-100 px-8 py-5 flex items-center justify-between flex-shrink-0">
-        <div>
-          <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Vendor Onboarding</p>
-          <h2 className="font-black text-slate-900 text-lg mt-0.5">{vendorName}</h2>
+    <div className="min-h-screen bg-[#f8fafc] flex flex-col font-sans">
+
+      {/* Top bar */}
+      <div className="bg-white border-b border-slate-100 px-8 py-4 flex items-center justify-between flex-shrink-0 shadow-sm">
+        <div className="flex items-center space-x-4">
+          <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+            <Package size={16} className="text-white" />
+          </div>
+          <div>
+            <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Vendor Onboarding</p>
+            <h2 className="font-black text-slate-900 text-base leading-tight">{vendorName}</h2>
+          </div>
         </div>
         {sessionId && (
-          <div className="text-right">
-            <p className="text-[10px] font-black text-slate-300 uppercase tracking-widest">Session</p>
-            <p className="font-mono text-xs text-slate-400 mt-0.5">{sessionId}</p>
-          </div>
+          <p className="font-mono text-[11px] text-slate-300">Session {sessionId}</p>
         )}
       </div>
 
-      {/* Step tracker */}
-      <div className="bg-white border-b border-slate-100 px-8 pt-6 pb-4 flex-shrink-0">
+      {/* Step progress bar */}
+      <div className="bg-white border-b border-slate-100 px-12 pt-6 pb-5 flex-shrink-0">
         <StepTracker
           steps={STEPS}
           currentIndex={stepIndex}
@@ -744,24 +1298,26 @@ export default function OnboardingWizard({ vendorName, onComplete, onAbort }) {
         />
       </div>
 
-      {/* Main content */}
-      <div className="flex-1 overflow-hidden px-8 py-6">
-        {(phase === 'starting' || phase === 'fetching') && (
-          <FetchingState stepMeta={currentStep} />
-        )}
-        {phase === 'reviewing' && stepIndex >= 0 && (
-          <ValidationGate
-            stepMeta={currentStep}
-            data={stepData[currentStep.key]}
-            onContinue={handleContinue}
-            onCancel={handleCancel}
-            isLast={stepIndex === STEPS.length - 1}
-            verdict={stepData['decision']?.verdict}
-          />
-        )}
+      {/* Full-page content area — each step is its own dedicated page */}
+      <div className="flex-1 flex flex-col overflow-y-auto">
+        <div className="max-w-2xl w-full mx-auto px-6 py-8 flex-1">
+          {(phase === 'starting' || phase === 'fetching') && (
+            <FetchingState stepMeta={currentStep} />
+          )}
+          {phase === 'reviewing' && stepIndex >= 0 && (
+            <ValidationGate
+              stepMeta={currentStep}
+              data={stepData[currentStep.key]}
+              onContinue={handleContinue}
+              onCancel={handleCancel}
+              isLast={stepIndex === STEPS.length - 1}
+              verdict={stepData['decision']?.verdict}
+            />
+          )}
+        </div>
       </div>
 
-      {/* Live audit strip */}
+      {/* Audit strip — pinned to bottom */}
       <AuditStrip logs={auditLog} />
     </div>
   );
