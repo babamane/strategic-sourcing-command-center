@@ -1,0 +1,30 @@
+# API
+fastapi
+uvicorn[standard]
+
+# State machine
+langgraph>=0.2.0
+langgraph-checkpoint-sqlite
+
+# LLM
+langchain-ollama
+langchain-core
+
+# Search (free, no API key)
+duckduckgo-search
+
+# Database
+sqlalchemy
+
+# Validation
+pydantic>=2.0
+
+# HTTP
+httpx
+requests
+
+# UI
+streamlit
+
+# Config
+python-dotenv

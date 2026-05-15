@@ -27,8 +27,16 @@ Start-Process powershell -ArgumentList "-NoExit", "-Command", "Set-Location 'all
 Write-Host "Starting Vibe Frontend (Port 5173)..."
 Start-Process powershell -ArgumentList "-NoExit", "-Command", "Set-Location 'all tools separate\vibe-main\frontend'; npm run dev -- --port 5173"
 
-# 7. Main Dashboard
+# 7. Vendor Onboarding Backend
+Write-Host "Starting Vendor Onboarding Backend (Port 8090)..."
+Start-Process powershell -ArgumentList "-NoExit", "-Command", "Set-Location 'onboarding'; python migrations/init_db.py; python -m uvicorn backend.main:app --port 8090 --reload"
+
+# 8. Vendor Onboarding Streamlit UI (optional secondary view)
+Write-Host "Starting Vendor Onboarding Streamlit (Port 8502)..."
+Start-Process powershell -ArgumentList "-NoExit", "-Command", "Set-Location 'onboarding'; python -m streamlit run frontend/app.py --server.port 8502"
+
+# 9. Main Dashboard
 Write-Host "Starting Main Dashboard (Port 3000)..."
 Start-Process powershell -ArgumentList "-NoExit", "-Command", "Set-Location 'frontend'; npm run dev -- --port 3000"
 
-Write-Host "✅ All services requested. Check the separate windows for status." -ForegroundColor Green
+Write-Host "All services requested. Check the separate windows for status." -ForegroundColor Green

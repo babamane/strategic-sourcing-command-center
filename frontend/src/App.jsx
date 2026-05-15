@@ -802,12 +802,27 @@ const App = () => {
     const [rightPanelVisible, setRightPanelVisible] = useState(true);
     const [currentStepIndex, setCurrentStepIndex] = useState(-1);
     const [completedSteps, setCompletedSteps] = useState([]);
+    const [sessionId, setSessionId] = useState(null);
+    const [sessionData, setSessionData] = useState(null);
+    const ONBOARDING_API = 'http://localhost:8090';
 
     const currentBlueprint = activeMissionKey ? MISSIONS[activeMissionKey] : null;
 
     useEffect(() => {
         if (pulseRef.current) pulseRef.current.scrollTop = pulseRef.current.scrollHeight;
     }, [logs]);
+
+    // Poll backend for real session data while pipeline is active
+    useEffect(() => {
+        if (!sessionId || !['running', 'hitl'].includes(missionStatus)) return;
+        const interval = setInterval(() => {
+            fetch(`${ONBOARDING_API}/sessions/${sessionId}`)
+                .then(r => r.json())
+                .then(data => setSessionData(data))
+                .catch(() => {});
+        }, 2500);
+        return () => clearInterval(interval);
+    }, [sessionId, missionStatus]);
 
     // Handle Dynamic Automated Steps Timer Logic
     useEffect(() => {
@@ -867,10 +882,47 @@ const App = () => {
     const launchMission = () => {
         setMissionStatus('running');
         setCurrentStepIndex(0);
+        setSessionId(null);
+        setSessionData(null);
         setLogs([{ agent: 'Orchestrator', msg: "Mission Launched.", reason: `Executing step 1: ${currentBlueprint.steps[0].title}.`, time: "LIVE" }]);
+
+        // Start real backend session for onboarding missions
+        if (activeMissionKey === 'onboarding' && onboardingVendor) {
+            fetch(`${ONBOARDING_API}/sessions`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ vendor_name: onboardingVendor }),
+            })
+                .then(r => r.json())
+                .then(data => {
+                    setSessionId(data.id);
+                    setSessionData(data);
+                    setLogs(prev => [...prev, { agent: 'Discovery Agent', msg: `Session started — ID: ${data.id}`, reason: 'Backend GenAI pipeline initialised.', time: 'LIVE' }]);
+                })
+                .catch(() => {
+                    setLogs(prev => [...prev, { agent: 'Orchestrator', msg: 'Backend offline — running simulation mode.', reason: 'Could not reach http://localhost:8090', time: 'WARN' }]);
+                });
+        }
     };
 
     const handleHitlApproval = () => {
+        // Call real backend if session exists
+        if (sessionId && currentBlueprint) {
+            const step  = currentBlueprint.steps[currentStepIndex];
+            const stage = step?.type === 'hitl_qual' ? 'qualification' : 'contract';
+            fetch(`${ONBOARDING_API}/sessions/${sessionId}/approve/${stage}`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ decision: 'approve', notes: '', overrides: {} }),
+            })
+                .then(r => r.json())
+                .then(data => {
+                    setSessionData(data);
+                    setLogs(prev => [...prev, { agent: 'Orchestrator', msg: `${stage} approved — backend confirmed.`, reason: 'GenAI pipeline resuming next stage.', time: 'NOW' }]);
+                })
+                .catch(() => {});
+        }
+
         setCompletedSteps(prev => [...prev, currentStepIndex]);
         setLogs(prev => [...prev, { agent: 'Orchestrator', msg: 'Human Approval Received.', reason: 'HITL cleared. Resuming autonomous execution.', time: 'NOW' }]);
 
@@ -889,34 +941,105 @@ const App = () => {
 
     // UI Helper for dynamic HITL content
     const renderHitlContent = (type) => {
+        const qual     = sessionData?.qualification;
+        const contract = sessionData?.contract;
         switch (type) {
             case 'hitl_qual':
                 return (
-                    <div className="grid grid-cols-2 gap-4 mb-6">
-                        <div className="bg-white border border-[#e2e8f0] rounded-2xl p-5 shadow-sm">
-                            <p className="text-[10px] font-black text-[#94a3b8] uppercase tracking-[0.15em] mb-3">SOC2 Status</p>
-                            <div className="flex items-center space-x-2 text-[#059669]"><CheckCircle2 size={18} strokeWidth={2.5} /><span className="font-bold text-[15px]">Verified</span></div>
+                    <div className="space-y-4 mb-6">
+                        <div className="grid grid-cols-2 gap-4">
+                            <div className="bg-white border border-[#e2e8f0] rounded-2xl p-5 shadow-sm">
+                                <p className="text-[10px] font-black text-[#94a3b8] uppercase tracking-[0.15em] mb-3">SOC2 Status</p>
+                                <div className="flex items-center space-x-2 text-[#059669]">
+                                    <CheckCircle2 size={18} strokeWidth={2.5} />
+                                    <span className="font-bold text-[15px]">{qual?.soc2_status || 'Verified - Type II'}</span>
+                                </div>
+                            </div>
+                            <div className="bg-white border border-[#e2e8f0] rounded-2xl p-5 shadow-sm">
+                                <p className="text-[10px] font-black text-[#94a3b8] uppercase tracking-[0.15em] mb-3">ESG Audit</p>
+                                <div className="flex items-center space-x-2 text-[#059669]">
+                                    <Award size={18} strokeWidth={2.5} />
+                                    <span className="font-bold text-[15px]">Grade {qual?.esg_grade || 'A'}</span>
+                                </div>
+                            </div>
+                            <div className="bg-white border border-[#e2e8f0] rounded-2xl p-5 shadow-sm">
+                                <p className="text-[10px] font-black text-[#94a3b8] uppercase tracking-[0.15em] mb-3">ISO 27001</p>
+                                <div className="flex items-center space-x-2 text-[#059669]">
+                                    <ShieldCheck size={18} strokeWidth={2.5} />
+                                    <span className="font-bold text-[15px]">{qual?.iso27001 || 'Certified'}</span>
+                                </div>
+                            </div>
+                            <div className="bg-white border border-[#e2e8f0] rounded-2xl p-5 shadow-sm">
+                                <p className="text-[10px] font-black text-[#94a3b8] uppercase tracking-[0.15em] mb-3">GDPR</p>
+                                <div className="flex items-center space-x-2 text-[#059669]">
+                                    <CheckCircle2 size={18} strokeWidth={2.5} />
+                                    <span className="font-bold text-[15px]">{qual?.gdpr_compliant !== false ? 'Compliant' : 'Non-Compliant'}</span>
+                                </div>
+                            </div>
                         </div>
-                        <div className="bg-white border border-[#e2e8f0] rounded-2xl p-5 shadow-sm">
-                            <p className="text-[10px] font-black text-[#94a3b8] uppercase tracking-[0.15em] mb-3">ESG Audit</p>
-                            <div className="flex items-center space-x-2 text-[#059669]"><Award size={18} strokeWidth={2.5} /><span className="font-bold text-[15px]">Grade A</span></div>
-                        </div>
+                        {qual?.compliance_notes && (
+                            <div className="bg-[#f0fdf4] border border-[#bbf7d0] rounded-xl p-4 text-[12px] text-[#166534] font-medium">
+                                {qual.compliance_notes}
+                            </div>
+                        )}
                     </div>
                 );
             case 'hitl_contract':
                 return (
-                    <div className="bg-white rounded-2xl border-[1.5px] border-[#e2e8f0] shadow-sm overflow-hidden mb-6 relative">
-                        <div className="bg-[#f8fafc] px-5 py-4 flex items-center justify-between border-b border-[#e2e8f0]">
-                            <div className="flex items-center space-x-3 text-[#475569] text-xs font-bold"><FileText size={16} /> <span>DRAFT_MSA_{onboardingVendor.toUpperCase()}.pdf</span></div>
-                        </div>
-                        <div className="p-8 pb-10 h-[240px] overflow-y-auto text-[13px] text-[#334155] leading-[1.8] font-serif bg-white">
-                            <h5 className="font-bold text-sm mb-4 tracking-wide text-[#0f172a]">2. FEES AND PAYMENT TERMS</h5>
-                            <p className="mb-4 pl-4">2.1 <strong>License Fees.</strong> Customer shall pay the annual recurring fee as detailed.</p>
-                            <div className="bg-[#f0fdf4] border-l-4 border-[#10b981] p-4 my-6 ml-4 flex relative rounded-r-lg">
-                                <div className="absolute -left-[30px] top-4 text-[#10b981]"><Zap size={16} fill="currentColor" /></div>
-                                <p className="text-[#065f46]">2.2 <strong>Price Protection.</strong> Any annual fee increases applied at the time of renewal shall not exceed <strong>5% (five percent)</strong> of the preceding year's fees.</p>
+                    <div className="space-y-4 mb-6">
+                        {/* Contract Terms Grid */}
+                        <div className="grid grid-cols-2 gap-3">
+                            <div className="bg-white border border-[#e2e8f0] rounded-2xl p-4 shadow-sm">
+                                <p className="text-[10px] font-black text-[#94a3b8] uppercase tracking-[0.15em] mb-2">Contract Term</p>
+                                <span className="font-bold text-[14px] text-[#0f172a]">{contract?.suggested_term || '24 months'}</span>
+                            </div>
+                            <div className="bg-white border border-[#e2e8f0] rounded-2xl p-4 shadow-sm">
+                                <p className="text-[10px] font-black text-[#94a3b8] uppercase tracking-[0.15em] mb-2">Payment Terms</p>
+                                <span className="font-bold text-[14px] text-[#0f172a]">{contract?.payment_terms || 'Net 30'}</span>
+                            </div>
+                            <div className="bg-white border border-[#e2e8f0] rounded-2xl p-4 shadow-sm">
+                                <p className="text-[10px] font-black text-[#94a3b8] uppercase tracking-[0.15em] mb-2">SLA Uptime</p>
+                                <div className="flex items-center space-x-2 text-[#059669]">
+                                    <CheckCircle2 size={15} strokeWidth={2.5} />
+                                    <span className="font-bold text-[14px]">{contract?.sla_uptime || '99.9%'}</span>
+                                </div>
+                            </div>
+                            <div className="bg-white border border-[#e2e8f0] rounded-2xl p-4 shadow-sm">
+                                <p className="text-[10px] font-black text-[#94a3b8] uppercase tracking-[0.15em] mb-2">Termination Notice</p>
+                                <span className="font-bold text-[14px] text-[#0f172a]">{contract?.termination_notice || '60 days'}</span>
                             </div>
                         </div>
+                        {/* Price Protection */}
+                        {contract?.price_protection && (
+                            <div className="bg-[#f0fdf4] border-l-4 border-[#10b981] rounded-r-xl p-4 flex items-start space-x-3">
+                                <Zap size={16} className="text-[#10b981] mt-0.5 flex-shrink-0" fill="currentColor" />
+                                <div>
+                                    <p className="text-[10px] font-black text-[#059669] uppercase tracking-widest mb-1">Price Protection Clause</p>
+                                    <p className="text-[12px] text-[#065f46] font-medium leading-relaxed">{contract.price_protection}</p>
+                                </div>
+                            </div>
+                        )}
+                        {/* Negotiation Blueprint */}
+                        {contract?.negotiation_blueprint?.length > 0 && (
+                            <div className="bg-white border border-[#e2e8f0] rounded-2xl p-4 shadow-sm">
+                                <p className="text-[10px] font-black text-[#94a3b8] uppercase tracking-[0.15em] mb-3">Negotiation Blueprint</p>
+                                <div className="space-y-2">
+                                    {contract.negotiation_blueprint.map((pt, i) => (
+                                        <div key={i} className="bg-[#f8fafc] rounded-xl p-3 border border-[#e2e8f0]">
+                                            <p className="text-[11px] font-black text-[#334155] uppercase tracking-wide mb-1">{pt.clause}</p>
+                                            <p className="text-[11px] text-[#64748b]"><span className="font-bold">Current:</span> {pt.current}</p>
+                                            <p className="text-[11px] text-[#059669] font-bold"><span className="text-[#334155]">Target:</span> {pt.target}</p>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
+                        {/* Savings Opportunity */}
+                        {contract?.savings_opportunity && (
+                            <div className="bg-[#eff6ff] border border-[#bfdbfe] rounded-xl p-4 text-[12px] text-[#1e40af] font-medium">
+                                <span className="font-black">Savings Opportunity: </span>{contract.savings_opportunity}
+                            </div>
+                        )}
                     </div>
                 );
             case 'hitl_reclaim':
@@ -1256,11 +1379,32 @@ const App = () => {
 
                                                     <div className="bg-[#1e293b] rounded-2xl p-5 mb-5 border border-[#334155] flex items-center space-x-4">
                                                         <Scale size={20} className="text-[#10b981]" />
-                                                        <span className="text-white font-black text-sm">System Verdict: <span className="text-[#10b981]">{currentBlueprint.verdict}</span></span>
+                                                        <span className="text-white font-black text-sm">System Verdict: <span className={sessionData?.verdict?.verdict === 'NO_GO' ? 'text-[#ef4444]' : sessionData?.verdict?.verdict === 'CONDITIONAL_GO' ? 'text-[#f59e0b]' : 'text-[#10b981]'}>{sessionData?.verdict?.verdict || currentBlueprint.verdict}</span></span>
                                                     </div>
 
+                                                    {/* Real risk + savings data from backend */}
+                                                    {sessionData?.verdict && (
+                                                        <div className="grid grid-cols-3 gap-3 mb-5">
+                                                            <div className="bg-[#1e293b] rounded-xl p-4 border border-[#334155] text-center">
+                                                                <p className="text-[#64748b] text-[10px] uppercase tracking-widest mb-1">Risk Score</p>
+                                                                <p className="text-white font-black text-lg">{sessionData?.risk?.score ?? '—'}<span className="text-[#64748b] text-xs">/10</span></p>
+                                                            </div>
+                                                            <div className="bg-[#1e293b] rounded-xl p-4 border border-[#334155] text-center">
+                                                                <p className="text-[#64748b] text-[10px] uppercase tracking-widest mb-1">Risk Level</p>
+                                                                <p className={`font-black text-sm ${sessionData?.risk?.level === 'HIGH' ? 'text-[#ef4444]' : sessionData?.risk?.level === 'MEDIUM' ? 'text-[#f59e0b]' : 'text-[#10b981]'}`}>{sessionData?.risk?.level ?? '—'}</p>
+                                                            </div>
+                                                            <div className="bg-[#1e293b] rounded-xl p-4 border border-[#334155] text-center">
+                                                                <p className="text-[#64748b] text-[10px] uppercase tracking-widest mb-1">Security</p>
+                                                                <p className="text-white font-black text-lg">{sessionData?.risk?.security_rating ?? '—'}</p>
+                                                            </div>
+                                                        </div>
+                                                    )}
+
                                                     <div className="bg-[#1e293b] rounded-2xl p-6 mb-8 border border-[#334155]">
-                                                        <p className="text-[#94a3b8] text-sm font-bold italic leading-relaxed">"{currentBlueprint.summary}"</p>
+                                                        <p className="text-[#94a3b8] text-sm font-bold italic leading-relaxed">"{sessionData?.verdict?.summary || currentBlueprint.summary}"</p>
+                                                        {sessionData?.contract?.savings_opportunity && (
+                                                            <p className="text-[#10b981] text-[11px] font-black uppercase tracking-widest mt-3">{sessionData.contract.savings_opportunity}</p>
+                                                        )}
                                                     </div>
 
                                                     {missionStatus === 'decision_terminal' ? (
