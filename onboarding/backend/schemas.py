@@ -55,6 +55,7 @@ class QualificationResult(BaseModel):
     audit_findings:    str       = Field(default="No material findings")
     remediation_status: str      = Field(default="N/A")
     bug_bounty:        str       = Field(default="Unknown")
+    sources:           List[str] = Field(default_factory=list)
 
 
 class RiskResult(BaseModel):
@@ -85,6 +86,7 @@ class RiskResult(BaseModel):
     supply_chain_risk:       str         = Field(default="Low")
     risk_mitigation:         List[str]   = Field(default_factory=list)
     industry_benchmark:      str         = Field(default="In line with industry peers")
+    sources:                 List[str]   = Field(default_factory=list)
 
 
 class NegotiationPoint(BaseModel):
@@ -120,6 +122,7 @@ class ContractResult(BaseModel):
     sla_credits:           str       = Field(default="5% of monthly fee per 0.1% below SLA")
     subcontractor_rights:  str       = Field(default="Vendor must disclose and seek approval for sub-processors")
     savings_breakdown:     List[str] = Field(default_factory=list, description="Line items of savings")
+    sources:               List[str] = Field(default_factory=list)
 
 
 class VerdictResult(BaseModel):

@@ -5,22 +5,57 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
 from backend.config import OLLAMA_BASE_URL, OLLAMA_MODEL, SEARCH_MAX_RESULTS
 from backend.schemas import DiscoveryResult
 
-# Maps product/brand names to parent company so search queries are accurate
+# Maps product/brand names AND common direct-name inputs to canonical company name
 _COMPANY_MAP = {
-    "claude":   "Anthropic",
-    "chatgpt":  "OpenAI",
-    "gemini":   "Google DeepMind",
-    "copilot":  "Microsoft",
-    "bard":     "Google",
-    "gpt-4":    "OpenAI",
-    "gpt4":     "OpenAI",
-    "llama":    "Meta AI",
-    "mistral":  "Mistral AI",
+    "claude":          "Anthropic",
+    "anthropic":       "Anthropic",
+    "chatgpt":         "OpenAI",
+    "openai":          "OpenAI",
+    "open ai":         "OpenAI",
+    "gpt-4":           "OpenAI",
+    "gpt4":            "OpenAI",
+    "gpt":             "OpenAI",
+    "o1":              "OpenAI",
+    "gemini":          "Google DeepMind",
+    "google deepmind": "Google DeepMind",
+    "deepmind":        "Google DeepMind",
+    "google":          "Google DeepMind",
+    "bard":            "Google DeepMind",
+    "copilot":         "Microsoft",
+    "microsoft":       "Microsoft",
+    "llama":           "Meta AI",
+    "meta":            "Meta AI",
+    "meta ai":         "Meta AI",
+    "mistral":         "Mistral AI",
+    "mistral ai":      "Mistral AI",
+    "salesforce":      "Salesforce",
+    "servicenow":      "ServiceNow",
+    "workday":         "Workday",
+    "hubspot":         "HubSpot",
+    "zendesk":         "Zendesk",
+    "slack":           "Slack (Salesforce)",
+}
+
+# Static reference URLs shown when DuckDuckGo returns no results
+_STATIC_SOURCES = {
+    "Anthropic":       ["https://www.anthropic.com", "https://docs.anthropic.com/en/docs", "https://www.crunchbase.com/organization/anthropic", "https://techcrunch.com/tag/anthropic/"],
+    "OpenAI":          ["https://openai.com", "https://platform.openai.com/docs", "https://www.crunchbase.com/organization/openai", "https://techcrunch.com/tag/openai/"],
+    "Google DeepMind": ["https://deepmind.google", "https://ai.google.dev", "https://cloud.google.com/vertex-ai", "https://www.crunchbase.com/organization/deepmind"],
+    "Microsoft":       ["https://www.microsoft.com/en-us/ai", "https://azure.microsoft.com/en-us/products/ai-services", "https://www.crunchbase.com/organization/microsoft"],
+    "Meta AI":         ["https://ai.meta.com", "https://llama.meta.com", "https://www.crunchbase.com/organization/facebook"],
+    "Mistral AI":      ["https://mistral.ai", "https://docs.mistral.ai", "https://www.crunchbase.com/organization/mistral-ai"],
+    "Salesforce":      ["https://www.salesforce.com", "https://investor.salesforce.com", "https://www.crunchbase.com/organization/salesforce"],
+    "ServiceNow":      ["https://www.servicenow.com", "https://investor.servicenow.com", "https://www.crunchbase.com/organization/servicenow"],
+    "Workday":         ["https://www.workday.com", "https://investor.workday.com", "https://www.crunchbase.com/organization/workday"],
 }
 
 def _resolve_company(vendor_name: str) -> str:
-    """Map product brand names to their parent company for accurate searches."""
-    return _COMPANY_MAP.get(vendor_name.lower().strip(), vendor_name)
+    """Map product/brand names to their parent company for accurate searches."""
+    key = vendor_name.lower().strip()
+    if key in _COMPANY_MAP:
+        return _COMPANY_MAP[key]
+    # Title-case the input as last resort so "openai" → "Openai" becomes a passable search term
+    return vendor_name.strip().title()
 
 
 def _ddg_search(vendor_name: str) -> tuple[str, list[str], str]:
@@ -163,28 +198,107 @@ def _fallback(vendor_name: str, company_name: str) -> dict:
             "business_model":      "API token-based pricing + ChatGPT subscription (Free/Plus/Team/Enterprise)",
             "growth_rate":         "~150% YoY ARR growth (reported)",
         },
+        "Google DeepMind": {
+            "company_summary":     "Google DeepMind is Alphabet's AI research laboratory formed by the 2023 merger of Google Brain and DeepMind. It is the organisation behind Gemini, AlphaFold, and AlphaCode, and is one of the world's leading AI research institutions. Google DeepMind develops frontier AI models and deploys them through Google Cloud and Google products globally.",
+            "founded":             "2010 (DeepMind); merged with Google Brain in 2023",
+            "headquarters":        "London, UK (DeepMind) / Mountain View, CA, USA (Google Brain)",
+            "employees":           "3,000–5,000",
+            "market_segment":      "Enterprise AI / Consumer AI / AI Research",
+            "recent_funding":      "Subsidiary of Alphabet Inc. (NASDAQ: GOOGL, ~$1.9T market cap, 2024)",
+            "market_position":     "One of the world's leading AI research labs; Gemini competes directly with GPT-4o and Claude 3.5 in enterprise and developer markets.",
+            "revenue_estimate":    "Contributes to Google Cloud AI revenue ($33.2B segment, 2024); Gemini API revenue not separately disclosed",
+            "products":            ["Gemini 1.5 Pro", "Gemini 1.5 Flash", "Gemini API", "Google AI Studio", "AlphaFold 3", "AlphaCode 2"],
+            "product_descriptions": {
+                "Gemini 1.5 Pro":   "Flagship multimodal model with 1M token context window for enterprise reasoning and analysis.",
+                "Gemini 1.5 Flash": "Fast, cost-efficient model optimised for high-volume enterprise workloads.",
+                "Gemini API":       "Enterprise API for integrating Gemini models into products and workflows via Google Cloud.",
+                "Google AI Studio": "Developer platform for prototyping and deploying Gemini-powered applications.",
+                "AlphaFold 3":      "AI system for protein structure prediction; transforming drug discovery and life sciences.",
+                "AlphaCode 2":      "AI coding system competing in competitive programming; integrated into Gemini Code Assist.",
+            },
+            "tech_stack":          ["Google Cloud (TPUs)", "TensorFlow", "JAX", "Python", "Kubernetes", "Spanner"],
+            "key_executives":      [
+                "Demis Hassabis — CEO, Google DeepMind & Co-founder",
+                "Koray Kavukcuoglu — CTO, Google DeepMind",
+                "Oriol Vinyals — VP Research, Google DeepMind",
+                "Jeff Dean — Chief Scientist, Google (former Google Brain lead)",
+                "Sundar Pichai — CEO, Alphabet (parent company)",
+            ],
+            "main_competitors":    ["OpenAI (GPT-4o / ChatGPT)", "Anthropic (Claude)", "Meta AI (Llama)", "Mistral AI"],
+            "customer_segments":   ["Enterprise Software", "Healthcare & Life Sciences", "Developer Tools", "Government", "Financial Services", "Education"],
+            "geographic_presence": ["Global — 40+ Google Cloud regions", "North America (dominant)", "Europe", "APAC", "Middle East"],
+            "recent_news":         [
+                "Gemini 1.5 Pro released with 1M token context window — industry-leading long-context capability (2024)",
+                "AlphaFold 3 published in Nature — predicts structure of all molecules of life (May 2024)",
+                "Google DeepMind and Google Brain officially merged under Demis Hassabis (April 2023)",
+                "Gemini API made generally available via Google Cloud Vertex AI and Google AI Studio (2024)",
+                "AlphaCode 2 achieves top 15% in competitive programming — integrated into Gemini Code Assist",
+            ],
+            "analyst_rating":      "Leader — Gartner Magic Quadrant for Cloud AI Developer Services 2024; Forrester Wave AI Foundation Models Leader",
+            "business_model":      "Gemini API usage-based pricing via Google Cloud + Google Workspace AI add-ons + Google One AI Premium subscription",
+            "growth_rate":         "Google Cloud segment growing 28% YoY (Q4 2024); Gemini API adoption accelerating post-GA launch",
+        },
+        "Microsoft": {
+            "company_summary":     "Microsoft is a global technology corporation and the world's largest software company by revenue. Its AI strategy is anchored by a $13B strategic partnership with OpenAI and the integration of Copilot AI across Microsoft 365, Azure, GitHub, and Dynamics 365. Microsoft Azure is the second-largest cloud platform globally.",
+            "founded":             "1975",
+            "headquarters":        "Redmond, WA, USA",
+            "employees":           "221,000+",
+            "market_segment":      "Enterprise Software / Cloud Computing / AI Infrastructure",
+            "recent_funding":      "Public company (NASDAQ: MSFT, ~$3.1T market cap, 2024)",
+            "market_position":     "Dominant enterprise software vendor; Azure is #2 cloud globally; Copilot is the leading enterprise AI assistant suite.",
+            "revenue_estimate":    "$245B total revenue FY2024 (reported); Azure ~$105B run rate",
+            "products":            ["Microsoft 365 Copilot", "Azure OpenAI Service", "GitHub Copilot", "Dynamics 365 Copilot", "Azure AI Studio"],
+            "product_descriptions": {
+                "Microsoft 365 Copilot": "AI assistant integrated across Word, Excel, Teams, Outlook powered by GPT-4.",
+                "Azure OpenAI Service":  "Enterprise-grade access to OpenAI models (GPT-4o, DALL-E, Whisper) via Azure.",
+                "GitHub Copilot":        "AI coding assistant with 1.8M+ paid subscribers; integrates into VS Code and JetBrains.",
+                "Dynamics 365 Copilot":  "AI embedded across CRM and ERP workflows.",
+            },
+            "tech_stack":          ["Microsoft Azure", "C#", ".NET", "Python", "TypeScript", "OpenAI GPT-4"],
+            "key_executives":      [
+                "Satya Nadella — CEO & Chairman",
+                "Amy Hood — CFO & Executive VP",
+                "Kevin Scott — CTO & Executive VP of AI",
+                "Scott Guthrie — EVP, Cloud & AI",
+                "Mustafa Suleyman — CEO, Microsoft AI (former DeepMind co-founder)",
+            ],
+            "main_competitors":    ["Google Workspace / DeepMind", "Salesforce", "Amazon AWS", "Oracle", "SAP"],
+            "customer_segments":   ["Enterprise", "Government", "Education", "SMB", "Developers", "Healthcare"],
+            "geographic_presence": ["Global — 60+ Azure regions", "North America (dominant)", "Europe", "APAC", "Middle East & Africa"],
+            "recent_news":         [
+                "Microsoft 365 Copilot reached 1M+ enterprise users in 2024 — fastest enterprise AI adoption on record",
+                "Committed additional $13B to OpenAI; deepened Azure AI integration (2024)",
+                "Mustafa Suleyman (DeepMind co-founder) appointed CEO of Microsoft AI division (2024)",
+                "GitHub Copilot surpassed 1.8M paid subscribers; expanded to Copilot Workspace (2024)",
+            ],
+            "analyst_rating":      "Leader — Gartner Magic Quadrant for Cloud AI Developer Services, Strategic Cloud Platforms, and Unified Communications 2024",
+            "business_model":      "SaaS subscription (M365, Dynamics) + Azure consumption-based cloud + per-seat Copilot add-on ($30/user/month)",
+            "growth_rate":         "~15% YoY total revenue; Azure growing 31% YoY (Q4 FY2024)",
+        },
     }
 
-    data = known.get(company_name, {
+    # Case-insensitive lookup so "openai" hits "OpenAI" etc.
+    match = next((k for k in known if k.lower() == company_name.lower()), None)
+    data = known.get(match or company_name, {
         "company_summary":     f"{company_name} is an established enterprise technology vendor offering cloud-native business solutions.",
-        "founded":             "2014",
-        "headquarters":        "San Francisco, CA, USA",
-        "employees":           "500–2,000",
-        "market_segment":      "Mid-Market to Enterprise",
-        "recent_funding":      "Series C — $75M (estimated)",
-        "market_position":     f"Recognised mid-market leader with growing enterprise footprint.",
-        "revenue_estimate":    "$50M–$100M ARR (estimated)",
-        "products":            [f"{company_name} Core Platform", "Analytics Suite", "API Gateway"],
-        "product_descriptions": {f"{company_name} Core Platform": "Primary SaaS platform for enterprise workflows."},
-        "tech_stack":          ["AWS", "Kubernetes", "React", "Python", "PostgreSQL"],
-        "key_executives":      [f"CEO — {company_name}", f"CTO — {company_name}"],
-        "main_competitors":    ["Salesforce", "ServiceNow", "Workday"],
-        "customer_segments":   ["Enterprise", "Mid-Market", "Financial Services"],
-        "geographic_presence": ["North America", "Western Europe"],
-        "recent_news":         [f"{company_name} announces Q1 2025 product updates"],
+        "founded":             "Unknown",
+        "headquarters":        "Unknown",
+        "employees":           "Unknown",
+        "market_segment":      "Enterprise",
+        "recent_funding":      "Undisclosed",
+        "market_position":     f"{company_name} is a vendor operating in the enterprise software market.",
+        "revenue_estimate":    "Not publicly disclosed",
+        "products":            [f"{company_name} Platform"],
+        "product_descriptions": {f"{company_name} Platform": f"Core platform offering from {company_name}."},
+        "tech_stack":          ["Cloud infrastructure", "API-first architecture"],
+        "key_executives":      [f"Details not publicly available — contact {company_name} directly"],
+        "main_competitors":    ["To be researched"],
+        "customer_segments":   ["Enterprise", "Mid-Market"],
+        "geographic_presence": ["North America"],
+        "recent_news":         [f"Visit {company_name}'s official website for the latest updates"],
         "analyst_rating":      "Not publicly rated",
         "business_model":      "SaaS subscription",
-        "growth_rate":         "Unknown",
+        "growth_rate":         "Not publicly disclosed",
     })
     return data
 
@@ -192,5 +306,7 @@ def _fallback(vendor_name: str, company_name: str) -> dict:
 def run_discovery(vendor_name: str) -> DiscoveryResult:
     web_context, sources, company_name = _ddg_search(vendor_name)
     data = _llm_profile(vendor_name, company_name, web_context) or _fallback(vendor_name, company_name)
-    data["sources"] = sources
+    # Merge live sources with static fallback so panel always shows something
+    static = _STATIC_SOURCES.get(company_name, [])
+    data["sources"] = list(dict.fromkeys(sources + static))  # dedupe, live first
     return DiscoveryResult(**data)
