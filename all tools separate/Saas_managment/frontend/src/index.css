@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #080A0F;
+  color: #E8ECFF;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+button,
+select,
+input {
+  font: inherit;
+}
+
+
+
+
+
