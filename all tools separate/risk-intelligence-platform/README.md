@@ -49,10 +49,7 @@ RiskIntel utilizes 10 distinct AI and heuristic agents. Each agent relies on tar
 | **Geopolitical Agent** | Geopolitical & Supply Chain | GDELT Event Feed API, Tavily Search, Gemini/OpenAI | Tracks regional logistics delays, shipping bottlenecks, import/export tariffs, and geopolitical conflicts. |
 | **Legal & Sanctions Agent** | Legal & Sanctions | OpenSanctions API, Tavily Search, Gemini/OpenAI | Performs watchlist checks against OFAC/UN lists, PEP records, and litigation history. |
 | **Compliance Agent** | Compliance Risk | Tavily Search API, Gemini/OpenAI | Validates presence of SOC 2, ISO 27001, HIPAA, GDPR alignment, or compliance fines. |
-| **Reputation Agent** | Reputation Risk | Tavily Search API, Gemini/OpenAI | Tracks brand sentiment, executive controversies, customer complaints, and negative press. |
-| **Threat Intel Agent** | Threat Intelligence | CISA KEV Feed API, AlienVault OTX, Tavily Search, Gemini/OpenAI | Identifies active zero-day exploits, threat actor targeting, and dark web credential dumps. |
-| **Profiling Agent** | Vendor Profile | OpenCorporates API, Tavily Search, Gemini/OpenAI | Pulls official corporate registration numbers, jurisdictions, HQ locations, and registration status. |
-| **Procurement Agent** | Unified Verdict | Gemini/OpenAI / Heuristics Engine | Synthesizes findings from the other 9 agents to yield a final verdict (e.g. *Approved*, *Reject*). |
+
 
 ---
 
