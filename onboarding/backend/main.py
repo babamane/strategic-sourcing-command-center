@@ -279,6 +279,24 @@ def run_step(session_id: str, step: str, db: Session = Depends(get_db)):
 
             if verdict.verdict in ("GO", "CONDITIONAL_GO"):
                 crud.promote_to_production(db, session_id, verdict)
+                # ── Auto-create vendor record in vendor_overview_patched_v5.csv ──
+                try:
+                    from backend.utils.csv_writer import append_vendor_row
+                    csv_row = append_vendor_row(
+                        vendor_name    = vendor,
+                        contract_data  = contract.model_dump(),
+                        discovery_data = discovery.model_dump(),
+                    )
+                    crud.add_audit_log(
+                        db, session_id, "VENDOR_RECORD_CREATED", "decision",
+                        {"of_id": csv_row["of_id"], "csv_row": csv_row},
+                    )
+                except Exception as csv_err:
+                    # Non-fatal — log but do not block the verdict response
+                    crud.add_audit_log(
+                        db, session_id, "VENDOR_RECORD_ERROR", "decision",
+                        {"error": str(csv_err)},
+                    )
             else:
                 session.final_verdict = verdict.verdict
                 session.status = "rejected"
