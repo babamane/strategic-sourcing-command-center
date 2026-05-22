@@ -1,0 +1,38 @@
+# ============================================================
+# VendorFlow AI / CRA — Python Dependencies
+# ============================================================
+
+# ── Web stack ──────────────────────────────────────────────
+fastapi>=0.124.1
+uvicorn[standard]>=0.34.0
+streamlit>=1.41.0
+requests>=2.32.4
+
+# ── Data / analytics ───────────────────────────────────────
+pandas==2.2.2
+numpy==1.26.4
+plotly==5.22.0
+statsmodels==0.14.2
+
+# ── Utilities ──────────────────────────────────────────────
+python-docx==1.1.2
+python-dotenv==1.0.1
+tzlocal==5.3
+uritemplate==3.0.1
+httpx==0.28.1
+python-dateutil>=2.8.2
+
+# ── Google APIs ────────────────────────────────────────────
+google-api-python-client>=2.157.0
+google-auth[pyopenssl]>=2.47.0
+google-auth-oauthlib==1.2.0
+google-auth-httplib2==0.2.0
+
+# ── Agent stack (optional — needed only for ADK intelligence) ──
+# Uncomment if you want the full ADK agent:
+# google-adk==1.31.1
+# litellm==1.74.0
+
+# ── Stability guards ───────────────────────────────────────
+pydantic>=2.6,<3
+anyio>=3.7,<5
