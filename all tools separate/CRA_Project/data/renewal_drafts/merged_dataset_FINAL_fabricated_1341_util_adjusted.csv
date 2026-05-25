@@ -1,0 +1,1343 @@
+Contract_ID,License_Type,Vendor,Start_Date,End_Date,Owner,Criticality,Days_to_Renewal,Renewal_Flag,Total_Users,Active_Users,Avg_Utilization_Pct,Total_Annual_Budget_USD,Total_Actual_Spend_USD,Spend%,Budget_Status,Total_True_Up_USD,Stages,Approval_Status,Max_Days_in_Stage
+C-1000,Contributor,Microsoft,14-05-2023,23-03-2026,IT,Medium,81,Warning,182,143,78.87,4538,3677,0.810288265,Near Limit,-861,Execution,Pending,9
+C-1001,Collaborator,Atlassify,29-11-2023,14-05-2026,IT,Medium,133,Planning,245,181,72.9,2538,1968,0.775330582,Healthy,-570,Approval,Approved,14
+C-1002,Collaborator,Microsoft,18-11-2023,22-04-2026,Procurement,Medium,111,Planning,161,124,91.18,3849,3347,0.869744384,Near Limit,-502,Approval,Approved,13
+C-1003,Collaborator,Nexaflow,02-08-2023,16-06-2026,Finance,Medium,166,Planning,157,30,30.12,2386,8616,3.610176245,Exceeded,6230,Execution,Pending,16
+C-1004,Contributor,Microsoft,31-03-2023,18-12-2026,Finance,Medium,351,Normal,182,143,86.87,282,301,1.067416049,Exceeded,19,Approval,Pending,13
+C-1005,Contributor,Microsoft,30-06-2023,20-02-2026,IT,Critical,50,Warning,182,35,19.46,8294,6756,0.814523431,Near Limit,-1538,Negotiation,Pending,15
+C-1006,Contributor,Microsoft,31-03-2023,23-05-2026,Procurement,Medium,142,Planning,182,143,78.87,4212,3517,0.834922402,Near Limit,-695,Approval,Pending,13
+C-1007,Contributor,Microsoft,22-01-2023,01-05-2026,Finance,Medium,120,Planning,182,143,78.87,1134,9850,8.683416829,Exceeded,8716,Execution,Approved,17
+C-1008,Collaborator,Prismly,13-04-2023,29-07-2026,Finance,Critical,209,Normal,245,181,72.9,1541,1421,0.922223772,Near Limit,-120,Negotiation,Pending,13
+C-1009,Collaborator,Microsoft,18-04-2023,19-09-2026,Procurement,High,261,Normal,161,124,76.18,2340,1949,0.8328,Near Limit,-391,Planning,Pending,13
+C-1010,Collaborator,Cloudora,15-06-2023,05-05-2026,Procurement,Critical,124,Planning,157,26,16.82,215,234,1.088581783,Exceeded,19,Approval,Pending,14
+C-1011,Contributor,Microsoft,09-10-2023,07-12-2026,Finance,Medium,340,Normal,182,49,27.03,1770,1472,0.831746649,Near Limit,-298,Approval,Approved,11
+C-1012,Collaborator,Nexaflow,10-03-2023,05-05-2026,IT,Critical,124,Planning,245,181,72.9,1148,1188,1.034431276,Exceeded,40,Planning,Approved,15
+C-1013,Collaborator,Microsoft,31-05-2023,23-01-2026,Finance,Critical,22,Critical,161,124,76.18,1431,1436,1.003278553,Exceeded,5,Planning,Pending,3
+C-1014,Collaborator,Cloudora,02-02-2023,27-08-2026,Procurement,High,238,Normal,157,114,75.23,1207,936,0.775672212,Healthy,-271,Execution,Pending,15
+C-1015,Collaborator,Databridge,16-11-2023,14-08-2026,IT,Medium,225,Normal,157,114,75.23,2956,2462,0.8328,Near Limit,-494,Negotiation,Pending,3
+C-1016,Collaborator,Veloxa,15-08-2023,26-12-2026,Finance,High,359,Normal,157,114,75.23,4567,2907,0.63649787,Healthy,-1660,Planning,Pending,16
+C-1017,Collaborator,Atlassify,11-01-2023,21-02-2026,Procurement,Critical,51,Warning,245,37,15.3,9938,6400,0.644014577,Healthy,-3538,Approval,Approved,3
+C-1018,Contributor,Microsoft,30-11-2023,19-12-2026,Procurement,Medium,352,Normal,182,143,78.87,1783,134,0.075517983,Healthy,-1649,Negotiation,Approved,16
+C-1019,Collaborator,Nexaflow,13-06-2023,27-06-2026,Procurement,Critical,177,Planning,157,114,75.23,3103,2035,0.656021387,Healthy,-1068,Planning,Pending,8
+C-1020,Collaborator,Cloudora,08-02-2023,07-11-2026,Finance,Medium,310,Normal,245,181,72.9,2063,1773,0.859740107,Near Limit,-290,Planning,Pending,14
+C-1021,Collaborator,Cloudora,26-12-2023,17-01-2026,Procurement,Critical,16,Critical,245,68,28,367,345,0.940655298,Near Limit,-22,Execution,Pending,12
+C-1022,Contributor,Microsoft,23-04-2023,26-04-2026,IT,Critical,115,Planning,182,143,78.87,2356,1093,0.4638592,Healthy,-1263,Negotiation,Pending,4
+C-1023,Contributor,Microsoft,01-01-2023,27-10-2026,Procurement,High,299,Normal,182,143,78.87,2112,2207,1.045012091,Exceeded,95,Execution,Approved,16
+C-1024,Collaborator,Databridge,24-03-2023,28-05-2026,Procurement,High,147,Planning,245,181,72.9,456,237,0.520777321,Healthy,-219,"Approval, ",Pending,10
+C-1025,Collaborator,Databridge,20-09-2023,02-10-2026,IT,High,274,Normal,245,181,72.9,3607,2270,0.629475894,Healthy,-1337,Planning,Pending,13
+C-1026,Contributor,Microsoft,16-09-2023,30-07-2026,Finance,High,210,Normal,182,143,78.87,342,324,0.947182482,Near Limit,-18,Execution,Approved,14
+C-1027,Contributor,Microsoft,15-01-2023,01-01-2026,IT,High,0,Critical,182,52,28.89,456,345,0.756425442,Healthy,-111,Approval,Approved,15
+C-1028,Collaborator,Databridge,24-06-2023,13-01-2026,IT,High,12,Critical,157,114,75.23,4789,143,0.030057582,Healthy,-4646,Negotiation,Approved,10
+C-1029,Collaborator,Veloxa,19-11-2023,15-02-2026,IT,High,45,Warning,157,114,75.23,2354,289,0.122747512,Healthy,-2065,Execution,Approved,4
+C-1030,Contributor,Microsoft,15-10-2023,05-10-2026,Finance,Critical,277,Normal,182,143,78.87,1561,1414,0.905962249,Near Limit,-147,Planning,Pending,12
+C-1031,Collaborator,Veloxa,19-03-2023,30-09-2026,Finance,Critical,272,Normal,245,181,72.9,345,324,0.938824741,Near Limit,-21,Approval,Approved,4
+C-1032,Collaborator,Databridge,19-06-2023,24-06-2026,Procurement,Medium,174,Planning,245,42,17.18,9918,10065,1.014862951,Exceeded,147,Planning,Pending,16
+C-1033,Contributor,Microsoft,04-06-2023,29-09-2026,Finance,Critical,271,Normal,182,143,78.87,3739,2415,0.645806059,Healthy,-1324,Approval,Approved,5
+C-1034,Collaborator,Microsoft,14-04-2023,29-12-2026,Finance,Medium,362,Normal,161,124,76.18,4875,4672,0.958314661,Exceeded,-203,Planning,Approved,13
+C-1035,Collaborator,Cloudora,02-10-2023,08-09-2026,IT,Critical,250,Normal,245,181,72.9,478,389,0.813053428,Near Limit,-89,Planning,Pending,17
+C-1036,Collaborator,Cloudora,07-12-2023,22-07-2026,Procurement,Medium,202,Normal,245,181,72.9,4195,3327,0.793143411,Healthy,-868,Planning,Pending,13
+C-1037,Contributor,Microsoft,24-01-2023,31-03-2026,Finance,Medium,89,Warning,182,24,13.6,4748,3215,0.67724928,Healthy,-1533,Execution,Approved,7
+C-1038,Collaborator,Microsoft,03-07-2023,17-11-2026,IT,Medium,320,Normal,161,124,76.18,3187,2154,0.676000432,Healthy,-1033,Planning,Pending,13
+C-1039,Collaborator,Atlassify,15-12-2023,30-03-2026,Finance,High,88,Warning,245,54,21.98,4657,345,0.074256164,Healthy,-4312,Planning,Pending,13
+C-1040,Contributor,Microsoft,27-07-2023,02-02-2026,Finance,Medium,32,Warning,182,143,78.87,5255,4178,0.795198649,Healthy,-1077,Negotiation,Pending,13
+C-1041,Collaborator,Microsoft,29-10-2023,09-02-2026,IT,High,39,Warning,161,124,76.18,4675,36749,7.860269291,Exceeded,32074,Planning,Pending,13
+C-1042,Collaborator,Veloxa,20-12-2023,26-06-2026,IT,Medium,176,Planning,245,181,72.9,3850,3494,0.907525319,Near Limit,-356,Planning,Pending,13
+C-1043,Collaborator,Atlassify,15-09-2023,03-05-2026,IT,Medium,122,Planning,157,114,75.23,234,223,0.954520433,Exceeded,-11,Approval,Pending,18
+C-1044,Collaborator,Nexaflow,08-10-2023,09-02-2026,Procurement,High,39,Warning,245,181,72.9,4481,4014,0.895752217,Near Limit,-467,Approval,Pending,13
+C-1045,Collaborator,Microsoft,14-04-2023,28-01-2026,Procurement,Critical,27,Critical,161,124,76.18,1235,1093,0.88492111,Near Limit,-142,Planning,Pending,13
+C-1046,Collaborator,Veloxa,11-11-2023,30-08-2026,Procurement,Critical,241,Normal,157,114,75.23,2845,2074,0.72916655,Healthy,-771,Planning,Pending,13
+C-1047,Collaborator,Databridge,20-10-2023,29-08-2026,IT,High,240,Normal,157,114,75.23,4208,4009,0.952644886,Exceeded,-199,Execution,Approved,1
+C-1048,Collaborator,Atlassify,12-02-2023,16-09-2026,Procurement,Medium,258,Normal,245,68,27.68,8064,5717,0.709006115,Healthy,-2347,Execution,Approved,15
+C-1049,Collaborator,Databridge,17-02-2023,29-07-2026,Procurement,Critical,209,Normal,157,114,75.23,5393,5123,0.950058798,Exceeded,-270,Execution,Approved,3
+C-1050,Collaborator,Microsoft,09-12-2023,04-07-2026,Finance,High,184,Normal,161,124,76.18,204,142,0.698325553,Healthy,-62,Planning,Pending,13
+C-1051,Contributor,Microsoft,26-03-2023,10-05-2026,Finance,Critical,129,Planning,182,46,25.71,384,287,0.747362924,Healthy,-97,Planning,Pending,3
+C-1052,Contributor,Microsoft,20-07-2023,19-11-2026,IT,High,322,Normal,182,143,78.87,1906,1317,0.690890541,Healthy,-589,Approval,Pending,13
+C-1053,Contributor,Microsoft,10-12-2023,31-08-2026,Procurement,Medium,242,Normal,182,143,78.87,2304,1497,0.649974069,Healthy,-807,Planning,Approved,15
+C-1054,Collaborator,Nexaflow,24-06-2023,31-01-2026,IT,Critical,30,Critical,245,181,72.9,3203,3270,1.020922081,Exceeded,67,Planning,Pending,13
+C-1055,Contributor,Microsoft,04-11-2023,26-11-2026,Procurement,Critical,329,Normal,182,143,78.87,1678,1489,0.887142351,Near Limit,-189,Negotiation,Approved,18
+C-1056,Collaborator,Prismly,28-01-2023,04-08-2026,IT,Medium,215,Normal,245,181,72.9,3401,2139,0.629001641,Healthy,-1262,Negotiation,Approved,17
+C-1057,Collaborator,Microsoft,19-10-2023,29-08-2026,Procurement,High,240,Normal,161,124,76.18,611,543,0.888987555,Near Limit,-68,Approval,Pending,7
+C-1058,Collaborator,Databridge,26-07-2023,21-11-2026,Procurement,Critical,324,Normal,245,181,72.9,2613,1794,0.686565543,Healthy,-819,Approval,Approved,9
+C-1059,Collaborator,Prismly,31-05-2023,29-10-2026,Procurement,High,301,Normal,245,181,72.9,3564,2268,0.636363279,Healthy,-1296,Planning,Pending,13
+C-1060,Collaborator,Prismly,27-04-2023,28-10-2026,IT,Medium,300,Normal,157,40,25.61,2894,210,0.072859906,Healthy,-2684,Planning,Pending,11
+C-1061,Contributor,Microsoft,31-03-2023,11-04-2026,IT,Critical,100,Planning,182,38,21.22,6424,4320,0.672535626,Healthy,-2104,Negotiation,Approved,11
+C-1062,Collaborator,Microsoft,28-04-2023,22-03-2026,Procurement,Medium,80,Warning,161,124,76.18,245,227,0.927751112,Near Limit,-18,Planning,Pending,13
+C-1063,Collaborator,Veloxa,09-07-2023,11-03-2026,IT,High,69,Warning,245,181,72.9,3648,3245,0.889627591,Near Limit,-403,Planning,Pending,13
+C-1064,Collaborator,Nexaflow,09-10-2023,30-06-2026,Procurement,Critical,180,Planning,245,45,18.52,2849,245,0.086235351,Healthy,-2604,Planning,Pending,13
+C-1065,Collaborator,Nexaflow,31-01-2023,17-06-2026,Procurement,Medium,167,Planning,245,68,27.8,2647,1890,0.713964484,Healthy,-757,Negotiation,Pending,10
+C-1066,Contributor,Microsoft,17-04-2023,26-08-2026,IT,High,237,Normal,182,143,78.87,3168,2660,0.839643036,Near Limit,-508,Approval,Approved,16
+C-1067,Contributor,Microsoft,18-03-2023,07-08-2026,IT,Critical,218,Normal,182,143,78.87,3482,2895,0.831379348,Near Limit,-587,Planning,Pending,13
+C-1068,Collaborator,Veloxa,10-12-2023,19-12-2026,Finance,Critical,352,Normal,157,114,75.23,3647,2674,0.733336185,Healthy,-973,Planning,Pending,7
+C-1069,Collaborator,Microsoft,25-12-2023,31-10-2026,Procurement,Medium,303,Normal,161,124,76.18,3624,3598,0.99287247,Exceeded,-26,Execution,Pending,8
+C-1070,Contributor,Microsoft,07-09-2023,08-09-2026,Procurement,Critical,250,Normal,182,143,78.87,4330,4484,1.035510704,Exceeded,154,Negotiation,Pending,4
+C-1071,Collaborator,Nexaflow,06-09-2023,08-05-2026,IT,Critical,127,Planning,245,181,72.9,3647,2367,0.64913282,Healthy,-1280,Planning,Pending,13
+C-1072,Collaborator,Microsoft,30-03-2023,19-03-2026,Finance,High,77,Warning,161,124,76.18,518,552,1.066013231,Exceeded,34,Planning,Pending,13
+C-1073,Contributor,Microsoft,09-12-2023,23-10-2026,IT,Critical,295,Normal,182,143,78.87,1856,1766,0.951543656,Exceeded,-90,Planning,Pending,13
+C-1074,Contributor,Microsoft,05-06-2023,20-12-2026,Procurement,Critical,353,Normal,182,143,78.87,7943,5224,0.65768539,Healthy,-2719,Execution,Pending,18
+C-1075,Collaborator,Veloxa,03-11-2023,21-10-2026,Finance,High,293,Normal,245,181,72.9,656,680,1.036636286,Exceeded,24,Planning,Pending,13
+C-1076,Contributor,Microsoft,30-12-2023,07-11-2026,Procurement,High,310,Normal,182,28,15.52,1878,1141,0.607820497,Healthy,-737,Approval,Approved,8
+C-1077,Collaborator,Cloudora,18-01-2023,30-03-2026,IT,High,88,Warning,245,181,72.9,4126,3575,0.866319896,Near Limit,-551,Planning,Pending,13
+C-1078,Collaborator,Microsoft,22-02-2023,02-05-2026,IT,High,121,Planning,161,124,76.18,2356,120,0.051334357,Healthy,-2236,Planning,Pending,13
+C-1079,Collaborator,Veloxa,05-01-2023,04-11-2026,Procurement,Medium,307,Normal,245,181,72.9,3647,234,0.064174187,Healthy,-3413,Negotiation,Approved,18
+C-1080,Contributor,Microsoft,31-03-2023,05-12-2026,IT,High,338,Normal,182,143,78.87,3784,339,0.089584472,Healthy,-3445,Planning,Pending,13
+C-1081,Collaborator,Microsoft,10-08-2023,23-04-2026,Finance,Critical,112,Planning,161,28,17.56,2346,2067,0.881247137,Near Limit,-279,Planning,Pending,13
+C-1082,Contributor,Microsoft,28-11-2023,10-05-2026,IT,High,129,Planning,182,143,78.87,3489,1278,0.366461682,Healthy,-2211,Planning,Pending,11
+C-1083,Contributor,Microsoft,12-04-2023,27-11-2026,Finance,Medium,330,Normal,182,143,78.87,3794,2754,0.726029278,Healthy,-1040,Planning,Pending,13
+C-1084,Contributor,Microsoft,12-09-2023,22-07-2026,IT,Critical,202,Normal,182,143,78.87,2347,289,0.1231062,Healthy,-2058,Approval,Pending,13
+C-1085,Collaborator,Microsoft,12-08-2023,18-02-2026,Procurement,Critical,48,Warning,161,124,76.18,2035,1698,0.834620592,Near Limit,-337,Planning,Pending,13
+C-1086,Contributor,Microsoft,28-02-2023,27-12-2026,IT,High,360,Normal,182,143,78.87,3074,2618,0.851907392,Near Limit,-456,Planning,Pending,13
+C-1087,Contributor,Microsoft,04-01-2023,03-01-2026,Finance,High,2,Critical,182,143,78.87,3639,1278,0.351250879,Healthy,-2361,Planning,Pending,13
+C-1088,Collaborator,Prismly,06-09-2023,15-10-2026,Finance,High,287,Normal,245,181,72.9,1289,345,0.268166176,Healthy,-944,Planning,Pending,13
+C-1089,Contributor,Microsoft,20-08-2023,09-06-2026,Procurement,Critical,159,Planning,182,47,25.88,3773,2862,0.758705779,Healthy,-911,Approval,Pending,13
+C-1090,Collaborator,Microsoft,04-03-2023,16-01-2026,Procurement,Medium,15,Critical,161,42,26.12,3456,256,0.074350008,Healthy,-3200,Approval,Pending,10
+C-1091,Contributor,Microsoft,01-01-2023,23-06-2026,Procurement,Critical,173,Planning,182,143,78.87,2374,1907,0.803133191,Near Limit,-467,Negotiation,"Approved, Pending",12
+C-1092,Collaborator,Prismly,31-12-2023,07-09-2026,IT,Critical,249,Normal,157,42,27.07,2500,2423,0.969240301,Exceeded,-77,Approval,Approved,10
+C-1093,Collaborator,Microsoft,01-05-2023,26-03-2026,Finance,High,84,Warning,161,124,76.18,2364,1890,0.799382187,Healthy,-474,Planning,Pending,12
+C-1094,Collaborator,Microsoft,21-03-2023,31-05-2026,Finance,High,150,Planning,161,124,76.18,3315,2809,0.847364608,Near Limit,-506,Planning,Pending,4
+C-1095,Collaborator,Microsoft,03-09-2023,01-02-2026,IT,Medium,31,Warning,161,124,76.18,3994,3173,0.794309963,Healthy,-821,Planning,Pending,12
+C-1096,Collaborator,Microsoft,11-04-2023,26-10-2026,Procurement,High,298,Normal,161,124,76.18,3218,3268,1.015609955,Exceeded,50,Approval,Approved,15
+C-1097,Collaborator,Microsoft,14-02-2023,26-11-2026,Procurement,Medium,329,Normal,161,124,76.18,2364,2189,0.925637713,Near Limit,-175,Planning,Pending,12
+C-1098,Contributor,Microsoft,22-05-2023,14-12-2026,Finance,Critical,347,Normal,182,143,78.87,3517,2705,0.769091896,Healthy,-812,Planning,Pending,12
+C-1099,Contributor,Microsoft,07-04-2023,24-12-2026,Procurement,Medium,357,Normal,182,143,78.87,969,830,0.85677399,Near Limit,-139,Execution,Approved,12
+C-1100,Collaborator,Atlassify,27-04-2023,11-11-2026,Procurement,Critical,314,Normal,157,114,75.23,3467,308,0.088901777,Healthy,-3159,Planning,Pending,12
+C-1101,Contributor,Microsoft,25-02-2023,25-11-2026,Finance,Medium,328,Normal,182,143,78.87,1278,106,0.083485009,Healthy,-1172,Approval,Pending,12
+C-1102,Collaborator,Databridge,02-07-2023,27-06-2026,Procurement,Critical,177,Planning,157,114,75.23,1541,1178,0.764411189,Healthy,-363,Planning,Pending,13
+C-1103,Collaborator,Databridge,28-11-2023,27-08-2026,Procurement,High,238,Normal,157,114,75.23,2508,1640,0.653683845,Healthy,-868,Planning,Pending,13
+C-1104,Collaborator,Microsoft,24-08-2023,15-10-2026,Finance,Critical,287,Normal,161,124,76.18,278,127,0.459201707,Healthy,-151,Planning,Pending,13
+C-1105,Contributor,Microsoft,13-07-2023,07-10-2026,Finance,High,279,Normal,182,143,78.87,2904,189,0.06519294,Healthy,-2715,Planning,Approved,19
+C-1106,Contributor,Microsoft,19-12-2023,07-04-2026,Procurement,Medium,96,Planning,182,143,78.87,2410,2413,1.001027886,Exceeded,3,Execution,Approved,5
+C-1107,Contributor,Microsoft,20-08-2023,08-01-2026,Procurement,Medium,7,Critical,182,30,16.83,3722,2568,0.690027643,Healthy,-1154,Negotiation,Approved,9
+C-1108,Collaborator,Cloudora,01-11-2023,14-09-2026,Procurement,Medium,256,Normal,157,114,75.23,2647,183,0.069154088,Healthy,-2464,Planning,Pending,13
+C-1109,Contributor,Microsoft,25-02-2023,12-11-2026,Procurement,Medium,315,Normal,182,143,78.87,1678,189,0.112595017,Healthy,-1489,Negotiation,Pending,1
+C-1110,Collaborator,Databridge,08-08-2023,08-06-2026,Procurement,Critical,158,Planning,245,181,72.9,1093,346,0.317150639,Healthy,-747,Planning,Pending,13
+C-1111,Collaborator,Cloudora,15-04-2023,08-09-2026,IT,High,250,Normal,245,181,72.9,9722,8782,0.903344648,Near Limit,-940,Negotiation,Approved,12
+C-1112,Collaborator,Microsoft,14-10-2023,12-07-2026,IT,Critical,192,Normal,161,124,76.18,1903,189,0.099478475,Healthy,-1714,Execution,Pending,6
+C-1113,Contributor,Microsoft,10-10-2023,12-11-2026,IT,Critical,315,Normal,182,143,78.87,2647,219,0.082720803,Healthy,-2428,Planning,Pending,13
+C-1114,Collaborator,Microsoft,30-10-2023,21-08-2026,Procurement,High,232,Normal,161,43,26.67,2776,2749,0.990415743,Exceeded,-27,Planning,Pending,12
+C-1115,Collaborator,Microsoft,25-02-2023,16-09-2026,IT,Medium,258,Normal,161,124,76.18,5433,4583,0.843491314,Near Limit,-850,Planning,Pending,14
+C-1116,Collaborator,Prismly,11-02-2023,18-07-2026,Procurement,High,198,Normal,245,181,72.9,5312,3564,0.67091449,Healthy,-1748,Planning,Pending,13
+C-1117,Contributor,Microsoft,07-11-2023,12-06-2026,Finance,High,162,Planning,182,143,78.87,1673,109,0.065522668,Healthy,-1564,Planning,Approved,5
+C-1118,Collaborator,Atlassify,10-10-2023,27-06-2026,IT,Medium,177,Planning,157,26,17.13,2766,3033,1.096168344,Exceeded,267,Planning,Pending,13
+C-1119,Collaborator,Databridge,02-04-2023,19-03-2026,Finance,Medium,77,Warning,157,114,75.23,6523,6106,0.936155653,Near Limit,-417,Planning,Pending,12
+C-1120,Collaborator,Prismly,06-08-2023,04-09-2026,IT,Medium,246,Normal,245,181,72.9,1345,256,0.19085549,Healthy,-1089,Planning,Approved,11
+C-1121,Collaborator,Atlassify,30-05-2023,29-01-2026,IT,Medium,28,Critical,245,71,29.1,2822,2507,0.888512905,Near Limit,-315,Planning,Pending,19
+C-1122,Collaborator,Microsoft,25-08-2023,10-07-2026,Procurement,Medium,190,Normal,161,124,76.18,4281,4326,1.010612233,Exceeded,45,Execution,Pending,18
+C-1123,Collaborator,Prismly,22-07-2023,31-10-2026,Finance,Critical,303,Normal,245,181,72.9,4892,3267,0.6678851,Healthy,-1625,Execution,Pending,11
+C-1124,Contributor,Microsoft,20-12-2023,29-05-2026,Procurement,Medium,148,Planning,182,143,78.87,2824,2749,0.973605056,Exceeded,-75,Approval,Approved,14
+C-1125,Contributor,Microsoft,07-02-2023,26-05-2026,IT,High,145,Planning,182,143,78.87,1193,725,0.60784046,Healthy,-468,Approval,Pending,11
+C-1126,Contributor,Microsoft,28-10-2023,23-10-2026,Finance,Critical,295,Normal,182,143,78.87,1581,1616,1.022040645,Exceeded,35,Approval,Approved,14
+C-1127,Collaborator,Veloxa,27-06-2023,05-12-2026,Finance,High,338,Normal,245,181,72.9,2094,145,0.069546727,Healthy,-1949,Negotiation,Approved,15
+C-1128,Collaborator,Databridge,30-07-2023,29-03-2026,IT,Critical,87,Warning,245,181,72.9,3093,245,0.079423242,Healthy,-2848,Negotiation,Approved,17
+C-1129,Contributor,Microsoft,29-10-2023,15-01-2026,Finance,Medium,14,Critical,182,143,78.87,2933,2471,0.842615415,Near Limit,-462,Negotiation,Pending,11
+C-1130,Collaborator,Veloxa,04-12-2023,17-01-2026,Procurement,Critical,16,Critical,245,46,18.8,4357,4629,1.06241736,Exceeded,272,Approval,Pending,19
+C-1131,Collaborator,Nexaflow,08-11-2023,26-05-2026,IT,Medium,145,Planning,157,114,75.23,469,464,0.989860553,Exceeded,-5,Execution,Approved,17
+C-1132,Collaborator,Nexaflow,01-10-2023,16-05-2026,Procurement,High,135,Planning,157,114,75.23,6566,5755,0.876373611,Near Limit,-811,Execution,Pending,11
+C-1133,Collaborator,Nexaflow,15-08-2023,14-11-2026,Finance,Medium,317,Normal,157,114,75.23,5054,4493,0.889041501,Near Limit,-561,Execution,Pending,2
+C-1134,Contributor,Microsoft,19-03-2023,24-11-2026,Finance,High,327,Normal,182,143,78.87,4567,235,0.051594466,Healthy,-4332,Approval,Approved,6
+C-1135,Contributor,Microsoft,04-03-2023,31-08-2026,Finance,Critical,242,Normal,182,143,78.87,5064,4632,0.914825612,Near Limit,-432,Planning,Pending,7
+C-1136,Contributor,Microsoft,17-02-2023,05-02-2026,Procurement,Medium,35,Warning,182,143,78.87,1832,1651,0.901069176,Near Limit,-181,Planning,Pending,8
+C-1137,Collaborator,Microsoft,11-03-2023,16-12-2026,Procurement,Critical,349,Normal,161,124,76.18,6124,4787,0.781715394,Healthy,-1337,Approval,Approved,9
+C-1138,Collaborator,Cloudora,10-02-2023,08-06-2026,IT,High,158,Planning,157,114,75.23,4648,3257,0.700843667,Healthy,-1391,Approval,Approved,10
+C-1139,Contributor,Microsoft,04-11-2023,15-03-2026,Finance,Critical,73,Warning,182,143,78.87,3310,2484,0.750697277,Healthy,-826,Approval,Approved,7
+C-1140,Contributor,Microsoft,07-03-2023,05-07-2026,Finance,Critical,185,Normal,182,143,78.87,2417,2133,0.882611514,Near Limit,-284,Planning,Approved,15
+C-1141,Collaborator,Microsoft,02-02-2023,15-02-2026,Finance,Critical,45,Warning,161,124,76.18,2347,1093,0.465763489,Healthy,-1254,Approval,Approved,9
+C-1142,Collaborator,Atlassify,30-06-2023,18-05-2026,Procurement,Medium,137,Planning,245,181,72.9,6574,6429,0.977967911,Exceeded,-145,Approval,Approved,12
+C-1143,Collaborator,Nexaflow,19-07-2023,10-05-2026,Finance,High,129,Planning,245,56,23.04,4738,3148,0.664420659,Healthy,-1590,Approval,Approved,6
+C-1144,Contributor,Microsoft,30-01-2023,17-01-2026,Finance,High,16,Critical,182,143,78.87,289,109,0.376636208,Healthy,-180,Negotiation,Pending,4
+C-1145,Collaborator,Microsoft,18-03-2023,24-05-2026,IT,Critical,143,Planning,161,124,76.18,188,119,0.630052082,Healthy,-69,Execution,Approved,7
+C-1146,Collaborator,Veloxa,23-12-2023,17-04-2026,IT,Medium,106,Planning,245,181,72.9,3511,2940,0.837208057,Near Limit,-571,Execution,Approved,4
+C-1147,Collaborator,Databridge,01-01-2023,07-08-2026,Procurement,High,218,Normal,157,114,75.23,1249,833,0.667113883,Healthy,-416,Negotiation,Pending,18
+C-1148,Collaborator,Cloudora,18-08-2023,02-05-2026,IT,High,121,Planning,157,36,22.93,2699,2809,1.040919613,Exceeded,110,Approval,Pending,6
+C-1149,Collaborator,Microsoft,03-01-2023,05-02-2026,Procurement,High,35,Warning,161,124,76.18,1455,1577,1.083904625,Exceeded,122,Negotiation,Pending,4
+C-1150,Collaborator,Databridge,31-10-2023,20-01-2026,IT,Medium,19,Critical,157,114,75.23,3057,2762,0.903650794,Near Limit,-295,Planning,Pending,13
+C-1151,Collaborator,Microsoft,08-12-2023,11-03-2026,IT,Critical,69,Warning,161,24,15.07,1783,108,0.060751027,Healthy,-1675,Planning,Pending,12
+C-1152,Collaborator,Nexaflow,06-10-2023,30-11-2026,IT,Critical,333,Normal,245,181,72.9,4567,4186,0.916695879,Near Limit,-381,Planning,Pending,11
+C-1153,Contributor,Microsoft,26-11-2023,08-03-2026,IT,High,66,Warning,182,143,78.87,847,928,1.095865453,Exceeded,81,Execution,Approved,17
+C-1154,Contributor,Microsoft,09-12-2023,21-08-2026,Finance,High,232,Normal,182,143,78.87,1637,109,0.066596493,Healthy,-1528,Execution,Pending,19
+C-1155,Collaborator,Microsoft,30-04-2023,22-10-2026,Finance,Critical,294,Normal,161,124,76.18,1679,126,0.075517404,Healthy,-1553,Planning,Pending,12
+C-1156,Collaborator,Nexaflow,10-12-2023,01-02-2026,Finance,High,31,Warning,157,114,75.23,2890,229,0.079243671,Healthy,-2661,Planning,Pending,11
+C-1157,Contributor,Microsoft,22-02-2023,12-01-2026,Finance,Critical,11,Critical,182,143,78.87,3547,273,0.077198823,Healthy,-3274,Approval,Approved,5
+C-1158,Collaborator,Microsoft,24-09-2023,03-08-2026,IT,High,214,Normal,161,124,76.18,2287,2437,1.065712244,Exceeded,150,Approval,Approved,6
+C-1159,Collaborator,Cloudora,17-05-2023,16-11-2026,Finance,Critical,319,Normal,245,181,72.9,2674,182,0.068076342,Healthy,-2492,Execution,Pending,14
+C-1160,Collaborator,Databridge,28-11-2023,22-01-2026,Finance,Medium,21,Critical,245,181,72.9,4631,4085,0.88198918,Near Limit,-546,Execution,Pending,12
+C-1161,Collaborator,Microsoft,30-04-2023,13-09-2026,IT,Medium,255,Normal,161,124,76.18,3546,2378,0.670727255,Healthy,-1168,Planning,Pending,19
+C-1162,Collaborator,Microsoft,23-10-2023,13-02-2026,Procurement,Medium,43,Warning,161,124,76.18,3785,3089,0.816005021,Near Limit,-696,Planning,Pending,11
+C-1163,Collaborator,Microsoft,09-11-2023,02-01-2026,IT,High,1,Critical,161,124,76.18,4895,4094,0.83637932,Near Limit,-801,Planning,Pending,12
+C-1164,Collaborator,Cloudora,20-11-2023,23-05-2026,IT,Critical,142,Planning,157,114,75.23,1264,109,0.086242525,Healthy,-1155,Planning,Pending,4
+C-1165,Collaborator,Cloudora,26-04-2023,24-03-2026,Procurement,Medium,82,Warning,245,181,72.9,267,128,0.479648363,Healthy,-139,Planning,Pending,6
+C-1166,Collaborator,Atlassify,24-11-2023,13-06-2026,Finance,High,163,Planning,245,181,72.9,2647,123,0.046712162,Healthy,-2524,Planning,Pending,8
+C-1167,Collaborator,Databridge,23-04-2023,19-05-2026,Finance,Medium,138,Planning,157,114,75.23,2768,1669,0.603043838,Healthy,-1099,Execution,Approved,3
+C-1168,Collaborator,Nexaflow,30-09-2023,15-08-2026,IT,Critical,226,Normal,157,114,75.23,278,128,0.46226317,Healthy,-150,Approval,Approved,9
+C-1169,Collaborator,Veloxa,12-03-2023,03-05-2026,Finance,High,122,Planning,157,114,75.23,3260,2706,0.830029688,Near Limit,-554,Execution,Pending,4
+C-1170,Collaborator,Cloudora,21-09-2023,27-06-2026,IT,Critical,177,Planning,245,48,19.58,4394,3768,0.857662832,Near Limit,-626,Negotiation,Pending,17
+C-1171,Collaborator,Nexaflow,30-11-2023,07-01-2026,IT,Medium,6,Critical,157,114,75.23,2563,128,0.050279571,Healthy,-2435,Approval,Pending,7
+C-1172,Collaborator,Databridge,17-01-2023,24-09-2026,Finance,Critical,266,Normal,245,181,72.9,289,210,0.727919515,Healthy,-79,Approval,Approved,11
+C-1173,Collaborator,Atlassify,10-09-2023,24-06-2026,Finance,High,174,Planning,157,114,75.23,3423,2779,0.811905397,Near Limit,-644,Execution,Pending,16
+C-1174,Contributor,Microsoft,03-01-2023,10-11-2026,Finance,Medium,313,Normal,182,143,78.87,4513,2785,0.617213378,Healthy,-1728,Planning,Pending,19
+C-1175,Collaborator,Cloudora,26-12-2023,28-04-2026,IT,Medium,117,Planning,157,114,75.23,4986,3764,0.754919415,Healthy,-1222,Planning,Pending,13
+C-1176,Collaborator,Prismly,13-05-2023,08-01-2026,Finance,High,7,Critical,157,114,75.23,246,108,0.440302863,Healthy,-138,Execution,Approved,6
+C-1177,Collaborator,Atlassify,30-01-2023,16-11-2026,Finance,Critical,319,Normal,245,181,72.9,4302,3678,0.855094091,Near Limit,-624,Execution,Pending,12
+C-1178,Collaborator,Microsoft,18-08-2023,10-08-2026,IT,High,221,Normal,161,124,76.18,2638,127,0.048445838,Healthy,-2511,Negotiation,Pending,13
+C-1179,Collaborator,Microsoft,30-11-2023,17-04-2026,Finance,High,106,Planning,161,124,76.18,3655,3388,0.926862115,Near Limit,-267,Negotiation,Approved,1
+C-1180,Collaborator,Cloudora,11-07-2023,23-06-2026,Procurement,Critical,173,Planning,157,20,12.99,3747,378,0.101030791,Healthy,-3369,Negotiation,Pending,11
+C-1181,Collaborator,Atlassify,08-10-2023,11-12-2026,Procurement,Critical,344,Normal,157,114,75.23,4736,3048,0.643584825,Healthy,-1688,Negotiation,Approved,5
+C-1182,Collaborator,Microsoft,12-07-2023,14-02-2026,Procurement,Medium,44,Warning,161,30,18.86,3647,326,0.089587286,Healthy,-3321,Planning,Pending,6
+C-1183,Collaborator,Microsoft,02-08-2023,20-07-2026,Finance,High,200,Normal,161,124,76.18,3814,3091,0.810392671,Near Limit,-723,Planning,Approved,11
+C-1184,Contributor,Microsoft,22-12-2023,06-08-2026,Finance,Critical,217,Normal,182,143,78.87,3674,673,0.183396805,Healthy,-3001,Planning,Approved,1
+C-1185,Collaborator,Microsoft,18-04-2023,01-02-2026,Finance,Medium,31,Warning,161,124,76.18,3223,2370,0.735568706,Healthy,-853,Planning,Pending,11
+C-1186,Collaborator,Prismly,28-08-2023,25-10-2026,Procurement,Critical,297,Normal,157,114,75.23,2739,223,0.081705515,Healthy,-2516,Approval,Approved,19
+C-1187,Collaborator,Cloudora,07-08-2023,29-12-2026,Finance,High,362,Normal,245,181,72.9,2915,2848,0.976900472,Exceeded,-67,Approval,Pending,7
+C-1188,Collaborator,Microsoft,10-08-2023,30-03-2026,IT,Medium,88,Warning,161,124,76.18,364,178,0.488882007,Healthy,-186,Approval,Pending,3
+C-1189,Collaborator,Nexaflow,27-07-2023,20-03-2026,Procurement,Critical,78,Warning,245,181,72.9,4859,278,0.057311062,Healthy,-4581,Approval,Pending,4
+C-1190,Collaborator,Atlassify,13-05-2023,27-02-2026,Procurement,Critical,57,Warning,245,181,72.9,274,190,0.692590059,Healthy,-84,Approval,Pending,6
+C-1191,Collaborator,Veloxa,30-05-2023,02-12-2026,Finance,Medium,335,Normal,157,114,75.23,461,495,1.071772914,Exceeded,34,Approval,Pending,7
+C-1192,Contributor,Microsoft,27-08-2023,11-01-2026,IT,Medium,10,Critical,182,23,13.1,2391,1858,0.777077558,Healthy,-533,Approval,Approved,4
+C-1193,Collaborator,Microsoft,05-06-2023,16-03-2026,IT,Critical,74,Warning,161,124,76.18,2440,1706,0.699372416,Healthy,-734,Execution,Pending,15
+C-1194,Collaborator,Microsoft,27-03-2023,08-05-2026,Procurement,Medium,127,Planning,161,124,76.18,647,278,0.430068402,Healthy,-369,Execution,Pending,12
+C-1195,Contributor,Microsoft,09-10-2023,23-08-2026,Finance,Medium,234,Normal,182,143,78.87,4027,3343,0.830042957,Near Limit,-684,Negotiation,Pending,13
+C-1196,Collaborator,Microsoft,06-01-2023,01-11-2026,IT,Critical,304,Normal,161,124,76.18,1829,1408,0.769720686,Healthy,-421,Negotiation,Pending,11
+C-1197,Collaborator,Cloudora,23-06-2023,28-10-2026,IT,Critical,300,Normal,245,181,72.9,3198,2199,0.687719904,Healthy,-999,Negotiation,Pending,12
+C-1198,Contributor,Microsoft,01-10-2023,19-02-2026,IT,Medium,49,Warning,182,143,78.87,780,6496,8.327817617,Exceeded,5716,Execution,Pending,18
+C-1199,Collaborator,Veloxa,27-11-2023,30-01-2026,Finance,High,29,Critical,245,181,72.9,622,420,0.675595477,Healthy,-202,Planning,Pending,19
+C-1200,Collaborator,Microsoft,23-10-2023,15-10-2026,Procurement,Medium,287,Normal,161,124,76.18,624,289,0.4632187,Healthy,-335,Execution,Approved,14
+C-1201,Contributor,Microsoft,01-06-2023,09-01-2026,Finance,High,8,Critical,182,143,78.87,3893,2564,0.658510854,Healthy,-1329,Planning,Approved,6
+C-1202,Collaborator,Atlassify,14-07-2023,12-09-2026,Procurement,High,254,Normal,157,114,75.23,8695,8564,0.984876713,Exceeded,-131,Planning,Pending,11
+C-1203,Collaborator,Nexaflow,29-11-2023,23-04-2026,Finance,Critical,112,Planning,245,181,72.9,490,390,0.796633115,Healthy,-100,Approval,Pending,3
+C-1204,Collaborator,Microsoft,22-02-2023,07-09-2026,Procurement,Medium,249,Normal,161,124,76.18,6379,127,0.020038415,Healthy,-6252,Approval,Approved,12
+C-1205,Collaborator,Microsoft,08-10-2023,29-03-2026,Finance,High,87,Warning,161,124,76.18,288,273,0.948605553,Near Limit,-15,Approval,Approved,13
+C-1206,Collaborator,Microsoft,03-01-2023,13-09-2026,IT,High,255,Normal,161,124,76.18,4244,3145,0.741062907,Healthy,-1099,Approval,Approved,10
+C-1207,Collaborator,Cloudora,19-07-2023,20-10-2026,Procurement,Critical,292,Normal,157,114,75.23,840,775,0.922582226,Near Limit,-65,Approval,Pending,3
+C-1208,Contributor,Microsoft,12-04-2023,04-03-2026,IT,Critical,62,Warning,182,143,78.87,358,137,0.384591565,Healthy,-221,Negotiation,Approved,13
+C-1209,Collaborator,Veloxa,13-03-2023,12-08-2026,Finance,Medium,223,Normal,245,181,72.9,382,238,0.624051099,Healthy,-144,Execution,Approved,14
+C-1210,Collaborator,Veloxa,09-09-2023,26-10-2026,IT,Medium,298,Normal,245,181,72.9,528,355,0.672499503,Healthy,-173,Execution,Pending,12
+C-1211,Contributor,Microsoft,08-07-2023,06-12-2026,IT,Medium,339,Normal,182,143,78.87,468,8520,18.18646528,Exceeded,8052,Planning,Pending,11
+C-1212,Contributor,Microsoft,22-08-2023,29-11-2026,Finance,Medium,332,Normal,182,143,78.87,7489,263,0.035221454,Healthy,-7226,Planning,Pending,10
+C-1213,Contributor,Microsoft,19-10-2023,19-08-2026,Procurement,Medium,230,Normal,182,143,78.87,5126,4491,0.876107211,Near Limit,-635,Planning,Pending,7
+C-1214,Collaborator,Microsoft,19-12-2023,19-02-2026,Finance,Medium,49,Warning,161,124,76.18,4620,3817,0.82614684,Near Limit,-803,Negotiation,Approved,18
+C-1215,Collaborator,Databridge,25-04-2023,03-03-2026,Finance,High,61,Warning,245,181,72.9,4712,3233,0.686204263,Healthy,-1479,Negotiation,Pending,4
+C-1216,Collaborator,Veloxa,09-10-2023,23-04-2026,Finance,High,112,Planning,245,181,72.9,4650,3682,0.791973407,Healthy,-968,Negotiation,Pending,5
+C-1217,Collaborator,Microsoft,19-06-2023,17-07-2026,Finance,Critical,197,Normal,161,124,76.18,7205,6780,0.94108044,Near Limit,-425,Planning,Pending,8
+C-1218,Collaborator,Nexaflow,01-08-2023,22-03-2026,Finance,High,80,Warning,245,181,72.9,268,273,1.017843731,Exceeded,5,Execution,Pending,11
+C-1219,Contributor,Microsoft,04-11-2023,13-06-2026,Finance,Critical,163,Planning,182,143,78.87,357,283,0.793720769,Healthy,-74,Planning,Pending,7
+C-1220,Collaborator,Microsoft,19-09-2023,21-11-2026,Procurement,High,324,Normal,161,124,76.18,1297,1783,1.374691039,Exceeded,486,Planning,Pending,12
+C-1221,Collaborator,Cloudora,13-09-2023,27-01-2026,Finance,Critical,26,Critical,157,39,25.1,369,8058,21.80999951,Exceeded,7689,Planning,Pending,11
+C-1222,Collaborator,Microsoft,21-03-2023,01-10-2026,Procurement,Critical,273,Normal,161,124,76.18,368,367,0.997332262,Exceeded,-1,Approval,Pending,9
+C-1223,Collaborator,Atlassify,24-10-2023,04-11-2026,IT,Medium,307,Normal,157,114,75.23,3788,3003,0.792795482,Healthy,-785,Approval,Approved,13
+C-1224,Contributor,Microsoft,18-09-2023,27-03-2026,IT,Medium,85,Warning,182,143,78.87,2382,478,0.200855551,Healthy,-1904,Planning,Pending,15
+C-1225,Contributor,Microsoft,09-01-2023,16-07-2026,IT,High,196,Normal,182,143,78.87,257,4082,15.84681695,Exceeded,3825,Planning,Pending,13
+C-1226,Contributor,Microsoft,07-03-2023,30-07-2026,IT,Medium,210,Normal,182,40,22.26,3645,2533,0.695170842,Healthy,-1112,Execution,Pending,19
+C-1227,Collaborator,Nexaflow,21-01-2023,14-08-2026,Finance,High,225,Normal,157,114,75.23,564,478,0.847444812,Near Limit,-86,Execution,Pending,16
+C-1228,Contributor,Microsoft,16-09-2023,04-01-2026,Procurement,Medium,3,Critical,182,143,78.87,1248,802,0.642551784,Healthy,-446,Execution,Pending,16
+C-1229,Collaborator,Veloxa,24-06-2023,11-07-2026,IT,Critical,191,Normal,245,181,72.9,678,478,0.705319408,Healthy,-200,Planning,Pending,11
+C-1230,Collaborator,Atlassify,19-03-2023,01-12-2026,IT,Medium,334,Normal,245,181,72.9,389,278,0.715042762,Healthy,-111,Approval,Pending,3
+C-1231,Collaborator,Microsoft,22-09-2023,17-09-2026,IT,High,259,Normal,161,44,27.67,2376,109,0.046019245,Healthy,-2267,Negotiation,Approved,3
+C-1232,Contributor,Microsoft,20-05-2023,19-02-2026,IT,High,49,Warning,182,143,78.87,357,190,0.532329364,Healthy,-167,Negotiation,Pending,6
+C-1233,Collaborator,Microsoft,06-03-2023,15-05-2026,Finance,High,134,Planning,161,124,76.18,379,849,2.236443213,Exceeded,470,Negotiation,Approved,8
+C-1234,Collaborator,Cloudora,11-01-2023,28-03-2026,Finance,Critical,86,Warning,245,181,72.9,4202,3016,0.717849964,Healthy,-1186,Planning,Pending,19
+C-1235,Collaborator,Microsoft,28-12-2023,19-07-2026,Finance,High,199,Normal,161,124,76.18,2889,103,0.035984304,Healthy,-2786,Planning,Pending,11
+C-1236,Contributor,Microsoft,01-05-2023,18-11-2026,IT,Critical,321,Normal,182,143,78.87,354,203,0.574261053,Healthy,-151,Planning,Pending,12
+C-1237,Contributor,Microsoft,11-10-2023,19-03-2026,Finance,Medium,77,Warning,182,143,78.87,2835,2973,1.048633225,Exceeded,138,Approval,Approved,13
+C-1238,Collaborator,Microsoft,01-02-2023,06-12-2026,IT,High,339,Normal,161,124,76.18,138,13303,95.72207592,Exceeded,13165,Execution,Pending,19
+C-1239,Collaborator,Microsoft,01-02-2023,13-04-2026,Finance,Critical,102,Planning,161,32,20.1,3277,5608,1.710986364,Exceeded,2331,Execution,Pending,15
+C-1240,Collaborator,Cloudora,17-10-2023,16-07-2026,Procurement,Medium,196,Normal,245,181,72.9,3601,2937,0.815815533,Near Limit,-664,Planning,Approved,16
+C-1241,Collaborator,Prismly,23-09-2023,27-02-2026,Procurement,Medium,57,Warning,245,49,20.19,3792,290,0.076562757,Healthy,-3502,Execution,Pending,14
+C-1242,Contributor,Microsoft,10-08-2023,28-07-2026,Finance,High,208,Normal,182,143,78.87,3798,278,0.073375671,Healthy,-3520,Planning,Pending,19
+C-1243,Collaborator,Prismly,01-12-2023,06-02-2026,Finance,High,36,Warning,157,114,75.23,128,107,0.836351369,Near Limit,-21,Planning,Pending,15
+C-1244,Collaborator,Microsoft,08-03-2023,17-03-2026,IT,Medium,75,Warning,161,124,76.18,3466,2198,0.634138532,Healthy,-1268,Planning,Pending,4
+C-1245,Collaborator,Microsoft,26-11-2023,31-07-2026,Finance,High,211,Normal,161,34,21.28,3687,6024,1.633803336,Exceeded,2337,Execution,Pending,8
+C-1246,Collaborator,Atlassify,23-07-2023,20-07-2026,Procurement,Medium,200,Normal,157,114,75.23,2946,2326,0.789687262,Healthy,-620,Planning,Pending,1
+C-1247,Collaborator,Prismly,02-05-2023,16-11-2026,Finance,Medium,319,Normal,245,181,72.9,463,328,0.709559751,Healthy,-135,Negotiation,Pending,11
+C-1248,Collaborator,Databridge,18-11-2023,21-12-2026,IT,Critical,354,Normal,157,114,75.23,476,359,0.753488889,Healthy,-117,Planning,Pending,17
+C-1249,Contributor,Microsoft,11-07-2023,02-12-2026,Finance,Critical,335,Normal,182,143,78.87,136,109,0.802002208,Near Limit,-27,Planning,Pending,12
+C-1251,Contributor,Microsoft,24-11-2023,27-02-2026,IT,Medium,57,Warning,150,44,29.41,168,108,0.646964847,Healthy,-60,Execution,Pending,16
+C-1293,Contributor,Microsoft,13-03-2023,22-02-2026,IT,Critical,52,Warning,150,27,18.36,1792,189,0.105643255,Healthy,-1603,Approval,Pending,6
+C-1255,Full,Veloxa,17-01-2023,16-01-2026,IT,Low,15,Critical,155,113,74.79,190,112,0.590438,Healthy,-78,Planning,Pending,12
+C-1295,Full,Cloudora,15-10-2023,12-04-2026,Finance,Medium,101,Normal,155,113,74.79,1997,109,0.054708315,Healthy,-1888,Planning,Pending,11
+C-1296,Collaborator,Salesforce,18-11-2023,05-11-2026,Procurement,Critical,307,Normal,98,21,21.94,3611,2683,0.743007477,Healthy,-928,Approval,Pending,4
+C-1297,Collaborator,Nexaflow,12-11-2023,18-02-2026,IT,Medium,47,Warning,245,173,70.74,13814,11562,0.83697698,Near Limit,-2252,Approval,Approved,17
+C-1298,Collaborator,Microsoft,08-05-2025,04-02-2027,Procurement,Critical,398,Normal,161,132,82.26,1671,967,0.578695392,Healthy,-704,Approval,Pending,4
+C-1299,Collaborator,Veloxa,05-07-2025,02-02-2027,Procurement,Critical,396,Normal,245,196,80.1,419,388,0.92601432,Near Limit,-31,Execution,Pending,5
+C-1300,Collaborator,Atlassify,19-06-2024,31-05-2026,Finance,Medium,149,Planning,157,96,61.4,193,66,0.341968912,Healthy,-127,Planning,Pending,12
+C-1301,Contributor,Microsoft,30-06-2025,23-01-2027,Procurement,Medium,386,Normal,182,147,80.7,11877,10419,0.877241728,Near Limit,-1458,Execution,Approved,11
+C-1302,Contributor,Microsoft,31-01-2025,03-02-2027,Procurement,High,397,Normal,182,151,83.17,1187,657,0.553496209,Healthy,-530,Planning,Approved,9
+C-1303,Full,Microsoft,19-01-2024,01-01-2027,Procurement,Critical,364,Normal,210,143,68.38,617,449,0.727714749,Healthy,-168,Approval,Approved,9
+C-1304,Collaborator,Microsoft,21-09-2023,03-03-2026,Finance,Critical,60,Warning,161,125,78.04,517,215,0.415860735,Healthy,-302,Planning,Pending,11
+C-1305,Contributor,Microsoft,01-11-2023,11-09-2026,Finance,High,252,Normal,182,135,74.4,1369,1383,1.010226443,Exceeded,14,Execution,Approved,11
+C-1306,Collaborator,Nexaflow,29-06-2025,11-01-2027,Procurement,High,374,Normal,245,162,65.97,4260,5481,1.286619718,Exceeded,1221,Planning,Pending,9
+C-1307,Collaborator,Microsoft,12-09-2023,30-03-2026,Finance,High,87,Warning,161,134,83.56,365,141,0.38630137,Healthy,-224,Execution,Pending,6
+C-1308,Full,Microsoft,07-04-2024,24-02-2027,Finance,High,418,Normal,210,154,73.62,897,2909,3.24303233,Exceeded,2012,Negotiation,Pending,9
+C-1309,Collaborator,Prismly,22-11-2025,30-01-2027,Procurement,High,393,Normal,245,209,85.39,2605,1776,0.681765835,Healthy,-829,Planning,Approved,17
+C-1310,Collaborator,Nexaflow,09-03-2023,21-02-2026,Finance,Medium,50,Warning,157,117,75.03,2472,1443,0.583737864,Healthy,-1029,Planning,Pending,3
+C-1311,Collaborator,Nexaflow,15-10-2023,10-04-2026,Finance,Critical,98,Planning,157,117,74.97,461,453,0.982646421,Near Limit,-8,Planning,Pending,7
+C-1312,Collaborator,Microsoft,23-02-2025,28-12-2026,IT,Medium,360,Normal,161,158,98.2,3291,2147,0.652385293,Healthy,-1144,Planning,Approved,16
+C-1313,Contributor,Salesforce,26-09-2023,25-06-2026,Finance,High,174,Planning,320,267,83.66,1934,1866,0.96483971,Near Limit,-68,Approval,Approved,8
+C-1314,Collaborator,Microsoft,13-08-2024,24-10-2026,Procurement,Medium,295,Normal,161,130,80.65,3174,4892,1.541272842,Exceeded,1718,Planning,Approved,7
+C-1315,Contributor,Microsoft,04-08-2024,13-10-2026,Finance,Medium,284,Normal,182,158,87.12,558,564,1.010752688,Exceeded,6,Planning,Approved,7
+C-1316,Contributor,Microsoft,02-10-2024,03-07-2026,IT,High,182,Normal,182,145,79.82,1753,1771,1.010268112,Exceeded,18,Negotiation,Pending,15
+C-1317,Contributor,AWS,09-12-2024,18-03-2026,Procurement,High,75,Warning,182,140,77.03,3820,2137,0.559424084,Healthy,-1683,Planning,Approved,15
+C-1318,Collaborator,Cloudora,28-04-2025,25-12-2026,Finance,High,357,Normal,245,175,71.35,5065,18144,3.582230997,Exceeded,13079,Planning,Pending,7
+C-1319,Collaborator,Salesforce,09-09-2024,09-04-2026,Procurement,High,97,Planning,98,70,72.04,1773,963,0.543147208,Healthy,-810,Planning,Pending,13
+C-1320,Full,Microsoft,18-12-2023,26-02-2026,Finance,Critical,55,Warning,210,157,74.9,346,283,0.817919075,Near Limit,-63,Approval,Approved,17
+C-1321,Collaborator,Databridge,19-08-2023,29-03-2026,IT,High,86,Warning,157,135,86.11,392,81,0.206632653,Healthy,-311,Execution,Approved,16
+C-1322,Collaborator,Salesforce,25-08-2024,12-03-2026,Finance,Critical,69,Warning,98,21,22.04,2576,2602,1.010093168,Exceeded,26,Planning,Pending,5
+C-1323,Collaborator,Cloudora,10-12-2023,05-12-2026,Procurement,High,337,Normal,98,90,92.24,3686,3034,0.823114487,Near Limit,-652,Approval,Pending,4
+C-1324,Contributor,Microsoft,25-10-2024,15-09-2026,Procurement,Medium,256,Normal,182,151,82.89,2505,3015,1.203592814,Exceeded,510,Planning,Pending,14
+C-1325,Full,Microsoft,21-02-2024,12-12-2026,IT,High,344,Normal,260,38,14.65,7343,5381,0.732806755,Healthy,-1962,Execution,Approved,5
+C-1326,Contributor,Microsoft,24-12-2023,09-09-2026,IT,Critical,250,Normal,182,135,74.18,4393,4214,0.959253358,Near Limit,-179,Planning,Approved,16
+C-1327,Contributor,Microsoft,06-11-2024,28-02-2026,Procurement,High,57,Warning,182,120,66.12,327,330,1.009174312,Exceeded,3,Planning,Pending,7
+C-1328,Collaborator,Microsoft,20-08-2025,02-01-2027,Procurement,Medium,365,Normal,161,108,67,6589,5453,0.82759144,Near Limit,-1136,Negotiation,Pending,14
+C-1329,Collaborator,Veloxa,11-10-2024,20-10-2026,IT,Critical,291,Normal,157,125,80,8198,2828,0.344962186,Healthy,-5370,Planning,Pending,4
+C-1330,Collaborator,Cloudora,06-10-2024,27-05-2026,IT,Medium,145,Planning,245,169,68.95,2872,2606,0.907381616,Near Limit,-266,Execution,Pending,10
+C-1331,Collaborator,Prismly,03-08-2024,06-11-2026,Procurement,High,308,Normal,245,230,93.89,399,447,1.120300752,Exceeded,48,Approval,Pending,14
+C-1332,Collaborator,Microsoft,17-05-2024,26-01-2027,IT,Medium,389,Normal,161,127,78.85,4041,2527,0.625340262,Healthy,-1514,Planning,Pending,8
+C-1333,Full,Salesforce,05-02-2025,31-10-2026,Finance,High,302,Normal,210,144,68.57,2799,2614,0.933904966,Near Limit,-185,Planning,Pending,14
+C-1334,Contributor,Microsoft,03-02-2024,10-10-2026,IT,Medium,281,Normal,182,165,90.95,265,116,0.437735849,Healthy,-149,Planning,Approved,15
+C-1335,Collaborator,Salesforce,01-11-2023,29-08-2026,IT,Medium,239,Normal,98,84,86.53,6812,6088,0.89371697,Near Limit,-724,Planning,Pending,7
+C-1336,Collaborator,Salesforce,27-01-2025,10-03-2026,IT,High,67,Warning,98,75,77.14,3742,2402,0.641902726,Healthy,-1340,Negotiation,Pending,8
+C-1337,Full,AWS,26-12-2024,21-01-2027,Procurement,Medium,384,Normal,260,182,70.31,2533,929,0.366758784,Healthy,-1604,Planning,Approved,16
+C-1338,Contributor,AWS,19-03-2025,09-10-2026,Finance,High,280,Normal,145,121,83.52,4875,3107,0.637333333,Healthy,-1768,Negotiation,Pending,17
+C-1339,Full,AWS,03-05-2024,22-03-2026,Procurement,Medium,79,Warning,260,57,22.15,4268,2644,0.619493908,Healthy,-1624,Execution,Approved,17
+C-1340,Contributor,Microsoft,21-02-2024,28-01-2026,Procurement,High,26,Critical,182,118,65.19,1509,1001,0.663353214,Healthy,-508,Negotiation,Pending,14
+C-1341,Contributor,Microsoft,03-01-2024,10-06-2026,Finance,Medium,159,Planning,182,148,81.63,3516,1055,0.300056883,Healthy,-2461,Approval,Pending,14
+C-1342,Contributor,Microsoft,26-02-2024,16-12-2026,IT,Medium,348,Normal,182,161,88.71,2842,2870,1.009852217,Exceeded,28,Approval,Approved,15
+C-1343,Collaborator,Microsoft,07-05-2024,17-10-2026,Finance,Medium,288,Normal,161,135,83.81,3656,1894,0.518052516,Healthy,-1762,Negotiation,Pending,7
+C-1344,Collaborator,Prismly,31-10-2024,26-07-2026,Procurement,High,205,Normal,245,158,64.67,2767,2394,0.865196964,Near Limit,-373,Planning,Pending,3
+C-1345,Collaborator,Salesforce,19-03-2025,13-11-2026,Finance,Critical,315,Normal,98,86,87.86,180,154,0.855555556,Near Limit,-26,Planning,Pending,14
+C-1346,Collaborator,Microsoft,11-08-2023,09-03-2026,Finance,High,66,Warning,161,134,83.31,4149,4190,1.009881899,Exceeded,41,Execution,Approved,17
+C-1347,Collaborator,Databridge,12-08-2024,26-06-2026,IT,Critical,175,Planning,245,192,78.27,2667,512,0.191976003,Healthy,-2155,Approval,Pending,4
+C-1348,Contributor,Microsoft,07-09-2024,02-02-2027,Finance,High,396,Normal,182,131,72.15,2861,634,0.221600839,Healthy,-2227,Negotiation,Approved,8
+C-1349,Collaborator,Veloxa,22-06-2023,02-03-2026,Finance,High,59,Warning,245,180,73.26,2068,1744,0.843326886,Near Limit,-324,Planning,Pending,6
+C-1350,Contributor,Microsoft,07-06-2025,16-09-2026,Procurement,Medium,257,Normal,182,148,81.25,290,159,0.548275862,Healthy,-131,Planning,Pending,5
+C-1351,Collaborator,Atlassify,15-01-2025,14-05-2026,Finance,Critical,132,Planning,157,112,71.34,2228,1195,0.536355476,Healthy,-1033,Negotiation,Pending,6
+C-1352,Full,Salesforce,02-01-2025,02-11-2026,Procurement,High,304,Normal,210,161,77.05,275,70,0.254545455,Healthy,-205,Execution,Pending,3
+C-1353,Full,Salesforce,21-09-2025,04-01-2027,Procurement,High,367,Normal,210,130,62.14,5325,855,0.16056338,Healthy,-4470,Negotiation,Pending,10
+C-1354,Collaborator,Microsoft,30-09-2024,19-04-2026,Procurement,High,107,Planning,161,111,68.98,4072,4368,1.072691552,Exceeded,296,Approval,Approved,7
+C-1355,Contributor,AWS,18-08-2024,29-12-2026,IT,High,361,Normal,145,107,73.93,4170,1999,0.479376499,Healthy,-2171,Planning,Pending,14
+C-1356,Collaborator,Cloudora,25-03-2024,09-08-2026,Finance,Critical,219,Normal,245,181,73.95,3493,4991,1.428857715,Exceeded,1498,Planning,Pending,5
+C-1357,Contributor,Salesforce,22-09-2023,13-03-2026,IT,High,70,Warning,320,227,71.22,2914,2943,1.009951956,Exceeded,29,Planning,Approved,4
+C-1358,Full,Salesforce,11-09-2023,25-06-2026,Procurement,High,174,Planning,210,34,16.38,1484,794,0.535040431,Healthy,-690,Negotiation,Pending,12
+C-1359,Contributor,Microsoft,28-04-2024,13-09-2026,IT,Medium,254,Normal,182,116,64.04,3135,3033,0.967464115,Near Limit,-102,Planning,Approved,6
+C-1360,Collaborator,Microsoft,15-07-2024,04-07-2026,IT,Medium,183,Normal,161,132,82.01,2109,714,0.338549075,Healthy,-1395,Execution,Pending,10
+C-1361,Collaborator,AWS,29-06-2025,08-10-2026,Procurement,Critical,279,Normal,161,138,85.73,4379,3954,0.902945878,Near Limit,-425,Planning,Pending,4
+C-1362,Collaborator,Microsoft,23-04-2025,21-01-2027,IT,Critical,384,Normal,161,128,79.4,986,4371,4.43306288,Exceeded,3385,Negotiation,Approved,14
+C-1363,Collaborator,Microsoft,16-02-2025,15-08-2026,Finance,High,225,Normal,161,137,85.24,180,56,0.311111111,Healthy,-124,Planning,Approved,16
+C-1364,Contributor,AWS,24-09-2024,18-10-2026,Procurement,High,289,Normal,182,149,81.96,2058,5100,2.478134111,Exceeded,3042,Negotiation,Approved,4
+C-1365,Collaborator,Cloudora,04-10-2023,08-08-2026,Finance,Medium,218,Normal,245,197,80.46,1989,537,0.269984917,Healthy,-1452,Negotiation,Pending,9
+C-1366,Collaborator,Salesforce,08-10-2025,13-11-2026,Finance,Critical,315,Normal,98,93,95,2630,2210,0.840304183,Near Limit,-420,Negotiation,Pending,12
+C-1367,Collaborator,Veloxa,02-11-2024,05-10-2026,Procurement,Medium,276,Normal,245,179,72.89,693,700,1.01010101,Exceeded,7,Execution,Approved,12
+C-1368,Collaborator,Atlassify,05-07-2025,12-11-2026,IT,Critical,314,Normal,157,127,81.46,2637,2663,1.009859689,Exceeded,26,Execution,Approved,3
+C-1369,Contributor,AWS,04-11-2023,16-04-2026,Procurement,High,104,Planning,145,132,91.59,3952,1625,0.411184211,Healthy,-2327,Approval,Approved,9
+C-1370,Collaborator,Microsoft,04-06-2025,30-01-2027,IT,High,393,Normal,161,140,87.22,180,148,0.822222222,Near Limit,-32,Planning,Approved,15
+C-1371,Collaborator,Microsoft,23-12-2023,22-05-2026,Procurement,Medium,140,Planning,161,114,71.09,5202,4030,0.774702038,Healthy,-1172,Planning,Pending,6
+C-1372,Contributor,Microsoft,25-09-2023,13-08-2026,Procurement,High,223,Normal,182,152,83.33,7564,6531,0.863432047,Near Limit,-1033,Planning,Pending,11
+C-1373,Contributor,AWS,04-08-2023,15-02-2026,Procurement,Critical,44,Warning,182,177,97.04,4851,1528,0.314986601,Healthy,-3323,Approval,Pending,6
+C-1374,Collaborator,Microsoft,06-11-2024,11-07-2026,Procurement,Medium,190,Normal,161,131,81.27,4071,1627,0.399656104,Healthy,-2444,Negotiation,Approved,5
+C-1375,Contributor,Microsoft,01-12-2024,21-01-2026,IT,Critical,19,Critical,182,38,20.94,4553,3739,0.82121678,Near Limit,-814,Execution,Approved,7
+C-1376,Collaborator,Veloxa,04-04-2023,03-04-2026,IT,Critical,91,Planning,157,136,86.62,4204,1872,0.4452902,Healthy,-2332,Planning,Approved,13
+C-1377,Collaborator,Nexaflow,28-05-2024,30-03-2026,Procurement,Critical,87,Warning,245,70,28.61,5522,6856,1.241579138,Exceeded,1334,Negotiation,Approved,15
+C-1378,Collaborator,Microsoft,04-09-2024,22-07-2026,Finance,Medium,201,Normal,161,119,74.13,2372,579,0.244097808,Healthy,-1793,Negotiation,Pending,12
+C-1379,Collaborator,Atlassify,01-09-2024,09-03-2026,Finance,High,66,Warning,157,25,16.11,1803,523,0.290072102,Healthy,-1280,Planning,Pending,14
+C-1380,Contributor,Microsoft,18-04-2024,05-02-2026,Finance,Medium,34,Warning,182,158,86.84,180,128,0.711111111,Healthy,-52,Negotiation,Pending,12
+C-1381,Contributor,Microsoft,14-12-2023,02-02-2026,IT,Medium,31,Warning,182,135,74.45,2709,1449,0.534883721,Healthy,-1260,Approval,Approved,13
+C-1382,Collaborator,Databridge,14-06-2025,30-12-2026,Procurement,High,362,Normal,157,121,77.26,3012,454,0.150730412,Healthy,-2558,Planning,Pending,11
+C-1383,Collaborator,Veloxa,02-03-2024,19-01-2027,Procurement,High,382,Normal,245,198,80.83,1346,1132,0.841010401,Near Limit,-214,Planning,Approved,11
+C-1384,Collaborator,Cloudora,31-12-2024,22-09-2026,Finance,Critical,263,Normal,245,167,68.13,3788,2722,0.718585005,Healthy,-1066,Negotiation,Approved,6
+C-1385,Contributor,Microsoft,23-09-2023,31-03-2026,IT,Medium,88,Warning,182,163,89.58,3465,1238,0.357287157,Healthy,-2227,Negotiation,Pending,17
+C-1386,Full,Salesforce,26-09-2023,09-09-2026,Procurement,High,250,Normal,210,150,71.52,3550,971,0.273521127,Healthy,-2579,Planning,Pending,11
+C-1387,Collaborator,Atlassify,25-06-2023,07-05-2026,IT,High,125,Planning,245,143,58.28,2091,1856,0.887613582,Near Limit,-235,Execution,Pending,7
+C-1388,Contributor,Microsoft,16-05-2024,30-10-2026,IT,Medium,301,Normal,182,146,80.43,923,627,0.679306609,Healthy,-296,Negotiation,Pending,11
+C-1389,Collaborator,Veloxa,01-12-2023,30-01-2026,Procurement,High,28,Critical,245,178,72.49,3418,2139,0.625804564,Healthy,-1279,Negotiation,Pending,13
+C-1390,Collaborator,Veloxa,02-07-2024,02-04-2026,Procurement,Medium,90,Warning,245,195,79.65,5818,2870,0.493296666,Healthy,-2948,Negotiation,Pending,5
+C-1391,Full,Salesforce,17-05-2025,30-07-2026,IT,Critical,209,Normal,210,160,76.19,334,294,0.880239521,Near Limit,-40,Planning,Pending,11
+C-1392,Collaborator,Microsoft,21-03-2024,24-12-2026,Procurement,Medium,356,Normal,161,38,23.82,3408,1969,0.577758216,Healthy,-1439,Planning,Pending,9
+C-1393,Contributor,Microsoft,01-07-2025,16-11-2026,IT,Medium,318,Normal,182,114,62.77,4388,4323,0.985186873,Near Limit,-65,Planning,Pending,17
+C-1394,Full,AWS,23-07-2024,20-08-2026,IT,High,230,Normal,260,186,71.54,3630,2642,0.727823691,Healthy,-988,Planning,Pending,3
+C-1395,Full,Salesforce,24-11-2024,22-12-2026,Finance,Critical,354,Normal,210,138,66.05,3944,3037,0.770030426,Healthy,-907,Planning,Approved,8
+C-1396,Full,Microsoft,19-09-2023,21-05-2026,Finance,Critical,139,Planning,210,162,77.52,2164,1956,0.903881701,Near Limit,-208,Approval,Pending,17
+C-1397,Full,AWS,15-12-2024,07-09-2026,IT,High,248,Normal,260,206,79.5,5162,3849,0.745641224,Healthy,-1313,Approval,Approved,4
+C-1398,Contributor,Microsoft,13-07-2023,01-06-2026,Procurement,Medium,150,Planning,182,125,68.75,4174,1147,0.274796358,Healthy,-3027,Approval,Pending,3
+C-1399,Collaborator,Atlassify,03-09-2023,31-05-2026,Finance,Critical,149,Planning,157,37,23.69,4168,3148,0.755278311,Healthy,-1020,Planning,Pending,4
+C-1400,Collaborator,Nexaflow,02-06-2024,17-04-2026,Finance,High,105,Planning,245,198,80.91,959,210,0.218978102,Healthy,-749,Approval,Pending,5
+C-1401,Collaborator,Prismly,04-04-2025,08-02-2027,Procurement,High,402,Normal,245,39,16.04,8014,6236,0.778138258,Healthy,-1778,Approval,Pending,6
+C-1402,Collaborator,Prismly,17-05-2024,28-03-2026,Procurement,High,85,Warning,245,182,74.28,4373,4057,0.927738395,Near Limit,-316,Negotiation,Pending,12
+C-1403,Collaborator,Databridge,01-06-2025,06-11-2026,IT,Critical,308,Normal,157,96,61.21,3733,3621,0.969997321,Near Limit,-112,Planning,Approved,5
+C-1404,Contributor,AWS,11-07-2023,20-04-2026,Finance,Medium,108,Planning,145,136,93.93,6796,1661,0.244408476,Healthy,-5135,Planning,Pending,5
+C-1405,Collaborator,Microsoft,31-01-2024,28-08-2026,Procurement,Medium,238,Normal,161,30,18.86,2219,845,0.380802163,Healthy,-1374,Planning,Pending,9
+C-1406,Collaborator,Atlassify,23-06-2025,27-09-2026,Procurement,Medium,268,Normal,245,192,78.18,274,268,0.97810219,Near Limit,-6,Approval,Pending,8
+C-1407,Collaborator,Salesforce,15-06-2023,17-01-2026,IT,Critical,15,Critical,245,51,20.84,4339,1782,0.410693708,Healthy,-2557,Approval,Pending,3
+C-1408,Full,Salesforce,19-03-2023,20-03-2026,Finance,Critical,77,Warning,210,173,82.38,5551,2987,0.538101243,Healthy,-2564,Negotiation,Pending,7
+C-1409,Collaborator,Cloudora,02-01-2024,30-11-2026,Finance,Medium,332,Normal,245,168,68.62,4534,3036,0.669607411,Healthy,-1498,Planning,Pending,13
+C-1410,Collaborator,Microsoft,14-10-2023,22-09-2026,Procurement,Medium,263,Normal,161,126,78.23,180,170,0.944444444,Near Limit,-10,Planning,Pending,9
+C-1411,Contributor,Microsoft,21-03-2025,21-08-2026,IT,Low,231,Normal,182,142,78.18,648,564,0.87037037,Near Limit,-84,Planning,Approved,4
+C-1412,Collaborator,Cloudora,23-04-2023,15-04-2026,Procurement,High,103,Planning,245,188,76.84,6611,6237,0.943427621,Near Limit,-374,Planning,Pending,16
+C-1413,Contributor,Microsoft,19-04-2023,14-02-2026,IT,Medium,43,Warning,182,138,76.1,4255,3208,0.753936545,Healthy,-1047,Planning,Pending,7
+C-1414,Full,Salesforce,14-10-2023,12-05-2026,Finance,Medium,130,Planning,210,168,80.1,3734,681,0.182378147,Healthy,-3053,Negotiation,Pending,15
+C-1415,Collaborator,Databridge,19-07-2023,05-01-2026,Finance,Critical,3,Critical,157,130,83.06,4703,4750,1.009993621,Exceeded,47,Planning,Pending,10
+C-1416,Collaborator,Cloudora,29-05-2023,31-03-2026,IT,High,88,Warning,245,47,19.29,2197,1448,0.659080564,Healthy,-749,Negotiation,Pending,13
+C-1417,Collaborator,AWS,24-07-2023,19-07-2026,Finance,High,198,Normal,161,114,70.84,2619,2286,0.872852234,Near Limit,-333,Negotiation,Pending,16
+C-1418,Collaborator,Microsoft,25-10-2023,26-06-2026,Finance,High,175,Planning,161,116,72.46,394,73,0.185279188,Healthy,-321,Planning,Pending,13
+C-1419,Contributor,Microsoft,29-08-2024,06-03-2026,Procurement,Medium,63,Warning,182,122,67.27,702,594,0.846153846,Near Limit,-108,Planning,Approved,6
+C-1420,Full,AWS,27-04-2024,12-04-2026,IT,Critical,100,Planning,260,192,74.12,3334,3367,1.00989802,Exceeded,33,Approval,Approved,6
+C-1421,Contributor,AWS,07-04-2025,09-09-2026,Procurement,Medium,250,Normal,182,156,85.86,4186,983,0.234830387,Healthy,-3203,Execution,Pending,4
+C-1422,Collaborator,Salesforce,19-01-2024,26-06-2026,Procurement,High,175,Planning,98,79,81.33,2754,2340,0.849673203,Near Limit,-414,Planning,Pending,10
+C-1423,Full,Salesforce,15-07-2024,29-01-2027,IT,Critical,392,Normal,210,141,67.48,3677,1890,0.514005983,Healthy,-1787,Planning,Pending,13
+C-1424,Collaborator,Prismly,18-01-2024,28-05-2026,IT,Medium,146,Planning,157,108,69.11,262,77,0.29389313,Healthy,-185,Approval,Pending,9
+C-1425,Collaborator,Microsoft,06-11-2024,08-11-2026,IT,Critical,310,Normal,161,20,12.66,363,341,0.939393939,Near Limit,-22,Planning,Pending,10
+C-1426,Collaborator,Cloudora,21-02-2024,17-01-2026,IT,High,15,Critical,98,20,21.33,2714,1743,0.642225497,Healthy,-971,Execution,Approved,4
+C-1427,Collaborator,Prismly,23-08-2024,20-04-2026,Procurement,Medium,108,Planning,245,172,70.04,1894,2200,1.16156283,Exceeded,306,Execution,Pending,14
+C-1428,Contributor,AWS,30-09-2024,02-12-2026,Finance,Medium,334,Normal,145,140,96.76,473,906,1.915433404,Exceeded,433,Planning,Pending,10
+C-1429,Full,Salesforce,05-04-2023,30-01-2026,IT,Critical,28,Critical,210,160,76.52,2652,2376,0.895927602,Near Limit,-276,Approval,Pending,7
+C-1430,Full,Salesforce,20-02-2024,06-11-2026,Finance,Medium,308,Normal,210,121,58,389,137,0.35218509,Healthy,-252,Planning,Pending,14
+C-1431,Contributor,Microsoft,22-10-2023,07-07-2026,Finance,High,186,Normal,182,147,80.65,2681,1780,0.663931369,Healthy,-901,Negotiation,Approved,9
+C-1432,Collaborator,Microsoft,13-09-2024,11-01-2027,IT,Medium,374,Normal,161,112,70.04,180,82,0.455555556,Healthy,-98,Planning,Pending,17
+C-1433,Contributor,Microsoft,24-07-2024,09-11-2026,Procurement,Medium,311,Normal,182,128,70.56,7625,3462,0.454032787,Healthy,-4163,Approval,Approved,15
+C-1434,Contributor,Microsoft,07-12-2023,04-08-2026,IT,High,214,Normal,182,137,75.49,1330,1343,1.009774436,Exceeded,13,Planning,Pending,16
+C-1435,Contributor,AWS,01-11-2023,18-07-2026,Procurement,High,197,Normal,182,155,85.36,4670,2912,0.623554604,Healthy,-1758,Planning,Pending,9
+C-1436,Collaborator,Salesforce,17-07-2023,06-01-2026,IT,Medium,4,Critical,98,90,92.14,3332,8974,2.693277311,Exceeded,5642,Planning,Pending,6
+C-1437,Collaborator,Microsoft,30-06-2024,05-01-2026,Finance,High,3,Critical,161,41,25.5,4974,4300,0.864495376,Near Limit,-674,Planning,Pending,5
+C-1438,Full,Salesforce,20-08-2023,01-05-2026,Finance,Critical,119,Planning,210,160,76.57,3303,3336,1.009990917,Exceeded,33,Planning,Approved,12
+C-1439,Collaborator,Nexaflow,13-02-2025,14-12-2026,Finance,Medium,346,Normal,245,173,70.7,3268,1852,0.566707466,Healthy,-1416,Planning,Approved,3
+C-1440,Contributor,Microsoft,27-12-2024,21-01-2027,IT,Critical,384,Normal,182,131,72.31,4524,969,0.214190981,Healthy,-3555,Execution,Pending,10
+C-1441,Collaborator,Microsoft,25-11-2023,04-03-2026,Procurement,Medium,61,Warning,161,119,74.13,2868,700,0.244072524,Healthy,-2168,Planning,Pending,3
+C-1442,Contributor,Microsoft,19-08-2023,07-08-2026,Procurement,Medium,217,Normal,182,153,84.16,3443,716,0.207958176,Healthy,-2727,Planning,Pending,17
+C-1443,Contributor,Atlassify,19-03-2024,11-02-2026,Finance,High,40,Warning,320,45,14.12,465,470,1.010752688,Exceeded,5,Planning,Approved,8
+C-1444,Collaborator,Nexaflow,25-10-2024,06-05-2026,IT,Medium,124,Planning,245,198,80.95,4754,3307,0.695624737,Healthy,-1447,Approval,Approved,13
+C-1445,Contributor,AWS,24-08-2025,15-02-2027,Finance,High,409,Normal,145,136,94,398,372,0.934673367,Near Limit,-26,Negotiation,Pending,17
+C-1446,Contributor,Microsoft,24-04-2025,04-05-2026,IT,Medium,122,Planning,182,151,82.89,2271,739,0.32540731,Healthy,-1532,Planning,Pending,3
+C-1447,Contributor,Microsoft,14-07-2025,18-09-2026,IT,Medium,259,Normal,182,147,80.81,10337,11289,1.092096353,Exceeded,952,Approval,Approved,14
+C-1448,Contributor,Salesforce,14-01-2024,31-07-2026,Procurement,Critical,210,Normal,320,235,73.66,10297,14135,1.372729921,Exceeded,3838,Planning,Pending,16
+C-1449,Collaborator,Microsoft,12-12-2024,22-02-2026,Procurement,High,51,Warning,161,126,78.29,4582,1839,0.401353121,Healthy,-2743,Planning,Pending,3
+C-1450,Collaborator,Microsoft,04-06-2024,07-04-2026,IT,Medium,95,Planning,161,46,29.09,1078,947,0.878478664,Near Limit,-131,Execution,Approved,5
+C-1451,Full,AWS,18-01-2025,09-02-2027,Procurement,Critical,403,Normal,260,67,26.12,4372,28418,6.5,Exceeded,24046,Approval,Pending,11
+C-1452,Collaborator,Microsoft,21-10-2024,29-04-2026,Procurement,Medium,117,Planning,161,130,81.2,1534,547,0.356584094,Healthy,-987,Approval,Pending,17
+C-1453,Collaborator,Veloxa,13-12-2023,15-09-2026,Finance,Low,256,Normal,245,193,78.59,362,366,1.011049724,Exceeded,4,Planning,Pending,4
+C-1454,Collaborator,Nexaflow,23-05-2024,24-10-2026,Finance,Critical,295,Normal,245,190,77.57,2545,2081,0.817681729,Near Limit,-464,Negotiation,Pending,12
+C-1455,Contributor,AWS,09-10-2024,15-05-2026,Finance,High,133,Planning,145,119,82.07,4279,1359,0.31759757,Healthy,-2920,Approval,Approved,6
+C-1456,Collaborator,Microsoft,16-05-2023,26-04-2026,Procurement,High,114,Planning,161,27,17.25,1896,1132,0.597046414,Healthy,-764,Negotiation,Pending,14
+C-1457,Collaborator,Microsoft,26-10-2023,10-04-2026,Finance,Critical,98,Planning,161,103,64.39,3272,3305,1.010085575,Exceeded,33,Planning,Pending,12
+C-1458,Collaborator,Microsoft,29-05-2025,02-02-2027,IT,High,396,Normal,161,141,87.9,5968,5001,0.837969169,Near Limit,-967,Planning,Pending,4
+C-1459,Collaborator,Cloudora,30-01-2024,19-07-2026,Finance,Medium,198,Normal,157,108,69.24,4614,4105,0.889683572,Near Limit,-509,Approval,Pending,13
+C-1460,Collaborator,Microsoft,10-03-2023,11-03-2026,IT,High,68,Warning,161,112,70.04,4262,1115,0.261614266,Healthy,-3147,Execution,Approved,5
+C-1461,Contributor,AWS,01-03-2025,10-09-2026,Finance,High,251,Normal,145,93,64.69,348,181,0.520114943,Healthy,-167,Planning,Pending,5
+C-1462,Contributor,Microsoft,21-09-2024,12-11-2026,IT,Critical,314,Normal,182,121,66.67,5031,3085,0.613198171,Healthy,-1946,Planning,Pending,4
+C-1463,Full,Salesforce,27-09-2024,18-03-2026,Finance,Medium,75,Warning,210,141,67.38,571,447,0.782837128,Healthy,-124,Planning,Pending,14
+C-1464,Contributor,Microsoft,29-11-2024,10-06-2026,Procurement,High,159,Planning,182,153,84.32,1335,461,0.345318352,Healthy,-874,Planning,Pending,10
+C-1465,Collaborator,Microsoft,15-10-2023,29-06-2026,IT,Medium,178,Planning,161,103,64.02,229,226,0.986899563,Near Limit,-3,Planning,Pending,3
+C-1466,Collaborator,Microsoft,02-07-2024,13-09-2026,Procurement,High,254,Normal,161,110,68.24,2875,1529,0.531826087,Healthy,-1346,Execution,Pending,5
+C-1467,Contributor,AWS,30-05-2025,27-01-2027,Finance,High,390,Normal,182,149,81.74,394,182,0.461928934,Healthy,-212,Planning,Pending,17
+C-1468,Collaborator,Prismly,14-06-2024,29-12-2026,Procurement,Medium,361,Normal,245,209,85.31,2688,2473,0.920014881,Near Limit,-215,Execution,Pending,13
+C-1469,Collaborator,Cloudora,29-10-2023,03-01-2026,Finance,Critical,1,Critical,157,128,81.72,5440,1521,0.279595588,Healthy,-3919,Approval,Pending,14
+C-1470,Collaborator,Nexaflow,07-01-2024,04-05-2026,IT,High,122,Planning,245,199,81.03,643,346,0.538102644,Healthy,-297,Planning,Pending,14
+C-1471,Collaborator,Nexaflow,07-11-2024,19-04-2026,IT,Medium,107,Planning,157,101,64.84,3361,1464,0.435584647,Healthy,-1897,Negotiation,Pending,11
+C-1472,Collaborator,Prismly,08-11-2024,09-08-2026,Finance,Medium,219,Normal,245,167,68.25,180,121,0.672222222,Healthy,-59,Planning,Pending,6
+C-1473,Full,Salesforce,11-07-2025,17-08-2026,IT,Critical,227,Normal,210,146,69.52,1436,969,0.674791086,Healthy,-467,Approval,Approved,10
+C-1474,Collaborator,Cloudora,31-12-2023,22-11-2026,Procurement,Medium,324,Normal,98,75,77.45,650,147,0.226153846,Healthy,-503,Planning,Pending,12
+C-1475,Full,Salesforce,27-05-2025,24-09-2026,Finance,High,265,Normal,210,38,18.1,5339,3922,0.734594493,Healthy,-1417,Negotiation,Pending,12
+C-1476,Collaborator,Atlassify,05-08-2023,10-07-2026,IT,Critical,189,Normal,157,107,68.41,3224,1530,0.474565757,Healthy,-1694,Approval,Approved,8
+C-1477,Collaborator,Microsoft,05-04-2025,26-11-2026,IT,Critical,328,Normal,161,114,71.15,6934,7003,1.009950966,Exceeded,69,Execution,Approved,10
+C-1478,Contributor,Microsoft,12-10-2023,13-04-2026,Finance,High,101,Planning,182,150,82.62,2876,1637,0.569193324,Healthy,-1239,Negotiation,Approved,8
+C-1479,Collaborator,Prismly,01-12-2023,26-04-2026,Procurement,High,114,Planning,157,140,89.3,414,63,0.152173913,Healthy,-351,Approval,Approved,15
+C-1480,Contributor,Microsoft,26-11-2023,20-03-2026,IT,Critical,77,Warning,182,157,86.35,1203,1910,1.587697423,Exceeded,707,Planning,Pending,4
+C-1481,Collaborator,Atlassify,25-12-2024,14-06-2026,Finance,Medium,163,Planning,157,42,27.32,2166,1396,0.644506002,Healthy,-770,Planning,Pending,16
+C-1482,Collaborator,Microsoft,22-04-2023,28-03-2026,Procurement,Critical,85,Warning,161,146,90.76,1214,1050,0.86490939,Near Limit,-164,Planning,Pending,11
+C-1483,Contributor,Microsoft,08-06-2024,19-04-2026,Procurement,High,107,Planning,182,132,72.42,3295,3112,0.944461305,Near Limit,-183,Approval,Pending,15
+C-1484,Collaborator,Microsoft,05-08-2023,18-04-2026,Procurement,Critical,106,Planning,161,118,73.76,4020,2988,0.743283582,Healthy,-1032,Planning,Pending,15
+C-1485,Contributor,Microsoft,17-05-2025,14-11-2026,Procurement,High,316,Normal,182,129,70.72,813,723,0.889298893,Near Limit,-90,Approval,Pending,16
+C-1486,Collaborator,Atlassify,15-05-2024,06-01-2027,IT,High,369,Normal,245,210,85.47,3621,1893,0.522783761,Healthy,-1728,Planning,Pending,15
+C-1487,Collaborator,Microsoft,09-04-2024,14-01-2026,Finance,High,12,Critical,161,124,77.36,1013,1023,1.009871668,Exceeded,10,Planning,Pending,16
+C-1488,Collaborator,Nexaflow,25-04-2024,04-04-2026,IT,Critical,92,Planning,157,118,75.61,4033,4073,1.009918175,Exceeded,40,Planning,Approved,5
+C-1489,Full,Salesforce,28-08-2024,11-10-2026,IT,Low,282,Normal,210,146,69.52,3870,2415,0.624031008,Healthy,-1455,Execution,Approved,8
+C-1490,Collaborator,Databridge,04-08-2024,06-04-2026,Finance,Medium,94,Planning,157,113,71.97,497,452,0.90945674,Near Limit,-45,Planning,Pending,5
+C-1491,Collaborator,Microsoft,19-08-2025,03-01-2027,IT,Critical,366,Normal,161,99,61.91,4026,4066,1.00993542,Exceeded,40,Negotiation,Pending,6
+C-1492,Collaborator,Salesforce,03-08-2023,09-06-2026,IT,High,158,Planning,98,79,80.61,4332,2522,0.582179132,Healthy,-1810,Negotiation,Pending,4
+C-1493,Collaborator,Microsoft,22-06-2024,10-03-2026,Procurement,Medium,67,Warning,161,121,75.12,3011,651,0.21620724,Healthy,-2360,Approval,Approved,6
+C-1494,Collaborator,Microsoft,08-04-2024,16-01-2026,IT,High,14,Critical,161,144,89.64,6615,6681,1.009977324,Exceeded,66,Approval,Approved,14
+C-1495,Collaborator,Databridge,06-08-2024,18-10-2026,Procurement,High,289,Normal,157,104,66.82,4205,1077,0.256123662,Healthy,-3128,Planning,Pending,7
+C-1496,Collaborator,Veloxa,19-10-2024,01-01-2027,Finance,High,364,Normal,245,36,14.65,586,446,0.76109215,Healthy,-140,Negotiation,Pending,7
+C-1497,Collaborator,Prismly,26-02-2025,24-01-2027,Procurement,Critical,387,Normal,245,196,80.02,2990,2546,0.851505017,Near Limit,-444,Planning,Approved,13
+C-1498,Collaborator,Salesforce,23-07-2024,28-09-2026,IT,Medium,269,Normal,98,71,72.86,2479,1056,0.425978217,Healthy,-1423,Execution,Approved,14
+C-1499,Collaborator,Salesforce,02-03-2024,02-02-2026,IT,High,31,Warning,245,189,77.13,3043,698,0.229378902,Healthy,-2345,Planning,Pending,7
+C-1500,Contributor,AWS,13-04-2025,13-10-2026,IT,High,284,Normal,145,123,85.31,1448,218,0.150552486,Healthy,-1230,Planning,Approved,7
+C-1501,Collaborator,Nexaflow,06-12-2023,28-10-2026,IT,Medium,299,Normal,245,158,64.67,7761,7109,0.915990207,Near Limit,-652,Negotiation,Approved,5
+C-1502,Contributor,AWS,29-11-2023,14-10-2026,IT,High,285,Normal,145,135,93.52,4463,7562,1.69437598,Exceeded,3099,Negotiation,Pending,8
+C-1503,Collaborator,Atlassify,28-05-2025,19-09-2026,IT,High,260,Normal,245,33,13.43,474,529,1.116033755,Exceeded,55,Planning,Pending,3
+C-1504,Collaborator,Microsoft,27-04-2024,22-09-2026,IT,High,263,Normal,161,45,28.04,2837,2524,0.889672189,Near Limit,-313,Planning,Approved,11
+C-1505,Contributor,Microsoft,29-11-2024,02-04-2026,Procurement,Medium,90,Warning,182,150,82.35,416,483,1.161057692,Exceeded,67,Planning,Pending,7
+C-1506,Collaborator,Microsoft,27-10-2025,04-11-2026,IT,Medium,306,Normal,161,113,70.22,2506,1247,0.497605746,Healthy,-1259,Planning,Pending,4
+C-1507,Collaborator,Prismly,19-10-2023,02-09-2026,IT,High,243,Normal,245,176,71.88,6946,6712,0.966311546,Near Limit,-234,Approval,Approved,12
+C-1508,Collaborator,Microsoft,11-01-2025,18-02-2027,Finance,Medium,412,Normal,161,123,76.67,987,495,0.501519757,Healthy,-492,Approval,Pending,14
+C-1509,Collaborator,Prismly,31-12-2023,12-03-2026,Procurement,Medium,69,Warning,245,36,14.86,13156,10802,0.821070234,Near Limit,-2354,Planning,Pending,4
+C-1510,Collaborator,Microsoft,25-08-2024,28-01-2027,Procurement,Critical,391,Normal,161,136,84.37,1102,689,0.62522686,Healthy,-413,Approval,Pending,7
+C-1511,Contributor,Microsoft,25-08-2024,30-05-2026,Finance,Critical,148,Planning,182,147,80.59,3047,3077,1.00984575,Exceeded,30,Approval,Approved,6
+C-1512,Collaborator,Microsoft,05-04-2024,28-02-2026,IT,Critical,57,Warning,161,112,69.79,257,815,3.171206226,Exceeded,558,Approval,Pending,16
+C-1513,Collaborator,Atlassify,16-04-2025,31-10-2026,IT,Medium,302,Normal,245,207,84.62,662,288,0.435045317,Healthy,-374,Planning,Approved,6
+C-1514,Collaborator,Salesforce,21-09-2023,06-03-2026,Finance,Critical,63,Warning,98,70,71.84,2473,2104,0.850788516,Near Limit,-369,Planning,Approved,8
+C-1515,Collaborator,Atlassify,22-11-2024,21-10-2026,Procurement,Medium,292,Normal,157,26,16.69,1162,1174,1.010327022,Exceeded,12,Approval,Approved,16
+C-1516,Contributor,Microsoft,18-08-2024,08-01-2026,Finance,Medium,6,Critical,182,132,72.42,2122,1196,0.563619227,Healthy,-926,Planning,Pending,12
+C-1517,Contributor,Microsoft,16-07-2024,24-10-2026,Procurement,High,295,Normal,182,130,71.27,3993,1448,0.362634611,Healthy,-2545,Planning,Pending,7
+C-1518,Contributor,Microsoft,14-07-2023,07-06-2026,IT,Medium,156,Planning,182,136,74.84,5054,4774,0.944598338,Near Limit,-280,Negotiation,Approved,4
+C-1519,Full,Salesforce,19-11-2024,04-01-2026,Finance,Medium,2,Critical,210,162,77.57,1880,1899,1.010106383,Exceeded,19,Planning,Pending,14
+C-1520,Contributor,Microsoft,12-12-2025,22-01-2027,Finance,Medium,385,Normal,182,138,75.82,4119,2503,0.607671765,Healthy,-1616,Approval,Pending,17
+C-1521,Contributor,Microsoft,16-09-2023,22-01-2026,Finance,High,20,Critical,182,174,95.56,2325,5355,2.303225806,Exceeded,3030,Planning,Pending,13
+C-1522,Contributor,AWS,27-12-2025,24-02-2027,IT,Medium,418,Normal,145,145,100,3672,614,0.167211329,Healthy,-3058,Approval,Pending,5
+C-1523,Collaborator,Nexaflow,31-12-2023,15-11-2026,IT,Medium,317,Normal,245,179,72.98,5322,5375,1.009958662,Exceeded,53,Planning,Approved,16
+C-1524,Contributor,Microsoft,23-01-2024,01-04-2026,Finance,Critical,89,Warning,182,146,80.37,1586,516,0.325346784,Healthy,-1070,Execution,Pending,3
+C-1525,Collaborator,Databridge,22-05-2024,10-09-2026,Procurement,High,251,Normal,245,165,67.28,3418,872,0.255119953,Healthy,-2546,Planning,Pending,4
+C-1526,Contributor,Microsoft,31-07-2023,06-06-2026,Finance,Critical,155,Planning,182,128,70.34,2328,2251,0.966924399,Near Limit,-77,Approval,Pending,11
+C-1527,Collaborator,Prismly,25-11-2024,07-02-2026,IT,Medium,36,Warning,245,166,67.77,5049,4108,0.813626461,Near Limit,-941,Approval,Approved,3
+C-1528,Contributor,Microsoft,08-03-2024,12-02-2027,Procurement,Critical,406,Normal,182,38,20.83,5771,14284,2.475134292,Exceeded,8513,Approval,Approved,13
+C-1529,Collaborator,Microsoft,22-03-2025,09-08-2026,Finance,Medium,219,Normal,161,123,76.43,3964,1489,0.375630676,Healthy,-2475,Execution,Pending,9
+C-1530,Collaborator,Databridge,06-02-2025,24-01-2027,Procurement,Critical,387,Normal,245,182,74.36,1392,1406,1.010057471,Exceeded,14,Planning,Approved,7
+C-1531,Collaborator,Microsoft,14-12-2023,18-01-2026,Finance,Critical,16,Critical,161,35,21.71,5501,1126,0.204690056,Healthy,-4375,Planning,Approved,3
+C-1532,Collaborator,Cloudora,03-06-2024,29-03-2026,Procurement,High,86,Warning,157,132,84.39,1515,253,0.1669967,Healthy,-1262,Planning,Pending,6
+C-1533,Collaborator,Microsoft,12-08-2024,19-04-2026,Procurement,Medium,107,Planning,161,117,72.64,8158,7759,0.951090954,Near Limit,-399,Approval,Pending,4
+C-1534,Collaborator,Cloudora,20-08-2024,19-08-2026,Finance,Medium,229,Normal,245,163,66.38,3600,3098,0.860555556,Near Limit,-502,Planning,Pending,10
+C-1535,Collaborator,Cloudora,29-01-2025,08-05-2026,Finance,Critical,126,Planning,245,170,69.52,6251,2967,0.474644057,Healthy,-3284,Planning,Approved,3
+C-1536,Contributor,AWS,24-04-2023,02-03-2026,Procurement,Medium,59,Warning,145,137,95.1,6549,11591,1.769888533,Exceeded,5042,Planning,Approved,13
+C-1537,Contributor,Prismly,04-12-2024,28-01-2026,Finance,Critical,26,Critical,320,170,53.34,2880,4024,1.397222222,Exceeded,1144,Negotiation,Pending,12
+C-1538,Collaborator,Salesforce,10-09-2024,07-01-2027,Finance,High,370,Normal,98,83,84.69,1406,769,0.546941679,Healthy,-637,Execution,Approved,3
+C-1539,Contributor,Salesforce,02-06-2025,23-09-2026,Finance,High,264,Normal,320,73,22.91,570,576,1.010526316,Exceeded,6,Approval,Pending,16
+C-1540,Contributor,Microsoft,10-10-2025,15-10-2026,IT,Medium,286,Normal,182,111,61.02,2011,1433,0.712580806,Healthy,-578,Planning,Pending,5
+C-1541,Full,Salesforce,30-05-2025,30-05-2026,Procurement,Critical,148,Planning,210,139,66.24,4749,6390,1.345546431,Exceeded,1641,Execution,Approved,14
+C-1542,Full,Salesforce,08-11-2023,06-02-2026,Finance,Critical,35,Warning,210,42,20.29,4189,2109,0.503461447,Healthy,-2080,Planning,Pending,17
+C-1543,Collaborator,Nexaflow,07-06-2024,28-04-2026,Procurement,Critical,116,Planning,157,128,82.1,743,690,0.928667564,Near Limit,-53,Execution,Approved,11
+C-1544,Collaborator,Prismly,31-01-2025,06-05-2026,Finance,Critical,124,Planning,157,111,71.27,260,330,1.269230769,Exceeded,70,Approval,Approved,14
+C-1545,Collaborator,Atlassify,26-10-2023,10-03-2026,IT,High,67,Warning,157,127,81.34,1045,1055,1.009569378,Exceeded,10,Execution,Pending,13
+C-1546,Collaborator,Microsoft,03-01-2025,24-03-2026,Procurement,High,81,Warning,161,123,76.61,1473,1011,0.686354379,Healthy,-462,Approval,Approved,9
+C-1547,Contributor,Microsoft,23-09-2024,10-03-2026,Finance,Critical,67,Warning,182,131,72.31,3267,2342,0.716865626,Healthy,-925,Planning,Pending,7
+C-1548,Collaborator,Nexaflow,05-06-2023,01-03-2026,Procurement,Medium,58,Warning,245,193,78.84,5010,4482,0.894610778,Near Limit,-528,Negotiation,Pending,10
+C-1549,Collaborator,Prismly,25-09-2023,10-09-2026,IT,Critical,251,Normal,157,135,86.56,328,209,0.637195122,Healthy,-119,Planning,Pending,10
+C-1550,Collaborator,Cloudora,23-06-2024,23-12-2026,IT,Critical,355,Normal,245,199,81.32,2552,2485,0.973746082,Near Limit,-67,Execution,Approved,14
+C-1551,Collaborator,Nexaflow,11-01-2024,26-08-2026,Finance,Critical,236,Normal,157,99,63.44,1583,2319,1.464939987,Exceeded,736,Approval,Approved,17
+C-1552,Contributor,Microsoft,17-07-2025,30-10-2026,Finance,Critical,301,Normal,182,119,65.24,4134,2247,0.543541364,Healthy,-1887,Negotiation,Pending,6
+C-1553,Collaborator,Nexaflow,18-10-2023,17-01-2026,Finance,Medium,15,Critical,245,174,71.1,6005,5814,0.968193172,Near Limit,-191,Execution,Pending,15
+C-1554,Contributor,Microsoft,16-08-2024,23-10-2026,Procurement,High,294,Normal,182,23,12.88,2154,704,0.326833798,Healthy,-1450,Planning,Pending,6
+C-1555,Contributor,Microsoft,08-03-2025,05-09-2026,Procurement,High,246,Normal,182,169,92.98,3143,1110,0.353165765,Healthy,-2033,Planning,Approved,6
+C-1556,Collaborator,Atlassify,02-04-2023,16-01-2026,Finance,Medium,14,Critical,157,123,78.34,3149,1238,0.39314068,Healthy,-1911,Approval,Approved,9
+C-1557,Collaborator,Databridge,02-07-2024,24-02-2026,Finance,Critical,53,Warning,245,215,87.75,480,203,0.422916667,Healthy,-277,Approval,Approved,3
+C-1558,Contributor,Microsoft,15-11-2025,13-12-2026,Procurement,High,345,Normal,182,122,67.16,737,252,0.34192673,Healthy,-485,Planning,Approved,11
+C-1559,Collaborator,Databridge,07-04-2025,21-05-2026,Finance,High,139,Planning,157,122,77.77,6243,6024,0.964920711,Near Limit,-219,Execution,Pending,13
+C-1560,Contributor,Salesforce,05-05-2023,22-03-2026,Procurement,Critical,79,Warning,320,195,61.16,7102,4791,0.674598705,Healthy,-2311,Execution,Pending,10
+C-1561,Collaborator,Microsoft,20-11-2023,15-01-2026,Procurement,Critical,13,Critical,161,140,87.16,2876,2736,0.95132128,Near Limit,-140,Approval,Approved,17
+C-1562,Collaborator,Microsoft,19-10-2024,21-04-2026,IT,Medium,109,Planning,161,123,76.67,1012,444,0.438735178,Healthy,-568,Execution,Approved,6
+C-1563,Contributor,Microsoft,11-08-2023,07-08-2026,Finance,Critical,217,Normal,182,127,69.96,3038,2726,0.897300856,Near Limit,-312,Planning,Pending,6
+C-1564,Collaborator,Cloudora,28-07-2023,02-03-2026,Procurement,Critical,59,Warning,98,98,100,3380,3414,1.010059172,Exceeded,34,Execution,Pending,4
+C-1565,Collaborator,Microsoft,29-05-2025,09-02-2027,Procurement,Critical,403,Normal,161,112,69.48,3524,1797,0.509931896,Healthy,-1727,Execution,Pending,7
+C-1566,Full,Salesforce,03-12-2024,20-07-2026,Finance,Medium,199,Normal,210,161,77.1,1373,1342,0.977421704,Near Limit,-31,Execution,Pending,5
+C-1567,Collaborator,Microsoft,16-04-2025,24-02-2027,Finance,High,418,Normal,161,114,70.97,558,503,0.901433692,Near Limit,-55,Planning,Pending,15
+C-1568,Collaborator,Prismly,12-06-2024,28-05-2026,Finance,Critical,146,Planning,245,233,94.91,4993,2940,0.588824354,Healthy,-2053,Planning,Pending,10
+C-1569,Collaborator,Microsoft,02-05-2023,06-04-2026,IT,High,94,Planning,161,118,73.33,3132,1320,0.421455939,Healthy,-1812,Planning,Pending,13
+C-1570,Collaborator,Nexaflow,09-07-2024,10-12-2026,Finance,Critical,342,Normal,157,110,70.38,312,236,0.756410256,Healthy,-76,Planning,Pending,3
+C-1571,Collaborator,Microsoft,20-05-2025,10-08-2026,IT,High,220,Normal,161,144,89.58,3772,3810,1.010074231,Exceeded,38,Planning,Pending,9
+C-1572,Full,AWS,22-11-2023,17-11-2026,IT,Critical,319,Normal,260,31,12.23,3688,3312,0.898047722,Near Limit,-376,Approval,Pending,6
+C-1573,Collaborator,Veloxa,30-06-2025,13-10-2026,IT,Medium,284,Normal,245,48,19.74,3923,3744,0.954371654,Near Limit,-179,Negotiation,Pending,10
+C-1574,Collaborator,Salesforce,24-01-2025,11-11-2026,IT,Critical,313,Normal,98,80,81.63,346,100,0.289017341,Healthy,-246,Negotiation,Pending,11
+C-1575,Contributor,AWS,28-10-2024,07-02-2026,IT,High,36,Warning,145,127,87.79,610,286,0.468852459,Healthy,-324,Planning,Pending,11
+C-1576,Collaborator,Nexaflow,27-08-2025,14-01-2027,Finance,Medium,377,Normal,245,151,61.7,3232,2296,0.71039604,Healthy,-936,Planning,Pending,16
+C-1577,Collaborator,AWS,25-04-2023,21-04-2026,Procurement,Medium,109,Planning,161,34,21.59,1112,661,0.59442446,Healthy,-451,Planning,Pending,8
+C-1578,Contributor,Microsoft,28-12-2023,29-11-2026,Finance,High,331,Normal,182,147,80.76,3071,568,0.18495604,Healthy,-2503,Planning,Pending,5
+C-1579,Collaborator,Databridge,04-10-2024,04-07-2026,IT,High,183,Normal,245,159,65.08,7041,7111,1.00994177,Exceeded,70,Planning,Approved,10
+C-1580,Contributor,Microsoft,16-04-2025,21-12-2026,Finance,Medium,353,Normal,182,126,69.46,4289,2121,0.494520867,Healthy,-2168,Planning,Pending,8
+C-1581,Contributor,Microsoft,02-10-2023,16-08-2026,IT,Medium,226,Normal,182,137,75.22,2648,546,0.206193353,Healthy,-2102,Execution,Approved,11
+C-1582,Contributor,Microsoft,24-09-2023,15-01-2026,Procurement,Critical,13,Critical,182,149,81.74,1340,750,0.559701493,Healthy,-590,Approval,Approved,16
+C-1583,Collaborator,Nexaflow,06-05-2024,27-03-2026,Procurement,High,84,Warning,245,177,72.41,5097,1552,0.304492839,Healthy,-3545,Planning,Pending,16
+C-1584,Collaborator,Nexaflow,06-04-2024,06-12-2026,IT,High,338,Normal,98,93,95.71,1900,1869,0.983684211,Near Limit,-31,Execution,Approved,17
+C-1585,Collaborator,Cloudora,16-08-2023,15-06-2026,Procurement,Medium,164,Planning,245,185,75.58,1735,293,0.168876081,Healthy,-1442,Planning,Pending,12
+C-1586,Collaborator,Veloxa,23-03-2024,10-09-2026,IT,High,251,Normal,245,162,65.93,4518,3677,0.813855688,Near Limit,-841,Planning,Approved,16
+C-1587,Contributor,Salesforce,13-06-2024,22-08-2026,Finance,Medium,232,Normal,320,274,85.84,5049,4576,0.906318083,Near Limit,-473,Planning,Pending,16
+C-1588,Collaborator,Microsoft,07-09-2024,01-05-2026,Procurement,Critical,119,Planning,161,134,83.62,1865,983,0.527077748,Healthy,-882,Negotiation,Pending,10
+C-1589,Collaborator,Prismly,09-10-2023,11-10-2026,Procurement,Critical,282,Normal,98,79,81.43,6183,29996,4.85136665,Exceeded,23813,Approval,Pending,10
+C-1590,Collaborator,Nexaflow,14-10-2023,19-03-2026,Finance,High,76,Warning,245,175,71.55,4133,1875,0.453665618,Healthy,-2258,Planning,Approved,10
+C-1591,Collaborator,Veloxa,14-06-2024,02-05-2026,IT,Medium,120,Planning,245,66,27.19,2001,878,0.43878061,Healthy,-1123,Planning,Pending,3
+C-1592,Collaborator,Microsoft,06-12-2025,20-12-2026,IT,High,352,Normal,161,120,74.75,4665,4615,0.989281886,Near Limit,-50,Planning,Pending,9
+C-1593,Collaborator,Nexaflow,29-08-2023,13-02-2026,Procurement,High,42,Warning,157,116,74.27,1548,1269,0.819767442,Near Limit,-279,Planning,Approved,10
+C-1594,Collaborator,Atlassify,04-09-2024,28-03-2026,Procurement,High,85,Warning,245,176,71.71,451,127,0.281596452,Healthy,-324,Execution,Approved,16
+C-1595,Collaborator,Atlassify,13-12-2024,08-11-2026,Procurement,Medium,310,Normal,157,123,78.79,2827,1451,0.513264945,Healthy,-1376,Planning,Pending,8
+C-1596,Full,Microsoft,26-04-2025,28-12-2026,IT,Medium,360,Normal,210,142,67.86,5509,2789,0.50626248,Healthy,-2720,Planning,Pending,16
+C-1597,Collaborator,Microsoft,17-01-2025,26-10-2026,Procurement,Medium,297,Normal,161,161,100,4142,1970,0.475615645,Healthy,-2172,Execution,Approved,14
+C-1598,Full,Salesforce,20-05-2025,07-09-2026,Finance,Critical,248,Normal,210,139,66.38,249,111,0.445783133,Healthy,-138,Negotiation,Pending,15
+C-1599,Contributor,AWS,25-05-2024,05-06-2026,Finance,Critical,154,Planning,182,153,83.94,2779,2807,1.010075567,Exceeded,28,Execution,Pending,14
+C-1600,Contributor,Microsoft,23-06-2024,20-11-2026,IT,Critical,322,Normal,182,142,78.07,8618,12982,1.506381991,Exceeded,4364,Negotiation,Approved,12
+C-1601,Full,AWS,23-10-2024,31-12-2026,Finance,Medium,363,Normal,260,184,71.04,2373,1401,0.590391909,Healthy,-972,Approval,Pending,9
+C-1602,Contributor,AWS,09-08-2024,19-04-2026,Finance,Medium,107,Planning,145,127,87.79,4682,3159,0.674711662,Healthy,-1523,Planning,Pending,10
+C-1603,Full,AWS,17-02-2024,28-03-2026,Procurement,High,85,Warning,260,260,100,1027,641,0.624148004,Healthy,-386,Negotiation,Pending,6
+C-1604,Full,Microsoft,22-01-2025,14-03-2026,Finance,High,71,Warning,210,152,72.38,11066,2542,0.229712633,Healthy,-8524,Approval,Approved,10
+C-1605,Collaborator,Salesforce,08-09-2023,12-05-2026,Procurement,Critical,130,Planning,245,170,69.35,227,229,1.008810573,Exceeded,2,Negotiation,Pending,12
+C-1606,Collaborator,Prismly,03-07-2023,22-06-2026,Finance,High,171,Planning,157,113,72.36,649,215,0.331278891,Healthy,-434,Planning,Pending,11
+C-1607,Collaborator,Microsoft,04-03-2024,23-12-2026,Finance,Critical,355,Normal,161,132,82.07,2808,1934,0.688746439,Healthy,-874,Negotiation,Pending,7
+C-1608,Collaborator,Microsoft,02-02-2024,17-02-2026,IT,Medium,46,Warning,161,114,71.09,3981,3304,0.829942226,Near Limit,-677,Execution,Pending,9
+C-1609,Full,Salesforce,16-07-2023,22-05-2026,Finance,High,140,Planning,210,148,70.57,2487,1555,0.625251307,Healthy,-932,Planning,Pending,5
+C-1610,Collaborator,Salesforce,16-09-2024,28-04-2026,Finance,Medium,116,Planning,98,77,79.18,2564,691,0.26950078,Healthy,-1873,Planning,Pending,6
+C-1611,Contributor,Microsoft,31-10-2024,28-12-2026,Procurement,Critical,360,Normal,182,129,70.89,2252,397,0.176287744,Healthy,-1855,Planning,Pending,6
+C-1612,Contributor,AWS,27-07-2024,08-09-2026,IT,High,249,Normal,145,118,81.72,302,272,0.900662252,Near Limit,-30,Planning,Approved,17
+C-1613,Collaborator,Cloudora,28-01-2025,25-09-2026,Procurement,High,266,Normal,245,218,88.89,351,347,0.988603989,Near Limit,-4,Planning,Pending,5
+C-1614,Collaborator,Microsoft,07-04-2024,06-05-2026,Finance,High,124,Planning,161,147,91.25,3687,3503,0.950094928,Near Limit,-184,Planning,Pending,17
+C-1615,Collaborator,Microsoft,10-06-2024,01-07-2026,Finance,Medium,180,Planning,161,27,16.94,4374,1997,0.4565615,Healthy,-2377,Approval,Pending,4
+C-1616,Full,Salesforce,29-03-2025,03-07-2026,IT,High,182,Normal,210,31,15.1,333,175,0.525525526,Healthy,-158,Approval,Pending,5
+C-1617,Contributor,Microsoft,15-05-2024,27-11-2026,Finance,High,329,Normal,182,133,73.19,5541,13651,2.463634723,Exceeded,8110,Approval,Pending,9
+C-1618,Collaborator,Nexaflow,01-08-2024,25-11-2026,IT,Critical,327,Normal,245,149,60.89,2974,3886,1.3066577,Exceeded,912,Planning,Approved,4
+C-1619,Full,Microsoft,28-12-2023,18-12-2026,IT,High,350,Normal,260,198,76.19,1589,1272,0.800503461,Near Limit,-317,Execution,Approved,7
+C-1620,Contributor,Salesforce,03-06-2023,31-05-2026,Procurement,Medium,149,Planning,320,196,61.25,396,374,0.944444444,Near Limit,-22,Planning,Pending,15
+C-1621,Collaborator,Prismly,29-01-2024,14-10-2026,Procurement,Medium,285,Normal,245,183,74.52,416,243,0.584134615,Healthy,-173,Execution,Pending,4
+C-1622,Full,AWS,19-09-2023,04-01-2026,Procurement,High,2,Critical,260,201,77.35,489,139,0.284253579,Healthy,-350,Negotiation,Pending,10
+C-1623,Contributor,Microsoft,26-01-2023,21-01-2026,IT,High,19,Critical,182,146,80.32,5997,1308,0.218109055,Healthy,-4689,Negotiation,Pending,7
+C-1624,Collaborator,Microsoft,10-08-2025,18-11-2026,IT,Medium,320,Normal,161,138,85.61,4275,4477,1.047251462,Exceeded,202,Negotiation,Approved,10
+C-1625,Collaborator,Prismly,11-03-2025,27-09-2026,Finance,Medium,268,Normal,157,129,82.36,5427,1996,0.367790676,Healthy,-3431,Execution,Approved,7
+C-1626,Contributor,Microsoft,07-03-2025,23-09-2026,Finance,High,264,Normal,182,129,70.72,7737,5342,0.690448494,Healthy,-2395,Execution,Approved,6
+C-1627,Contributor,Microsoft,30-12-2024,25-02-2027,Procurement,Critical,419,Normal,182,132,72.75,370,193,0.521621622,Healthy,-177,Planning,Pending,16
+C-1628,Collaborator,Microsoft,31-01-2026,25-02-2027,Finance,Medium,419,Normal,161,120,74.88,238,48,0.201680672,Healthy,-190,Negotiation,Pending,5
+C-1629,Collaborator,Microsoft,09-12-2024,07-07-2026,Procurement,Low,186,Normal,161,130,80.71,1823,1122,0.615469007,Healthy,-701,Negotiation,Pending,13
+C-1630,Collaborator,Cloudora,14-03-2023,02-03-2026,IT,High,59,Warning,245,204,83.19,3662,752,0.205352267,Healthy,-2910,Planning,Approved,8
+C-1631,Collaborator,Microsoft,25-11-2023,15-01-2026,Finance,High,13,Critical,161,141,87.53,2442,1065,0.436117936,Healthy,-1377,Approval,Approved,11
+C-1632,Collaborator,Prismly,27-04-2024,16-07-2026,Finance,Critical,195,Normal,245,169,68.86,1670,1222,0.731736527,Healthy,-448,Execution,Pending,16
+C-1633,Contributor,Microsoft,25-03-2024,19-10-2026,IT,Medium,290,Normal,182,137,75.33,627,605,0.964912281,Near Limit,-22,Planning,Approved,3
+C-1634,Collaborator,Atlassify,14-07-2024,15-05-2026,IT,Critical,133,Planning,245,58,23.61,418,309,0.73923445,Healthy,-109,Approval,Pending,16
+C-1635,Collaborator,Microsoft,19-12-2023,06-04-2026,IT,Medium,94,Planning,161,124,77.23,218,93,0.426605505,Healthy,-125,Planning,Pending,9
+C-1636,Collaborator,Nexaflow,28-05-2023,08-05-2026,Procurement,Critical,126,Planning,245,213,86.94,3628,3241,0.893329658,Near Limit,-387,Planning,Pending,14
+C-1637,Contributor,AWS,01-04-2024,12-12-2026,Finance,Medium,344,Normal,145,131,90.69,4010,2693,0.671571072,Healthy,-1317,Execution,Approved,6
+C-1638,Collaborator,Atlassify,11-06-2024,19-06-2026,IT,High,168,Planning,245,188,76.52,1161,576,0.496124031,Healthy,-585,Approval,Pending,3
+C-1639,Collaborator,Microsoft,10-09-2025,19-01-2027,Procurement,High,382,Normal,161,39,24.57,656,385,0.586890244,Healthy,-271,Execution,Approved,16
+C-1640,Full,Salesforce,28-09-2023,05-07-2026,Finance,Medium,184,Normal,210,142,67.9,5249,1251,0.238331111,Healthy,-3998,Execution,Approved,9
+C-1641,Full,Salesforce,23-11-2025,25-01-2027,Procurement,Critical,388,Normal,210,164,78.52,3866,1830,0.473357475,Healthy,-2036,Negotiation,Pending,12
+C-1642,Collaborator,Salesforce,29-09-2024,20-08-2026,Finance,Medium,230,Normal,98,85,87.04,4238,3809,0.898773006,Near Limit,-429,Approval,Approved,6
+C-1643,Collaborator,Prismly,24-03-2024,10-06-2026,IT,Medium,159,Planning,245,183,74.85,9450,8267,0.874814815,Near Limit,-1183,Negotiation,Pending,15
+C-1644,Contributor,Microsoft,03-02-2025,15-07-2026,Finance,Critical,194,Normal,182,142,78.34,4993,1324,0.26517124,Healthy,-3669,Negotiation,Pending,14
+C-1645,Collaborator,Nexaflow,13-10-2025,09-01-2027,Finance,Critical,372,Normal,157,127,81.02,2179,4388,2.013767783,Exceeded,2209,Negotiation,Pending,17
+C-1646,Collaborator,Prismly,08-12-2024,16-08-2026,Finance,Critical,226,Normal,245,157,64.27,2468,2270,0.919773096,Near Limit,-198,Execution,Approved,13
+C-1647,Collaborator,Databridge,02-01-2025,20-05-2026,IT,Critical,138,Planning,245,150,61.42,353,234,0.662889518,Healthy,-119,Approval,Pending,11
+C-1648,Collaborator,Nexaflow,07-02-2024,28-01-2027,Finance,Critical,391,Normal,157,105,67.13,1474,895,0.607191316,Healthy,-579,Planning,Approved,15
+C-1649,Collaborator,Veloxa,14-11-2024,06-07-2026,Finance,Medium,185,Normal,245,189,77.21,180,128,0.711111111,Healthy,-52,Approval,Pending,12
+C-1650,Collaborator,Veloxa,14-08-2024,25-01-2026,Procurement,Critical,23,Critical,245,192,78.35,264,221,0.837121212,Near Limit,-43,Negotiation,Approved,7
+C-1651,Collaborator,Microsoft,18-11-2024,01-05-2026,Procurement,High,119,Planning,161,118,73.57,2128,1222,0.57424812,Healthy,-906,Execution,Approved,8
+C-1652,Contributor,Microsoft,23-08-2024,15-06-2026,Procurement,High,164,Planning,182,162,88.87,3626,1220,0.336458908,Healthy,-2406,Approval,Pending,6
+C-1653,Collaborator,Atlassify,25-11-2023,02-03-2026,Procurement,Critical,59,Warning,245,187,76.48,669,538,0.804185351,Near Limit,-131,Planning,Pending,9
+C-1654,Collaborator,Microsoft,01-11-2024,20-03-2026,IT,Medium,77,Warning,161,122,76.05,8353,3380,0.404645038,Healthy,-4973,Planning,Pending,6
+C-1655,Collaborator,Microsoft,28-03-2025,01-02-2027,Finance,Critical,395,Normal,161,113,70.6,1652,829,0.501815981,Healthy,-823,Approval,Approved,15
+C-1656,Contributor,Microsoft,30-12-2023,10-01-2026,Finance,Medium,8,Critical,182,174,95.39,3716,1375,0.370021529,Healthy,-2341,Approval,Pending,7
+C-1657,Contributor,AWS,28-08-2024,06-02-2027,IT,Medium,400,Normal,145,119,82.62,837,845,1.009557945,Exceeded,8,Execution,Approved,9
+C-1658,Contributor,AWS,23-01-2025,18-10-2026,IT,Critical,289,Normal,145,98,68.14,2481,5996,2.416767432,Exceeded,3515,Approval,Approved,13
+C-1659,Collaborator,Microsoft,17-06-2025,15-01-2027,Procurement,High,378,Normal,161,125,77.92,1372,1342,0.978134111,Near Limit,-30,Planning,Pending,5
+C-1660,Collaborator,Atlassify,10-10-2024,23-05-2026,Finance,High,141,Planning,157,113,72.17,6804,1952,0.286890065,Healthy,-4852,Negotiation,Pending,11
+C-1661,Contributor,Microsoft,29-03-2024,01-04-2026,Finance,High,89,Warning,182,148,81.25,8841,8018,0.906910983,Near Limit,-823,Planning,Pending,6
+C-1662,Collaborator,Microsoft,29-08-2024,20-03-2026,Procurement,High,77,Warning,161,130,80.89,180,27,0.15,Healthy,-153,Planning,Pending,10
+C-1663,Collaborator,Veloxa,27-03-2025,26-01-2027,Procurement,Critical,389,Normal,245,182,74.11,2739,993,0.362541073,Healthy,-1746,Execution,Pending,8
+C-1664,Full,Salesforce,20-11-2025,23-11-2026,Finance,Medium,325,Normal,210,147,70.1,2773,1612,0.58131987,Healthy,-1161,Planning,Pending,12
+C-1665,Collaborator,Microsoft,07-12-2023,21-04-2026,Procurement,High,109,Planning,161,137,85.48,1933,716,0.370408691,Healthy,-1217,Execution,Approved,16
+C-1666,Contributor,Microsoft,18-11-2025,02-12-2026,Finance,High,334,Normal,182,141,77.8,3914,1201,0.306847215,Healthy,-2713,Negotiation,Pending,4
+C-1667,Collaborator,Cloudora,19-04-2025,18-07-2026,IT,Medium,197,Normal,245,222,90.44,350,152,0.434285714,Healthy,-198,Planning,Approved,4
+C-1668,Contributor,Microsoft,24-11-2024,18-09-2026,Procurement,Critical,259,Normal,182,140,76.97,3152,1612,0.51142132,Healthy,-1540,Planning,Pending,5
+C-1669,Contributor,Microsoft,13-12-2024,10-05-2026,IT,High,128,Planning,182,166,91.23,1763,1172,0.66477595,Healthy,-591,Execution,Pending,10
+C-1670,Collaborator,Prismly,27-02-2024,02-05-2026,IT,Medium,120,Planning,245,187,76.48,6888,4868,0.706736353,Healthy,-2020,Negotiation,Pending,8
+C-1671,Contributor,AWS,16-08-2024,23-02-2027,Procurement,Critical,417,Normal,182,164,90.35,426,430,1.009389671,Exceeded,4,Negotiation,Pending,5
+C-1672,Contributor,Microsoft,09-08-2024,30-10-2026,Procurement,High,301,Normal,182,129,71.11,6977,6355,0.910849936,Near Limit,-622,Negotiation,Pending,15
+C-1673,Contributor,Microsoft,02-07-2024,05-03-2026,IT,High,62,Warning,182,142,78.18,2227,736,0.330489448,Healthy,-1491,Planning,Pending,17
+C-1674,Collaborator,Microsoft,14-09-2023,20-07-2026,Finance,High,199,Normal,161,25,15.57,1282,1295,1.010140406,Exceeded,13,Planning,Approved,4
+C-1675,Collaborator,Veloxa,21-08-2023,17-02-2026,IT,Medium,46,Warning,98,74,76.12,1480,1371,0.926351351,Near Limit,-109,Execution,Approved,8
+C-1676,Contributor,Microsoft,10-08-2025,30-09-2026,Procurement,High,271,Normal,182,117,64.42,8987,10779,1.199399132,Exceeded,1792,Execution,Pending,12
+C-1677,Collaborator,AWS,15-01-2024,08-09-2026,IT,High,249,Normal,161,118,73.39,5667,11432,2.0172931,Exceeded,5765,Planning,Pending,5
+C-1678,Full,Salesforce,08-09-2024,21-11-2026,Finance,Low,323,Normal,210,59,28.19,804,547,0.680348259,Healthy,-257,Planning,Pending,6
+C-1679,Full,Salesforce,31-03-2025,18-08-2026,Finance,Critical,228,Normal,210,36,17.52,3360,3394,1.010119048,Exceeded,34,Approval,Pending,11
+C-1680,Contributor,Microsoft,29-11-2024,26-04-2026,IT,Medium,114,Planning,182,144,79.39,1827,465,0.254515599,Healthy,-1362,Planning,Pending,11
+C-1681,Collaborator,Microsoft,12-03-2024,19-02-2026,Finance,Medium,48,Warning,161,127,79.09,5105,2365,0.463271303,Healthy,-2740,Execution,Approved,5
+C-1682,Full,AWS,22-10-2023,06-01-2026,Procurement,Critical,4,Critical,260,237,91.38,4892,3999,0.817457073,Near Limit,-893,Execution,Approved,12
+C-1683,Contributor,AWS,09-08-2023,02-02-2026,Finance,Critical,31,Warning,145,109,75.31,5813,2530,0.435231378,Healthy,-3283,Planning,Pending,15
+C-1684,Full,Salesforce,18-03-2024,06-07-2026,Procurement,High,185,Normal,210,156,74.62,3417,2131,0.623646474,Healthy,-1286,Planning,Pending,13
+C-1685,Full,Salesforce,15-04-2025,31-05-2026,IT,Medium,149,Planning,210,131,62.43,2167,950,0.438394093,Healthy,-1217,Approval,Pending,13
+C-1686,Contributor,Microsoft,18-04-2023,17-02-2026,Finance,High,46,Warning,182,141,77.3,3151,1810,0.574420819,Healthy,-1341,Planning,Pending,9
+C-1687,Full,Salesforce,08-05-2025,11-11-2026,Procurement,Medium,313,Normal,210,137,65.57,1972,5648,2.864097363,Exceeded,3676,Planning,Pending,4
+C-1688,Collaborator,Salesforce,28-04-2025,24-12-2026,Finance,High,356,Normal,98,90,92.45,2570,1323,0.514785992,Healthy,-1247,Approval,Approved,5
+C-1689,Collaborator,Nexaflow,11-03-2025,03-08-2026,Finance,Critical,213,Normal,157,44,28.03,3751,1395,0.371900826,Healthy,-2356,Execution,Pending,8
+C-1690,Collaborator,Microsoft,15-12-2023,22-01-2026,IT,Medium,20,Critical,161,134,83.68,195,197,1.01025641,Exceeded,2,Execution,Approved,11
+C-1691,Contributor,Microsoft,22-07-2023,28-04-2026,Finance,Medium,116,Planning,182,153,83.99,3198,16434,5.138836773,Exceeded,13236,Planning,Approved,13
+C-1692,Contributor,AWS,07-02-2024,15-11-2026,IT,Medium,317,Normal,145,135,93.59,5152,1195,0.231948758,Healthy,-3957,Negotiation,Pending,10
+C-1693,Contributor,Salesforce,06-09-2024,15-02-2027,IT,High,409,Normal,320,254,79.53,2208,1198,0.542572464,Healthy,-1010,Planning,Pending,11
+C-1694,Collaborator,Nexaflow,05-03-2024,03-01-2026,IT,High,1,Critical,245,198,80.83,180,182,1.011111111,Exceeded,2,Approval,Pending,10
+C-1695,Collaborator,Microsoft,13-05-2024,18-10-2026,IT,Critical,289,Normal,161,130,81.02,8544,5851,0.684808052,Healthy,-2693,Approval,Approved,12
+C-1696,Collaborator,Atlassify,07-11-2024,28-01-2027,IT,High,391,Normal,245,195,79.53,2190,580,0.264840183,Healthy,-1610,Planning,Approved,3
+C-1697,Collaborator,Microsoft,26-06-2024,14-08-2026,Finance,Critical,224,Normal,161,125,77.98,4401,3711,0.843217451,Near Limit,-690,Approval,Approved,14
+C-1698,Collaborator,Cloudora,29-07-2024,20-04-2026,Procurement,High,108,Planning,245,194,78.96,4890,3070,0.627811861,Healthy,-1820,Planning,Approved,16
+C-1699,Collaborator,Nexaflow,05-02-2024,22-11-2026,Finance,Critical,324,Normal,245,183,74.6,4055,2033,0.50135635,Healthy,-2022,Approval,Pending,12
+C-1700,Collaborator,Microsoft,04-06-2024,05-03-2026,Procurement,High,62,Warning,161,125,77.85,3613,993,0.274840852,Healthy,-2620,Execution,Pending,9
+C-1701,Collaborator,Veloxa,03-07-2024,02-02-2026,IT,Critical,31,Warning,245,229,93.24,3006,8351,2.778110446,Exceeded,5345,Planning,Pending,15
+C-1702,Collaborator,Atlassify,31-08-2024,27-11-2026,Procurement,Critical,329,Normal,245,178,72.65,2990,828,0.276923077,Healthy,-2162,Execution,Pending,17
+C-1703,Contributor,Microsoft,25-02-2024,10-12-2026,Procurement,Medium,342,Normal,182,129,71,3889,6098,1.568012343,Exceeded,2209,Planning,Pending,12
+C-1704,Collaborator,Veloxa,23-02-2024,28-06-2026,Finance,Critical,177,Planning,157,122,78.15,3090,2999,0.970550162,Near Limit,-91,Execution,Approved,13
+C-1705,Full,Microsoft,24-03-2025,30-12-2026,Procurement,Critical,362,Normal,210,146,69.71,6288,2928,0.465648855,Healthy,-3360,Planning,Approved,4
+C-1706,Collaborator,Microsoft,12-02-2025,13-12-2026,Procurement,Critical,345,Normal,161,144,89.52,5525,5339,0.966334842,Near Limit,-186,Planning,Pending,8
+C-1707,Contributor,Microsoft,21-01-2025,26-03-2026,Procurement,High,83,Warning,182,171,94.02,3524,2192,0.622020431,Healthy,-1332,Negotiation,Pending,9
+C-1708,Collaborator,Salesforce,19-05-2025,11-08-2026,Procurement,Critical,221,Normal,98,80,81.84,2805,2455,0.875222816,Near Limit,-350,Planning,Pending,10
+C-1709,Collaborator,Salesforce,09-10-2023,11-06-2026,IT,Critical,160,Planning,98,21,22.14,569,533,0.936731107,Near Limit,-36,Approval,Pending,10
+C-1710,Contributor,Microsoft,17-08-2023,30-04-2026,Finance,High,118,Planning,182,121,66.56,4799,4065,0.847051469,Near Limit,-734,Approval,Pending,8
+C-1711,Collaborator,Nexaflow,12-02-2025,23-04-2026,Finance,High,111,Planning,245,59,24.26,2388,867,0.363065327,Healthy,-1521,Planning,Pending,10
+C-1712,Collaborator,Prismly,19-07-2024,17-02-2027,Procurement,Medium,411,Normal,157,148,94.27,3183,2149,0.67514923,Healthy,-1034,Approval,Pending,3
+C-1713,Collaborator,Cloudora,12-12-2023,04-06-2026,IT,Medium,153,Planning,245,171,69.72,4280,1177,0.275,Healthy,-3103,Approval,Approved,15
+C-1714,Contributor,Microsoft,03-01-2025,12-05-2026,Finance,High,130,Planning,182,161,88.49,352,346,0.982954545,Near Limit,-6,Approval,Approved,7
+C-1715,Contributor,Microsoft,22-11-2023,28-01-2026,Procurement,Medium,26,Critical,182,145,79.93,5453,3752,0.688061617,Healthy,-1701,Approval,Approved,3
+C-1716,Full,Salesforce,26-11-2023,04-09-2026,Finance,Critical,245,Normal,210,153,72.9,1143,6915,6.049868766,Exceeded,5772,Approval,Approved,7
+C-1717,Collaborator,Microsoft,16-07-2024,16-02-2026,Procurement,Critical,45,Warning,161,116,71.96,437,364,0.832951945,Near Limit,-73,Execution,Pending,14
+C-1718,Contributor,AWS,23-05-2025,22-11-2026,Procurement,Medium,324,Normal,145,128,88.69,7666,7351,0.95890947,Near Limit,-315,Execution,Pending,6
+C-1719,Collaborator,Microsoft,05-07-2024,08-11-2026,Finance,Medium,310,Normal,161,148,91.81,385,69,0.179220779,Healthy,-316,Approval,Pending,8
+C-1720,Collaborator,Veloxa,29-03-2025,21-07-2026,IT,Medium,200,Normal,245,143,58.28,3023,2583,0.854449223,Near Limit,-440,Approval,Pending,13
+C-1721,Collaborator,Veloxa,14-08-2024,23-01-2026,IT,Low,21,Critical,245,174,71.18,9461,4684,0.495085086,Healthy,-4777,Execution,Approved,5
+C-1722,Collaborator,Databridge,11-02-2024,31-01-2026,Finance,High,29,Critical,245,188,76.64,4786,4171,0.871500209,Near Limit,-615,Approval,Pending,17
+C-1723,Contributor,Salesforce,27-01-2025,22-05-2026,IT,Medium,140,Planning,320,192,60,4337,4176,0.962877565,Near Limit,-161,Execution,Pending,12
+C-1724,Collaborator,Microsoft,19-02-2024,16-10-2026,Finance,Medium,287,Normal,161,141,87.59,2007,1429,0.712007972,Healthy,-578,Execution,Pending,17
+C-1725,Contributor,Microsoft,12-08-2024,13-07-2026,Procurement,Medium,192,Normal,182,175,96.05,2983,868,0.290982233,Healthy,-2115,Planning,Pending,16
+C-1726,Collaborator,Microsoft,02-04-2025,16-01-2027,Procurement,High,379,Normal,161,144,89.7,1068,741,0.693820225,Healthy,-327,Planning,Approved,10
+C-1727,Contributor,Microsoft,07-12-2023,18-03-2026,IT,Critical,75,Warning,182,149,82.18,4079,4120,1.010051483,Exceeded,41,Planning,Pending,9
+C-1728,Collaborator,Microsoft,08-12-2023,26-07-2026,Finance,Medium,205,Normal,161,119,74.19,2125,4057,1.909176471,Exceeded,1932,Planning,Pending,8
+C-1729,Contributor,Microsoft,11-05-2025,22-01-2027,Procurement,High,385,Normal,182,38,20.89,1278,1259,0.98513302,Near Limit,-19,Planning,Approved,4
+C-1730,Collaborator,Atlassify,28-02-2024,10-11-2026,Finance,High,312,Normal,157,133,84.78,2929,1129,0.385455787,Healthy,-1800,Approval,Approved,17
+C-1731,Collaborator,Atlassify,22-05-2024,02-03-2026,Procurement,High,59,Warning,245,181,73.79,1545,911,0.589644013,Healthy,-634,Planning,Approved,3
+C-1732,Contributor,Microsoft,27-12-2024,26-07-2026,Finance,High,205,Normal,182,32,17.98,7697,5868,0.762374951,Healthy,-1829,Planning,Approved,6
+C-1733,Collaborator,Veloxa,01-02-2024,26-04-2026,Finance,Medium,114,Planning,245,183,74.64,4525,4312,0.952928177,Near Limit,-213,Execution,Approved,7
+C-1734,Contributor,Microsoft,02-09-2025,04-09-2026,Finance,High,245,Normal,182,49,27.14,2475,2399,0.969292929,Near Limit,-76,Execution,Pending,11
+C-1735,Collaborator,Databridge,29-01-2025,13-11-2026,IT,Critical,315,Normal,245,168,68.62,786,305,0.388040712,Healthy,-481,Approval,Approved,17
+C-1736,Collaborator,Atlassify,24-08-2023,03-02-2026,IT,Medium,32,Warning,157,34,22.23,907,249,0.274531422,Healthy,-658,Approval,Approved,12
+C-1737,Collaborator,Cloudora,28-12-2023,03-01-2026,Finance,High,1,Critical,157,125,79.87,4395,748,0.170193402,Healthy,-3647,Negotiation,Approved,13
+C-1738,Full,Salesforce,11-11-2024,08-12-2026,IT,Medium,340,Normal,210,157,75.1,6608,3381,0.511652542,Healthy,-3227,Planning,Pending,9
+C-1739,Contributor,Microsoft,22-12-2023,20-10-2026,Finance,High,291,Normal,182,112,61.62,351,147,0.418803419,Healthy,-204,Execution,Pending,6
+C-1740,Collaborator,Cloudora,11-10-2024,10-02-2026,Finance,Medium,39,Warning,157,132,84.33,4892,3343,0.683360589,Healthy,-1549,Planning,Pending,17
+C-1741,Collaborator,Microsoft,25-02-2025,14-02-2027,Procurement,High,408,Normal,161,113,70.16,2209,1957,0.885921231,Near Limit,-252,Execution,Approved,5
+C-1742,Full,Salesforce,16-09-2024,26-11-2026,Finance,High,328,Normal,210,143,68.1,3312,3122,0.94263285,Near Limit,-190,Planning,Pending,13
+C-1743,Contributor,Microsoft,06-06-2024,12-06-2026,Finance,Critical,161,Planning,182,124,68.31,3863,5654,1.463629304,Exceeded,1791,Negotiation,Approved,16
+C-1744,Contributor,Salesforce,30-08-2024,27-01-2026,IT,Medium,25,Critical,320,193,60.56,7188,32569,4.531023929,Exceeded,25381,Execution,Approved,4
+C-1745,Collaborator,Salesforce,13-03-2024,08-04-2026,Finance,Critical,96,Planning,245,212,86.37,4997,3517,0.703822293,Healthy,-1480,Planning,Pending,12
+C-1746,Collaborator,Microsoft,01-12-2024,18-10-2026,IT,High,289,Normal,161,113,70.1,3122,1322,0.423446509,Healthy,-1800,Planning,Approved,10
+C-1747,Collaborator,Veloxa,13-03-2025,08-10-2026,Procurement,Critical,279,Normal,157,117,74.71,2406,2278,0.946799667,Near Limit,-128,Negotiation,Pending,13
+C-1748,Collaborator,Prismly,29-12-2023,05-01-2026,IT,Medium,3,Critical,245,206,84,5762,4070,0.706351961,Healthy,-1692,Planning,Pending,12
+C-1749,Collaborator,Microsoft,29-09-2023,14-09-2026,Procurement,Critical,255,Normal,161,136,84.37,4465,4510,1.010078387,Exceeded,45,Approval,Pending,6
+C-1750,Full,AWS,15-08-2024,05-03-2026,Procurement,Medium,62,Warning,260,73,28.19,957,824,0.861024033,Near Limit,-133,Planning,Pending,6
+C-1751,Contributor,Salesforce,28-11-2024,26-03-2026,Finance,High,83,Warning,320,241,75.56,2264,2225,0.982773852,Near Limit,-39,Planning,Pending,10
+C-1752,Contributor,Microsoft,22-12-2023,18-01-2026,Procurement,High,16,Critical,182,148,81.58,4710,4073,0.864755839,Near Limit,-637,Approval,Pending,6
+C-1753,Full,Salesforce,24-08-2024,02-08-2026,Finance,Medium,212,Normal,210,146,69.67,2757,17920,6.499818643,Exceeded,15163,Planning,Pending,9
+C-1754,Collaborator,Microsoft,16-05-2023,21-01-2026,IT,High,19,Critical,161,129,80.02,311,183,0.588424437,Healthy,-128,Execution,Approved,5
+C-1755,Contributor,Microsoft,05-04-2024,18-03-2026,Finance,High,75,Warning,182,27,15.3,1936,1812,0.935950413,Near Limit,-124,Planning,Pending,13
+C-1756,Full,Salesforce,30-05-2024,21-03-2026,Procurement,Critical,78,Warning,210,166,79.19,3098,2032,0.655907037,Healthy,-1066,Planning,Pending,11
+C-1757,Collaborator,Microsoft,17-02-2023,02-02-2026,IT,Critical,31,Warning,161,119,74.26,1860,1997,1.073655914,Exceeded,137,Execution,Pending,12
+C-1758,Collaborator,Microsoft,13-11-2024,15-08-2026,Finance,High,225,Normal,161,99,61.85,10419,10523,1.009981764,Exceeded,104,Planning,Pending,7
+C-1759,Collaborator,Microsoft,26-08-2025,05-01-2027,IT,Critical,368,Normal,161,123,76.61,2676,2248,0.840059791,Near Limit,-428,Planning,Pending,10
+C-1760,Collaborator,Cloudora,30-05-2024,07-01-2026,Finance,Medium,5,Critical,245,174,70.86,3724,3761,1.009935553,Exceeded,37,Planning,Pending,4
+C-1761,Contributor,Microsoft,04-05-2023,18-02-2026,IT,High,47,Warning,182,119,65.35,3405,3439,1.009985316,Exceeded,34,Approval,Pending,10
+C-1762,Collaborator,Microsoft,15-09-2025,10-01-2027,Finance,Critical,373,Normal,161,25,15.51,5123,2252,0.43958618,Healthy,-2871,Planning,Approved,5
+C-1763,Contributor,AWS,01-03-2024,28-05-2026,IT,High,146,Planning,145,130,89.86,1604,1415,0.882169576,Near Limit,-189,Approval,Pending,10
+C-1764,Collaborator,Salesforce,23-11-2023,27-05-2026,Procurement,Critical,145,Planning,245,29,12.09,325,328,1.009230769,Exceeded,3,Approval,Approved,6
+C-1765,Collaborator,Veloxa,10-07-2025,05-01-2027,Procurement,Low,368,Normal,245,171,69.88,1860,602,0.323655914,Healthy,-1258,Planning,Pending,8
+C-1766,Collaborator,Microsoft,21-05-2024,29-10-2026,Finance,Medium,300,Normal,161,121,75.5,4788,1980,0.413533835,Healthy,-2808,Negotiation,Pending,4
+C-1767,Collaborator,Microsoft,18-11-2025,27-11-2026,Finance,Medium,329,Normal,161,125,77.92,5691,5285,0.928659287,Near Limit,-406,Planning,Pending,11
+C-1768,Collaborator,Atlassify,26-09-2023,02-05-2026,Finance,Medium,120,Planning,157,121,77.39,3226,1781,0.552076875,Healthy,-1445,Planning,Approved,15
+C-1769,Collaborator,Microsoft,17-09-2023,21-01-2026,Finance,High,19,Critical,161,115,71.65,401,899,2.241895262,Exceeded,498,Planning,Pending,8
+C-1770,Contributor,AWS,29-10-2023,13-06-2026,Procurement,Medium,162,Planning,145,145,100,234,111,0.474358974,Healthy,-123,Approval,Pending,15
+C-1771,Contributor,Microsoft,21-07-2024,19-11-2026,Procurement,Medium,321,Normal,182,51,28.45,2142,1613,0.753034547,Healthy,-529,Negotiation,Pending,15
+C-1772,Collaborator,Nexaflow,26-03-2024,24-02-2026,Finance,Critical,53,Warning,245,189,77.17,3653,1095,0.299753627,Healthy,-2558,Approval,Pending,4
+C-1773,Contributor,Microsoft,06-03-2024,25-05-2026,IT,Medium,143,Planning,182,154,84.76,3406,3130,0.91896653,Near Limit,-276,Execution,Pending,15
+C-1774,Collaborator,Salesforce,01-12-2024,04-10-2026,IT,High,275,Normal,98,83,85.61,749,473,0.631508678,Healthy,-276,Approval,Pending,8
+C-1775,Collaborator,Databridge,27-12-2024,06-01-2026,Procurement,Medium,4,Critical,157,101,64.59,1015,192,0.189162562,Healthy,-823,Planning,Approved,7
+C-1776,Collaborator,Microsoft,07-04-2025,19-04-2026,IT,High,107,Planning,161,127,79.34,4478,2961,0.661232693,Healthy,-1517,Negotiation,Pending,16
+C-1777,Contributor,Microsoft,11-10-2024,01-06-2026,IT,Critical,150,Planning,182,139,76.7,2886,1077,0.373180873,Healthy,-1809,Approval,Pending,10
+C-1778,Full,AWS,03-08-2024,21-04-2026,IT,High,109,Planning,260,178,68.77,12529,7134,0.569398994,Healthy,-5395,Approval,Pending,8
+C-1779,Collaborator,Cloudora,10-02-2024,19-07-2026,Procurement,High,198,Normal,157,109,69.43,231,117,0.506493506,Healthy,-114,Planning,Pending,11
+C-1780,Collaborator,Veloxa,26-02-2024,19-03-2026,IT,Critical,76,Warning,245,195,79.57,4583,1679,0.366353917,Healthy,-2904,Planning,Pending,14
+C-1781,Collaborator,Microsoft,17-09-2023,13-01-2026,Finance,Medium,11,Critical,161,110,68.36,1750,279,0.159428571,Healthy,-1471,Negotiation,Pending,3
+C-1782,Collaborator,Salesforce,22-03-2024,10-01-2026,IT,Medium,8,Critical,98,80,81.94,3721,6041,1.62348831,Exceeded,2320,Negotiation,Pending,12
+C-1783,Collaborator,Microsoft,23-06-2025,18-11-2026,Finance,Medium,320,Normal,161,146,90.94,520,124,0.238461538,Healthy,-396,Planning,Pending,8
+C-1784,Contributor,Microsoft,12-11-2024,13-01-2026,Finance,Medium,11,Critical,182,152,83.39,4389,2480,0.565048986,Healthy,-1909,Approval,Pending,8
+C-1785,Collaborator,Veloxa,07-06-2025,26-06-2026,Finance,Medium,175,Planning,245,174,70.94,2731,2391,0.875503479,Near Limit,-340,Execution,Pending,4
+C-1786,Contributor,AWS,25-01-2024,27-04-2026,Finance,High,115,Planning,145,143,98.9,1945,1445,0.742930591,Healthy,-500,Planning,Pending,6
+C-1787,Contributor,AWS,02-08-2024,19-07-2026,IT,Critical,198,Normal,145,141,97.72,561,352,0.62745098,Healthy,-209,Approval,Pending,15
+C-1788,Contributor,Salesforce,17-09-2024,11-04-2026,Procurement,Medium,99,Planning,320,229,71.78,5775,2100,0.363636364,Healthy,-3675,Planning,Pending,14
+C-1789,Contributor,AWS,03-02-2024,31-03-2026,Procurement,Medium,88,Warning,145,126,87.1,2056,1671,0.812743191,Near Limit,-385,Planning,Pending,13
+C-1790,Collaborator,Prismly,10-10-2023,25-03-2026,IT,High,82,Warning,157,130,83.12,7837,19289,2.461273446,Exceeded,11452,Approval,Pending,16
+C-1791,Collaborator,Veloxa,24-04-2024,11-01-2026,IT,High,9,Critical,245,168,68.66,1033,932,0.902226525,Near Limit,-101,Planning,Pending,8
+C-1792,Collaborator,Databridge,25-11-2023,11-01-2026,IT,Medium,9,Critical,157,117,74.84,420,413,0.983333333,Near Limit,-7,Negotiation,Pending,5
+C-1793,Full,Salesforce,17-07-2025,20-07-2026,IT,High,199,Normal,210,138,66.14,2359,1557,0.660025435,Healthy,-802,Execution,Pending,6
+C-1794,Collaborator,Cloudora,04-11-2023,17-01-2026,Procurement,Critical,15,Critical,157,115,73.57,315,48,0.152380952,Healthy,-267,Approval,Approved,9
+C-1795,Contributor,AWS,12-04-2024,17-01-2026,Procurement,Medium,15,Critical,145,128,88.48,1848,4910,2.656926407,Exceeded,3062,Approval,Approved,11
+C-1796,Collaborator,Nexaflow,22-03-2025,22-03-2026,Finance,High,79,Warning,157,108,68.85,4573,3748,0.819593265,Near Limit,-825,Execution,Pending,4
+C-1797,Full,AWS,17-08-2023,25-07-2026,Finance,Medium,204,Normal,260,223,86.08,4552,3537,0.77702109,Healthy,-1015,Planning,Pending,7
+C-1798,Collaborator,Atlassify,11-12-2024,13-02-2027,IT,Critical,407,Normal,245,171,69.64,1355,530,0.391143911,Healthy,-825,Execution,Pending,3
+C-1799,Contributor,AWS,16-04-2025,25-11-2026,Procurement,High,327,Normal,145,125,86.28,2937,8245,2.807286347,Exceeded,5308,Negotiation,Pending,9
+C-1800,Contributor,Salesforce,14-08-2023,12-02-2026,Finance,High,41,Warning,320,227,70.94,605,580,0.958677686,Near Limit,-25,Execution,Pending,7
+C-1801,Contributor,Microsoft,14-05-2025,18-01-2027,Finance,Medium,381,Normal,182,141,77.63,4369,2449,0.560540169,Healthy,-1920,Approval,Approved,3
+C-1802,Full,Microsoft,27-10-2023,11-06-2026,IT,High,160,Planning,210,60,28.81,1838,1610,0.875952122,Near Limit,-228,Planning,Pending,13
+C-1803,Full,Salesforce,04-05-2024,20-01-2027,Procurement,Medium,383,Normal,210,165,78.81,1532,533,0.347911227,Healthy,-999,Execution,Approved,12
+C-1804,Collaborator,Microsoft,10-10-2023,25-04-2026,Finance,High,113,Planning,161,33,20.47,4420,4148,0.938461538,Near Limit,-272,Approval,Pending,13
+C-1805,Collaborator,Salesforce,06-06-2023,24-02-2026,IT,Critical,53,Warning,245,209,85.23,421,217,0.51543943,Healthy,-204,Execution,Pending,5
+C-1806,Collaborator,Atlassify,08-08-2024,13-08-2026,Finance,High,223,Normal,157,128,81.91,3928,880,0.224032587,Healthy,-3048,Negotiation,Pending,12
+C-1807,Contributor,Microsoft,07-07-2025,25-08-2026,IT,Critical,235,Normal,182,138,76.04,3352,3017,0.900059666,Near Limit,-335,Planning,Pending,7
+C-1808,Collaborator,Atlassify,18-09-2023,17-02-2026,Procurement,Medium,46,Warning,157,111,71.21,4662,4086,0.876447876,Near Limit,-576,Approval,Approved,3
+C-1809,Collaborator,Microsoft,14-04-2024,30-06-2026,IT,Critical,179,Planning,161,128,79.84,2647,728,0.275028334,Healthy,-1919,Planning,Approved,13
+C-1810,Collaborator,Databridge,05-01-2025,27-08-2026,IT,Medium,237,Normal,245,193,78.8,180,70,0.388888889,Healthy,-110,Approval,Pending,7
+C-1811,Collaborator,Microsoft,11-09-2024,12-04-2026,IT,Critical,100,Planning,161,143,89.27,1411,2141,1.517363572,Exceeded,730,Execution,Pending,9
+C-1812,Collaborator,Databridge,23-04-2025,28-05-2026,Procurement,High,146,Planning,245,162,65.93,519,1065,2.052023121,Exceeded,546,Approval,Approved,13
+C-1813,Collaborator,Databridge,05-05-2024,23-01-2026,Finance,High,21,Critical,245,194,79,3732,3522,0.943729904,Near Limit,-210,Planning,Pending,3
+C-1814,Collaborator,Prismly,27-09-2025,02-01-2027,Procurement,Medium,365,Normal,157,123,78.92,1055,882,0.836018957,Near Limit,-173,Planning,Pending,14
+C-1815,Full,Salesforce,06-02-2025,05-04-2026,IT,Critical,93,Planning,210,158,75.52,2747,4465,1.625409538,Exceeded,1718,Approval,Pending,9
+C-1816,Collaborator,Microsoft,21-04-2025,13-11-2026,Finance,High,315,Normal,161,122,75.87,2000,3055,1.5275,Exceeded,1055,Approval,Approved,7
+C-1817,Contributor,Microsoft,22-06-2024,06-03-2026,IT,Critical,63,Warning,182,158,87.12,487,349,0.716632444,Healthy,-138,Planning,Pending,7
+C-1818,Collaborator,Veloxa,15-02-2024,09-12-2026,IT,High,341,Normal,98,79,81.53,3097,1529,0.493703584,Healthy,-1568,Planning,Pending,16
+C-1819,Contributor,Microsoft,27-11-2023,23-01-2026,Finance,Medium,21,Critical,182,150,82.29,334,190,0.568862275,Healthy,-144,Approval,Pending,13
+C-1820,Contributor,AWS,21-06-2024,18-01-2027,Finance,Medium,381,Normal,182,134,73.57,1938,1311,0.676470588,Healthy,-627,Approval,Approved,7
+C-1821,Full,Microsoft,21-02-2025,26-11-2026,IT,High,328,Normal,210,137,65.48,6373,1480,0.232229719,Healthy,-4893,Planning,Pending,4
+C-1822,Contributor,Microsoft,09-06-2023,31-03-2026,Finance,Critical,88,Warning,182,141,77.3,1008,316,0.313492063,Healthy,-692,Planning,Pending,17
+C-1823,Collaborator,Veloxa,15-12-2024,19-05-2026,Procurement,High,137,Planning,245,175,71.27,4496,4311,0.958852313,Near Limit,-185,Planning,Pending,4
+C-1824,Collaborator,Atlassify,16-12-2024,16-12-2026,Finance,Medium,348,Normal,245,158,64.39,4897,4782,0.976516234,Near Limit,-115,Execution,Pending,17
+C-1825,Collaborator,Nexaflow,03-02-2025,24-10-2026,Finance,High,295,Normal,245,55,22.55,4743,3933,0.829222011,Near Limit,-810,Planning,Pending,16
+C-1826,Collaborator,Prismly,15-04-2025,02-12-2026,IT,High,334,Normal,245,191,78.1,3266,3114,0.95345989,Near Limit,-152,Planning,Pending,17
+C-1827,Collaborator,Databridge,10-01-2025,12-01-2026,Finance,Critical,10,Critical,157,99,63.31,2970,1993,0.671043771,Healthy,-977,Planning,Pending,14
+C-1828,Collaborator,Atlassify,29-11-2023,27-09-2026,IT,Medium,268,Normal,157,118,75.67,3475,2955,0.850359712,Near Limit,-520,Planning,Approved,14
+C-1829,Full,Microsoft,13-09-2023,05-07-2026,Procurement,Critical,184,Normal,210,45,21.76,4552,2144,0.471001757,Healthy,-2408,Execution,Approved,10
+C-1830,Collaborator,Databridge,17-12-2023,18-03-2026,Procurement,Critical,75,Warning,157,136,87.2,2086,1953,0.936241611,Near Limit,-133,Approval,Pending,11
+C-1831,Collaborator,Databridge,04-08-2024,10-07-2026,Finance,Medium,189,Normal,245,167,67.97,458,400,0.873362445,Near Limit,-58,Planning,Approved,6
+C-1832,Contributor,Microsoft,14-01-2024,21-01-2026,Finance,Medium,19,Critical,182,113,61.95,491,277,0.564154786,Healthy,-214,Negotiation,Pending,7
+C-1833,Collaborator,Microsoft,05-12-2023,15-09-2026,Finance,Medium,256,Normal,161,27,17.31,5086,8763,1.722965002,Exceeded,3677,Planning,Pending,6
+C-1834,Contributor,AWS,17-12-2024,22-07-2026,Finance,Medium,201,Normal,182,141,77.52,3485,3645,1.045911047,Exceeded,160,Negotiation,Approved,12
+C-1835,Contributor,Microsoft,07-12-2025,20-12-2026,Procurement,Critical,352,Normal,182,124,68.15,347,136,0.391930836,Healthy,-211,Planning,Pending,5
+C-1836,Collaborator,Databridge,17-06-2023,03-02-2026,IT,Critical,32,Warning,245,125,51,357,191,0.535014006,Healthy,-166,Negotiation,Pending,7
+C-1837,Collaborator,Databridge,25-12-2024,10-02-2026,Procurement,Critical,39,Warning,157,125,79.81,2955,2597,0.878849408,Near Limit,-358,Planning,Pending,14
+C-1838,Collaborator,Microsoft,20-03-2024,17-09-2026,Procurement,Critical,258,Normal,161,136,84.93,180,182,1.011111111,Exceeded,2,Planning,Pending,9
+C-1839,Collaborator,Veloxa,18-12-2025,19-12-2026,Procurement,High,351,Normal,157,87,55.41,2273,1672,0.735591729,Healthy,-601,Planning,Pending,11
+C-1840,Collaborator,Cloudora,23-09-2024,20-02-2027,Finance,High,414,Normal,245,182,74.32,481,457,0.95010395,Near Limit,-24,Execution,Approved,3
+C-1841,Collaborator,Atlassify,02-10-2024,16-01-2026,Procurement,High,14,Critical,245,69,28.45,8119,6372,0.784825717,Healthy,-1747,Planning,Pending,8
+C-1842,Collaborator,Nexaflow,10-03-2023,08-01-2026,IT,Medium,6,Critical,245,149,60.97,3166,4244,1.340492735,Exceeded,1078,Execution,Approved,13
+C-1843,Collaborator,Nexaflow,05-01-2025,01-11-2026,IT,Medium,303,Normal,245,160,65.24,2008,4383,2.182768924,Exceeded,2375,Approval,Approved,11
+C-1844,Collaborator,Atlassify,08-12-2024,20-04-2026,IT,High,108,Planning,157,95,60.57,2981,2626,0.880912445,Near Limit,-355,Planning,Pending,12
+C-1845,Collaborator,Microsoft,21-05-2025,12-10-2026,Procurement,Critical,283,Normal,161,143,89.02,5599,1262,0.225397392,Healthy,-4337,Planning,Pending,8
+C-1846,Collaborator,Microsoft,21-11-2023,18-07-2026,IT,Medium,197,Normal,161,121,75.12,3693,1754,0.474952613,Healthy,-1939,Approval,Pending,9
+C-1847,Full,AWS,04-09-2024,03-04-2026,IT,High,91,Planning,260,186,71.81,12376,12500,1.010019392,Exceeded,124,Negotiation,Approved,7
+C-1848,Contributor,Microsoft,22-07-2024,25-01-2026,IT,High,23,Critical,182,39,21.88,9287,7204,0.775707979,Healthy,-2083,Execution,Approved,3
+C-1849,Contributor,Microsoft,23-05-2025,17-10-2026,Procurement,Critical,288,Normal,182,171,93.75,6000,2839,0.473166667,Healthy,-3161,Planning,Pending,13
+C-1850,Full,AWS,21-04-2024,27-09-2026,Procurement,High,268,Normal,260,199,76.88,623,527,0.845906902,Near Limit,-96,Negotiation,Pending,9
+C-1851,Contributor,Microsoft,14-02-2025,27-07-2026,Procurement,High,206,Normal,182,155,85.25,6374,1498,0.235017258,Healthy,-4876,Approval,Pending,8
+C-1852,Collaborator,Microsoft,21-05-2023,05-05-2026,Finance,High,123,Planning,161,98,61.04,3272,2559,0.782090465,Healthy,-713,Planning,Pending,11
+C-1853,Collaborator,Microsoft,28-02-2025,05-05-2026,Finance,Critical,123,Planning,161,135,83.81,8702,8187,0.940818203,Near Limit,-515,Planning,Pending,8
+C-1854,Contributor,Microsoft,22-07-2024,30-07-2026,IT,Medium,209,Normal,182,145,79.93,1909,1928,1.009952855,Exceeded,19,Approval,Approved,13
+C-1855,Full,Salesforce,24-12-2023,19-03-2026,Finance,Critical,76,Warning,210,137,65.67,698,112,0.160458453,Healthy,-586,Planning,Pending,10
+C-1856,Collaborator,Prismly,17-09-2024,20-10-2026,Finance,Medium,291,Normal,245,149,60.97,1645,2244,1.364133739,Exceeded,599,Planning,Pending,14
+C-1857,Collaborator,Prismly,02-04-2024,03-09-2026,Finance,Medium,244,Normal,245,190,77.61,5044,1994,0.395321174,Healthy,-3050,Execution,Pending,16
+C-1858,Full,Microsoft,19-07-2023,13-06-2026,Finance,High,162,Planning,210,134,64.19,4418,4791,1.084427343,Exceeded,373,Planning,Pending,5
+C-1859,Contributor,Microsoft,14-04-2023,24-01-2026,Procurement,Critical,22,Critical,182,166,91.45,4125,2767,0.670787879,Healthy,-1358,Approval,Pending,9
+C-1860,Contributor,Microsoft,08-11-2024,13-06-2026,IT,Medium,162,Planning,182,148,81.36,9709,2791,0.287465238,Healthy,-6918,Planning,Approved,5
+C-1861,Collaborator,Veloxa,05-03-2024,18-05-2026,IT,Critical,136,Planning,245,179,73.1,4049,4089,1.009878982,Exceeded,40,Approval,Pending,9
+C-1862,Collaborator,Microsoft,25-07-2025,10-10-2026,IT,High,281,Normal,161,104,64.89,571,474,0.830122592,Near Limit,-97,Execution,Approved,6
+C-1863,Full,Salesforce,06-10-2024,27-10-2026,Finance,High,298,Normal,210,144,68.81,4406,4450,1.009986382,Exceeded,44,Approval,Approved,16
+C-1864,Collaborator,AWS,18-02-2024,13-01-2027,Procurement,Critical,376,Normal,161,106,66,2934,8706,2.967280164,Exceeded,5772,Negotiation,Approved,15
+C-1865,Contributor,Microsoft,18-12-2023,01-02-2026,IT,Medium,30,Critical,182,149,82.13,1525,1378,0.903606557,Near Limit,-147,Execution,Pending,3
+C-1866,Contributor,Prismly,23-08-2025,24-08-2026,Procurement,High,234,Normal,320,44,13.94,1458,1220,0.836762689,Near Limit,-238,Planning,Pending,13
+C-1867,Collaborator,Cloudora,16-03-2023,21-02-2026,IT,High,50,Warning,245,152,62.11,6017,907,0.150739571,Healthy,-5110,Negotiation,Pending,8
+C-1868,Collaborator,Databridge,13-03-2024,21-11-2026,Procurement,Medium,323,Normal,245,48,19.62,4128,4169,1.009932171,Exceeded,41,Execution,Approved,6
+C-1869,Contributor,Salesforce,07-02-2024,06-04-2026,Procurement,Critical,94,Planning,320,199,62.38,397,198,0.498740554,Healthy,-199,Execution,Pending,16
+C-1870,Contributor,Microsoft,25-02-2024,02-01-2026,IT,Medium,0,Critical,182,51,28.45,4304,670,0.155669145,Healthy,-3634,Planning,Pending,9
+C-1871,Contributor,AWS,11-03-2025,11-06-2026,IT,Medium,160,Planning,145,125,86.28,2203,809,0.367226509,Healthy,-1394,Planning,Pending,5
+C-1872,Contributor,AWS,06-06-2024,04-05-2026,Procurement,Medium,122,Planning,145,140,97.03,2982,2782,0.932930919,Near Limit,-200,Planning,Pending,5
+C-1873,Collaborator,Salesforce,10-03-2024,04-02-2027,IT,Medium,398,Normal,98,98,100,2571,1039,0.404122909,Healthy,-1532,Execution,Approved,17
+C-1874,Collaborator,Veloxa,05-12-2024,09-10-2026,Finance,Critical,280,Normal,157,110,70.51,496,847,1.70766129,Exceeded,351,Execution,Approved,9
+C-1875,Collaborator,Databridge,15-01-2025,10-08-2026,Finance,Critical,220,Normal,157,118,75.16,304,258,0.848684211,Near Limit,-46,Planning,Pending,8
+C-1876,Contributor,Microsoft,14-11-2023,15-02-2026,IT,High,44,Warning,182,125,68.59,4283,1716,0.400653747,Healthy,-2567,Approval,Approved,6
+C-1877,Contributor,Microsoft,03-09-2024,29-01-2026,IT,Critical,27,Critical,182,145,79.55,2905,576,0.19827883,Healthy,-2329,Negotiation,Pending,13
+C-1878,Collaborator,Databridge,17-03-2024,27-03-2026,IT,Medium,84,Warning,157,45,28.85,4506,2475,0.549267643,Healthy,-2031,Execution,Pending,16
+C-1879,Full,Salesforce,05-03-2024,07-06-2026,Procurement,Critical,156,Planning,210,146,69.81,180,223,1.238888889,Exceeded,43,Approval,Approved,6
+C-1880,Contributor,Microsoft,14-03-2024,23-01-2026,Finance,High,21,Critical,182,36,19.9,432,300,0.694444444,Healthy,-132,Approval,Pending,12
+C-1881,Full,Salesforce,25-06-2024,08-01-2026,Procurement,Medium,6,Critical,210,58,27.81,6265,5287,0.843894653,Near Limit,-978,Planning,Pending,5
+C-1882,Collaborator,Databridge,19-01-2024,24-05-2026,Finance,Critical,142,Planning,157,91,58.15,1906,1437,0.753934942,Healthy,-469,Planning,Approved,17
+C-1883,Contributor,Microsoft,23-07-2024,11-01-2027,Finance,High,374,Normal,182,165,90.52,548,349,0.636861314,Healthy,-199,Approval,Approved,6
+C-1884,Collaborator,Microsoft,05-03-2023,20-01-2026,Procurement,High,18,Critical,161,143,88.83,360,279,0.775,Healthy,-81,Execution,Approved,8
+C-1885,Contributor,Microsoft,22-11-2024,04-11-2026,Procurement,Critical,306,Normal,182,126,69.08,391,159,0.406649616,Healthy,-232,Negotiation,Pending,10
+C-1886,Collaborator,Microsoft,30-05-2024,18-10-2026,Procurement,High,289,Normal,161,114,70.84,1364,820,0.601173021,Healthy,-544,Planning,Approved,7
+C-1887,Collaborator,Nexaflow,31-08-2024,30-05-2026,Finance,Critical,148,Planning,157,107,68.54,1460,410,0.280821918,Healthy,-1050,Approval,Pending,7
+C-1888,Contributor,AWS,10-05-2025,25-06-2026,IT,Medium,174,Planning,145,124,85.52,2549,2427,0.952138093,Near Limit,-122,Approval,Approved,6
+C-1889,Collaborator,Cloudora,29-08-2023,29-04-2026,IT,Medium,117,Planning,245,193,78.75,2466,2288,0.927818329,Near Limit,-178,Planning,Pending,14
+C-1890,Collaborator,Veloxa,22-02-2024,18-12-2026,Finance,Medium,350,Normal,157,114,73.06,2953,2741,0.928208601,Near Limit,-212,Planning,Pending,5
+C-1891,Contributor,Microsoft,20-08-2024,01-10-2026,Procurement,High,272,Normal,182,177,97.42,4009,1684,0.420054877,Healthy,-2325,Approval,Approved,14
+C-1892,Collaborator,Prismly,02-05-2024,27-02-2026,IT,Critical,56,Warning,157,118,75.48,8076,2100,0.260029718,Healthy,-5976,Planning,Pending,11
+C-1893,Collaborator,Cloudora,02-11-2024,27-09-2026,IT,High,268,Normal,245,188,76.84,5433,5361,0.986747653,Near Limit,-72,Execution,Approved,11
+C-1894,Collaborator,Microsoft,03-10-2024,19-02-2026,Procurement,Critical,48,Warning,161,108,67.25,3764,2099,0.557651435,Healthy,-1665,Planning,Approved,13
+C-1895,Collaborator,Salesforce,01-02-2025,26-08-2026,Procurement,Medium,236,Normal,245,36,14.81,2867,1880,0.655737705,Healthy,-987,Planning,Pending,17
+C-1896,Collaborator,Veloxa,06-12-2023,19-06-2026,Finance,Critical,168,Planning,245,175,71.31,1808,1155,0.638827434,Healthy,-653,Planning,Pending,14
+C-1897,Collaborator,Veloxa,07-02-2025,29-04-2026,Finance,High,117,Planning,157,104,66.56,2554,2662,1.042286609,Exceeded,108,Planning,Pending,4
+C-1898,Full,AWS,24-01-2024,22-05-2026,IT,Critical,140,Planning,260,169,65.31,3973,1924,0.484268814,Healthy,-2049,Planning,Pending,10
+C-1899,Full,Salesforce,27-03-2024,01-11-2026,Finance,Medium,303,Normal,210,166,79.24,246,167,0.678861789,Healthy,-79,Approval,Pending,15
+C-1900,Collaborator,Salesforce,02-12-2024,03-05-2026,Finance,Critical,121,Planning,245,167,68.17,5579,1406,0.25201649,Healthy,-4173,Negotiation,Pending,16
+C-1901,Contributor,Microsoft,25-12-2023,09-05-2026,Procurement,Medium,127,Planning,182,152,83.72,5842,10210,1.747689148,Exceeded,4368,Approval,Pending,6
+C-1902,Contributor,AWS,17-01-2025,26-02-2027,IT,Critical,420,Normal,145,115,79.66,7646,1813,0.237117447,Healthy,-5833,Execution,Pending,8
+C-1903,Collaborator,Nexaflow,14-09-2025,05-02-2027,Finance,High,399,Normal,157,127,80.96,2893,7701,2.66194262,Exceeded,4808,Planning,Approved,6
+C-1904,Contributor,Microsoft,18-12-2023,19-06-2026,Procurement,Medium,168,Planning,182,132,72.37,3234,3078,0.951762523,Near Limit,-156,Execution,Pending,12
+C-1905,Collaborator,Microsoft,15-08-2024,27-03-2026,Procurement,Medium,84,Warning,161,46,28.72,4345,3149,0.724741082,Healthy,-1196,Approval,Pending,6
+C-1906,Collaborator,Salesforce,16-11-2023,15-10-2026,Procurement,Critical,286,Normal,98,85,87.65,3184,1668,0.523869347,Healthy,-1516,Planning,Pending,6
+C-1907,Collaborator,Microsoft,29-11-2024,21-11-2026,IT,Medium,323,Normal,161,120,74.81,3209,639,0.199127454,Healthy,-2570,Execution,Pending,3
+C-1908,Collaborator,Databridge,11-01-2025,19-08-2026,IT,High,229,Normal,245,158,64.51,4973,4224,0.849386688,Near Limit,-749,Planning,Approved,9
+C-1909,Collaborator,Salesforce,16-04-2024,10-06-2026,Finance,Medium,159,Planning,98,24,25.2,378,316,0.835978836,Near Limit,-62,Execution,Approved,13
+C-1910,Contributor,Microsoft,08-02-2024,16-02-2026,Procurement,High,45,Warning,182,151,83.17,3605,1141,0.316504854,Healthy,-2464,Planning,Pending,12
+C-1911,Contributor,Microsoft,27-12-2024,20-08-2026,Procurement,Medium,230,Normal,182,140,77.19,3870,3333,0.86124031,Near Limit,-537,Negotiation,Pending,6
+C-1912,Contributor,Microsoft,23-05-2024,11-07-2026,Finance,Medium,190,Normal,182,150,82.62,4190,4232,1.010023866,Exceeded,42,Execution,Approved,7
+C-1913,Collaborator,Prismly,30-11-2023,24-11-2026,Procurement,Medium,326,Normal,157,103,65.92,7392,7004,0.947510823,Near Limit,-388,Execution,Approved,13
+C-1914,Collaborator,Prismly,12-03-2024,07-10-2026,Procurement,Medium,278,Normal,157,119,76.18,2365,372,0.157293869,Healthy,-1993,Planning,Pending,15
+C-1915,Collaborator,Veloxa,22-03-2025,11-10-2026,Finance,Medium,282,Normal,245,176,71.92,4984,1158,0.232343499,Healthy,-3826,Planning,Approved,8
+C-1916,Collaborator,Microsoft,05-05-2025,07-05-2026,Finance,Critical,125,Planning,161,116,72.46,2767,1836,0.663534514,Healthy,-931,Approval,Pending,3
+C-1917,Collaborator,Salesforce,27-04-2025,28-07-2026,Procurement,Low,207,Normal,98,13,13.67,6632,4234,0.638419783,Healthy,-2398,Planning,Pending,10
+C-1918,Collaborator,Microsoft,28-01-2025,02-06-2026,IT,Medium,151,Planning,161,150,93.61,3557,3593,1.010120888,Exceeded,36,Approval,Pending,9
+C-1919,Collaborator,Nexaflow,02-02-2025,19-08-2026,Procurement,Medium,229,Normal,157,120,76.88,1756,567,0.322892938,Healthy,-1189,Execution,Approved,5
+C-1920,Collaborator,Veloxa,02-12-2025,15-02-2027,Procurement,High,409,Normal,157,107,68.22,1294,565,0.436630603,Healthy,-729,Execution,Pending,14
+C-1921,Collaborator,Microsoft,08-05-2024,24-10-2026,Finance,Critical,295,Normal,161,141,87.78,1914,2066,1.079414838,Exceeded,152,Negotiation,Pending,12
+C-1922,Collaborator,Salesforce,23-01-2025,02-05-2026,IT,High,120,Planning,98,81,82.76,2648,1722,0.650302115,Healthy,-926,Approval,Approved,7
+C-1923,Contributor,Salesforce,08-11-2023,12-01-2026,Procurement,Critical,10,Critical,320,177,55.44,5684,5385,0.9473962,Near Limit,-299,Negotiation,Pending,7
+C-1924,Collaborator,Atlassify,24-08-2023,04-02-2026,Procurement,Critical,33,Warning,157,134,85.54,3025,628,0.207603306,Healthy,-2397,Approval,Approved,17
+C-1925,Collaborator,Microsoft,24-11-2024,04-04-2026,Procurement,Medium,92,Planning,161,126,78.23,645,615,0.953488372,Near Limit,-30,Approval,Pending,11
+C-1926,Contributor,AWS,01-04-2024,08-05-2026,Finance,Medium,126,Planning,145,19,13.52,2050,588,0.286829268,Healthy,-1462,Planning,Pending,17
+C-1927,Collaborator,Veloxa,30-12-2024,22-10-2026,IT,Medium,293,Normal,245,192,78.31,3469,2790,0.804266359,Near Limit,-679,Planning,Pending,16
+C-1928,Collaborator,Veloxa,18-10-2023,26-01-2026,IT,Critical,24,Critical,245,168,68.46,4480,3615,0.806919643,Near Limit,-865,Execution,Pending,3
+C-1929,Full,Salesforce,05-04-2025,13-11-2026,IT,Medium,315,Normal,210,156,74.29,484,419,0.865702479,Near Limit,-65,Negotiation,Pending,5
+C-1930,Collaborator,Nexaflow,01-09-2024,04-09-2026,IT,Medium,245,Normal,157,27,17.39,693,201,0.29004329,Healthy,-492,Negotiation,Pending,9
+C-1931,Collaborator,Veloxa,17-12-2024,27-11-2026,Finance,Medium,329,Normal,157,138,87.96,355,303,0.853521127,Near Limit,-52,Planning,Pending,8
+C-1932,Collaborator,Salesforce,26-10-2023,12-09-2026,Finance,Medium,253,Normal,245,179,73.02,4632,3753,0.810233161,Near Limit,-879,Execution,Approved,14
+C-1933,Contributor,Microsoft,09-02-2024,23-01-2026,IT,Medium,21,Critical,182,115,63.16,3242,2744,0.846391117,Near Limit,-498,Planning,Pending,12
+C-1934,Collaborator,Veloxa,20-02-2024,22-12-2026,Finance,High,354,Normal,245,169,68.78,9751,3323,0.34078556,Healthy,-6428,Planning,Approved,8
+C-1935,Full,AWS,18-01-2024,02-05-2026,IT,High,120,Planning,260,166,63.85,495,699,1.412121212,Exceeded,204,Planning,Pending,14
+C-1936,Contributor,Microsoft,01-05-2023,05-01-2026,IT,High,3,Critical,182,166,91.01,775,359,0.463225806,Healthy,-416,Planning,Approved,12
+C-1937,Collaborator,Databridge,19-01-2025,15-12-2026,IT,Critical,347,Normal,245,194,79.24,4242,4284,1.00990099,Exceeded,42,Planning,Pending,7
+C-1938,Full,Salesforce,02-08-2024,16-01-2027,Procurement,Critical,379,Normal,210,140,66.81,971,355,0.365602472,Healthy,-616,Negotiation,Pending,15
+C-1939,Full,AWS,28-09-2024,20-06-2026,Finance,Critical,169,Planning,260,211,81.31,3579,3072,0.858340319,Near Limit,-507,Planning,Pending,5
+C-1940,Contributor,Prismly,29-05-2023,04-04-2026,IT,Medium,92,Planning,320,49,15.56,3233,4843,1.497989483,Exceeded,1610,Execution,Pending,16
+C-1941,Full,AWS,07-08-2024,27-04-2026,Procurement,Medium,115,Planning,260,58,22.46,494,284,0.574898785,Healthy,-210,Execution,Pending,8
+C-1942,Collaborator,Microsoft,30-01-2025,08-01-2027,IT,Medium,371,Normal,161,138,85.98,441,141,0.319727891,Healthy,-300,Execution,Approved,6
+C-1943,Collaborator,Veloxa,09-02-2025,22-07-2026,IT,Medium,201,Normal,157,127,80.96,2420,2444,1.009917355,Exceeded,24,Approval,Pending,8
+C-1944,Collaborator,Atlassify,27-01-2024,15-09-2026,Procurement,Medium,256,Normal,157,115,73.5,2386,1020,0.427493713,Healthy,-1366,Negotiation,Approved,8
+C-1945,Collaborator,Prismly,26-04-2023,26-01-2026,Procurement,High,24,Critical,157,102,65.54,1191,1017,0.853904282,Near Limit,-174,Approval,Approved,17
+C-1946,Full,Salesforce,12-04-2024,12-04-2026,IT,Medium,100,Planning,210,147,70,3520,3555,1.009943182,Exceeded,35,Execution,Approved,5
+C-1947,Collaborator,Nexaflow,20-11-2024,01-08-2026,IT,High,211,Normal,245,129,52.67,9307,33769,3.628344257,Exceeded,24462,Planning,Pending,17
+C-1948,Collaborator,Prismly,12-05-2024,08-05-2026,Procurement,High,126,Planning,245,185,75.3,1649,428,0.259551243,Healthy,-1221,Execution,Approved,4
+C-1949,Collaborator,Microsoft,27-04-2024,17-11-2026,Procurement,High,319,Normal,161,119,74.19,2201,2443,1.109950023,Exceeded,242,Negotiation,Pending,4
+C-1950,Collaborator,Cloudora,26-01-2025,12-02-2027,IT,High,406,Normal,157,117,74.65,1732,585,0.337759815,Healthy,-1147,Approval,Approved,5
+C-1951,Contributor,AWS,28-12-2023,01-04-2026,Finance,Medium,89,Warning,145,129,89.1,3415,807,0.236310395,Healthy,-2608,Planning,Approved,14
+C-1952,Collaborator,Salesforce,15-08-2023,03-08-2026,Procurement,Critical,213,Normal,245,149,60.97,2333,7104,3.045006429,Exceeded,4771,Execution,Pending,13
+C-1953,Collaborator,Veloxa,01-11-2024,25-01-2026,Procurement,High,23,Critical,245,62,25.4,2234,3356,1.502238138,Exceeded,1122,Approval,Approved,13
+C-1954,Contributor,Microsoft,03-07-2024,05-10-2026,IT,High,276,Normal,182,39,21.6,4456,4264,0.956912029,Near Limit,-192,Planning,Pending,8
+C-1955,Contributor,AWS,23-07-2024,24-12-2026,IT,Critical,356,Normal,145,35,24.21,225,227,1.008888889,Exceeded,2,Negotiation,Approved,13
+C-1956,Collaborator,Salesforce,19-03-2024,09-12-2026,IT,High,341,Normal,245,60,24.46,193,195,1.010362694,Exceeded,2,Planning,Pending,16
+C-1957,Collaborator,Microsoft,19-04-2025,11-02-2027,IT,High,405,Normal,161,115,71.53,311,67,0.215434084,Healthy,-244,Negotiation,Pending,4
+C-1958,Collaborator,Microsoft,02-05-2025,11-05-2026,IT,Medium,129,Planning,161,133,83,6143,5179,0.843073417,Near Limit,-964,Approval,Approved,16
+C-1959,Collaborator,Cloudora,23-07-2024,14-02-2027,Procurement,Critical,408,Normal,245,185,75.66,4059,3610,0.889381621,Near Limit,-449,Approval,Pending,7
+C-1960,Contributor,Microsoft,19-05-2025,21-02-2027,IT,High,415,Normal,182,132,72.7,4745,2469,0.520337197,Healthy,-2276,Planning,Approved,15
+C-1961,Collaborator,Microsoft,13-06-2024,03-04-2026,Finance,High,91,Planning,161,129,80.27,3132,1165,0.371966794,Healthy,-1967,Execution,Pending,3
+C-1962,Full,Microsoft,04-06-2025,26-12-2026,IT,High,358,Normal,260,182,70.04,6367,3816,0.599340349,Healthy,-2551,Execution,Pending,10
+C-1963,Contributor,Salesforce,23-11-2023,18-01-2026,Finance,Critical,16,Critical,320,245,76.59,9817,4391,0.447285321,Healthy,-5426,Planning,Pending,5
+C-1964,Full,AWS,24-08-2024,16-02-2026,IT,Critical,45,Warning,260,206,79.31,3555,2220,0.624472574,Healthy,-1335,Execution,Pending,15
+C-1965,Contributor,Salesforce,20-04-2024,11-05-2026,IT,High,129,Planning,320,233,72.97,2400,1438,0.599166667,Healthy,-962,Approval,Approved,12
+C-1966,Contributor,Microsoft,23-08-2024,14-06-2026,Procurement,Critical,163,Planning,182,129,70.89,909,467,0.513751375,Healthy,-442,Planning,Pending,17
+C-1967,Full,Salesforce,19-02-2024,18-02-2026,IT,Critical,47,Warning,210,180,85.81,1582,520,0.328697851,Healthy,-1062,Execution,Approved,9
+C-1968,Collaborator,Microsoft,21-05-2024,26-10-2026,Procurement,Critical,297,Normal,161,118,73.26,257,194,0.754863813,Healthy,-63,Planning,Pending,10
+C-1969,Collaborator,Atlassify,29-10-2024,03-01-2027,Finance,Medium,366,Normal,157,127,81.4,3250,2517,0.774461538,Healthy,-733,Planning,Approved,3
+C-1970,Collaborator,Atlassify,25-07-2025,08-08-2026,Finance,High,218,Normal,157,125,80.06,1900,1636,0.861052632,Near Limit,-264,Execution,Pending,17
+C-1971,Full,Microsoft,05-11-2024,21-02-2027,IT,Critical,415,Normal,260,195,75.08,2771,2863,1.03320101,Exceeded,92,Approval,Approved,16
+C-1972,Contributor,Microsoft,26-05-2024,16-10-2026,Finance,Critical,287,Normal,182,146,80.1,1837,1669,0.908546543,Near Limit,-168,Planning,Pending,6
+C-1973,Collaborator,Microsoft,23-10-2024,01-03-2026,IT,Medium,58,Warning,161,130,80.65,2299,1693,0.736407134,Healthy,-606,Approval,Approved,8
+C-1974,Collaborator,Nexaflow,16-03-2024,06-11-2026,IT,High,308,Normal,245,64,26.25,6483,4779,0.737158723,Healthy,-1704,Planning,Pending,12
+C-1975,Collaborator,Microsoft,20-02-2024,10-01-2026,Finance,Critical,8,Critical,161,124,77.17,2560,2303,0.899609375,Near Limit,-257,Planning,Pending,7
+C-1976,Collaborator,Microsoft,26-03-2025,18-12-2026,Finance,Medium,350,Normal,161,124,77.3,4685,875,0.186766275,Healthy,-3810,Approval,Pending,13
+C-1977,Collaborator,Databridge,05-03-2025,01-06-2026,Procurement,Medium,150,Planning,245,169,69.07,2918,708,0.24263194,Healthy,-2210,Execution,Approved,13
+C-1978,Collaborator,Microsoft,16-08-2023,02-04-2026,Finance,Medium,90,Warning,161,140,87.16,233,143,0.613733906,Healthy,-90,Planning,Pending,10
+C-1979,Collaborator,Databridge,26-06-2024,13-12-2026,IT,Medium,345,Normal,245,71,28.98,350,93,0.265714286,Healthy,-257,Negotiation,Pending,5
+C-1980,Contributor,Cloudora,13-03-2024,21-06-2026,IT,Critical,170,Planning,320,275,86.09,3138,1666,0.530911409,Healthy,-1472,Execution,Approved,9
+C-1981,Collaborator,Salesforce,12-01-2025,26-06-2026,Procurement,Critical,175,Planning,245,69,28.45,3526,15427,4.375212706,Exceeded,11901,Planning,Pending,12
+C-1982,Collaborator,Microsoft,02-08-2024,16-01-2027,Procurement,High,379,Normal,161,118,73.33,225,95,0.422222222,Healthy,-130,Approval,Approved,4
+C-1983,Collaborator,Databridge,14-07-2023,04-04-2026,Procurement,Medium,92,Planning,157,106,68.09,6409,2442,0.381026681,Healthy,-3967,Execution,Approved,3
+C-1984,Full,Salesforce,06-03-2023,13-01-2026,Procurement,Critical,11,Critical,210,132,63.05,815,332,0.407361963,Healthy,-483,Planning,Pending,17
+C-1985,Collaborator,Databridge,09-03-2024,11-02-2027,IT,High,405,Normal,245,187,76.39,533,2046,3.838649156,Exceeded,1513,Planning,Pending,3
+C-1986,Collaborator,Microsoft,13-02-2025,21-01-2027,Finance,High,384,Normal,161,113,70.53,2921,2266,0.775761725,Healthy,-655,Planning,Pending,6
+C-1987,Collaborator,Microsoft,05-10-2023,25-05-2026,Procurement,Critical,143,Planning,161,125,77.98,842,269,0.319477435,Healthy,-573,Planning,Pending,14
+C-1988,Collaborator,Microsoft,25-06-2024,13-09-2026,Procurement,High,254,Normal,161,110,68.24,3848,3978,1.033783784,Exceeded,130,Planning,Pending,6
+C-1989,Contributor,Microsoft,20-06-2024,20-09-2026,IT,Medium,261,Normal,182,153,84.05,5807,5532,0.952643361,Near Limit,-275,Execution,Pending,8
+C-1990,Contributor,AWS,04-07-2024,25-02-2026,Finance,Critical,54,Warning,182,144,79.17,5466,1087,0.198865715,Healthy,-4379,Planning,Pending,9
+C-1991,Collaborator,Microsoft,27-12-2024,29-06-2026,Finance,High,178,Planning,161,113,70.53,1214,1138,0.937397035,Near Limit,-76,Approval,Pending,4
+C-1992,Contributor,Microsoft,16-10-2024,26-02-2026,IT,Critical,55,Warning,182,141,77.3,3907,3285,0.840798567,Near Limit,-622,Planning,Approved,6
+C-1993,Contributor,AWS,22-06-2025,10-11-2026,Finance,Medium,312,Normal,145,108,74.55,4039,731,0.180985392,Healthy,-3308,Approval,Pending,7
+C-1994,Full,Salesforce,21-08-2024,11-07-2026,Procurement,Critical,190,Normal,210,152,72.38,1286,989,0.769051322,Healthy,-297,Planning,Approved,8
+C-1995,Contributor,Microsoft,28-12-2023,23-01-2026,Procurement,Critical,21,Critical,182,118,65.19,3487,1539,0.441353599,Healthy,-1948,Approval,Pending,3
+C-1996,Collaborator,Microsoft,15-07-2025,17-11-2026,Procurement,Critical,319,Normal,161,132,82.26,3097,830,0.268001292,Healthy,-2267,Approval,Approved,17
+C-1997,Collaborator,Atlassify,25-06-2025,29-12-2026,IT,High,361,Normal,157,125,80,375,214,0.570666667,Healthy,-161,Approval,Pending,5
+C-1998,Collaborator,Prismly,12-12-2024,23-01-2026,IT,Medium,21,Critical,245,189,77.13,2320,2343,1.009913793,Exceeded,23,Execution,Pending,14
+C-1999,Contributor,Microsoft,27-10-2024,05-03-2026,Finance,Critical,62,Warning,182,170,93.42,278,82,0.294964029,Healthy,-196,Negotiation,Pending,4
+C-2000,Full,Salesforce,27-03-2025,03-04-2026,Procurement,High,91,Planning,210,142,67.76,3374,3143,0.93153527,Near Limit,-231,Negotiation,Pending,15
+C-2001,Collaborator,Microsoft,28-02-2024,05-04-2026,IT,High,93,Planning,161,129,80.27,6152,5962,0.969115735,Near Limit,-190,Planning,Pending,15
+C-2002,Collaborator,Microsoft,04-10-2024,03-03-2026,IT,Medium,60,Warning,161,132,81.89,2975,4477,1.50487395,Exceeded,1502,Planning,Pending,3
+C-2003,Collaborator,Veloxa,24-11-2023,30-08-2026,IT,High,240,Normal,245,30,12.41,5080,4936,0.971653543,Near Limit,-144,Planning,Pending,7
+C-2004,Collaborator,Databridge,29-03-2024,06-07-2026,Finance,Critical,185,Normal,245,188,76.64,4726,2767,0.585484554,Healthy,-1959,Approval,Pending,17
+C-2005,Contributor,Microsoft,30-07-2025,12-11-2026,Finance,High,314,Normal,182,126,69.13,4697,3918,0.834149457,Near Limit,-779,Approval,Pending,3
+C-2006,Full,Microsoft,29-05-2024,02-11-2026,Finance,High,304,Normal,260,53,20.42,667,521,0.781109445,Healthy,-146,Approval,Pending,4
+C-2007,Contributor,AWS,05-03-2025,05-10-2026,Procurement,Medium,276,Normal,182,153,84.05,2775,966,0.348108108,Healthy,-1809,Planning,Pending,5
+C-2008,Collaborator,Cloudora,08-05-2025,17-12-2026,Procurement,Medium,349,Normal,157,115,73.76,519,319,0.614643545,Healthy,-200,Approval,Approved,17
+C-2009,Full,Microsoft,20-08-2024,03-03-2026,Finance,High,60,Warning,210,166,79.1,180,182,1.011111111,Exceeded,2,Planning,Pending,7
+C-2010,Collaborator,Microsoft,09-10-2023,26-03-2026,IT,High,83,Warning,161,124,77.42,1378,680,0.493468795,Healthy,-698,Planning,Pending,16
+C-2011,Collaborator,Databridge,21-06-2024,02-05-2026,Finance,High,120,Planning,157,124,79.36,2185,1919,0.87826087,Near Limit,-266,Execution,Approved,3
+C-2012,Contributor,Microsoft,17-02-2024,07-02-2026,Procurement,Critical,36,Warning,182,137,75.44,4624,3535,0.764489619,Healthy,-1089,Planning,Approved,11
+C-2013,Collaborator,Cloudora,14-06-2024,14-12-2026,Finance,Critical,346,Normal,98,86,88.16,3599,1059,0.294248402,Healthy,-2540,Planning,Pending,13
+C-2014,Collaborator,Veloxa,11-08-2024,11-08-2026,IT,Critical,221,Normal,157,122,78.09,4771,5843,1.22469084,Exceeded,1072,Planning,Pending,5
+C-2015,Contributor,Microsoft,17-06-2023,30-01-2026,Procurement,Critical,28,Critical,182,148,81.41,5153,5205,1.010091209,Exceeded,52,Planning,Pending,7
+C-2016,Collaborator,Microsoft,04-12-2023,06-01-2026,Finance,High,4,Critical,161,101,63.09,248,57,0.22983871,Healthy,-191,Planning,Pending,4
+C-2017,Full,Microsoft,01-01-2025,20-03-2026,Finance,High,77,Warning,210,34,16.62,2241,2083,0.929495761,Near Limit,-158,Planning,Approved,11
+C-2018,Collaborator,Microsoft,14-06-2023,21-04-2026,Finance,Medium,109,Planning,161,126,78.6,3180,2304,0.724528302,Healthy,-876,Planning,Pending,9
+C-2019,Contributor,Microsoft,06-08-2024,04-02-2027,IT,Critical,398,Normal,182,141,77.3,3714,2823,0.760096931,Healthy,-891,Negotiation,Pending,8
+C-2020,Contributor,AWS,12-11-2024,31-03-2026,IT,Medium,88,Warning,145,136,94.28,2712,1554,0.57300885,Healthy,-1158,Negotiation,Pending,4
+C-2021,Contributor,Microsoft,17-10-2024,30-06-2026,Finance,Medium,179,Planning,182,106,58.44,4135,1868,0.451753325,Healthy,-2267,Planning,Pending,17
+C-2022,Collaborator,Microsoft,04-12-2023,22-06-2026,IT,Critical,171,Planning,161,120,74.5,3948,1112,0.281661601,Healthy,-2836,Planning,Pending,13
+C-2023,Contributor,Microsoft,11-03-2024,28-04-2026,Finance,High,116,Planning,182,129,71.11,4020,3764,0.936318408,Near Limit,-256,Execution,Pending,3
+C-2024,Contributor,Salesforce,03-11-2024,26-07-2026,Procurement,Medium,205,Normal,320,76,24.03,4268,3617,0.847469541,Near Limit,-651,Execution,Approved,8
+C-2025,Contributor,Microsoft,28-04-2025,01-01-2027,Finance,Medium,364,Normal,182,120,66.12,476,355,0.745798319,Healthy,-121,Execution,Pending,3
+C-2026,Contributor,AWS,20-04-2024,16-02-2026,IT,Medium,45,Warning,145,25,17.52,224,68,0.303571429,Healthy,-156,Planning,Pending,15
+C-2027,Collaborator,Databridge,07-08-2023,24-04-2026,Procurement,Medium,112,Planning,245,55,22.55,9401,8359,0.889160728,Near Limit,-1042,Planning,Pending,5
+C-2028,Collaborator,Nexaflow,06-05-2025,19-09-2026,IT,Critical,260,Normal,157,116,74.2,426,270,0.633802817,Healthy,-156,Negotiation,Pending,10
+C-2029,Collaborator,Microsoft,25-06-2023,20-06-2026,Procurement,High,169,Planning,161,126,78.66,4991,4474,0.896413544,Near Limit,-517,Planning,Pending,11
+C-2030,Contributor,Microsoft,04-08-2023,09-01-2026,IT,High,7,Critical,182,151,83.28,6304,4203,0.666719543,Healthy,-2101,Approval,Approved,10
+C-2031,Collaborator,Atlassify,22-01-2025,21-10-2026,Finance,Medium,292,Normal,245,177,72.04,1451,393,0.270847691,Healthy,-1058,Negotiation,Pending,15
+C-2032,Contributor,AWS,12-01-2025,25-01-2026,Procurement,Critical,23,Critical,145,109,75.45,2929,2543,0.868214408,Near Limit,-386,Execution,Approved,15
+C-2033,Collaborator,Veloxa,18-06-2024,10-06-2026,Procurement,High,159,Planning,157,35,22.29,651,178,0.273425499,Healthy,-473,Execution,Approved,13
+C-2034,Collaborator,Microsoft,01-08-2024,21-01-2026,IT,High,19,Critical,161,123,76.3,1601,1453,0.907557776,Near Limit,-148,Planning,Pending,6
+C-2035,Collaborator,Microsoft,16-08-2023,27-02-2026,IT,Medium,56,Warning,161,114,71.22,6042,3548,0.587222774,Healthy,-2494,Negotiation,Pending,12
+C-2036,Collaborator,Veloxa,01-02-2024,24-11-2026,IT,Medium,326,Normal,157,127,81.46,180,151,0.838888889,Near Limit,-29,Planning,Pending,5
+C-2037,Collaborator,Veloxa,07-05-2025,10-08-2026,Finance,High,220,Normal,157,116,74.33,1616,261,0.161509901,Healthy,-1355,Execution,Approved,17
+C-2038,Contributor,Microsoft,31-07-2025,21-10-2026,Finance,High,292,Normal,182,138,75.88,1914,1634,0.853709509,Near Limit,-280,Approval,Approved,12
+C-2039,Contributor,AWS,04-12-2024,15-07-2026,Procurement,Critical,194,Normal,145,129,89.17,4102,2841,0.692588981,Healthy,-1261,Planning,Approved,12
+C-2040,Contributor,Microsoft,27-10-2024,27-07-2026,Procurement,Critical,206,Normal,182,142,77.91,2515,2477,0.984890656,Near Limit,-38,Execution,Approved,5
+C-2041,Collaborator,Databridge,07-10-2024,16-09-2026,Procurement,High,257,Normal,245,46,19.01,3120,3817,1.223397436,Exceeded,697,Planning,Pending,11
+C-2042,Collaborator,Cloudora,28-02-2024,05-10-2026,Procurement,Critical,276,Normal,245,169,68.99,3651,2869,0.785812106,Healthy,-782,Approval,Approved,12
+C-2043,Collaborator,Databridge,13-06-2024,21-02-2026,IT,Critical,50,Warning,98,87,89.49,3629,942,0.259575641,Healthy,-2687,Approval,Pending,14
+C-2044,Collaborator,Salesforce,28-12-2023,04-02-2026,Finance,Medium,33,Warning,98,78,80.31,464,88,0.189655172,Healthy,-376,Execution,Pending,9
+C-2045,Contributor,AWS,25-11-2023,14-09-2026,Procurement,Medium,255,Normal,182,130,71.33,1072,638,0.595149254,Healthy,-434,Planning,Pending,12
+C-2046,Collaborator,Databridge,22-01-2024,06-02-2026,Finance,Critical,35,Warning,245,189,77.21,3580,3029,0.846089385,Near Limit,-551,Negotiation,Pending,10
+C-2047,Collaborator,Prismly,09-10-2023,22-08-2026,IT,Critical,232,Normal,157,123,78.92,1187,789,0.664700927,Healthy,-398,Negotiation,Pending,16
+C-2048,Collaborator,Databridge,13-09-2025,19-01-2027,Finance,High,382,Normal,157,134,85.61,3600,1515,0.420833333,Healthy,-2085,Planning,Pending,17
+C-2049,Collaborator,Atlassify,31-01-2024,24-08-2026,IT,Medium,234,Normal,157,27,17.77,3899,3570,0.91561939,Near Limit,-329,Negotiation,Approved,10
+C-2050,Collaborator,Atlassify,19-02-2024,01-10-2026,Procurement,High,272,Normal,245,138,56.53,3844,3882,1.009885536,Exceeded,38,Execution,Pending,10
+C-2051,Collaborator,Salesforce,28-02-2023,26-01-2026,Finance,High,24,Critical,98,82,84.49,842,441,0.523752969,Healthy,-401,Planning,Pending,5
+C-2052,Collaborator,Atlassify,23-01-2024,21-11-2026,Procurement,High,323,Normal,98,76,77.55,180,126,0.7,Healthy,-54,Approval,Approved,13
+C-2053,Full,Microsoft,28-12-2023,10-12-2026,IT,High,342,Normal,260,198,76.46,1631,2554,1.565910484,Exceeded,923,Negotiation,Pending,7
+C-2054,Contributor,Microsoft,17-05-2024,01-11-2026,Procurement,Medium,303,Normal,182,140,77.19,4914,2932,0.596662597,Healthy,-1982,Execution,Approved,5
+C-2055,Collaborator,Databridge,16-09-2024,27-02-2026,Procurement,Low,56,Warning,245,60,24.5,3759,1035,0.275339186,Healthy,-2724,Execution,Approved,3
+C-2056,Collaborator,Salesforce,29-12-2024,10-03-2026,IT,High,67,Warning,245,161,65.73,7150,7222,1.01006993,Exceeded,72,Approval,Pending,15
+C-2057,Full,AWS,15-02-2025,06-04-2026,Procurement,Critical,94,Planning,260,216,83.42,4175,4037,0.966946108,Near Limit,-138,Negotiation,Pending,4
+C-2058,Collaborator,Veloxa,04-06-2023,25-05-2026,IT,Medium,143,Planning,245,206,84.05,3762,1762,0.468367889,Healthy,-2000,Planning,Pending,13
+C-2059,Contributor,Microsoft,27-11-2024,03-04-2026,Procurement,Medium,91,Planning,182,147,80.87,334,337,1.008982036,Exceeded,3,Approval,Pending,5
+C-2060,Full,AWS,13-07-2024,18-01-2026,Finance,Critical,16,Critical,260,228,87.88,1712,1288,0.752336449,Healthy,-424,Execution,Approved,8
+C-2061,Contributor,Salesforce,12-05-2024,20-03-2026,IT,High,77,Warning,320,204,63.84,8961,5042,0.562660417,Healthy,-3919,Approval,Pending,6
+C-2062,Collaborator,Databridge,01-12-2024,07-05-2026,Procurement,Medium,125,Planning,98,67,68.37,1759,1165,0.66230813,Healthy,-594,Execution,Approved,7
+C-2063,Contributor,Microsoft,23-03-2024,03-01-2027,IT,Medium,366,Normal,182,131,71.98,1977,1679,0.849266566,Near Limit,-298,Planning,Pending,10
+C-2064,Contributor,Salesforce,13-08-2023,03-07-2026,Finance,Medium,182,Normal,320,179,56.03,3086,825,0.267336358,Healthy,-2261,Planning,Pending,17
+C-2065,Full,Salesforce,29-08-2024,07-10-2026,Finance,High,278,Normal,210,160,76.48,3512,4606,1.311503417,Exceeded,1094,Approval,Approved,7
+C-2066,Collaborator,Atlassify,29-07-2024,09-02-2026,Finance,Critical,38,Warning,245,210,85.67,180,59,0.327777778,Healthy,-121,Approval,Pending,4
+C-2067,Collaborator,Prismly,17-12-2024,04-08-2026,IT,Critical,214,Normal,157,126,80.83,340,280,0.823529412,Near Limit,-60,Execution,Pending,4
+C-2068,Collaborator,Databridge,21-08-2023,22-01-2026,Procurement,Medium,20,Critical,245,164,66.83,2178,1172,0.538108356,Healthy,-1006,Execution,Pending,10
+C-2069,Collaborator,Microsoft,24-01-2025,07-11-2026,IT,High,309,Normal,161,33,20.72,3916,671,0.171348315,Healthy,-3245,Planning,Pending,6
+C-2070,Contributor,AWS,27-11-2023,28-11-2026,Finance,Critical,330,Normal,145,139,96.48,580,476,0.820689655,Near Limit,-104,Negotiation,Pending,10
+C-2071,Contributor,Salesforce,09-05-2024,10-02-2026,Finance,High,39,Warning,320,190,59.56,12529,7360,0.587437146,Healthy,-5169,Negotiation,Pending,6
+C-2072,Full,Salesforce,20-02-2025,13-12-2026,Finance,Medium,345,Normal,210,115,54.76,2017,1347,0.6678235,Healthy,-670,Negotiation,Pending,3
+C-2073,Collaborator,Nexaflow,19-03-2024,27-01-2026,IT,Critical,25,Critical,157,86,55.1,347,325,0.936599424,Near Limit,-22,Planning,Pending,3
+C-2074,Collaborator,Microsoft,27-01-2025,04-08-2026,Procurement,Critical,214,Normal,161,130,80.65,3451,2252,0.652564474,Healthy,-1199,Approval,Approved,10
+C-2075,Full,AWS,23-11-2023,12-10-2026,Procurement,High,283,Normal,260,192,73.92,1969,779,0.395632301,Healthy,-1190,Negotiation,Pending,15
+C-2076,Collaborator,Salesforce,22-04-2024,19-04-2026,Procurement,Critical,107,Planning,245,201,81.97,5146,4641,0.901865527,Near Limit,-505,Planning,Pending,5
+C-2077,Full,AWS,19-05-2023,20-03-2026,IT,High,77,Warning,260,208,80.23,1957,959,0.490035769,Healthy,-998,Approval,Approved,7
+C-2078,Contributor,Microsoft,25-06-2025,19-09-2026,Finance,Critical,260,Normal,182,98,53.78,5405,4510,0.834412581,Near Limit,-895,Negotiation,Pending,12
+C-2079,Collaborator,Microsoft,06-02-2025,08-03-2026,IT,Critical,65,Warning,161,121,75.37,7194,6640,0.922991382,Near Limit,-554,Planning,Pending,14
+C-2080,Collaborator,Prismly,16-11-2023,09-01-2026,IT,Medium,7,Critical,157,40,25.54,1829,1368,0.747949699,Healthy,-461,Negotiation,Pending,5
+C-2081,Collaborator,Microsoft,11-09-2023,31-07-2026,Finance,Critical,210,Normal,161,122,76.05,3635,5819,1.600825309,Exceeded,2184,Approval,Pending,17
+C-2082,Collaborator,Veloxa,11-07-2024,06-02-2026,Procurement,Medium,35,Warning,157,26,16.75,3932,1228,0.312309257,Healthy,-2704,Planning,Pending,16
+C-2083,Contributor,AWS,14-01-2025,21-07-2026,Finance,Critical,200,Normal,145,124,85.52,1158,382,0.329879102,Healthy,-776,Planning,Pending,9
+C-2084,Contributor,AWS,20-10-2024,14-01-2026,IT,High,12,Critical,145,117,81.17,3149,1520,0.482692918,Healthy,-1629,Planning,Pending,17
+C-2085,Collaborator,Cloudora,25-01-2024,29-01-2027,Finance,Critical,392,Normal,157,110,70.06,3061,924,0.301862137,Healthy,-2137,Execution,Approved,16
+C-2086,Collaborator,Microsoft,26-03-2025,07-02-2027,Finance,High,401,Normal,161,140,87.22,274,389,1.419708029,Exceeded,115,Execution,Approved,13
+C-2087,Collaborator,Databridge,20-02-2025,29-12-2026,IT,High,361,Normal,245,183,74.48,4319,4194,0.971058115,Near Limit,-125,Approval,Pending,8
+C-2088,Full,Microsoft,13-06-2025,14-08-2026,Finance,High,224,Normal,210,136,65,1745,1762,1.00974212,Exceeded,17,Negotiation,Pending,7
+C-2089,Full,AWS,15-04-2024,24-09-2026,Finance,Medium,265,Normal,260,195,75.12,2362,519,0.219729043,Healthy,-1843,Execution,Approved,13
+C-2090,Contributor,Microsoft,25-03-2024,20-01-2027,Procurement,Medium,383,Normal,182,142,78.18,3277,2777,0.847421422,Near Limit,-500,Negotiation,Pending,6
+C-2091,Collaborator,Databridge,20-01-2025,13-03-2026,Procurement,Critical,70,Warning,245,214,87.42,4431,1871,0.422252313,Healthy,-2560,Execution,Pending,17
+C-2092,Collaborator,Cloudora,16-01-2025,05-03-2026,Finance,High,62,Warning,245,184,75.21,2410,991,0.41120332,Healthy,-1419,Planning,Pending,10
+C-2093,Collaborator,Databridge,28-06-2025,27-10-2026,IT,Medium,298,Normal,157,140,89.17,1814,409,0.225468578,Healthy,-1405,Planning,Pending,4
+C-2094,Collaborator,Veloxa,31-07-2024,17-03-2026,Finance,High,74,Warning,157,32,20.7,180,87,0.483333333,Healthy,-93,Execution,Approved,4
+C-2095,Collaborator,Databridge,23-12-2024,26-07-2026,IT,Medium,205,Normal,245,157,64.18,2572,5837,2.269440124,Exceeded,3265,Execution,Pending,14
+C-2096,Collaborator,Prismly,24-12-2023,29-07-2026,Procurement,Critical,208,Normal,245,176,71.63,411,191,0.464720195,Healthy,-220,Planning,Pending,15
+C-2097,Collaborator,Nexaflow,03-12-2025,09-01-2027,Finance,Medium,372,Normal,157,127,81.08,2261,2186,0.966828837,Near Limit,-75,Approval,Approved,10
+C-2098,Contributor,Microsoft,22-05-2025,05-10-2026,IT,Critical,276,Normal,182,149,81.8,2888,1086,0.376038781,Healthy,-1802,Planning,Approved,17
+C-2099,Collaborator,Prismly,08-04-2025,03-06-2026,Finance,High,152,Planning,245,219,89.17,5325,1578,0.296338028,Healthy,-3747,Execution,Approved,17
+C-2100,Collaborator,Microsoft,10-06-2023,15-03-2026,IT,Critical,72,Warning,161,106,66.13,4436,9605,2.165238954,Exceeded,5169,Execution,Pending,10
+C-2101,Collaborator,Microsoft,08-05-2024,13-07-2026,Finance,Medium,192,Normal,161,115,71.84,3321,528,0.158988257,Healthy,-2793,Execution,Approved,4
+C-2102,Contributor,Microsoft,09-12-2024,16-08-2026,IT,Critical,226,Normal,182,148,81.63,1645,1615,0.981762918,Near Limit,-30,Planning,Pending,15
+C-2103,Contributor,Microsoft,22-01-2025,01-07-2026,Finance,High,180,Planning,182,160,88.05,1597,1434,0.897933626,Near Limit,-163,Execution,Approved,7
+C-2104,Contributor,Veloxa,25-06-2025,10-10-2026,Finance,High,281,Normal,320,170,53.37,7908,1729,0.218639353,Healthy,-6179,Execution,Approved,10
+C-2105,Contributor,AWS,05-01-2024,16-08-2026,IT,Critical,226,Normal,145,122,84.62,1582,1209,0.764222503,Healthy,-373,Planning,Approved,5
+C-2106,Contributor,AWS,27-12-2024,17-05-2026,IT,Medium,135,Planning,145,110,76.48,2995,1803,0.602003339,Healthy,-1192,Planning,Pending,8
+C-2107,Contributor,Microsoft,22-10-2023,05-03-2026,Procurement,High,62,Warning,182,165,90.79,3428,3115,0.908693116,Near Limit,-313,Planning,Approved,5
+C-2108,Collaborator,Veloxa,22-11-2024,09-04-2026,IT,High,97,Planning,245,68,28,1450,1464,1.009655172,Exceeded,14,Approval,Pending,15
+C-2109,Full,AWS,16-11-2025,11-01-2027,Finance,High,374,Normal,260,221,85.31,337,406,1.204747774,Exceeded,69,Planning,Pending,5
+C-2110,Collaborator,Salesforce,04-03-2024,10-09-2026,IT,Medium,251,Normal,98,89,90.92,911,301,0.330406147,Healthy,-610,Planning,Pending,7
+C-2111,Collaborator,Microsoft,01-05-2024,26-01-2026,IT,Critical,24,Critical,161,113,70.22,304,342,1.125,Exceeded,38,Approval,Pending,6
+C-2112,Collaborator,Databridge,13-04-2025,01-01-2027,Procurement,Critical,364,Normal,245,156,63.74,4096,829,0.202392578,Healthy,-3267,Planning,Approved,8
+C-2113,Collaborator,Microsoft,11-02-2024,15-05-2026,Procurement,Critical,133,Planning,161,45,28.16,3726,3763,1.00993022,Exceeded,37,Planning,Pending,7
+C-2114,Contributor,Microsoft,24-09-2024,18-06-2026,Finance,Medium,167,Planning,182,141,77.47,3630,1752,0.482644628,Healthy,-1878,Approval,Pending,11
+C-2115,Contributor,AWS,28-07-2024,10-03-2026,IT,Medium,67,Warning,145,122,84.62,3356,1262,0.376042908,Healthy,-2094,Negotiation,Pending,11
+C-2116,Collaborator,Microsoft,01-03-2025,12-03-2026,IT,Medium,69,Warning,161,121,75.62,5730,5240,0.914485166,Near Limit,-490,Approval,Approved,4
+C-2117,Collaborator,Microsoft,28-05-2025,25-09-2026,Finance,Medium,266,Normal,161,132,82.44,283,196,0.692579505,Healthy,-87,Planning,Pending,15
+C-2118,Collaborator,Prismly,16-10-2023,10-07-2026,Finance,High,189,Normal,245,172,70.37,180,138,0.766666667,Healthy,-42,Execution,Pending,13
+C-2119,Collaborator,Salesforce,01-02-2025,15-12-2026,IT,Medium,347,Normal,98,73,74.59,4658,4705,1.010090167,Exceeded,47,Planning,Pending,9
+C-2120,Full,Salesforce,09-04-2024,22-05-2026,Finance,Medium,140,Planning,210,29,13.86,180,182,1.011111111,Exceeded,2,Execution,Approved,7
+C-2121,Contributor,Microsoft,20-09-2023,25-01-2026,IT,Medium,23,Critical,182,138,75.66,3417,2792,0.817091016,Near Limit,-625,Negotiation,Approved,8
+C-2122,Full,Microsoft,24-06-2024,09-04-2026,Finance,Medium,97,Planning,260,183,70.42,3341,2164,0.647710266,Healthy,-1177,Negotiation,Approved,4
+C-2123,Contributor,Microsoft,23-06-2024,04-03-2026,Finance,Medium,61,Warning,182,128,70.29,4023,3123,0.776286353,Healthy,-900,Planning,Pending,15
+C-2124,Collaborator,Cloudora,14-12-2024,25-12-2026,Finance,Medium,357,Normal,245,166,67.68,550,448,0.814545455,Near Limit,-102,Planning,Pending,16
+C-2125,Collaborator,Prismly,01-02-2024,06-10-2026,IT,Medium,277,Normal,245,200,81.64,4573,2440,0.533566586,Healthy,-2133,Planning,Pending,11
+C-2126,Full,Microsoft,15-04-2025,25-01-2027,Procurement,High,388,Normal,260,209,80.69,408,236,0.578431373,Healthy,-172,Approval,Pending,13
+C-2127,Collaborator,Cloudora,15-09-2023,10-08-2026,Finance,Medium,220,Normal,157,34,21.78,180,182,1.011111111,Exceeded,2,Negotiation,Pending,9
+C-2128,Contributor,Microsoft,10-01-2024,12-07-2026,IT,High,191,Normal,182,124,68.31,9908,8925,0.900787243,Near Limit,-983,Execution,Pending,7
+C-2129,Collaborator,Veloxa,12-02-2025,23-12-2026,Finance,High,355,Normal,157,117,74.97,1383,1121,0.810556761,Near Limit,-262,Planning,Pending,9
+C-2130,Contributor,Salesforce,28-05-2023,20-05-2026,Finance,Critical,138,Planning,320,188,58.81,3862,708,0.183324702,Healthy,-3154,Approval,Pending,11
+C-2131,Collaborator,Prismly,25-10-2024,19-01-2026,Procurement,High,17,Critical,245,55,22.39,4886,4303,0.880679492,Near Limit,-583,Negotiation,Pending,8
+C-2132,Collaborator,Cloudora,19-05-2024,28-11-2026,Finance,Medium,330,Normal,98,87,88.88,3218,2985,0.927594779,Near Limit,-233,Negotiation,Pending,12
+C-2133,Collaborator,Microsoft,17-10-2025,03-02-2027,IT,High,397,Normal,161,117,72.95,2156,631,0.292671614,Healthy,-1525,Planning,Pending,11
+C-2134,Collaborator,Microsoft,06-04-2025,16-12-2026,Finance,Medium,348,Normal,161,132,81.89,663,618,0.932126697,Near Limit,-45,Approval,Approved,3
+C-2135,Collaborator,Cloudora,28-03-2024,01-07-2026,Procurement,Medium,180,Planning,245,173,70.41,1573,579,0.368086459,Healthy,-994,Planning,Pending,13
+C-2136,Full,Salesforce,23-12-2023,01-05-2026,Procurement,Critical,119,Planning,210,179,85.67,4830,18377,3.804761905,Exceeded,13547,Negotiation,Pending,5
+C-2137,Collaborator,Veloxa,21-03-2025,17-02-2027,IT,Medium,411,Normal,157,129,82.55,6904,5898,0.85428737,Near Limit,-1006,Approval,Approved,14
+C-2138,Contributor,Microsoft,21-05-2024,10-04-2026,Finance,Medium,98,Planning,182,138,75.77,3019,2424,0.802914872,Near Limit,-595,Negotiation,Pending,10
+C-2139,Collaborator,Veloxa,11-02-2024,22-02-2026,IT,High,51,Warning,157,124,79.36,6358,4585,0.721138723,Healthy,-1773,Planning,Pending,4
+C-2140,Collaborator,Microsoft,31-01-2023,01-02-2026,IT,High,30,Critical,161,134,83.19,287,187,0.651567944,Healthy,-100,Planning,Approved,8
+C-2141,Collaborator,Microsoft,14-08-2024,18-05-2026,IT,Medium,136,Planning,161,107,66.5,3039,2911,0.957880882,Near Limit,-128,Approval,Pending,3
+C-2142,Contributor,Microsoft,01-02-2025,09-02-2026,Procurement,Medium,38,Warning,182,160,87.88,3703,944,0.254928436,Healthy,-2759,Planning,Pending,11
+C-2143,Collaborator,Nexaflow,17-02-2025,11-09-2026,Finance,High,252,Normal,98,79,81.53,3317,1786,0.538438348,Healthy,-1531,Negotiation,Pending,12
+C-2144,Contributor,AWS,06-11-2023,11-03-2026,Procurement,Critical,68,Warning,145,119,82.62,285,269,0.943859649,Near Limit,-16,Planning,Pending,14
+C-2145,Collaborator,Nexaflow,09-12-2023,19-02-2026,Procurement,Critical,48,Warning,157,45,29.11,8007,8087,1.009991258,Exceeded,80,Approval,Pending,16
+C-2146,Contributor,Microsoft,27-02-2025,10-01-2027,Finance,High,373,Normal,182,36,20.07,473,371,0.78435518,Healthy,-102,Negotiation,Pending,15
+C-2147,Full,Salesforce,28-05-2025,05-10-2026,Procurement,Medium,276,Normal,210,144,68.86,1076,921,0.855947955,Near Limit,-155,Approval,Approved,6
+C-2148,Full,Salesforce,03-09-2025,26-02-2027,Procurement,Medium,420,Normal,210,52,24.81,5107,1529,0.29939299,Healthy,-3578,Approval,Approved,6
+C-2149,Contributor,Microsoft,28-09-2023,30-01-2026,Finance,Medium,28,Critical,182,138,75.82,2064,1373,0.665213178,Healthy,-691,Planning,Pending,15
+C-2150,Collaborator,Salesforce,08-09-2023,06-09-2026,IT,High,247,Normal,98,75,76.63,5123,4544,0.886980285,Near Limit,-579,Negotiation,Approved,6
+C-2151,Contributor,AWS,03-03-2023,03-01-2026,IT,Medium,1,Critical,145,145,100,180,29,0.161111111,Healthy,-151,Execution,Pending,7
+C-2152,Full,AWS,06-07-2024,09-10-2026,Finance,High,280,Normal,260,204,78.81,4314,2115,0.490264256,Healthy,-2199,Execution,Pending,7
+C-2153,Collaborator,Microsoft,22-02-2024,22-07-2026,Procurement,Medium,201,Normal,161,104,64.83,1860,446,0.239784946,Healthy,-1414,Planning,Pending,11
+C-2154,Full,AWS,17-10-2024,26-10-2026,Finance,Critical,297,Normal,260,231,89.04,4631,1987,0.429064997,Healthy,-2644,Planning,Pending,13
+C-2155,Collaborator,Microsoft,18-12-2025,18-01-2027,Procurement,Medium,381,Normal,161,114,70.97,3809,1528,0.401155159,Healthy,-2281,Negotiation,Pending,9
+C-2156,Collaborator,Microsoft,13-02-2025,05-06-2026,Procurement,Critical,154,Planning,161,104,64.64,1380,553,0.400724638,Healthy,-827,Approval,Approved,10
+C-2157,Collaborator,Cloudora,15-04-2025,20-02-2027,Procurement,High,414,Normal,245,171,69.96,10094,8273,0.819595799,Near Limit,-1821,Planning,Approved,12
+C-2158,Collaborator,Nexaflow,17-11-2024,30-06-2026,Procurement,Medium,179,Planning,245,173,70.41,5130,3119,0.607992203,Healthy,-2011,Planning,Pending,4
+C-2159,Contributor,AWS,01-03-2024,02-12-2026,Finance,High,334,Normal,182,146,80.32,5900,7979,1.352372881,Exceeded,2079,Approval,Pending,7
+C-2160,Contributor,Salesforce,17-10-2024,05-02-2026,IT,High,34,Warning,320,219,68.69,496,246,0.495967742,Healthy,-250,Planning,Pending,9
+C-2161,Collaborator,Salesforce,28-08-2023,04-02-2026,Procurement,Medium,33,Warning,98,69,70.71,1021,623,0.610186092,Healthy,-398,Planning,Approved,3
+C-2162,Contributor,Databridge,01-10-2023,11-06-2026,Finance,High,160,Planning,320,202,63.22,4973,3575,0.718881963,Healthy,-1398,Planning,Pending,17
+C-2163,Collaborator,Microsoft,17-09-2024,01-07-2026,Procurement,High,180,Planning,161,122,75.99,395,326,0.825316456,Near Limit,-69,Planning,Pending,5
+C-2164,Contributor,Microsoft,20-11-2023,30-05-2026,Finance,Medium,148,Planning,182,132,72.59,4584,2546,0.555410122,Healthy,-2038,Planning,Pending,12
+C-2165,Contributor,Microsoft,28-09-2023,25-06-2026,Procurement,Medium,174,Planning,182,132,72.81,632,638,1.009493671,Exceeded,6,Execution,Approved,9
+C-2166,Collaborator,Prismly,12-12-2024,22-12-2026,Finance,Medium,354,Normal,157,44,28.6,5716,1130,0.197690693,Healthy,-4586,Negotiation,Pending,10
+C-2167,Collaborator,Nexaflow,09-12-2024,22-05-2026,Procurement,Critical,140,Planning,245,180,73.54,4367,2605,0.59651935,Healthy,-1762,Approval,Pending,15
+C-2168,Contributor,Microsoft,15-12-2023,10-10-2026,Procurement,Medium,281,Normal,182,159,87.66,741,333,0.449392713,Healthy,-408,Approval,Approved,7
+C-2169,Full,Salesforce,31-03-2025,14-07-2026,IT,Medium,193,Normal,210,124,59.05,3854,3409,0.884535547,Near Limit,-445,Negotiation,Pending,7
+C-2170,Collaborator,Cloudora,30-06-2024,19-01-2026,Finance,Critical,17,Critical,157,116,74.46,8976,9066,1.010026738,Exceeded,90,Execution,Pending,11
+C-2171,Collaborator,Microsoft,01-01-2025,30-01-2026,IT,Critical,28,Critical,161,107,66.94,1810,1828,1.009944751,Exceeded,18,Execution,Approved,5
+C-2172,Collaborator,Microsoft,28-01-2024,28-01-2026,IT,High,26,Critical,161,127,79.28,2287,3648,1.595102755,Exceeded,1361,Approval,Pending,13
+C-2173,Collaborator,Databridge,17-10-2025,26-02-2027,Finance,High,420,Normal,245,191,77.78,2523,1411,0.559254855,Healthy,-1112,Execution,Approved,6
+C-2174,Contributor,Microsoft,10-11-2023,08-02-2026,Finance,High,37,Warning,182,100,55.15,1267,316,0.249408051,Healthy,-951,Negotiation,Pending,15
+C-2175,Full,AWS,24-01-2025,05-12-2026,IT,High,337,Normal,260,50,19.27,559,274,0.490161002,Healthy,-285,Planning,Pending,16
+C-2176,Contributor,AWS,27-11-2024,18-05-2026,Procurement,Medium,136,Planning,182,135,74.29,2975,808,0.271596639,Healthy,-2167,Planning,Pending,5
+C-2177,Full,Salesforce,08-08-2024,02-04-2026,Procurement,High,90,Warning,210,135,64.33,2883,2719,0.943114811,Near Limit,-164,Planning,Pending,5
+C-2178,Full,Salesforce,07-02-2025,09-11-2026,Finance,High,311,Normal,210,156,74.71,6179,5409,0.875384366,Near Limit,-770,Negotiation,Pending,13
+C-2179,Collaborator,Atlassify,15-09-2023,11-04-2026,IT,High,99,Planning,245,188,76.84,308,368,1.194805195,Exceeded,60,Approval,Approved,12
+C-2180,Contributor,Microsoft,12-12-2025,02-01-2027,IT,Medium,365,Normal,182,152,83.33,675,470,0.696296296,Healthy,-205,Planning,Pending,17
+C-2181,Collaborator,Databridge,21-08-2024,21-06-2026,Finance,Medium,170,Planning,245,164,66.87,1703,433,0.254257193,Healthy,-1270,Execution,Pending,9
+C-2182,Collaborator,Salesforce,07-12-2023,10-05-2026,Finance,Critical,128,Planning,98,78,79.59,4251,3508,0.825217596,Near Limit,-743,Execution,Approved,6
+C-2183,Contributor,Microsoft,10-06-2025,03-09-2026,Procurement,Critical,244,Normal,182,164,90.41,3511,599,0.170606665,Healthy,-2912,Approval,Pending,13
+C-2184,Collaborator,Cloudora,12-12-2023,31-03-2026,Procurement,High,88,Warning,157,109,69.43,5087,2187,0.429919402,Healthy,-2900,Negotiation,Approved,11
+C-2185,Contributor,Microsoft,07-06-2023,13-04-2026,IT,Critical,101,Planning,182,140,76.75,435,355,0.816091954,Near Limit,-80,Planning,Pending,6
+C-2186,Collaborator,Prismly,03-10-2023,16-02-2026,Procurement,High,45,Warning,245,183,74.64,5495,3453,0.628389445,Healthy,-2042,Approval,Approved,6
+C-2187,Contributor,Microsoft,31-07-2024,23-01-2026,IT,High,21,Critical,182,135,74.23,1443,1199,0.830907831,Near Limit,-244,Planning,Pending,13
+C-2188,Contributor,Microsoft,27-06-2024,30-07-2026,Finance,Critical,209,Normal,182,133,73.08,8719,4353,0.499254502,Healthy,-4366,Approval,Pending,7
+C-2189,Full,Salesforce,07-07-2024,10-04-2026,Finance,High,98,Planning,210,148,70.52,6917,2374,0.343212375,Healthy,-4543,Approval,Approved,17
+C-2190,Contributor,Microsoft,16-06-2025,06-11-2026,Procurement,Critical,308,Normal,182,133,73.25,2451,2386,0.973480212,Near Limit,-65,Approval,Approved,17
+C-2191,Collaborator,Veloxa,07-08-2024,18-07-2026,IT,Critical,197,Normal,245,168,68.46,2768,2388,0.862716763,Near Limit,-380,Planning,Pending,12
+C-2192,Collaborator,Cloudora,26-06-2024,22-03-2026,IT,Critical,79,Warning,157,122,77.96,752,658,0.875,Near Limit,-94,Execution,Pending,17
+C-2193,Contributor,AWS,14-07-2023,10-05-2026,Finance,Critical,128,Planning,145,42,29.38,5097,3057,0.599764567,Healthy,-2040,Planning,Pending,13
+C-2194,Collaborator,Atlassify,26-08-2023,20-03-2026,Finance,Critical,77,Warning,245,184,74.93,2287,744,0.325317009,Healthy,-1543,Planning,Pending,17
+C-2195,Collaborator,Microsoft,14-07-2024,16-11-2026,Procurement,High,318,Normal,161,125,77.92,3834,3443,0.898017736,Near Limit,-391,Planning,Pending,10
+C-2196,Collaborator,Veloxa,18-04-2025,26-02-2027,Finance,Medium,420,Normal,157,120,76.94,4074,1842,0.452135493,Healthy,-2232,Planning,Pending,4
+C-2197,Contributor,AWS,14-11-2023,13-04-2026,Procurement,Medium,101,Planning,145,121,84,3621,2609,0.720519194,Healthy,-1012,Planning,Pending,4
+C-2198,Collaborator,Microsoft,15-03-2024,10-07-2026,Finance,Medium,189,Normal,161,144,89.83,3005,725,0.241264559,Healthy,-2280,Planning,Pending,17
+C-2199,Full,Salesforce,12-12-2024,08-02-2027,Finance,High,402,Normal,210,122,58.14,6333,5971,0.942839097,Near Limit,-362,Execution,Approved,10
+C-2200,Collaborator,Nexaflow,22-12-2023,22-08-2026,IT,High,232,Normal,157,25,16.43,315,266,0.844444444,Near Limit,-49,Execution,Approved,8
+C-2201,Contributor,Microsoft,04-06-2025,22-11-2026,IT,Critical,324,Normal,182,139,76.21,318,73,0.229559748,Healthy,-245,Negotiation,Pending,3
+C-2202,Collaborator,Nexaflow,10-03-2024,03-12-2026,Procurement,Medium,335,Normal,157,126,80.83,3358,2041,0.607802263,Healthy,-1317,Negotiation,Approved,7
+C-2203,Collaborator,Microsoft,23-07-2024,01-04-2026,Procurement,Medium,89,Warning,161,108,67.25,3037,2515,0.828119855,Near Limit,-522,Negotiation,Pending,16
+C-2204,Contributor,Microsoft,17-01-2024,07-03-2026,IT,High,64,Warning,182,152,83.83,2068,742,0.358800774,Healthy,-1326,Approval,Approved,9
+C-2205,Collaborator,Veloxa,25-11-2025,02-01-2027,IT,Medium,365,Normal,245,195,79.45,5714,3546,0.620581029,Healthy,-2168,Approval,Pending,10
+C-2206,Collaborator,Databridge,20-07-2024,03-02-2026,Procurement,Critical,32,Warning,245,169,68.95,4819,2671,0.55426437,Healthy,-2148,Negotiation,Approved,10
+C-2207,Collaborator,Prismly,08-08-2025,24-11-2026,Procurement,High,326,Normal,157,122,78.09,788,801,1.016497462,Exceeded,13,Execution,Pending,16
+C-2208,Contributor,Microsoft,14-05-2023,25-01-2026,Finance,High,23,Critical,182,154,84.92,3432,1926,0.561188811,Healthy,-1506,Execution,Pending,5
+C-2209,Contributor,AWS,12-12-2024,26-12-2026,Procurement,Medium,358,Normal,145,125,86.28,295,602,2.040677966,Exceeded,307,Approval,Pending,7
+C-2210,Collaborator,Databridge,24-09-2024,23-10-2026,Procurement,Medium,294,Normal,245,163,66.34,3824,3765,0.98457113,Near Limit,-59,Planning,Pending,3
+C-2211,Full,AWS,24-12-2023,13-02-2026,Finance,Medium,42,Warning,260,224,86.31,469,454,0.968017058,Near Limit,-15,Planning,Pending,6
+C-2212,Contributor,Microsoft,02-08-2024,23-02-2027,Procurement,Medium,417,Normal,182,166,91.23,4583,3939,0.85948069,Near Limit,-644,Planning,Pending,14
+C-2213,Collaborator,Microsoft,21-04-2025,12-10-2026,Procurement,Critical,283,Normal,161,120,74.44,2849,645,0.226395226,Healthy,-2204,Approval,Pending,13
+C-2214,Collaborator,Microsoft,19-01-2024,05-07-2026,Procurement,High,184,Normal,161,131,81.45,745,695,0.932885906,Near Limit,-50,Planning,Approved,5
+C-2215,Collaborator,Nexaflow,03-10-2023,20-08-2026,Finance,Critical,230,Normal,245,181,73.91,702,521,0.742165242,Healthy,-181,Planning,Approved,7
+C-2216,Contributor,AWS,12-09-2024,25-11-2026,IT,Medium,327,Normal,145,123,85.24,2715,4053,1.49281768,Exceeded,1338,Planning,Pending,10
+C-2217,Full,Salesforce,09-08-2023,10-04-2026,IT,High,98,Planning,210,143,68.1,2956,2039,0.689783491,Healthy,-917,Planning,Approved,7
+C-2218,Collaborator,Microsoft,05-12-2024,30-09-2026,Procurement,Medium,271,Normal,161,108,67.37,367,347,0.945504087,Near Limit,-20,Approval,Pending,5
+C-2219,Collaborator,Nexaflow,01-12-2024,17-09-2026,Finance,High,258,Normal,245,169,69.03,456,408,0.894736842,Near Limit,-48,Planning,Pending,3
+C-2220,Contributor,Microsoft,28-04-2024,19-09-2026,Procurement,High,260,Normal,182,45,25.16,3843,1619,0.421285454,Healthy,-2224,Planning,Approved,12
+C-2221,Full,Salesforce,08-02-2024,14-03-2026,Procurement,High,71,Warning,210,148,70.76,417,217,0.520383693,Healthy,-200,Approval,Pending,14
+C-2222,Full,Salesforce,05-07-2024,12-01-2026,IT,High,10,Critical,210,190,90.52,1403,394,0.2808268,Healthy,-1009,Negotiation,Pending,13
+C-2223,Collaborator,Databridge,19-08-2024,02-08-2026,Finance,Medium,212,Normal,245,214,87.34,1676,389,0.232100239,Healthy,-1287,Planning,Pending,3
+C-2224,Full,AWS,08-02-2024,17-01-2026,Finance,Critical,15,Critical,260,240,92.38,1729,1584,0.916136495,Near Limit,-145,Negotiation,Approved,17
+C-2225,Collaborator,Microsoft,02-05-2025,28-10-2026,Finance,High,299,Normal,161,116,72.21,5306,3993,0.752544289,Healthy,-1313,Approval,Pending,9
+C-2226,Contributor,Microsoft,08-05-2024,11-08-2026,Procurement,Critical,221,Normal,182,136,75.05,2699,1902,0.704705446,Healthy,-797,Approval,Pending,11
+C-2227,Collaborator,Salesforce,25-09-2024,29-12-2026,IT,High,361,Normal,245,195,79.41,2554,2580,1.01018011,Exceeded,26,Planning,Pending,8
+C-2228,Collaborator,Veloxa,02-08-2025,08-12-2026,IT,High,340,Normal,157,123,78.92,401,244,0.608478803,Healthy,-157,Planning,Pending,3
+C-2229,Full,Salesforce,14-07-2025,23-09-2026,Procurement,Medium,264,Normal,210,140,67.1,3976,3007,0.756287726,Healthy,-969,Approval,Pending,4
+C-2230,Collaborator,Microsoft,08-09-2024,01-02-2026,IT,Critical,30,Critical,161,102,63.59,286,272,0.951048951,Near Limit,-14,Planning,Pending,11
+C-2231,Full,Microsoft,05-04-2024,03-12-2026,Finance,Medium,335,Normal,210,136,64.9,5767,962,0.166811167,Healthy,-4805,Negotiation,Approved,5
+C-2232,Collaborator,Cloudora,29-04-2024,26-08-2026,Procurement,Critical,236,Normal,245,188,76.68,7424,11997,1.615975216,Exceeded,4573,Planning,Approved,9
+C-2233,Full,Salesforce,26-03-2025,04-11-2026,Finance,High,306,Normal,210,109,51.9,581,877,1.509466437,Exceeded,296,Planning,Approved,17
+C-2234,Collaborator,Nexaflow,26-09-2023,09-08-2026,Finance,Critical,219,Normal,245,165,67.36,475,100,0.210526316,Healthy,-375,Planning,Pending,11
+C-2235,Full,Microsoft,08-01-2025,11-01-2027,Finance,High,374,Normal,210,175,83.76,2807,3265,1.16316352,Exceeded,458,Approval,Approved,3
+C-2236,Collaborator,Nexaflow,10-08-2023,05-06-2026,IT,Critical,154,Planning,245,189,77.21,5391,10035,1.861435726,Exceeded,4644,Negotiation,Pending,10
+C-2237,Collaborator,Prismly,17-11-2024,23-04-2026,IT,High,111,Planning,245,174,70.98,180,112,0.622222222,Healthy,-68,Approval,Pending,12
+C-2238,Collaborator,Prismly,26-05-2024,30-09-2026,Procurement,Medium,271,Normal,157,100,64.2,2085,2184,1.047482014,Exceeded,99,Planning,Pending,4
+C-2239,Contributor,AWS,26-02-2025,07-03-2026,Procurement,Medium,64,Warning,145,119,82.21,2124,1266,0.596045198,Healthy,-858,Planning,Pending,13
+C-2240,Contributor,Microsoft,15-07-2024,25-07-2026,Finance,Medium,204,Normal,182,143,78.4,572,314,0.548951049,Healthy,-258,Negotiation,Pending,9
+C-2241,Collaborator,Atlassify,01-08-2024,20-09-2026,IT,Critical,261,Normal,98,21,21.43,2064,3048,1.476744186,Exceeded,984,Negotiation,Pending,17
+C-2242,Contributor,Nexaflow,06-12-2024,27-04-2026,Procurement,High,115,Planning,320,208,65.09,548,313,0.571167883,Healthy,-235,Execution,Pending,9
+C-2243,Contributor,AWS,23-09-2024,29-01-2026,IT,Medium,27,Critical,182,140,77.03,314,203,0.646496815,Healthy,-111,Planning,Pending,11
+C-2244,Contributor,Microsoft,11-01-2026,27-01-2027,Procurement,Medium,390,Normal,182,145,79.93,1846,2201,1.192307692,Exceeded,355,Planning,Pending,12
+C-2245,Contributor,Microsoft,17-01-2025,23-10-2026,IT,Medium,294,Normal,182,125,68.53,228,43,0.188596491,Healthy,-185,Planning,Pending,4
+C-2246,Contributor,Salesforce,11-06-2023,26-03-2026,IT,Critical,83,Warning,320,276,86.38,4931,1006,0.204015413,Healthy,-3925,Planning,Approved,15
+C-2247,Contributor,Microsoft,26-07-2025,19-01-2027,Finance,Critical,382,Normal,182,138,75.93,4320,2062,0.477314815,Healthy,-2258,Planning,Pending,13
+C-2248,Contributor,AWS,02-06-2023,27-02-2026,Finance,Critical,56,Warning,182,140,77.19,3779,3333,0.88197936,Near Limit,-446,Planning,Pending,6
+C-2249,Contributor,Veloxa,05-01-2025,23-03-2026,Procurement,Critical,80,Warning,320,206,64.59,379,170,0.448548813,Healthy,-209,Planning,Pending,12
+C-2250,Contributor,Microsoft,11-05-2025,03-10-2026,Finance,High,274,Normal,182,151,83.17,4587,1566,0.341399608,Healthy,-3021,Negotiation,Pending,14
+C-2251,Collaborator,Microsoft,16-12-2023,06-01-2026,IT,Critical,4,Critical,161,108,67.06,1136,875,0.770246479,Healthy,-261,Negotiation,Pending,17
+C-2252,Collaborator,Microsoft,19-06-2025,26-01-2027,Procurement,High,389,Normal,161,123,76.8,3441,2355,0.684394071,Healthy,-1086,Planning,Pending,14
+C-2253,Contributor,AWS,05-08-2024,12-11-2026,Procurement,Medium,314,Normal,145,143,98.9,2359,1556,0.659601526,Healthy,-803,Approval,Pending,6
+C-2254,Contributor,Microsoft,23-02-2025,20-04-2026,IT,Medium,108,Planning,182,47,25.99,4695,4406,0.938445154,Near Limit,-289,Planning,Approved,5
+C-2255,Collaborator,Databridge,16-03-2023,11-02-2026,IT,High,40,Warning,157,110,70.19,3536,2505,0.708427602,Healthy,-1031,Planning,Approved,6
+C-2256,Contributor,Cloudora,10-06-2024,01-04-2026,Finance,Critical,89,Warning,320,260,81.28,813,490,0.602706027,Healthy,-323,Execution,Approved,6
+C-2257,Collaborator,Atlassify,09-03-2024,05-10-2026,Finance,High,276,Normal,245,48,19.82,1200,1076,0.896666667,Near Limit,-124,Planning,Pending,8
+C-2258,Contributor,Microsoft,13-10-2023,19-06-2026,IT,High,168,Planning,182,137,75.44,396,325,0.820707071,Near Limit,-71,Approval,Pending,6
+C-2259,Full,Salesforce,02-05-2024,03-04-2026,Finance,Critical,91,Planning,210,165,78.57,3449,2675,0.775587127,Healthy,-774,Planning,Pending,6
+C-2260,Collaborator,Microsoft,09-02-2025,02-09-2026,Procurement,Medium,243,Normal,161,126,78.23,1491,1506,1.010060362,Exceeded,15,Approval,Pending,3
+C-2261,Contributor,Salesforce,30-05-2024,03-03-2026,Finance,Medium,60,Warning,320,202,63.41,2531,1791,0.707625444,Healthy,-740,Planning,Approved,9
+C-2262,Full,AWS,19-07-2023,13-07-2026,IT,Critical,192,Normal,260,230,88.46,4780,4405,0.921548117,Near Limit,-375,Approval,Pending,8
+C-2263,Collaborator,Cloudora,25-07-2024,20-11-2026,IT,High,322,Normal,157,124,79.24,2307,1264,0.547897703,Healthy,-1043,Approval,Approved,7
+C-2264,Collaborator,Nexaflow,28-12-2023,10-12-2026,Finance,High,342,Normal,245,183,74.56,299,279,0.933110368,Near Limit,-20,Negotiation,Approved,16
+C-2265,Full,Microsoft,17-04-2024,28-05-2026,Finance,Critical,146,Planning,260,197,76.04,4365,3746,0.858190149,Near Limit,-619,Negotiation,Pending,3
+C-2266,Collaborator,Microsoft,26-09-2024,03-03-2026,Procurement,Medium,60,Warning,161,122,75.74,1573,980,0.62301335,Healthy,-593,Planning,Approved,15
+C-2267,Collaborator,Microsoft,26-03-2025,26-02-2027,IT,Critical,420,Normal,161,113,70.6,269,72,0.267657993,Healthy,-197,Negotiation,Pending,5
+C-2268,Collaborator,Atlassify,11-03-2024,08-01-2026,IT,High,6,Critical,245,175,71.55,3438,3215,0.935136707,Near Limit,-223,Negotiation,Pending,11
+C-2269,Contributor,Microsoft,28-03-2025,26-11-2026,IT,Low,328,Normal,182,129,70.94,4207,2576,0.612312812,Healthy,-1631,Planning,Approved,5
+C-2270,Collaborator,Nexaflow,28-06-2024,16-11-2026,IT,Medium,318,Normal,245,134,54.62,513,191,0.372319688,Healthy,-322,Planning,Approved,5
+C-2271,Contributor,AWS,16-12-2023,06-07-2026,Finance,High,185,Normal,145,124,85.93,3092,1652,0.534282018,Healthy,-1440,Negotiation,Pending,17
+C-2272,Collaborator,Nexaflow,09-02-2025,15-04-2026,IT,Medium,103,Planning,245,178,72.81,267,270,1.011235955,Exceeded,3,Approval,Pending,13
+C-2273,Collaborator,Microsoft,21-05-2024,29-11-2026,IT,High,331,Normal,161,135,83.75,2430,2650,1.090534979,Exceeded,220,Approval,Pending,10
+C-2274,Collaborator,Atlassify,24-04-2024,15-03-2026,IT,Critical,72,Warning,157,130,83.06,260,918,3.530769231,Exceeded,658,Planning,Pending,12
+C-2275,Contributor,AWS,04-08-2024,21-08-2026,Finance,High,231,Normal,145,134,92.55,8181,7131,0.871653832,Near Limit,-1050,Planning,Pending,12
+C-2276,Contributor,AWS,21-06-2024,19-03-2026,IT,High,76,Warning,145,124,85.66,1910,1492,0.781151832,Healthy,-418,Execution,Approved,5
+C-2277,Contributor,Salesforce,06-06-2024,11-09-2026,IT,Medium,252,Normal,320,229,71.56,395,220,0.556962025,Healthy,-175,Planning,Pending,6
+C-2278,Collaborator,Microsoft,25-05-2024,08-07-2026,Finance,Critical,187,Normal,161,114,71.22,561,551,0.982174688,Near Limit,-10,Planning,Pending,3
+C-2279,Collaborator,Nexaflow,09-09-2023,17-05-2026,IT,Critical,135,Planning,157,119,76.37,4264,2949,0.691604128,Healthy,-1315,Planning,Pending,17
+C-2280,Collaborator,Microsoft,09-01-2026,09-02-2027,IT,Medium,403,Normal,161,116,72.33,4336,3775,0.870618081,Near Limit,-561,Approval,Pending,14
+C-2281,Collaborator,Microsoft,29-11-2024,24-02-2026,Procurement,High,53,Warning,161,122,76.18,3349,1547,0.461928934,Healthy,-1802,Planning,Pending,16
+C-2282,Collaborator,Microsoft,27-07-2023,21-04-2026,Procurement,Medium,109,Planning,161,30,19.17,4117,947,0.230021861,Healthy,-3170,Approval,Pending,9
+C-2283,Collaborator,Microsoft,24-05-2023,13-03-2026,Finance,High,70,Warning,161,126,78.66,2430,2094,0.861728395,Near Limit,-336,Execution,Approved,5
+C-2284,Collaborator,Veloxa,27-03-2023,17-01-2026,IT,High,15,Critical,245,168,68.5,402,933,2.320895522,Exceeded,531,Planning,Pending,16
+C-2285,Collaborator,Veloxa,28-02-2024,19-07-2026,IT,High,198,Normal,245,169,69.07,5093,2229,0.437659533,Healthy,-2864,Approval,Approved,3
+C-2286,Collaborator,Nexaflow,13-10-2023,17-01-2026,Procurement,Medium,15,Critical,245,170,69.31,4711,4223,0.896412651,Near Limit,-488,Planning,Pending,7
+C-2287,Collaborator,Databridge,24-02-2024,01-05-2026,IT,Medium,119,Planning,245,166,67.89,1330,1169,0.878947368,Near Limit,-161,Negotiation,Pending,11
+C-2288,Collaborator,Cloudora,18-12-2024,19-05-2026,Procurement,Medium,137,Planning,157,105,67.26,483,1228,2.542443064,Exceeded,745,Negotiation,Pending,15
+C-2289,Contributor,AWS,12-11-2024,25-08-2026,Procurement,High,235,Normal,182,144,79,3164,3196,1.01011378,Exceeded,32,Negotiation,Pending,16
+C-2290,Collaborator,Veloxa,06-07-2024,08-02-2026,Finance,Critical,37,Warning,157,115,73.38,2746,2070,0.753823744,Healthy,-676,Negotiation,Pending,5
+C-2291,Collaborator,Cloudora,23-04-2024,25-01-2026,Procurement,Critical,23,Critical,245,154,62.72,853,683,0.8007034,Near Limit,-170,Approval,Approved,15
+C-2292,Collaborator,Prismly,16-10-2024,24-09-2026,Finance,High,265,Normal,245,161,65.89,3745,2558,0.683044059,Healthy,-1187,Negotiation,Pending,13
+C-2293,Full,AWS,14-04-2023,17-03-2026,Procurement,High,74,Warning,260,210,81,2556,1726,0.675273865,Healthy,-830,Execution,Approved,8
+C-2294,Collaborator,Veloxa,04-01-2024,24-06-2026,IT,High,173,Planning,245,145,59.18,582,265,0.45532646,Healthy,-317,Approval,Pending,8
+C-2295,Contributor,AWS,18-09-2023,19-05-2026,Procurement,Medium,137,Planning,145,141,97.31,180,182,1.011111111,Exceeded,2,Approval,Approved,15
+C-2296,Collaborator,Microsoft,04-07-2025,14-08-2026,Procurement,Critical,224,Normal,161,119,74.26,5272,1485,0.281676783,Healthy,-3787,Execution,Approved,4
+C-2297,Collaborator,Cloudora,23-11-2023,23-05-2026,Procurement,Critical,141,Planning,157,108,69.04,476,192,0.403361345,Healthy,-284,Planning,Pending,10
+C-2298,Collaborator,Veloxa,23-02-2025,26-11-2026,IT,Medium,328,Normal,157,135,86.5,220,60,0.272727273,Healthy,-160,Approval,Pending,3
+C-2299,Full,AWS,28-07-2024,04-02-2026,Finance,High,33,Warning,260,58,22.65,3861,6183,1.601398601,Exceeded,2322,Negotiation,Pending,4
+C-2300,Full,Salesforce,21-02-2024,09-01-2026,IT,Critical,7,Critical,210,182,87.05,4203,5755,1.369260052,Exceeded,1552,Execution,Approved,9
+C-2301,Collaborator,Nexaflow,25-06-2023,17-05-2026,IT,High,135,Planning,245,155,63.29,2145,3566,1.662470862,Exceeded,1421,Negotiation,Pending,16
+C-2302,Collaborator,Salesforce,18-06-2024,22-01-2027,IT,Critical,385,Normal,98,82,84.59,3169,3039,0.958977595,Near Limit,-130,Planning,Pending,12
+C-2303,Collaborator,Databridge,24-12-2024,30-01-2026,Finance,High,28,Critical,157,122,78.09,5337,5230,0.979951283,Near Limit,-107,Approval,Pending,14
+C-2304,Contributor,Salesforce,19-11-2023,27-05-2026,Finance,High,145,Planning,320,191,59.81,697,631,0.905308465,Near Limit,-66,Planning,Pending,15
+C-2305,Collaborator,Atlassify,21-04-2024,28-12-2026,IT,Medium,360,Normal,157,106,68.09,4397,1890,0.429838526,Healthy,-2507,Execution,Pending,16
+C-2306,Collaborator,Microsoft,17-06-2023,09-01-2026,Procurement,Critical,7,Critical,161,127,78.85,4925,3625,0.736040609,Healthy,-1300,Negotiation,Pending,17
+C-2307,Contributor,AWS,05-09-2025,16-02-2027,Procurement,Critical,410,Normal,145,133,92.34,180,64,0.355555556,Healthy,-116,Negotiation,Pending,4
+C-2308,Full,Salesforce,16-03-2023,15-02-2026,IT,Medium,44,Warning,210,140,66.67,658,571,0.867781155,Near Limit,-87,Negotiation,Approved,3
+C-2309,Full,Salesforce,19-11-2023,22-01-2026,Finance,High,20,Critical,210,146,69.9,1134,2965,2.614638448,Exceeded,1831,Planning,Pending,3
+C-2310,Collaborator,Prismly,16-08-2024,05-02-2026,Finance,High,34,Warning,245,216,88.24,2516,1115,0.443163752,Healthy,-1401,Planning,Pending,16
+C-2311,Collaborator,Cloudora,25-03-2024,24-06-2026,Finance,Medium,173,Planning,157,124,79.55,2074,2095,1.010125362,Exceeded,21,Negotiation,Pending,12
+C-2312,Collaborator,Nexaflow,22-07-2024,02-06-2026,IT,Medium,151,Planning,157,131,83.76,4712,1179,0.250212224,Healthy,-3533,Approval,Approved,14
+C-2313,Contributor,Microsoft,24-07-2023,27-04-2026,Procurement,High,115,Planning,182,137,75.27,6438,3277,0.509009009,Healthy,-3161,Negotiation,Pending,5
+C-2314,Collaborator,Nexaflow,28-08-2023,23-08-2026,Procurement,High,233,Normal,245,193,78.8,2541,2266,0.891774892,Near Limit,-275,Negotiation,Approved,3
+C-2315,Collaborator,Databridge,04-02-2024,25-06-2026,IT,High,174,Planning,157,94,59.87,3140,830,0.26433121,Healthy,-2310,Negotiation,Approved,9
+C-2316,Collaborator,Microsoft,16-07-2025,14-10-2026,Finance,Medium,285,Normal,161,118,73.2,1948,1670,0.857289528,Near Limit,-278,Approval,Approved,8
+C-2317,Contributor,Microsoft,10-04-2023,03-01-2026,Finance,Critical,1,Critical,182,146,80.32,2602,4027,1.54765565,Exceeded,1425,Planning,Pending,11
+C-2318,Contributor,Microsoft,19-11-2023,13-01-2026,Finance,Medium,11,Critical,182,141,77.52,4868,6880,1.413311422,Exceeded,2012,Approval,Approved,16
+C-2319,Contributor,AWS,14-05-2024,10-08-2026,Finance,High,220,Normal,145,125,86.21,3377,2766,0.819070181,Near Limit,-611,Planning,Pending,11
+C-2320,Collaborator,Prismly,27-07-2024,02-06-2026,Finance,Medium,151,Planning,245,38,15.67,4457,3678,0.825218757,Near Limit,-779,Planning,Pending,14
+C-2321,Contributor,Microsoft,01-04-2023,09-01-2026,Procurement,Critical,7,Critical,182,154,84.81,5070,765,0.150887574,Healthy,-4305,Planning,Pending,8
+C-2322,Collaborator,Microsoft,28-05-2025,28-10-2026,Procurement,Critical,299,Normal,161,125,78.04,301,130,0.431893688,Healthy,-171,Planning,Approved,9
+C-2323,Collaborator,Veloxa,06-05-2023,09-02-2026,Finance,Critical,38,Warning,157,114,72.99,920,555,0.60326087,Healthy,-365,Planning,Pending,5
+C-2324,Contributor,Microsoft,09-01-2024,27-05-2026,IT,Medium,145,Planning,182,48,26.32,4911,2533,0.5157809,Healthy,-2378,Execution,Approved,14
+C-2325,Contributor,Microsoft,19-03-2024,11-06-2026,IT,High,160,Planning,182,135,74.23,2013,560,0.278191754,Healthy,-1453,Planning,Pending,14
+C-2326,Contributor,Microsoft,08-12-2023,16-07-2026,Finance,Medium,195,Normal,182,152,83.83,4803,4458,0.928169894,Near Limit,-345,Negotiation,Pending,3
+C-2327,Collaborator,Cloudora,02-11-2025,09-01-2027,Finance,Critical,372,Normal,157,119,75.8,1417,794,0.560338744,Healthy,-623,Negotiation,Pending,16
+C-2328,Collaborator,Databridge,19-04-2024,05-02-2027,Finance,Critical,399,Normal,98,97,99.9,1784,1740,0.975336323,Near Limit,-44,Negotiation,Pending,14
+C-2329,Collaborator,Prismly,06-04-2025,07-05-2026,IT,High,125,Planning,157,131,84.01,3433,2275,0.662685698,Healthy,-1158,Negotiation,Pending,7
+C-2330,Contributor,AWS,27-06-2025,05-09-2026,Finance,Medium,246,Normal,182,148,81.36,394,307,0.779187817,Healthy,-87,Negotiation,Pending,16
+C-2331,Collaborator,Salesforce,14-01-2025,25-02-2027,IT,Critical,419,Normal,245,181,73.75,1678,309,0.184147795,Healthy,-1369,Planning,Pending,4
+C-2332,Collaborator,Prismly,30-04-2025,08-12-2026,Finance,Critical,340,Normal,157,118,75.61,279,251,0.899641577,Near Limit,-28,Execution,Approved,17
+C-2333,Full,Microsoft,27-02-2025,14-08-2026,Procurement,Medium,224,Normal,260,165,63.58,3157,1033,0.327209376,Healthy,-2124,Execution,Approved,12
+C-2334,Collaborator,Databridge,15-07-2024,10-02-2026,Procurement,Medium,39,Warning,157,118,75.41,3154,3072,0.974001268,Near Limit,-82,Planning,Pending,16
+C-2335,Contributor,Microsoft,28-06-2023,28-03-2026,IT,Critical,85,Warning,182,130,71.33,4536,2223,0.490079365,Healthy,-2313,Execution,Pending,16
+C-2336,Contributor,Microsoft,22-01-2025,24-02-2026,Finance,Medium,53,Warning,182,122,67.32,2900,2608,0.899310345,Near Limit,-292,Negotiation,Pending,9
+C-2337,Contributor,AWS,23-06-2024,02-06-2026,Procurement,High,151,Planning,145,145,100,5738,3230,0.562913907,Healthy,-2508,Execution,Pending,15
+C-2338,Collaborator,Microsoft,28-11-2023,11-05-2026,IT,Critical,129,Planning,161,123,76.49,3637,5172,1.422051141,Exceeded,1535,Approval,Approved,7
+C-2339,Collaborator,Atlassify,02-06-2024,01-02-2026,Finance,Medium,30,Critical,157,138,88.22,3271,2935,0.89727912,Near Limit,-336,Planning,Pending,12
+C-2340,Collaborator,Microsoft,13-07-2025,03-12-2026,Finance,Medium,335,Normal,161,24,15.14,1182,1107,0.936548223,Near Limit,-75,Planning,Pending,17
+C-2341,Contributor,Salesforce,23-11-2023,30-09-2026,Procurement,Critical,271,Normal,320,158,49.5,517,1550,2.998065764,Exceeded,1033,Execution,Approved,14
+C-2342,Contributor,Salesforce,01-07-2024,05-08-2026,Finance,Critical,215,Normal,320,230,72.06,4308,719,0.166898793,Healthy,-3589,Planning,Pending,11
+C-2343,Collaborator,Veloxa,09-09-2024,23-01-2026,Finance,High,21,Critical,157,123,78.41,2984,1085,0.363605898,Healthy,-1899,Negotiation,Pending,10
+C-2344,Collaborator,Salesforce,18-02-2025,11-05-2026,Finance,Critical,129,Planning,98,84,86.63,2539,1585,0.62426152,Healthy,-954,Execution,Approved,14
+C-2345,Collaborator,Salesforce,08-04-2024,16-04-2026,Finance,Critical,104,Planning,98,79,81.22,3466,1551,0.447489902,Healthy,-1915,Negotiation,Pending,17
+C-2346,Contributor,Microsoft,07-06-2023,17-01-2026,IT,Critical,15,Critical,182,141,77.3,191,94,0.492146597,Healthy,-97,Approval,Approved,3
+C-2347,Collaborator,Microsoft,12-05-2025,02-01-2027,Finance,High,365,Normal,161,123,76.74,2537,4595,1.811194324,Exceeded,2058,Execution,Approved,9
+C-2348,Contributor,AWS,18-10-2023,08-06-2026,IT,High,157,Planning,145,121,83.66,1552,787,0.507087629,Healthy,-765,Execution,Pending,15
+C-2349,Contributor,AWS,27-07-2025,21-10-2026,IT,High,292,Normal,182,156,85.58,4162,809,0.194377703,Healthy,-3353,Approval,Pending,3
+C-2350,Collaborator,Veloxa,04-07-2024,16-01-2026,IT,Medium,14,Critical,245,214,87.3,6168,6039,0.979085603,Near Limit,-129,Approval,Approved,4
+C-2351,Collaborator,Microsoft,13-03-2024,27-09-2026,IT,Critical,268,Normal,161,148,92.31,4791,2452,0.511792945,Healthy,-2339,Negotiation,Pending,9
+C-2352,Contributor,AWS,10-03-2025,15-04-2026,IT,Medium,103,Planning,145,121,84.07,3891,1001,0.257260344,Healthy,-2890,Planning,Pending,8
+C-2353,Contributor,Microsoft,23-11-2024,14-06-2026,IT,Critical,163,Planning,182,126,69.57,589,267,0.453310696,Healthy,-322,Planning,Pending,12
+C-2354,Contributor,Microsoft,13-12-2025,15-12-2026,Finance,Medium,347,Normal,182,131,72.2,4655,8922,1.916648765,Exceeded,4267,Planning,Pending,11
+C-2355,Full,AWS,03-03-2024,16-09-2026,Finance,Critical,257,Normal,260,195,75,3113,2976,0.955991005,Near Limit,-137,Negotiation,Pending,14
+C-2356,Contributor,AWS,30-12-2023,03-10-2026,Finance,Critical,274,Normal,145,124,85.72,3867,3907,1.010343936,Exceeded,40,Planning,Pending,3
+C-2357,Collaborator,Microsoft,16-10-2024,31-01-2027,IT,Medium,394,Normal,161,124,77.17,4697,1374,0.292527145,Healthy,-3323,Execution,Approved,12
+C-2358,Collaborator,Salesforce,14-01-2025,08-07-2026,IT,Critical,187,Normal,98,88,90.1,271,113,0.41697417,Healthy,-158,Planning,Approved,10
+C-2359,Full,Salesforce,08-05-2025,19-06-2026,Procurement,Medium,168,Planning,210,143,68.29,3370,2810,0.833827893,Near Limit,-560,Execution,Approved,11
+C-2360,Contributor,Microsoft,05-10-2023,07-03-2026,Procurement,High,64,Warning,182,145,79.82,3562,1266,0.355418304,Healthy,-2296,Negotiation,Pending,13
+C-2361,Contributor,Microsoft,20-10-2023,09-04-2026,Finance,Critical,97,Planning,182,147,80.98,4907,4589,0.93519462,Near Limit,-318,Approval,Pending,14
+C-2362,Collaborator,Microsoft,11-12-2023,28-02-2026,IT,High,57,Warning,161,117,72.89,4092,4133,1.01001955,Exceeded,41,Negotiation,Pending,16
+C-2363,Collaborator,Veloxa,21-02-2025,03-11-2026,Procurement,Medium,305,Normal,157,120,76.69,3383,730,0.215784806,Healthy,-2653,Planning,Pending,7
+C-2364,Collaborator,Databridge,29-10-2024,19-09-2026,Finance,Critical,260,Normal,245,185,75.38,5695,4111,0.721861282,Healthy,-1584,Planning,Pending,15
+C-2365,Contributor,Microsoft,14-10-2023,18-02-2026,Procurement,Critical,47,Warning,182,133,73.25,3650,3328,0.911780822,Near Limit,-322,Negotiation,Pending,6
+C-2366,Contributor,Microsoft,04-02-2025,16-03-2026,Procurement,Medium,73,Warning,182,145,79.55,10580,5051,0.477410208,Healthy,-5529,Approval,Pending,9
+C-2367,Contributor,Microsoft,02-06-2023,14-02-2026,IT,Critical,43,Warning,182,142,78.07,2212,2114,0.955696203,Near Limit,-98,Negotiation,Approved,15
+C-2368,Full,Microsoft,02-01-2024,21-04-2026,IT,Medium,109,Planning,210,123,58.62,7069,5079,0.718489178,Healthy,-1990,Planning,Pending,3
+C-2369,Collaborator,Prismly,31-03-2025,05-06-2026,IT,Critical,154,Planning,157,88,56.56,521,354,0.679462572,Healthy,-167,Planning,Pending,7
+C-2370,Collaborator,Microsoft,02-05-2024,08-12-2026,Finance,High,340,Normal,161,131,81.64,4033,19481,4.830399207,Exceeded,15448,Approval,Approved,13
+C-2371,Full,Salesforce,28-08-2025,19-02-2027,IT,High,413,Normal,210,162,77.19,486,646,1.329218107,Exceeded,160,Planning,Pending,6
+C-2372,Full,Microsoft,09-06-2024,01-08-2026,IT,High,211,Normal,210,155,74.05,215,312,1.451162791,Exceeded,97,Planning,Pending,10
+C-2373,Full,Salesforce,04-03-2024,23-04-2026,Procurement,High,111,Planning,210,129,61.52,3071,1344,0.437642462,Healthy,-1727,Planning,Approved,11
+C-2374,Collaborator,AWS,15-09-2023,05-09-2026,Finance,Critical,246,Normal,161,115,71.65,2708,1019,0.376292467,Healthy,-1689,Approval,Approved,11
+C-2375,Contributor,Microsoft,23-12-2024,15-05-2026,Procurement,High,133,Planning,182,128,70.67,7431,4307,0.579598977,Healthy,-3124,Planning,Pending,4
+C-2376,Collaborator,Microsoft,07-11-2024,21-04-2026,Finance,Medium,109,Planning,161,136,84.55,3451,8405,2.435525935,Exceeded,4954,Planning,Pending,14
+C-2377,Contributor,Microsoft,09-07-2025,16-02-2027,Finance,Medium,410,Normal,182,136,74.62,1104,582,0.527173913,Healthy,-522,Planning,Pending,17
+C-2378,Collaborator,Prismly,15-08-2023,08-05-2026,Finance,High,126,Planning,157,25,16.24,2906,2698,0.92842395,Near Limit,-208,Planning,Pending,14
+C-2379,Collaborator,Atlassify,05-07-2024,24-10-2026,Finance,High,295,Normal,157,38,24.46,1532,960,0.626631854,Healthy,-572,Planning,Pending,11
+C-2380,Collaborator,Prismly,28-10-2023,29-08-2026,Finance,High,239,Normal,157,131,83.63,2123,2021,0.951954781,Near Limit,-102,Planning,Pending,13
+C-2381,Collaborator,AWS,10-03-2025,06-06-2026,Procurement,Medium,155,Planning,161,121,75.37,228,45,0.197368421,Healthy,-183,Execution,Approved,16
+C-2382,Contributor,Microsoft,06-05-2025,14-11-2026,Finance,Critical,316,Normal,182,136,74.95,8351,1803,0.215902287,Healthy,-6548,Planning,Pending,8
+C-2383,Contributor,OpenAI,15-11-2024,15-11-2025,IT,High,25,Warning,320,250,78.13,1250000,980000,0.784,Near Limit,-270000,Execution,Pending,4
