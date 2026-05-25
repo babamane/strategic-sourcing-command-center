@@ -244,7 +244,7 @@ async def handle_stage_action(contract_id: str, stage_action: str):
             <strong>Contract ID: {contract_id}</strong>
             <span>Current Stage: {stage_action}</span>
         </div>
-        <a href="http://localhost:8502" class="btn">Return to Dashboard</a>
+        <a href="http://localhost:8501" class="btn">Return to Dashboard</a>
         <div class="footer">
             VendorFlow AI · Contract Renewal Agent
         </div>
@@ -361,6 +361,363 @@ async def refresh_triggers(batch_size: int = 3):
 async def get_pending():
     """Returns count of contracts still awaiting trigger emails."""
     return {"pending": get_pending_count()}
+
+
+@app.get("/report/{contract_id}", response_class=HTMLResponse)
+async def get_contract_report(contract_id: str):
+    """
+    Display contract summary report in HTML format.
+    This endpoint is called when user clicks "View Summary Report" button in email.
+    """
+    import csv
+    from email_service import CONTRACT_DOCS
+    
+    # Load contract data from CSV
+    contract_data = None
+    if os.path.exists(CSV_FILE):
+        try:
+            with open(CSV_FILE, newline="", encoding="utf-8") as fh:
+                reader = csv.DictReader(fh)
+                for row in reader:
+                    if row.get("Contract_ID") == contract_id:
+                        contract_data = row
+                        break
+        except Exception as e:
+            print(f"[Report] Error loading CSV: {e}")
+    
+    if not contract_data:
+        # Return error page if contract not found
+        html_response = f"""
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contract Not Found - VendorFlow AI</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {{
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }}
+        .container {{
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            text-align: center;
+        }}
+        .error-icon {{
+            width: 80px;
+            height: 80px;
+            background: #EF4444;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+        }}
+        .error-icon::before {{
+            content: "✕";
+            color: white;
+            font-size: 48px;
+            font-weight: bold;
+        }}
+        h1 {{
+            color: #1F2937;
+            margin: 0 0 16px;
+            font-size: 28px;
+        }}
+        p {{
+            color: #6B7280;
+            margin: 0 0 32px;
+            font-size: 16px;
+            line-height: 1.6;
+        }}
+        .btn {{
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            padding: 12px 32px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: background 0.3s;
+        }}
+        .btn:hover {{
+            background: #5568d3;
+        }}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="error-icon"></div>
+        <h1>Contract Not Found</h1>
+        <p>Contract {contract_id} could not be found in the system.</p>
+        <a href="http://localhost:8501" class="btn">Return to Dashboard</a>
+    </div>
+</body>
+</html>
+        """
+        return html_response
+    
+    # Load agent state for workflow information
+    agent_state = _load_json(STATE_FILE)
+    contract_state = agent_state.get(contract_id, {})
+    
+    # Format values
+    def fmt_number(val):
+        try:
+            return f"{int(float(val)):,}"
+        except Exception:
+            return str(val)
+    
+    def fmt_currency(val):
+        try:
+            return f"${float(val):,.2f}"
+        except Exception:
+            return str(val)
+    
+    def get_renewal_month_year(end_date_str):
+        for fmt in ("%d-%m-%Y", "%Y-%m-%d", "%m/%d/%Y"):
+            try:
+                from datetime import datetime
+                return datetime.strptime(end_date_str, fmt).strftime("%B %Y")
+            except Exception:
+                pass
+        return end_date_str
+    
+    # Extract contract details
+    vendor = contract_data.get("Vendor", "N/A")
+    license_type = contract_data.get("License_Type", "N/A")
+    days = contract_data.get("Days_to_Renewal", "N/A")
+    renewal_month = get_renewal_month_year(contract_data.get("End_Date", ""))
+    total_users = fmt_number(contract_data.get("Total_Users", "N/A"))
+    active_users = fmt_number(contract_data.get("Active_Users", "N/A"))
+    
+    utilization = contract_data.get("Avg_Utilization_Pct", "N/A")
+    try:
+        util_display = f"{float(str(utilization).replace('%','').strip()):.2f}%"
+    except Exception:
+        util_display = str(utilization)
+    
+    budget = fmt_currency(contract_data.get("Total_Annual_Budget_USD", "N/A"))
+    
+    # Workflow stage information
+    current_stage = contract_state.get("Stage", "Planning")
+    pending_with = contract_state.get("Pending_With", "Procurement Team")
+    execution_status = contract_state.get("Execution_Status", "Running")
+    
+    # Get report URL if available
+    report_url = CONTRACT_DOCS.get(contract_id, "")
+    
+    # Build HTML response
+    html_response = f"""
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contract Summary Report — {contract_id} | VendorFlow AI</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {{
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #f3f4f6;
+            margin: 0;
+            padding: 20px;
+        }}
+        .container {{
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }}
+        .header {{
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+        }}
+        .header h1 {{
+            margin: 0 0 8px;
+            font-size: 28px;
+        }}
+        .header p {{
+            margin: 0;
+            opacity: 0.9;
+            font-size: 14px;
+        }}
+        .content {{
+            padding: 30px;
+        }}
+        .section {{
+            margin-bottom: 30px;
+        }}
+        .section h2 {{
+            color: #1F2937;
+            margin: 0 0 16px;
+            font-size: 18px;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 8px;
+        }}
+        .info-grid {{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }}
+        .info-item {{
+            background: #f9fafb;
+            padding: 12px;
+            border-radius: 8px;
+        }}
+        .info-label {{
+            color: #6B7280;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }}
+        .info-value {{
+            color: #1F2937;
+            font-size: 16px;
+            font-weight: 600;
+        }}
+        .workflow-status {{
+            background: #eff6ff;
+            border-left: 4px solid #3b82f6;
+            padding: 16px;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 20px;
+        }}
+        .workflow-status h3 {{
+            margin: 0 0 8px;
+            color: #1e40af;
+            font-size: 16px;
+        }}
+        .workflow-status p {{
+            margin: 0;
+            color: #1e40af;
+            font-size: 14px;
+        }}
+        .btn {{
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: background 0.3s;
+        }}
+        .btn:hover {{
+            background: #5568d3;
+        }}
+        .btn-secondary {{
+            background: #9CA3AF;
+        }}
+        .btn-secondary:hover {{
+            background: #6B7280;
+        }}
+        .footer {{
+            text-align: center;
+            padding: 20px;
+            color: #9CA3AF;
+            font-size: 12px;
+            border-top: 1px solid #e5e7eb;
+        }}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Contract Summary Report</h1>
+            <p>{contract_id} — Generated by VendorFlow AI</p>
+        </div>
+        
+        <div class="content">
+            <div class="workflow-status">
+                <h3>📋 Current Workflow Status</h3>
+                <p><strong>Stage:</strong> {current_stage} | <strong>Pending With:</strong> {pending_with} | <strong>Status:</strong> {execution_status}</p>
+            </div>
+            
+            <div class="section">
+                <h2>📄 Contract Information</h2>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <div class="info-label">Contract ID</div>
+                        <div class="info-value">{contract_id}</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Vendor</div>
+                        <div class="info-value">{vendor}</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">License Type</div>
+                        <div class="info-value">{license_type}</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Renewal Month</div>
+                        <div class="info-value">{renewal_month}</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Days to Renewal</div>
+                        <div class="info-value" style="color: #dc2626;">{days} days</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>📊 License Utilization</h2>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <div class="info-label">Total Users</div>
+                        <div class="info-value">{total_users}</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Active Users</div>
+                        <div class="info-value">{active_users}</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Utilization Rate</div>
+                        <div class="info-value">{util_display}</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>💰 Budget Information</h2>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <div class="info-label">Annual Budget</div>
+                        <div class="info-value">{budget}</div>
+                    </div>
+                </div>
+            </div>
+            
+            {f'<div class="section"><h2>📎 AI Generated Report</h2><a href="{report_url}" class="btn" target="_blank">View Full AI Summary Report</a></div>' if report_url else ''}
+            
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="http://localhost:8501" class="btn btn-secondary">Return to Dashboard</a>
+            </div>
+        </div>
+        
+        <div class="footer">
+            Automated by VendorFlow AI · Contract Renewal Agent · Generated on {contract_state.get("Last_Trigger_Timestamp", "N/A")}
+        </div>
+    </div>
+</body>
+</html>
+    """
+    return html_response
 
 
 @app.get("/status")

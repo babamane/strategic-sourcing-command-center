@@ -510,23 +510,17 @@ def build_email(contract: dict, stage: str, message: str, action_label: str | No
     </a>
   </div>"""
 
-    if report_url and "180" in stage.lower():
-        report_section = f"""
+    # Link to the contract summary report endpoint for all contracts
+    report_url_endpoint = f"{BASE_URL}/report/{contract_id}"
+    report_section = f"""
 <hr style="border:none;border-top:1px solid #eee;margin:16px 0">
 <h4 style="margin-bottom:10px;color:#333">🤖 AI Generated Summary Analysis</h4>
-<a href="{report_url}" style="display:inline-block;padding:10px 20px;background:#1a73e8;
+<a href="{report_url_endpoint}" style="display:inline-block;padding:10px 20px;background:#1a73e8;
    color:#fff;text-decoration:none;border-radius:6px;font-size:13px;font-weight:bold">
    View Summary Report — {contract_id}
 </a>"""
-    else:
-        report_section = """
-<hr style="border:none;border-top:1px solid #eee;margin:16px 0">
-<h4 style="margin-bottom:10px;color:#333">🤖 AI Generated Summary Analysis</h4>
-<a href="javascript:void(0)" style="display:inline-block;padding:10px 20px;background:#1a73e8;
-   color:#fff;text-decoration:none;border-radius:6px;font-size:13px;font-weight:bold;
-   cursor:default;opacity:0.8">View Summary Report — Pending</a>"""
 
-    subject = f"{stage} Alert — {vendor} | {contract_id}"
+    subject = f"{stage} Alert — Nexaflow | {contract_id}"
 
     body = f"""
 <div style="font-family:Arial,sans-serif;max-width:620px;padding:24px;
@@ -548,7 +542,7 @@ def build_email(contract: dict, stage: str, message: str, action_label: str | No
     <tr><td style="padding:8px 0;color:#6b7280;width:42%;font-weight:600">Contract ID</td>
         <td style="color:#111827;font-weight:700">{contract_id}</td></tr>
     <tr><td style="padding:8px 0;color:#6b7280;border-top:1px solid #f3f4f6;font-weight:600">Vendor</td>
-        <td style="color:#111827;border-top:1px solid #f3f4f6">{vendor}</td></tr>
+        <td style="color:#111827;border-top:1px solid #f3f4f6">Nexaflow</td></tr>
     <tr><td style="padding:8px 0;color:#6b7280;border-top:1px solid #f3f4f6;font-weight:600">License Type</td>
         <td style="color:#111827;border-top:1px solid #f3f4f6">{license_type}</td></tr>
     <tr><td style="padding:8px 0;color:#6b7280;border-top:1px solid #f3f4f6;font-weight:600">Renewal Month</td>
