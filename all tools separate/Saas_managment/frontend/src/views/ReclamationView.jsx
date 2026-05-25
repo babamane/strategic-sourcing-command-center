@@ -5,7 +5,7 @@ import { DataTable } from "../components/shared/DataTable.jsx";
 import { KPICard } from "../components/shared/KPICard.jsx";
 import { filterBySkuSeat } from "../utils/deriveFilters.js";
 
-const money = n => `$${Number(n ?? 0).toLocaleString(undefined, { maximumFractionDigits: 0 })}`;
+const money = n => `$${Number(n ?? 0).toLocaleString("en-US", { maximumFractionDigits: 0 })}`;
 
 const ACTIVE_ONLY = new Set(["active", "over_tier"]);
 

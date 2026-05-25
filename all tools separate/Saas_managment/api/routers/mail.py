@@ -12,6 +12,8 @@ from db.recommendations_table import insert_recommendation
 from processing.context_builder import build_context
 from processing.reclamation_detector import get_reclamation_candidates
 from services.mail_service import send_churn_notification
+from pydantic import BaseModel
+from services.mail_service import send_planning_brief
 
 router = APIRouter(prefix="/mail", tags=["mail"])
 
@@ -65,3 +67,38 @@ def churn_notification(req: ChurnMailRequest) -> ChurnMailResponse:
         sent=result.get("sent"),
         recommendation_id=rec_id,
     )
+
+
+class PlanningBriefRequest(BaseModel):
+    generated_at: str
+    audit_date: str
+    active_vendors: list[str]
+    portfolio_summary: dict
+    vendor_signals: list[dict]
+    available_tools: list[str]
+    confirmed: bool = False
+
+class PlanningBriefResponse(BaseModel):
+    preview: bool
+    recipient: str
+    subject: str
+    body_preview: str | None = None
+    sent: bool | None = None
+    error: str | None = None
+
+@router.post("/send-planning-brief", response_model=PlanningBriefResponse)
+def send_planning_brief_endpoint(req: PlanningBriefRequest) -> PlanningBriefResponse:
+    try:
+        result = send_planning_brief(
+            briefing=req.model_dump(),
+            preview_only=not req.confirmed,
+        )
+    except (KeyError, smtplib.SMTPException) as exc:
+        return PlanningBriefResponse(
+            preview=False,
+            recipient="",
+            subject="",
+            sent=False,
+            error=str(exc),
+        )
+    return PlanningBriefResponse(**result)

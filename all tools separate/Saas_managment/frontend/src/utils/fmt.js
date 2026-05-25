@@ -1,5 +1,5 @@
 export function fmtMoney(n) {
-  return `$${Number(n ?? 0).toLocaleString(undefined, { maximumFractionDigits: 0 })}`;
+  return `$${Number(n ?? 0).toLocaleString("en-US", { maximumFractionDigits: 0 })}`;
 }
 
 export function monthKey(isoDate) {

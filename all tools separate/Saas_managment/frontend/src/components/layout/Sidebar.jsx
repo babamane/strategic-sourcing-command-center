@@ -39,7 +39,7 @@ export function Sidebar() {
     <aside className="flex w-[220px] shrink-0 flex-col border-r border-border bg-surface">
       <div className="border-b border-border p-4">
         <div className="font-display text-xl">SaaS Spend</div>
-        <div className="font-mono text-xs text-text-secondary">Phase 1E</div>
+        <div className="font-mono text-xs text-text-secondary"></div>
       </div>
       <nav className="flex-1 p-2">
         {items.map(([id, label, Icon]) => (

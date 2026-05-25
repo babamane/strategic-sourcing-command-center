@@ -2,7 +2,7 @@ export const DEFAULT_CFG = {
   baseUrl: import.meta.env.VITE_LLM_BASE_URL ?? "http://127.0.0.1:11434",
   model: import.meta.env.VITE_LLM_MODEL ?? "qwen2.5:14b",
   temperature: 0.1,
-  num_ctx: 8192,
+  num_ctx: 16384,
   num_predict: 1024,
   timeoutMs: 600_000,
 };

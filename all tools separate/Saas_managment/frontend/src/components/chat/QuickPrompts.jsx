@@ -1,5 +1,5 @@
 const prompts = {
-  overview: ["Portfolio waste summary", "Which contracts expired?", "Top savings opportunity"],
+  overview: ["Portfolio waste summary", "Which contracts expired?", "Top savings opportunity","Brief planning agent"],
   ghost: ["Ghost breakdown by department", "Raise Jira for Engineering ghosts", "How much can we reclaim?"],
   reclamation: ["Show top candidates", "Export CSV for Nexaflow", "Send churn email for Atlassify"],
   trueup: [

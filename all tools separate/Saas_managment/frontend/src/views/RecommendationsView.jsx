@@ -32,7 +32,7 @@ export function RecommendationsView() {
       <div className="grid grid-cols-3 gap-4">
         <KPICard title="Pending" value={pending.toLocaleString()} accentColor="amber" />
         <KPICard title="Dispatched" value={dispatched.toLocaleString()} accentColor="success" />
-        <KPICard title="Total Impact" value={`$${impact.toLocaleString()}`} accentColor="info" />
+       <KPICard title="Total Impact" value={`$${impact.toLocaleString('en-US')}`} accentColor="info" />
       </div>
       <DataTable rows={rows} columns={[
         { key: "id", label: "ID" },
