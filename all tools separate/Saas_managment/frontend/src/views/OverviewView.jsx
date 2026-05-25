@@ -12,7 +12,7 @@ import { KPICard } from "../components/shared/KPICard.jsx";
 import { StatusBadge } from "../components/shared/StatusBadge.jsx";
 import { filterBySkuSeat, seriesLabel } from "../utils/deriveFilters.js";
 
-const money = n => `$${Number(n ?? 0).toLocaleString(undefined, { maximumFractionDigits: 0 })}`;
+const money = n => `$${Number(n ?? 0).toLocaleString("en-US", { maximumFractionDigits: 0 })}`;
 const pct = n => `${Math.round(Number(n ?? 0) * 100)}%`;
 
 export function OverviewView() {
