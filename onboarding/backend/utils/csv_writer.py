@@ -23,27 +23,31 @@ COLUMNS = [
 
 
 def _next_of_id(csv_path: Path) -> str:
-    """Read all of_id values, parse the highest numeric suffix, increment by 1."""
+    """
+    of_id format: V{vendor_number}-OF-{license_count}
+      - V number  : increments per new vendor (V1, V2, V3 → next new vendor = V4)
+      - OF        : constant
+      - license # : defaults to 0 for all new onboarding rows
+    Example: existing max is V3-OF-xxx → new vendor gets V4-OF-0
+    """
     if not csv_path.exists():
-        return "V1-OF-001"
+        return "V1-OF-0"
 
     with open(csv_path, newline="", encoding="utf-8") as f:
         reader = csv.DictReader(f)
         ids = [row.get("of_id", "") for row in reader if row.get("of_id")]
 
-    # Extract numeric part from patterns like V1-OF-001, V3-OF-132
-    max_num   = 0
-    max_prefix = "V1-OF"
+    # Find the highest V number across all existing records
+    max_v = 0
     for oid in ids:
-        m = re.match(r"^(V\d+-OF)-(\d+)$", oid.strip())
+        m = re.match(r"^V(\d+)-OF-", oid.strip())
         if m:
-            n = int(m.group(2))
-            if n > max_num:
-                max_num    = n
-                max_prefix = m.group(1)
+            v = int(m.group(1))
+            if v > max_v:
+                max_v = v
 
-    next_num = max_num + 1
-    return f"{max_prefix}-{next_num:03d}"
+    next_v = max_v + 1
+    return f"V{next_v}-OF-0"
 
 
 def _contract_group_id(vendor: str, sku: str) -> str:
