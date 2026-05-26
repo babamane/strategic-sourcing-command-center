@@ -9,7 +9,7 @@ export default defineConfig(({ mode }) => {
       open: false,
       proxy: {
         "/api": {
-          target: env.VITE_API_BASE_URL ?? "http://localhost:8000",
+          target: env.VITE_API_BASE_URL ?? "http://localhost:8010",
           changeOrigin: true,
           rewrite: path => path.replace(/^\/api/, ""),
         },
