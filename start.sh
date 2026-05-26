@@ -16,6 +16,8 @@ export BROWSER=
 export GRADIO_SERVER_NAME=127.0.0.1
 export STREAMLIT_BROWSER_GATHER_USAGE_STATS=false
 export PYTHONWARNINGS=ignore
+# Risk Intelligence API requires Tavily key (set placeholder to allow startup)
+export TAVILY_API_KEY="${TAVILY_API_KEY:-placeholder}"
 
 # ── Colours ───────────────────────────────────────────────────────────────────
 CYAN='\033[0;36m'; GREEN='\033[0;32m'; YELLOW='\033[1;33m'
@@ -96,10 +98,10 @@ wait_port() {
   return 1
 }
 
-# ── npm install if node_modules missing ───────────────────────────────────────
+# ── npm install if node_modules missing OR vite binary missing ────────────────
 ensure_npm() {
   local dir="$1" name="$2"
-  if [[ ! -d "$dir/node_modules" ]]; then
+  if [[ ! -d "$dir/node_modules" || ! -f "$dir/node_modules/.bin/vite" ]]; then
     info "npm install → $name…"
     (cd "$dir" && npm install --silent) >> "$LOGS/npm_install_${name}.log" 2>&1 \
       && ok "npm install done: $name" \
@@ -191,6 +193,8 @@ start_service "saas_frontend" "$SAAS_DIR/frontend"  npm run dev -- --port 5174 -
 # 7. Risk Intelligence (8020 + 8503)
 INTEL_DIR="$TOOLS/risk-intelligence-platform"
 INTEL_PY="$(resolve_python "$INTEL_DIR")"
+# Ensure fpdf2 is installed (required by streamlit app)
+"$INTEL_PY" -m pip install fpdf2 --quiet >> "$LOGS/riskintel_deps.log" 2>&1 || true
 start_service "riskintel_api"       "$INTEL_DIR/backend"       "$INTEL_PY" -m uvicorn main:app --host 0.0.0.0 --port 8020
 start_service "riskintel_streamlit" "$INTEL_DIR/streamlit_app" "$INTEL_PY" -m streamlit run app.py \
   --server.port 8503 --server.headless true
@@ -204,17 +208,17 @@ banner "Waiting for services…"
 echo ""
 
 wait_port 8090 "Vendor Onboarding API    " 60
-wait_port 8000 "CRA Backend              " 45
-wait_port 8501 "CRA Dashboard            " 60
-wait_port 7860 "SAFE App                 " 60
-wait_port 5000 "Vendor Risk Analyzer     " 45
-wait_port 9001 "VIBE Backend             " 45
-wait_port 5173 "VIBE Frontend            " 60
-wait_port 8010 "SaaS Management API      " 45
-wait_port 5174 "SaaS Management Frontend " 60
-wait_port 8020 "Risk Intelligence API    " 45
-wait_port 8503 "Risk Intelligence UI     " 60
-wait_port 3000 "Main Dashboard           " 90
+wait_port 8000 "CRA Backend              " 60
+wait_port 8501 "CRA Dashboard            " 90
+wait_port 7860 "SAFE App                 " 90
+wait_port 5000 "Vendor Risk Analyzer     " 60
+wait_port 9001 "VIBE Backend             " 60
+wait_port 5173 "VIBE Frontend            " 120
+wait_port 8010 "SaaS Management API      " 60
+wait_port 5174 "SaaS Management Frontend " 120
+wait_port 8020 "Risk Intelligence API    " 60
+wait_port 8503 "Risk Intelligence UI     " 90
+wait_port 3000 "Main Dashboard           " 120
 
 # ── Open browser ──────────────────────────────────────────────────────────────
 start "http://localhost:3000" 2>/dev/null || true
