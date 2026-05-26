@@ -11,6 +11,12 @@ TOOLS="$REPO/all tools separate"
 LOGS="$REPO/.logs"
 mkdir -p "$LOGS"
 
+# Suppress ALL auto-browser-opens from Gradio, Streamlit, Vite, etc.
+export BROWSER=
+export GRADIO_SERVER_NAME=127.0.0.1
+export STREAMLIT_BROWSER_GATHER_USAGE_STATS=false
+export PYTHONWARNINGS=ignore
+
 # ── Colours ───────────────────────────────────────────────────────────────────
 CYAN='\033[0;36m'; GREEN='\033[0;32m'; YELLOW='\033[1;33m'
 GRAY='\033[0;37m'; BOLD='\033[1m'; NC='\033[0m'
@@ -174,13 +180,13 @@ start_service "vendor_risk" "$RISK_DIR" "$RISK_PY" backend.py
 VIBE_DIR="$TOOLS/vibe-main"
 VIBE_PY="$(resolve_python "$VIBE_DIR" "vibe_env")"
 start_service "vibe_backend"  "$VIBE_DIR"          "$VIBE_PY" -m uvicorn backend_api:app --host 0.0.0.0 --port 9001
-start_service "vibe_frontend" "$VIBE_DIR/frontend"  npm run dev -- --port 5173
+start_service "vibe_frontend" "$VIBE_DIR/frontend"  npm run dev -- --port 5173 --open false
 
 # 6. SaaS Management (8010 + 5174)
 SAAS_DIR="$TOOLS/Saas_managment"
 SAAS_PY="$(resolve_python "$SAAS_DIR")"
 start_service "saas_api"      "$SAAS_DIR"          "$SAAS_PY" -m uvicorn api.main:app --host 127.0.0.1 --port 8010
-start_service "saas_frontend" "$SAAS_DIR/frontend"  npm run dev -- --port 5174
+start_service "saas_frontend" "$SAAS_DIR/frontend"  npm run dev -- --port 5174 --open false
 
 # 7. Risk Intelligence (8020 + 8503)
 INTEL_DIR="$TOOLS/risk-intelligence-platform"
@@ -190,7 +196,7 @@ start_service "riskintel_streamlit" "$INTEL_DIR/streamlit_app" "$INTEL_PY" -m st
   --server.port 8503 --server.headless true
 
 # 8. Main Dashboard (3000)
-start_service "dashboard" "$REPO/frontend" npm run dev -- --port 3000
+start_service "dashboard" "$REPO/frontend" npm run dev -- --port 3000 --open false
 
 # ── Wait for critical services ────────────────────────────────────────────────
 echo ""
