@@ -5,6 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   server: {
+    open: false,
     allowedHosts: ['029d0110a58c.ngrok-free.app', 'e9c71196d292.ngrok-free.app'],
     proxy: {
       '/stock-data': {
