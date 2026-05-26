@@ -152,11 +152,11 @@ info "[1] DB migration…"
 start_service "onboarding" "$ONBOARD_DIR" \
   "$ONBOARD_PY" -m uvicorn backend.main:app --host 0.0.0.0 --port 8090
 
-# 2. CRA Workflow (8000 + 8501)
-CRA_DIR="$TOOLS/cra_workflow"
+# 2. CRA Project — Contract Renewal Agent (8000 + 8501)
+CRA_DIR="$TOOLS/CRA_Project"
 CRA_PY="$(resolve_python "$CRA_DIR" "cra_env")"
 start_service "cra_backend"   "$CRA_DIR" "$CRA_PY" -m uvicorn main:app --host 0.0.0.0 --port 8000
-start_service "cra_dashboard" "$CRA_DIR" "$CRA_PY" -m streamlit run app_v8.py \
+start_service "cra_dashboard" "$CRA_DIR" "$CRA_PY" -m streamlit run app_v9.py \
   --server.port 8501 --server.headless true
 
 # 3. SAFE (7860)
