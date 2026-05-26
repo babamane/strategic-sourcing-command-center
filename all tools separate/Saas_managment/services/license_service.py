@@ -62,10 +62,11 @@ def _vendor_filter(vendor: Optional[str]) -> tuple[str, list[object]]:
     active_vendors = _get_active_vendors()
     if vendor is None:
         if not active_vendors:
-            return "1 = 0", []
+            # No ACTIVE_VENDORS configured — return all rows
+            return "1=1", []
         placeholders = ",".join("?" for _ in active_vendors)
         return f"vendor IN ({placeholders})", list(active_vendors)
-    if vendor not in set(active_vendors):
+    if active_vendors and vendor not in set(active_vendors):
         raise ValueError(f"Unsupported vendor: {vendor}")
     return "vendor = ?", [vendor]
 
