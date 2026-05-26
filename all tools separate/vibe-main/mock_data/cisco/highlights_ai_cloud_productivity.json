@@ -1,0 +1,17 @@
+{
+  "content": "## Cisco AI, Cloud, and Productivity Updates\n\nCisco is driving secure networking and observability by integrating security analytics with Splunk's monitoring platform to secure hybrid cloud operations.\n\n## AI Product Launches\n- Cisco AI Assistant for Security: Natural language security policy generator released in mid-2024\n- Webex AI Codec: Audio and video compression algorithm for low-bandwidth environments\n- ThousandEyes WAN Insights: AI-driven network telemetry engine for wide area networks\n\n## Productivity Updates\n- Webex Meeting summaries: Automated transcriptions and task extraction in 30 languages\n- Webex Slido Integration: Automated real-time polling and feedback systems\n- Cisco Spaces: AI-powered workspace analytics platform that tracks physical office occupancy\n\n## Enterprise Features\n- Cisco HyperShield: AI-native security architecture designed to shield data centers from threats\n- Splunk Enterprise Integration: Observability pipeline connecting network telemetry to threat intelligence\n- NVIDIA Partnership: Jointly engineered enterprise AI infrastructure clusters using custom switches",
+  "sources": [
+    {
+      "title": "Cisco Reports Third Quarter Fiscal 2024 Results",
+      "url": "https://investor.cisco.com"
+    },
+    {
+      "title": "Cisco HyperShield Launch and Product Architecture",
+      "url": "https://newsroom.cisco.com"
+    },
+    {
+      "title": "Webex AI Innovations and Collaboration Guide",
+      "url": "https://blog.webex.com"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+Research key leadership executives for {company}.
+
+Return ONLY valid JSON (no markdown blocks):
+[
+  {
+    "name": "Executive Name",
+    "title": "Exact Title",
+    "since": "Year (e.g. 2015)",
+    "bio": "1-2 sentence background and historical highlights at {company} or prior roles."
+  }
+]
+
+RULES:
+1. Identify 5-8 top executive leaders (CEO, CFO, CPO, CBO, General Counsel, CCO, etc.)
+2. Include their name, title, the year they joined or were appointed to the role (since), and a brief, high-fidelity biography
+3. Provide ONLY a valid JSON list of objects matching the schema exactly.

@@ -1,3 +1,4 @@
+import os
 from typing import Type, Optional
 from pydantic import BaseModel, Field
 from langchain.tools import BaseTool
@@ -28,8 +29,13 @@ class RAGTool(BaseTool):
             if not persist_dir.exists():
                 return f"Error: No knowledge base found for company '{company_name}'. Please ensure the vector database is created."
 
-            # Initialize embeddings and vector store
-            embedding = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
+            # Initialize embeddings from the local cache only. If the model is
+            # not cached, fail fast instead of blocking the chatbot on network retries.
+            os.environ.setdefault("HF_HUB_OFFLINE", "1")
+            embedding = HuggingFaceEmbeddings(
+                model_name="sentence-transformers/all-MiniLM-L6-v2",
+                model_kwargs={"local_files_only": True},
+            )
             vectorstore = Chroma(
                 persist_directory=str(persist_dir),
                 embedding_function=embedding

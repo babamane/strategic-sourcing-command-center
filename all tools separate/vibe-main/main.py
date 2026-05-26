@@ -94,8 +94,16 @@ def resolve_symbol(company_name: str) -> str:
     key = company_name.strip().lower()
     symbol = mapping.get(key)
 
+    # If not found in mapping, check if it's already a symbol (e.g. "CSCO")
     if not symbol:
-        raise ValueError(f"Unknown company name '{company_name}'. Please map it to a ticker symbol.")
+        # If it's all caps and 1-5 chars, treat it as a symbol
+        if company_name.isupper() and 1 <= len(company_name) <= 5:
+            return company_name
+        # Fallback: check if the uppercase version is in the values of the mapping
+        if company_name.upper() in mapping.values():
+            return company_name.upper()
+            
+        raise ValueError(f"Unknown company name or ticker '{company_name}'. Please map it to a ticker symbol.")
 
     return symbol
 
@@ -111,9 +119,13 @@ def fetch_stock_data(company_name: str) -> StockDataResponse:
 
     ticker = yf.Ticker(symbol)
 
-    # 2. Realtime price (last close from 1d/1m)
-    price_hist = ticker.history(period="1d", interval="1m")
-    realtime_price = float(price_hist["Close"].iloc[-1]) if not price_hist.empty else None
+    # 2. Realtime price
+    info = getattr(ticker, "info", {}) or {}
+    realtime_price = info.get("currentPrice") or info.get("regularMarketPrice")
+
+    if realtime_price is None:
+        price_hist = ticker.history(period="1d")
+        realtime_price = float(price_hist["Close"].iloc[-1]) if not price_hist.empty else None
 
     # 3. Info
     info = getattr(ticker, "info", {}) or {}

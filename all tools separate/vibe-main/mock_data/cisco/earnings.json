@@ -1,0 +1,10 @@
+{
+    "content": "## Overview\nCisco's recent quarterly results showcased solid execution in a challenging macro environment, delivering revenue of $12.8B and an EPS of $0.87, slightly above estimates. The quarter's main theme was the successful close of the Splunk acquisition and strong growth in security software.\n\n## Key Takeaways\n- Total revenue stood at $12.8B, down slightly YoY due to supply chain normalization\n- Security segment revenue grew 3% YoY, driven by strong adoption of zero-trust solutions\n- Splunk integration tracking ahead of schedule, expected to add $4B in ARR\n- Software subscription revenue now represents 50% of total revenue\n\n## Highlights\n- Closed the $28 billion acquisition of Splunk, completing the largest deal in Cisco history\n- Hyperscaler orders accelerated, with AI infrastructure investments driving networking demand\n- Security AI Assistant deployment scaled across 1,000+ enterprise customers\n\n## Investment Focus Areas\n- **Products**: Splunk observability platform, Cisco Security Cloud, Silicon One\n- **AI & Cloud**: $1B AI startup investment fund, hyperscaler ethernet switches\n- **Strategic Priorities**: Shifting to recurring software revenue and dominating AI networking infrastructure",
+    "sources": [
+        {
+            "title": "Cisco Q3 FY24 Financial Results",
+            "url": "https://investor.cisco.com",
+            "date": "May 2024"
+        }
+    ]
+}

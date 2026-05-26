@@ -7,7 +7,7 @@ import './ChatWidget.css';
 // 🔧 UPDATE YOUR API ENDPOINT HERE
 // ============================================
 // const API_URL = 'http://localhost:9001';
-const API_URL = '';
+const API_URL = 'http://localhost:9001';
 // Change the URL above to your backend endpoint
 // Example: const API_URL = 'https://your-api.com'
 // ============================================
@@ -206,13 +206,20 @@ const ChatWidget = ({ companyName }) => {
                 };
                 setMessages(prev => [...prev, botMessage]);
             } else {
-                throw new Error('Failed to get response');
+                let errorDetail = 'Failed to get response';
+                try {
+                    const errorData = await response.json();
+                    errorDetail = errorData.detail || errorData.message || errorDetail;
+                } catch (parseError) {
+                    errorDetail = await response.text();
+                }
+                throw new Error(errorDetail);
             }
         } catch (error) {
             console.error('Chat error:', error);
             const errorMessage = {
                 id: Date.now() + 1,
-                text: 'Sorry, I\'m having trouble connecting right now. Please make sure the chatbot API endpoint is configured.',
+                text: `Sorry, I'm having trouble connecting right now. ${error.message || 'Please make sure the chatbot API endpoint is configured.'}`,
                 sender: 'bot',
                 timestamp: new Date().toISOString(),
                 isError: true
@@ -319,21 +326,21 @@ const ChatWidget = ({ companyName }) => {
                             <div className="suggested-questions">
                                 <button
                                     className="suggestion-chip"
-                                    onClick={() => setInputValue("What are the key highlights?")}
+                                    onClick={() => setInputValue("Brief AI, cloud and productivity updates")}
                                 >
-                                    What are the key highlights?
+                                    AI & productivity
                                 </button>
                                 <button
                                     className="suggestion-chip"
-                                    onClick={() => setInputValue("Show me revenue trends")}
+                                    onClick={() => setInputValue("Summarize pricing insights")}
                                 >
-                                    Show me revenue trends
+                                    Pricing insights
                                 </button>
                                 <button
                                     className="suggestion-chip"
-                                    onClick={() => setInputValue("What's the market sentiment?")}
+                                    onClick={() => setInputValue("Who is on the leadership team?")}
                                 >
-                                    What's the market sentiment?
+                                    Leadership team
                                 </button>
                             </div>
                         </div>

@@ -1,18 +1,18 @@
 .app-container {
   min-height: 100vh;
-  background: white;
+  background: var(--bg-color);
 }
 
 .selection-view {
   width: 100%;
   min-height: 100vh;
-  background: white;
+  background: var(--bg-color);
 }
 
 .dashboard-view {
   display: flex;
   min-height: 100vh;
-  background: linear-gradient(to bottom, #ffffff 0%, #f9fafb 100%);
+  background: var(--bg-color);
 }
 
 .main-content {

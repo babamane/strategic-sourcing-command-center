@@ -189,8 +189,22 @@ class SummaryAgent:
             self.llm = LLMClient().get_llm()
             
             # Debug: Print model info
-            print(f"[SummaryAgent] Using Model: {Config.GOOGLE_LLM_MODEL}")
-            key_preview = Config.GOOGLE_API_KEY if Config.GOOGLE_API_KEY else "None"
+            provider = Config.LLM_PROVIDER.upper()
+            if Config.LLM_PROVIDER == "openai":
+                model = Config.OPENAI_MODEL
+                api_key = Config.OPENAI_API_KEY
+            elif Config.LLM_PROVIDER == "google":
+                model = Config.GOOGLE_LLM_MODEL
+                api_key = Config.GOOGLE_API_KEY
+            elif Config.LLM_PROVIDER == "ollama":
+                model = Config.OLLAMA_MODEL
+                api_key = None
+            else:
+                model = Config.LLAMA_MODEL
+                api_key = Config.LLAMA_API_KEY
+            
+            print(f"[SummaryAgent] Using {provider} Model: {model}")
+            key_preview = f"{api_key[:10]}..." if api_key else "None"
             print(f"[SummaryAgent] Active API Key: {key_preview}")
 
             # 1. Check Cache

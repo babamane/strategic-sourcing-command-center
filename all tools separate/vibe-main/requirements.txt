@@ -1,15 +1,13 @@
 # Stock Dashboard Dependencies
 yfinance>=0.2.66
 plotly>=5.18.0
-pandas>=3.0.0
-numpy>=2.0.0
-langchain-pymupdf4llm
-langchain-chroma
+pandas>=2.0.0
+pymupdf4llm
 
 # LangChain and LLM Dependencies
 langchain>=1.1.0
-google-ai-generativelanguage>=0.7.0
-langchain-google-genai>=3.0.2
+google-ai-generativelanguage==0.7.0
+langchain-google-genai==3.0.2
 langchain-community>=0.4
 langchain-core>=1.1.0
 langchain-experimental

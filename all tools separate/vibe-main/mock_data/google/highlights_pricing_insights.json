@@ -1,0 +1,20 @@
+{
+  "content": "## Google Pricing Updates\n\nGoogle's enterprise strategy leverages competitive bundles and API usage pricing, prioritizing volume adoption of Vertex AI over high per-user licenses.\n\n## Key Price Changes\n- Google Workspace Business Starter: 20% increase, $6.00 -> $7.20/user/month (effective April 2024)\n- Gemini Advanced Tier: $19.99/user/month premium add-on (effective February 2024)\n- Vertex AI Gemini 1.5 Flash API: 78% reduction, $0.000125 -> $0.000075/1K input tokens (effective June 2024)\n\n## Business Impact\n- Promotes rapid developer onboarding and deployment with extremely low entry-level API costs\n- Adds 15% increase in total annualized recurring revenue across baseline Workspace users\n- Compresses competitor margins in enterprise large language model inference pricing\n\n## What This Means\n- Reevaluate bulk API consumption models to capitalize on recent token cost drops\n- Expect a small price push on core baseline workspace renewals in the coming fiscal year\n- Focus negotiations on committed use discounts for long-term Vertex AI enterprise workloads",
+  "sources": [
+    {
+      "title": "Google Workspace Pricing Updates Announcement",
+      "url": "https://workspace.google.com/blog",
+      "date": "2024-02-15"
+    },
+    {
+      "title": "Gemini Advanced Tier Pricing and Release",
+      "url": "https://blog.google/technology/ai/",
+      "date": "2024-02-08"
+    },
+    {
+      "title": "Google Cloud Vertex AI API Cost Reductions",
+      "url": "https://cloud.google.com/blog",
+      "date": "2024-06-14"
+    }
+  ]
+}

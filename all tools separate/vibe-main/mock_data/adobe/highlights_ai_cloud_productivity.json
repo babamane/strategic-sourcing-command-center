@@ -1,0 +1,17 @@
+{
+  "content": "## Adobe AI, Cloud, and Productivity Updates\n\nAdobe is integrating generative AI into its digital media suite Creative Cloud via its brand-safe Firefly model family to optimize content creation workflows.\n\n## AI Product Launches\n- Firefly Image 3: Advanced commercial generative model with high-fidelity control features\n- Photoshop Generative Fill: AI-driven image modification adopted by 85% of active designers\n- Firefly Vector Model: Industry first vector graphic generation tool released in May 2024\n\n## Productivity Updates\n- Acrobat AI Assistant: Automated document summaries and conversational analysis across PDF files\n- Adobe Express Generative AI: Mobile content creation engine that surpassed 100 million total downloads\n- Creative Cloud Libraries: Automated asset tagging and collaborative creative cloud sharing\n\n## Enterprise Features\n- Firefly Enterprise Custom Models: Brand-compliant generative models trained on specific company assets\n- Adobe Content Credentials: Cryptographic metadata standard for digital content provenance tracking\n- Microsoft Copilot Integration: Content generation connector launched for enterprise productivity apps",
+  "sources": [
+    {
+      "title": "Adobe Reports Record Q2 Fiscal 2024 Revenue",
+      "url": "https://www.adobe.com/investor-relations.html"
+    },
+    {
+      "title": "Firefly Generative AI Enterprise Adoption Rates",
+      "url": "https://blog.adobe.com"
+    },
+    {
+      "title": "Acrobat AI Assistant Deployment metrics",
+      "url": "https://news.adobe.com"
+    }
+  ]
+}

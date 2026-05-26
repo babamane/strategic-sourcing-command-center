@@ -1,12 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { ResponsiveContainer, AreaChart, Area, Tooltip, XAxis, YAxis } from 'recharts';
-import { Download, Share2, Info } from 'lucide-react';
+import { Download, Share2, Info, ChevronDown, ChevronUp, RefreshCw } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import './Dashboard.css';
 
-const API_URL = '';
+const API_URL = 'http://localhost:9001';
 
 const Dashboard = ({ company, currentPage, activeHighlightTab, setActiveHighlightTab }) => {
+    const pageSubtitles = {
+        'Highlights and Takeaways': 'Latest Highlights',
+        'Earnings': 'Latest Earnings Report',
+        'Briefing Docs': 'Latest Briefing Doc',
+        'Full Summary': 'Latest Full Summary'
+    };
+    const pageSubtitle = pageSubtitles[currentPage] || `Latest ${currentPage}`;
+
     const [summary, setSummary] = useState('');
     const [stockData, setStockData] = useState(null);
     const [metrics, setMetrics] = useState(null);
@@ -21,18 +29,30 @@ const Dashboard = ({ company, currentPage, activeHighlightTab, setActiveHighligh
     const [highlightsData, setHighlightsData] = useState({});
     const [highlightsSources, setHighlightsSources] = useState({});
     const [isLoadingHighlights, setIsLoadingHighlights] = useState(false);
-    const [qbrData, setQbrData] = useState(null);
-    const [isLoadingQbr, setIsLoadingQbr] = useState(false);
     const [briefingData, setBriefingData] = useState(null);
     const [isLoadingBriefing, setIsLoadingBriefing] = useState(false);
     const [showSources, setShowSources] = useState(false);
+    const [modalSources, setModalSources] = useState([]);
+    const [expandedSections, setExpandedSections] = useState({
+        leadership: true,
+        vendor_topics: true,
+        pricing_insights: true,
+        products_features: true,
+        ai_cloud_productivity: true
+    });
+
+    const toggleSection = (secId) => {
+        setExpandedSections(prev => ({
+            ...prev,
+            [secId]: !prev[secId]
+        }));
+    };
     const highlightTabs = [
+        { id: 'leadership', label: 'Leadership' },
         { id: 'vendor_topics', label: 'Vendor Discussion Topics' },
         { id: 'pricing_insights', label: 'Pricing Insights' },
         { id: 'products_features', label: 'Products and Features' },
-        { id: 'ai_cloud_productivity', label: 'AI, Cloud and Productivity' },
-        { id: 'meta_synergies', label: 'Vendor Synergies' },
-        { id: 'meta_spend_metrics', label: 'Vendor Spend and Metrics' }
+        { id: 'ai_cloud_productivity', label: 'AI, Cloud and Productivity' }
     ];
 
     // Clear data when company changes
@@ -40,7 +60,6 @@ const Dashboard = ({ company, currentPage, activeHighlightTab, setActiveHighligh
         if (company) {
             setHighlightsData({});
             setHighlightsSources({});
-            setQbrData(null);
             setBriefingData(null);
             setEarningsData(null);
             setSummary('');
@@ -177,6 +196,32 @@ const Dashboard = ({ company, currentPage, activeHighlightTab, setActiveHighligh
         }
     };
 
+    const refreshLiveEarnings = async () => {
+        if (!company) return;
+
+        setIsLoadingEarnings(true);
+        try {
+            const res = await fetch(`${API_URL}/earnings`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    company_name: company.name,
+                    force_live: true
+                })
+            });
+            if (res.ok) {
+                const data = await res.json();
+                setEarningsData(data.earnings);
+            } else {
+                console.error("Failed to refresh live earnings");
+            }
+        } catch (err) {
+            console.error("Live earnings refresh error:", err);
+        } finally {
+            setIsLoadingEarnings(false);
+        }
+    };
+
     const fetchHighlights = async (tabId) => {
         if (!company) return;
 
@@ -228,46 +273,18 @@ const Dashboard = ({ company, currentPage, activeHighlightTab, setActiveHighligh
         }
     };
 
-    // Fetch highlights when tab changes
+    // Fetch all highlights when Highlights page is open
     useEffect(() => {
         if (currentPage === 'Highlights and Takeaways' && company) {
-            if (!highlightsData[activeHighlightTab]) {
-                fetchHighlights(activeHighlightTab);
-            }
-        }
-    }, [activeHighlightTab, company, currentPage, highlightsData]);
-
-    const fetchQbr = async () => {
-        if (!company) return;
-
-        setIsLoadingQbr(true);
-        try {
-            const res = await fetch(`${API_URL}/qbr`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    company_name: company.name
-                })
+            const tabs = ['leadership', 'vendor_topics', 'pricing_insights', 'products_features', 'ai_cloud_productivity'];
+            tabs.forEach(tab => {
+                if (!highlightsData[tab]) {
+                    fetchHighlights(tab);
+                }
             });
-            if (res.ok) {
-                const result = await res.json();
-                setQbrData(result.qbr);
-            } else {
-                console.error("Failed to fetch QBR");
-            }
-        } catch (err) {
-            console.error("QBR fetch error:", err);
-        } finally {
-            setIsLoadingQbr(false);
         }
-    };
+    }, [company, currentPage, highlightsData]);
 
-    // Fetch QBR when page changes
-    useEffect(() => {
-        if (currentPage === 'QBR' && company && !qbrData) {
-            fetchQbr();
-        }
-    }, [company, currentPage, qbrData]);
 
     const fetchBriefing = async () => {
         if (!company) return;
@@ -356,16 +373,159 @@ const Dashboard = ({ company, currentPage, activeHighlightTab, setActiveHighligh
         };
 
         if (currentPage === 'Highlights and Takeaways') {
-            const activeTabLabel = highlightTabs.find(t => t.id === activeHighlightTab)?.label;
-            const tabContent = highlightsData[activeHighlightTab] || 'No data available.';
-            title = `${company.name} - ${activeTabLabel}`;
-            content = `<h1>${title}</h1>${formatForDoc(tabContent)}`;
-        } else if (currentPage === 'QBR') {
-            title = `${company.name} - Quarterly Business Review`;
-            content = `<h1>${title}</h1>${formatForDoc(qbrData?.content || 'No QBR data available.')}`;
+            title = `${company.name} - Highlights and Takeaways`;
+            let docHtml = '';
+
+            const sections = [
+                { id: 'leadership', label: 'Leadership Team' },
+                { id: 'vendor_topics', label: 'Vendor Discussion Topics' },
+                { id: 'pricing_insights', label: 'Pricing Insights' },
+                { id: 'products_features', label: 'Products and Features' },
+                { id: 'ai_cloud_productivity', label: 'AI, Cloud and Productivity' }
+            ];
+
+            sections.forEach(sec => {
+                const tabContent = highlightsData[sec.id] || 'No data available.';
+                docHtml += `<h2>${sec.label}</h2>`;
+                
+                if (sec.id === 'leadership') {
+                    try {
+                        const parsed = JSON.parse(tabContent);
+                        if (Array.isArray(parsed)) {
+                            parsed.forEach(exec => {
+                                docHtml += `<p><b>${exec.name}</b> - <span style="color: #4f46e5; font-weight: 600;">${exec.title}</span>${exec.since ? ` (Since ${exec.since})` : ''}</p>`;
+                                docHtml += `<p style="margin-left: 20px; font-style: italic; color: #555; margin-bottom: 15px;">${exec.bio}</p>`;
+                            });
+                        } else {
+                            docHtml += formatForDoc(tabContent);
+                        }
+                    } catch (e) {
+                        docHtml += formatForDoc(tabContent);
+                    }
+                } else if (sec.id === 'vendor_topics') {
+                    try {
+                        const parsed = JSON.parse(tabContent);
+                        if (parsed) {
+                            if (parsed.pricing_strategy) {
+                                docHtml += `<h4>Pricing & Packaging Strategy</h4>`;
+                                docHtml += `<p>${parsed.pricing_strategy.summary}</p>`;
+                                docHtml += `<p style="background-color: #fffbeb; padding: 10px; border-left: 4px solid #d97706; margin-bottom: 15px;"><b>Meeting Ask:</b> ${parsed.pricing_strategy.discussion_point}</p>`;
+                            }
+                            if (parsed.ai_cloud_integration) {
+                                docHtml += `<h4>AI & Cloud Platform Strategy</h4>`;
+                                docHtml += `<p>${parsed.ai_cloud_integration.summary}</p>`;
+                                docHtml += `<p style="background-color: #faf5ff; padding: 10px; border-left: 4px solid #7c3aed; margin-bottom: 15px;"><b>Meeting Ask:</b> ${parsed.ai_cloud_integration.discussion_point}</p>`;
+                            }
+                            if (parsed.product_roadmap) {
+                                docHtml += `<h4>Product Capability Roadmap</h4>`;
+                                docHtml += `<p>${parsed.product_roadmap.summary}</p>`;
+                                docHtml += `<p style="background-color: #f0f9ff; padding: 10px; border-left: 4px solid #1d4ed8; margin-bottom: 15px;"><b>Meeting Ask:</b> ${parsed.product_roadmap.discussion_point}</p>`;
+                            }
+                            if (parsed.security_compliance) {
+                                docHtml += `<h4>Security & Risk Compliance</h4>`;
+                                docHtml += `<p>${parsed.security_compliance.context || parsed.security_compliance.summary || ''}</p>`;
+                                docHtml += `<p style="background-color: #fef2f2; padding: 10px; border-left: 4px solid #ef4444; margin-bottom: 15px;"><b>Meeting Ask:</b> ${parsed.security_compliance.discussion_point}</p>`;
+                            }
+                            if (parsed.partnership_opportunities) {
+                                docHtml += `<h4>Strategic Partnership & Growth</h4>`;
+                                docHtml += `<p>${parsed.partnership_opportunities.context || parsed.partnership_opportunities.summary || ''}</p>`;
+                                docHtml += `<p style="background-color: #ecfdf5; padding: 10px; border-left: 4px solid #10b981; margin-bottom: 15px;"><b>Meeting Ask:</b> ${parsed.partnership_opportunities.discussion_point}</p>`;
+                            }
+                        } else {
+                            docHtml += formatForDoc(tabContent);
+                        }
+                    } catch (e) {
+                        docHtml += formatForDoc(tabContent);
+                    }
+                } else {
+                    docHtml += formatForDoc(tabContent);
+                }
+                
+                docHtml += `<hr style="border: 0; border-top: 1px solid #eee; margin: 25px 0;" />`;
+            });
+
+            content = docHtml;
         } else if (currentPage === 'Briefing Docs') {
             title = `${company.name} - Vendor Briefing Document`;
-            content = `<h1>${title}</h1>${formatForDoc(briefingData?.content || 'No Briefing data available.')}`;
+            let parsed = null;
+            if (briefingData && briefingData.content) {
+                try {
+                    parsed = typeof briefingData.content === 'object' ? briefingData.content : JSON.parse(briefingData.content);
+                } catch (e) {
+                    console.error("Error parsing briefing content for export:", e);
+                }
+            }
+
+            if (parsed) {
+                let docHtml = `<h2>Executive Summary & Overview</h2>`;
+                if (parsed.financial_health) {
+                    docHtml += `<div style="background-color: #f0f4f9; border-left: 4px solid #1a73e8; padding: 12px; margin-bottom: 20px;">`;
+                    docHtml += `<h3 style="margin-top: 0; color: #1a73e8;">Financial & Business Health</h3>`;
+                    docHtml += `<p>${parsed.financial_health}</p>`;
+                    docHtml += `</div>`;
+                }
+
+                if (parsed.account_summary) {
+                    docHtml += `<h3>Company Overview</h3>`;
+                    docHtml += `<p>${parsed.account_summary.company_overview || ''}</p>`;
+                    
+                    if (parsed.account_summary.key_highlights && parsed.account_summary.key_highlights.length > 0) {
+                        docHtml += `<h4>Key Highlights</h4><ul>`;
+                        parsed.account_summary.key_highlights.forEach(h => {
+                            docHtml += `<li>${h}</li>`;
+                        });
+                        docHtml += `</ul>`;
+                    }
+                }
+
+                if (parsed.business_performance) {
+                    docHtml += `<h2>Business Performance Analysis</h2>`;
+                    if (parsed.business_performance.strengths && parsed.business_performance.strengths.length > 0) {
+                        docHtml += `<h3 style="color: #2e7d32;">Strengths</h3><ul>`;
+                        parsed.business_performance.strengths.forEach(s => {
+                            docHtml += `<li>${s}</li>`;
+                        });
+                        docHtml += `</ul>`;
+                    }
+                    if (parsed.business_performance.challenges && parsed.business_performance.challenges.length > 0) {
+                        docHtml += `<h3 style="color: #c62828;">Challenges</h3><ul>`;
+                        parsed.business_performance.challenges.forEach(c => {
+                            docHtml += `<li>${c}</li>`;
+                        });
+                        docHtml += `</ul>`;
+                    }
+                }
+
+                if (parsed.opportunities_risks) {
+                    docHtml += `<h2>Strategic Outlook</h2>`;
+                    if (parsed.opportunities_risks.opportunities && parsed.opportunities_risks.opportunities.length > 0) {
+                        docHtml += `<h3 style="color: #00838f;">Strategic Opportunities</h3><ul>`;
+                        parsed.opportunities_risks.opportunities.forEach(o => {
+                            docHtml += `<li>${o}</li>`;
+                        });
+                        docHtml += `</ul>`;
+                    }
+                    if (parsed.opportunities_risks.risks && parsed.opportunities_risks.risks.length > 0) {
+                        docHtml += `<h3 style="color: #ef6c00;">Key Risks & Concerns</h3><ul>`;
+                        parsed.opportunities_risks.risks.forEach(r => {
+                            docHtml += `<li>${r}</li>`;
+                        });
+                        docHtml += `</ul>`;
+                    }
+                }
+
+                if (parsed.recommended_actions && parsed.recommended_actions.length > 0) {
+                    docHtml += `<h2>Recommended Actions & Next Steps</h2><ol>`;
+                    parsed.recommended_actions.forEach(a => {
+                        docHtml += `<li style="margin-bottom: 8px;"><b>[ACTION]</b> ${a}</li>`;
+                    });
+                    docHtml += `</ol>`;
+                }
+
+                content = `<h1>${title}</h1>${docHtml}`;
+            } else {
+                content = `<h1>${title}</h1>${formatForDoc(briefingData?.content || 'No Briefing data available.')}`;
+            }
         } else if (currentPage === 'Earnings') {
             title = `${company.name} - Earnings Summary`;
             const summary = earningsData?.summary || 'No summary available.';
@@ -420,47 +580,336 @@ const Dashboard = ({ company, currentPage, activeHighlightTab, setActiveHighligh
     const renderContent = () => {
         // Highlights and Takeaways Page
         if (currentPage === 'Highlights and Takeaways') {
-            const currentSources = highlightsSources[activeHighlightTab] || [];
-
             return (
-                <div className="highlights-container">
-                    <div className="highlight-content">
-                        {isLoadingHighlights ? (
-                            <div className="loading-state">
-                                <div className="spinner"></div>
-                                <p>Loading highlights...</p>
-                            </div>
-                        ) : highlightsData[activeHighlightTab] ? (
-                            <div className="highlights-data-card">
-                                <div className="highlights-header">
-                                    <h3>{highlightTabs.find(t => t.id === activeHighlightTab)?.label}</h3>
-                                    <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
-                                        <span className="ai-badge">AI Generated</span>
-                                        {currentSources.length > 0 && (
-                                            <button
-                                                className="info-btn"
-                                                onClick={() => setShowSources(true)}
-                                                title="View Sources"
-                                            >
-                                                <Info size={16} />
-                                            </button>
-                                        )}
-                                    </div>
+                <div className="highlights-container stacked-container">
+                    <div className="highlight-content stacked-content">
+                        {/* Section 1: Leadership */}
+                        <div className="highlights-section-card animate-slide-up">
+                            <div className="highlights-header accordion-header" onClick={() => toggleSection('leadership')}>
+                                <div className="accordion-title-group">
+                                    {expandedSections['leadership'] ? <ChevronUp size={18} className="accordion-chevron" /> : <ChevronDown size={18} className="accordion-chevron" />}
+                                    <h3>Leadership Team</h3>
                                 </div>
-                                <div className="highlights-text">
-                                    <ReactMarkdown>{highlightsData[activeHighlightTab]}</ReactMarkdown>
+                                <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+                                    <span className="ai-badge">AI Generated</span>
+                                    {highlightsSources['leadership'] && highlightsSources['leadership'].length > 0 && (
+                                        <button
+                                            className="info-btn"
+                                            onClick={(e) => {
+                                                e.stopPropagation();
+                                                setModalSources(highlightsSources['leadership']);
+                                                setShowSources(true);
+                                            }}
+                                            title="View Sources"
+                                        >
+                                            <Info size={16} />
+                                        </button>
+                                    )}
                                 </div>
                             </div>
-                        ) : (
-                            <div className="placeholder-content">
-                                <h3>{highlightTabs.find(t => t.id === activeHighlightTab)?.label}</h3>
-                                <p>No data available for this section.</p>
+                            {expandedSections['leadership'] && (
+                                <div className="highlights-text accordion-content animate-slide-down">
+                                    {!highlightsData['leadership'] ? (
+                                        <div className="loading-state-mini">
+                                            <div className="spinner-mini"></div>
+                                            <p>Loading Leadership Profiles...</p>
+                                        </div>
+                                    ) : (
+                                        (() => {
+                                            try {
+                                                const parsed = JSON.parse(highlightsData['leadership']);
+                                                if (Array.isArray(parsed)) {
+                                                    return (
+                                                        <div className="leadership-grid">
+                                                            {parsed.map((exec, idx) => (
+                                                                <div key={idx} className="leadership-card">
+                                                                    <div className="leadership-card-top">
+                                                                        <h4 className="exec-name">{exec.name}</h4>
+                                                                        <span className="exec-title">{exec.title}</span>
+                                                                        {exec.since && (
+                                                                            <span className="exec-since">Since {exec.since}</span>
+                                                                        )}
+                                                                    </div>
+                                                                    <div className="leadership-card-divider"></div>
+                                                                    <p className="exec-bio">{exec.bio}</p>
+                                                                </div>
+                                                            ))}
+                                                        </div>
+                                                    );
+                                                }
+                                            } catch (e) {
+                                                console.error("Error parsing leadership JSON:", e);
+                                            }
+                                            return <ReactMarkdown>{highlightsData['leadership']}</ReactMarkdown>;
+                                        })()
+                                    )}
+                                </div>
+                            )}
+                        </div>
+
+                        {/* Section 2: Vendor Discussion Topics */}
+                        <div className="highlights-section-card animate-slide-up" style={{ animationDelay: '0.1s' }}>
+                            <div className="highlights-header accordion-header" onClick={() => toggleSection('vendor_topics')}>
+                                <div className="accordion-title-group">
+                                    {expandedSections['vendor_topics'] ? <ChevronUp size={18} className="accordion-chevron" /> : <ChevronDown size={18} className="accordion-chevron" />}
+                                    <h3>Vendor Discussion Topics</h3>
+                                </div>
+                                <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+                                    <span className="ai-badge">AI Generated</span>
+                                    {highlightsSources['vendor_topics'] && highlightsSources['vendor_topics'].length > 0 && (
+                                        <button
+                                            className="info-btn"
+                                            onClick={(e) => {
+                                                e.stopPropagation();
+                                                setModalSources(highlightsSources['vendor_topics']);
+                                                setShowSources(true);
+                                            }}
+                                            title="View Sources"
+                                        >
+                                            <Info size={16} />
+                                        </button>
+                                    )}
+                                </div>
                             </div>
-                        )}
+                            {expandedSections['vendor_topics'] && (
+                                <div className="highlights-text accordion-content animate-slide-down">
+                                    {!highlightsData['vendor_topics'] ? (
+                                        <div className="loading-state-mini">
+                                            <div className="spinner-mini"></div>
+                                            <p>Loading Vendor Topics...</p>
+                                        </div>
+                                    ) : (
+                                        (() => {
+                                            try {
+                                                const parsed = JSON.parse(highlightsData['vendor_topics']);
+                                                if (parsed && (parsed.pricing_strategy || parsed.ai_cloud_integration)) {
+                                                    return (
+                                                        <div className="vendor-topics-grid">
+                                                            {/* Topic 1: Pricing Strategy */}
+                                                            {parsed.pricing_strategy && (
+                                                                <div className="topic-card border-amber">
+                                                                    <div className="topic-card-header bg-amber-soft">
+                                                                        <div className="topic-icon-badge amber-badge">$</div>
+                                                                        <div className="topic-title-wrapper">
+                                                                            <h4>Pricing & Packaging Strategy</h4>
+                                                                            <span className="topic-type-badge text-amber">Pricing</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div className="topic-card-body">
+                                                                        <p className="topic-summary">{parsed.pricing_strategy.summary}</p>
+                                                                        <div className="discussion-point-bubble bg-amber-bubble">
+                                                                            <strong>Meeting Ask:</strong>
+                                                                            <p>{parsed.pricing_strategy.discussion_point}</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            )}
+                                                            {/* Topic 2: AI & Cloud Integration */}
+                                                            {parsed.ai_cloud_integration && (
+                                                                <div className="topic-card border-purple">
+                                                                    <div className="topic-card-header bg-purple-soft">
+                                                                        <div className="topic-icon-badge purple-badge">⚡</div>
+                                                                        <div className="topic-title-wrapper">
+                                                                            <h4>AI & Cloud Platform Strategy</h4>
+                                                                            <span className="topic-type-badge text-purple">AI / Cloud</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div className="topic-card-body">
+                                                                        <p className="topic-summary">{parsed.ai_cloud_integration.summary}</p>
+                                                                        <div className="discussion-point-bubble bg-purple-bubble">
+                                                                            <strong>Meeting Ask:</strong>
+                                                                            <p>{parsed.ai_cloud_integration.discussion_point}</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            )}
+                                                            {/* Topic 3: Product Roadmap */}
+                                                            {parsed.product_roadmap && (
+                                                                <div className="topic-card border-blue">
+                                                                    <div className="topic-card-header bg-blue-soft">
+                                                                        <div className="topic-icon-badge blue-badge">📋</div>
+                                                                        <div className="topic-title-wrapper">
+                                                                            <h4>Product Capability Roadmap</h4>
+                                                                            <span className="topic-type-badge text-blue">Roadmap</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div className="topic-card-body">
+                                                                        <p className="topic-summary">{parsed.product_roadmap.summary}</p>
+                                                                        <div className="discussion-point-bubble bg-blue-bubble">
+                                                                            <strong>Meeting Ask:</strong>
+                                                                            <p>{parsed.product_roadmap.discussion_point}</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            )}
+                                                            {/* Topic 4: Security & Compliance */}
+                                                            {parsed.security_compliance && (
+                                                                <div className="topic-card border-coral">
+                                                                    <div className="topic-card-header bg-coral-soft">
+                                                                        <div className="topic-icon-badge coral-badge">🛡️</div>
+                                                                        <div className="topic-title-wrapper">
+                                                                            <h4>Security & Risk Compliance</h4>
+                                                                            <span className="topic-type-badge text-coral">Security</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div className="topic-card-body">
+                                                                        <p className="topic-summary">{parsed.security_compliance.context}</p>
+                                                                        <div className="discussion-point-bubble bg-coral-bubble">
+                                                                            <strong>Meeting Ask:</strong>
+                                                                            <p>{parsed.security_compliance.discussion_point}</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            )}
+                                                            {/* Topic 5: Partnership Opportunities */}
+                                                            {parsed.partnership_opportunities && (
+                                                                <div className="topic-card border-emerald">
+                                                                    <div className="topic-card-header bg-emerald-soft">
+                                                                        <div className="topic-icon-badge emerald-badge">🤝</div>
+                                                                        <div className="topic-title-wrapper">
+                                                                            <h4>Strategic Partnership & Growth</h4>
+                                                                            <span className="topic-type-badge text-emerald">Alliance</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div className="topic-card-body">
+                                                                        <p className="topic-summary">{parsed.partnership_opportunities.context}</p>
+                                                                        <div className="discussion-point-bubble bg-emerald-bubble">
+                                                                            <strong>Meeting Ask:</strong>
+                                                                            <p>{parsed.partnership_opportunities.discussion_point}</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            )}
+                                                        </div>
+                                                    );
+                                                }
+                                            } catch (e) {
+                                                console.error("Error parsing vendor topics JSON:", e);
+                                            }
+                                            return <ReactMarkdown>{highlightsData['vendor_topics']}</ReactMarkdown>;
+                                        })()
+                                    )}
+                                </div>
+                            )}
+                        </div>
+
+                        {/* Section 3: Pricing Insights */}
+                        <div className="highlights-section-card animate-slide-up" style={{ animationDelay: '0.2s' }}>
+                            <div className="highlights-header accordion-header" onClick={() => toggleSection('pricing_insights')}>
+                                <div className="accordion-title-group">
+                                    {expandedSections['pricing_insights'] ? <ChevronUp size={18} className="accordion-chevron" /> : <ChevronDown size={18} className="accordion-chevron" />}
+                                    <h3>Pricing Insights</h3>
+                                </div>
+                                <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+                                    <span className="ai-badge">AI Generated</span>
+                                    {highlightsSources['pricing_insights'] && highlightsSources['pricing_insights'].length > 0 && (
+                                        <button
+                                            className="info-btn"
+                                            onClick={(e) => {
+                                                e.stopPropagation();
+                                                setModalSources(highlightsSources['pricing_insights']);
+                                                setShowSources(true);
+                                            }}
+                                            title="View Sources"
+                                        >
+                                            <Info size={16} />
+                                        </button>
+                                    )}
+                                </div>
+                            </div>
+                            {expandedSections['pricing_insights'] && (
+                                <div className="highlights-text accordion-content animate-slide-down">
+                                    {!highlightsData['pricing_insights'] ? (
+                                        <div className="loading-state-mini">
+                                            <div className="spinner-mini"></div>
+                                            <p>Loading Pricing Insights...</p>
+                                        </div>
+                                    ) : (
+                                        <ReactMarkdown>{highlightsData['pricing_insights']}</ReactMarkdown>
+                                    )}
+                                </div>
+                            )}
+                        </div>
+
+                        {/* Section 4: Products and Features */}
+                        <div className="highlights-section-card animate-slide-up" style={{ animationDelay: '0.3s' }}>
+                            <div className="highlights-header accordion-header" onClick={() => toggleSection('products_features')}>
+                                <div className="accordion-title-group">
+                                    {expandedSections['products_features'] ? <ChevronUp size={18} className="accordion-chevron" /> : <ChevronDown size={18} className="accordion-chevron" />}
+                                    <h3>Products and Features</h3>
+                                </div>
+                                <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+                                    <span className="ai-badge">AI Generated</span>
+                                    {highlightsSources['products_features'] && highlightsSources['products_features'].length > 0 && (
+                                        <button
+                                            className="info-btn"
+                                            onClick={(e) => {
+                                                e.stopPropagation();
+                                                setModalSources(highlightsSources['products_features']);
+                                                setShowSources(true);
+                                            }}
+                                            title="View Sources"
+                                        >
+                                            <Info size={16} />
+                                        </button>
+                                    )}
+                                </div>
+                            </div>
+                            {expandedSections['products_features'] && (
+                                <div className="highlights-text accordion-content animate-slide-down">
+                                    {!highlightsData['products_features'] ? (
+                                        <div className="loading-state-mini">
+                                            <div className="spinner-mini"></div>
+                                            <p>Loading Products and Features...</p>
+                                        </div>
+                                    ) : (
+                                        <ReactMarkdown>{highlightsData['products_features']}</ReactMarkdown>
+                                    )}
+                                </div>
+                            )}
+                        </div>
+
+                        {/* Section 5: AI, Cloud and Productivity */}
+                        <div className="highlights-section-card animate-slide-up" style={{ animationDelay: '0.4s' }}>
+                            <div className="highlights-header accordion-header" onClick={() => toggleSection('ai_cloud_productivity')}>
+                                <div className="accordion-title-group">
+                                    {expandedSections['ai_cloud_productivity'] ? <ChevronUp size={18} className="accordion-chevron" /> : <ChevronDown size={18} className="accordion-chevron" />}
+                                    <h3>AI, Cloud and Productivity</h3>
+                                </div>
+                                <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+                                    <span className="ai-badge">AI Generated</span>
+                                    {highlightsSources['ai_cloud_productivity'] && highlightsSources['ai_cloud_productivity'].length > 0 && (
+                                        <button
+                                            className="info-btn"
+                                            onClick={(e) => {
+                                                e.stopPropagation();
+                                                setModalSources(highlightsSources['ai_cloud_productivity']);
+                                                setShowSources(true);
+                                            }}
+                                            title="View Sources"
+                                        >
+                                            <Info size={16} />
+                                        </button>
+                                    )}
+                                </div>
+                            </div>
+                            {expandedSections['ai_cloud_productivity'] && (
+                                <div className="highlights-text accordion-content animate-slide-down">
+                                    {!highlightsData['ai_cloud_productivity'] ? (
+                                        <div className="loading-state-mini">
+                                            <div className="spinner-mini"></div>
+                                            <p>Loading AI, Cloud and Productivity updates...</p>
+                                        </div>
+                                    ) : (
+                                        <ReactMarkdown>{highlightsData['ai_cloud_productivity']}</ReactMarkdown>
+                                    )}
+                                </div>
+                            )}
+                        </div>
                     </div>
 
                     {/* Sources Modal */}
-                    {showSources && currentSources.length > 0 && (
+                    {showSources && modalSources.length > 0 && (
                         <div className="sources-modal-overlay" onClick={() => setShowSources(false)}>
                             <div className="sources-modal" onClick={(e) => e.stopPropagation()}>
                                 <div className="sources-modal-header">
@@ -468,7 +917,7 @@ const Dashboard = ({ company, currentPage, activeHighlightTab, setActiveHighligh
                                     <button className="close-btn" onClick={() => setShowSources(false)}>×</button>
                                 </div>
                                 <div className="sources-modal-content">
-                                    {currentSources.map((source, idx) => (
+                                    {modalSources.map((source, idx) => (
                                         <div key={idx} className="source-item">
                                             <div className="source-number">{idx + 1}</div>
                                             <div className="source-details">
@@ -476,8 +925,16 @@ const Dashboard = ({ company, currentPage, activeHighlightTab, setActiveHighligh
                                                     {source.title}
                                                 </a>
                                                 <div className="source-meta">
-                                                    <span className="source-date">{source.date}</span>
-                                                    <span className="source-url">{new URL(source.url).hostname}</span>
+                                                    {source.date && <span className="source-date">{source.date}</span>}
+                                                    <span className="source-url">
+                                                        {(() => {
+                                                            try {
+                                                                return new URL(source.url).hostname;
+                                                            } catch (e) {
+                                                                return source.url;
+                                                            }
+                                                        })()}
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
@@ -490,39 +947,6 @@ const Dashboard = ({ company, currentPage, activeHighlightTab, setActiveHighligh
             );
         }
 
-        // QBR Page
-        if (currentPage === 'QBR') {
-            if (isLoadingQbr) {
-                return (
-                    <div className="loading-state">
-                        <div className="spinner"></div>
-                        <p>Generating Quarterly Business Review...</p>
-                        <span className="loading-subtext">Optimizing report based on latest data</span>
-                    </div>
-                );
-            }
-
-            if (qbrData) {
-                return (
-                    <div className="highlights-data-card">
-                        <div className="highlights-header">
-                            <h3>Quarterly Business Review</h3>
-                            <span className="ai-badge">AI Generated</span>
-                        </div>
-                        <div className="highlights-text">
-                            <ReactMarkdown>{qbrData.content}</ReactMarkdown>
-                        </div>
-                    </div>
-                );
-            }
-
-            return (
-                <div className="placeholder-content">
-                    <h3>Quarterly Business Review</h3>
-                    <p>Select a company to generate report.</p>
-                </div>
-            );
-        }
 
         // Briefing Docs Page
         if (currentPage === 'Briefing Docs') {
@@ -537,8 +961,181 @@ const Dashboard = ({ company, currentPage, activeHighlightTab, setActiveHighligh
             }
 
             if (briefingData) {
+                let parsed = null;
+                try {
+                    parsed = typeof briefingData.content === 'object' ? briefingData.content : JSON.parse(briefingData.content);
+                } catch (e) {
+                    console.error("Error parsing briefing content:", e);
+                }
+
+                if (parsed) {
+                    return (
+                        <div className="briefing-dashboard">
+                            {/* Financial Health Callout Banner */}
+                            {parsed.financial_health && (
+                                <div className="briefing-health-banner animate-slide-up">
+                                    <div className="banner-icon-container">
+                                        <span className="banner-glow-dot"></span>
+                                        <svg className="banner-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                            <line x1="18" y1="20" x2="18" y2="10"></line>
+                                            <line x1="12" y1="20" x2="12" y2="4"></line>
+                                            <line x1="6" y1="20" x2="6" y2="14"></line>
+                                        </svg>
+                                    </div>
+                                    <div className="banner-body">
+                                        <h4>Financial & Business Health</h4>
+                                        <p>{parsed.financial_health}</p>
+                                    </div>
+                                </div>
+                            )}
+
+                            <div className="briefing-grid">
+                                {/* Account Summary Card */}
+                                <div className="briefing-card summary-card animate-slide-up">
+                                    <div className="card-header border-blue">
+                                        <h3>Account Summary</h3>
+                                        <span className="section-badge badge-blue">Overview</span>
+                                    </div>
+                                    <div className="card-body">
+                                        <p className="company-overview-text">{parsed.account_summary?.company_overview}</p>
+                                        <div className="highlight-section-title">Key Highlights</div>
+                                        <ul className="briefing-list">
+                                            {parsed.account_summary?.key_highlights?.map((highlight, idx) => (
+                                                <li key={idx} className="list-item-hover">
+                                                    <span className="list-bullet bullet-blue"></span>
+                                                    <p>{highlight}</p>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                {/* Business Performance Card */}
+                                <div className="briefing-card performance-card animate-slide-up">
+                                    <div className="card-header border-purple">
+                                        <h3>Business Performance</h3>
+                                        <span className="section-badge badge-purple">Performance</span>
+                                    </div>
+                                    <div className="card-body split-grid">
+                                        <div className="split-column">
+                                            <div className="column-title text-green">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="column-icon">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                                Strengths
+                                            </div>
+                                            <ul className="briefing-list compact">
+                                                {parsed.business_performance?.strengths?.map((item, idx) => (
+                                                    <li key={idx} className="list-item-hover">
+                                                        <span className="list-bullet bullet-green"></span>
+                                                        <p>{item}</p>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                        <div className="split-column">
+                                            <div className="column-title text-red">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="column-icon">
+                                                    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                                                    <line x1="12" y1="9" x2="12" y2="13"></line>
+                                                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                                                </svg>
+                                                Challenges
+                                            </div>
+                                            <ul className="briefing-list compact">
+                                                {parsed.business_performance?.challenges?.map((item, idx) => (
+                                                    <li key={idx} className="list-item-hover">
+                                                        <span className="list-bullet bullet-red"></span>
+                                                        <p>{item}</p>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Opportunities & Risks Card */}
+                                <div className="briefing-card opportunities-card animate-slide-up">
+                                    <div className="card-header border-amber">
+                                        <h3>Opportunities & Risks</h3>
+                                        <span className="section-badge badge-amber">Strategic Outlook</span>
+                                    </div>
+                                    <div className="card-body split-grid">
+                                        <div className="split-column">
+                                            <div className="column-title text-cyan">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="column-icon">
+                                                    <polygon points="12 2 2 22 22 22"></polygon>
+                                                </svg>
+                                                Strategic Opportunities
+                                            </div>
+                                            <ul className="briefing-list compact">
+                                                {parsed.opportunities_risks?.opportunities?.map((item, idx) => (
+                                                    <li key={idx} className="list-item-hover">
+                                                        <span className="list-bullet bullet-cyan"></span>
+                                                        <p>{item}</p>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                        <div className="split-column">
+                                            <div className="column-title text-orange">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="column-icon">
+                                                    <circle cx="12" cy="12" r="10"></circle>
+                                                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                                                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                                                </svg>
+                                                Key Risks
+                                            </div>
+                                            <ul className="briefing-list compact">
+                                                {parsed.opportunities_risks?.risks?.map((item, idx) => (
+                                                    <li key={idx} className="list-item-hover">
+                                                        <span className="list-bullet bullet-orange"></span>
+                                                        <p>{item}</p>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Recommended Actions Card */}
+                                <div className="briefing-card actions-card animate-slide-up">
+                                    <div className="card-header border-teal">
+                                        <h3>Recommended Actions</h3>
+                                        <span className="section-badge badge-teal">Execution</span>
+                                    </div>
+                                    <div className="card-body">
+                                        <div className="action-intro-text">Prioritized strategic demands and next-step actions:</div>
+                                        <div className="action-checklist">
+                                            {parsed.recommended_actions?.map((action, idx) => (
+                                                <div key={idx} className="action-item list-item-hover">
+                                                    <div className="checkbox-wrapper">
+                                                        <div className="custom-checkbox">
+                                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" className="check-svg">
+                                                                <polyline points="20 6 9 17 4 12"></polyline>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                    <div className="action-content">
+                                                        <span className="action-priority-tag">Action {idx + 1}</span>
+                                                        <p>{action}</p>
+                                                    </div>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    );
+                }
+            }
+
+            // Fallback rendering of markdown
+            if (briefingData && briefingData.content) {
                 return (
-                    <div className="highlights-data-card">
+                    <div className="highlights-data-card animate-slide-up">
                         <div className="highlights-header">
                             <h3>Vendor Briefing Document</h3>
                             <span className="ai-badge">AI Generated</span>
@@ -571,53 +1168,52 @@ const Dashboard = ({ company, currentPage, activeHighlightTab, setActiveHighligh
             }
 
             if (earningsData) {
+                let parsed = earningsData;
+                try {
+                    if (typeof earningsData === 'string') {
+                        parsed = JSON.parse(earningsData);
+                    }
+                } catch (e) {
+                    console.error("Error parsing earnings JSON:", e);
+                }
+
+                // Support both legacy "summary" and new "content" structures
+                const contentText = parsed?.content || parsed?.summary || "No earnings data available.";
+                const sources = parsed?.sources || [];
+
                 return (
-                    <div className="earnings-container">
-                        <div className="metrics-card-styled">
-                            <h3>Earnings Metric</h3>
-                            <div className="metrics-list">
-                                <div className="metric-row">
-                                    <span className="metric-label">Announce Date</span>
-                                    <span className="metric-value">{earningsData.announce_date}</span>
-                                </div>
-                                <div className="metric-row">
-                                    <span className="metric-label">EPS Estimated</span>
-                                    <span className="metric-value">{earningsData.eps_estimated}</span>
-                                </div>
-                                <div className="metric-row">
-                                    <span className="metric-label">EPS Actual</span>
-                                    <span className="metric-value">{earningsData.eps_actual}</span>
-                                </div>
-                                <div className="metric-row">
-                                    <span className="metric-label">EPS Surprise (%)</span>
-                                    <span className={`metric-value ${earningsData.eps_surprise_percent?.includes('Beat') ? 'text-green' : ''}`}>
-                                        {earningsData.eps_surprise_percent}
-                                    </span>
-                                </div>
-                                <div className="metric-row">
-                                    <span className="metric-label">Revenue Actual</span>
-                                    <span className="metric-value">{earningsData.revenue_actual}</span>
-                                </div>
-                                <div className="metric-row">
-                                    <span className="metric-label">Revenue Surprise</span>
-                                    <span className={`metric-value ${earningsData.revenue_surprise?.includes('Beat') ? 'text-green' : ''}`}>
-                                        {earningsData.revenue_surprise}
-                                    </span>
-                                </div>
+                    <div className="highlights-data-card animate-slide-up">
+                        <div className="highlights-header">
+                            <h3>Quarterly Earnings Results</h3>
+                            <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+                                <span className="ai-badge">AI Generated</span>
+                                <button
+                                    className="sources-bubble"
+                                    onClick={refreshLiveEarnings}
+                                    title="Refresh with live sources"
+                                >
+                                    <RefreshCw size={14} />
+                                    <span>Refresh Live</span>
+                                </button>
+                                {sources && sources.length > 0 && (
+                                    <button 
+                                        className="sources-bubble"
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            setModalSources(sources);
+                                            setShowSources(true);
+                                        }}
+                                        title="View Sources"
+                                    >
+                                        <Info size={14} />
+                                        <span>{sources.length} Sources</span>
+                                    </button>
+                                )}
                             </div>
                         </div>
-
-                        {earningsData.summary && (
-                            <div className="earnings-summary-card">
-                                <div className="summary-header">
-                                    <h3>Earnings Overview</h3>
-                                    <span className="ai-badge">AI Analysis</span>
-                                </div>
-                                <div className="summary-content-text">
-                                    <ReactMarkdown>{earningsData.summary}</ReactMarkdown>
-                                </div>
-                            </div>
-                        )}
+                        <div className="highlights-text">
+                            <ReactMarkdown>{contentText}</ReactMarkdown>
+                        </div>
                     </div>
                 );
             }
@@ -650,7 +1246,7 @@ const Dashboard = ({ company, currentPage, activeHighlightTab, setActiveHighligh
             );
         }
 
-        // Other pages (QBR, Briefing Docs, Spend)
+        // Other pages (Briefing Docs, Spend)
         return (
             <div className="coming-soon">
                 <h3>{currentPage}</h3>
@@ -664,7 +1260,7 @@ const Dashboard = ({ company, currentPage, activeHighlightTab, setActiveHighligh
             <header className="dashboard-header">
                 <div>
                     <h1 className="page-title">{currentPage}</h1>
-                    <p className="page-subtitle">Latest Earnings Report • {company.name}</p>
+                    <p className="page-subtitle">{pageSubtitle} - {company.name}</p>
                 </div>
                 <div className="header-actions">
                     <button className="action-btn" onClick={handleExport}><Download size={18} /> Export</button>
@@ -682,100 +1278,11 @@ const Dashboard = ({ company, currentPage, activeHighlightTab, setActiveHighligh
                         {renderContent()}
                     </div>
                 </div>
-
-                <div className="side-panel">
-                    <div className="metric-card">
-                        <div className="metric-header">
-                            <h3>Stock Performance</h3>
-                            {stockData && (
-                                <span className={`change-tag ${stockData.realtime_price >= chartData[0]?.price ? 'positive' : 'negative'}`}>
-                                    {stockData.currency}
-                                </span>
-                            )}
-                        </div>
-                        {stockError ? (
-                            <div className="stock-error-message" style={{
-                                padding: '2rem',
-                                textAlign: 'center',
-                                color: '#888',
-                                fontSize: '0.95rem',
-                                lineHeight: '1.6'
-                            }}>
-                                <p style={{ margin: 0 }}>{stockError}</p>
-                            </div>
-                        ) : (
-                            <>
-                                <div className="current-price">
-                                    {isLoadingStock ? 'Loading...' : stockData ? `$${stockData.realtime_price?.toFixed(2)}` : 'Loading...'}
-                                </div>
-                                <div className="chart-container">
-                                    <ResponsiveContainer width="100%" height={200}>
-                                        <AreaChart data={chartData}>
-                                            <defs>
-                                                <linearGradient id="colorPrice" x1="0" y1="0" x2="0" y2="1">
-                                                    <stop offset="5%" stopColor="#4285f4" stopOpacity={0.3} />
-                                                    <stop offset="95%" stopColor="#4285f4" stopOpacity={0} />
-                                                </linearGradient>
-                                            </defs>
-                                            <Tooltip
-                                                contentStyle={{ backgroundColor: '#1e2029', border: 'none', borderRadius: '8px' }}
-                                                itemStyle={{ color: '#fff' }}
-                                                labelStyle={{ color: '#888' }}
-                                            />
-                                            <Area
-                                                type="monotone"
-                                                dataKey="price"
-                                                stroke="#4285f4"
-                                                fillOpacity={1}
-                                                fill="url(#colorPrice)"
-                                                strokeWidth={2}
-                                            />
-                                            <XAxis dataKey="date" hide />
-                                            <YAxis domain={['auto', 'auto']} hide />
-                                        </AreaChart>
-                                    </ResponsiveContainer>
-                                </div>
-                                <div className="time-filters">
-                                    {['5d', '1mo', '6mo', '1y', '5y'].map(range => (
-                                        <button
-                                            key={range}
-                                            className={`time-btn ${timeRange === range ? 'active' : ''}`}
-                                            onClick={() => handleTimeRangeChange(range)}
-                                        >
-                                            {range.toUpperCase()}
-                                        </button>
-                                    ))}
-                                </div>
-                            </>
-                        )}
-                    </div>
-
-                    <div className="metric-card">
-                        <h3>Key Metrics</h3>
-                        <div className="key-metrics-grid">
-                            <div className="km-item">
-                                <span className="km-label">Market Cap</span>
-                                <span className="km-value">{metrics?.market_cap || '–'}</span>
-                            </div>
-                            <div className="km-item">
-                                <span className="km-label">P/E Ratio</span>
-                                <span className="km-value">{metrics?.pe_ratio?.toFixed(2) || '–'}</span>
-                            </div>
-                            <div className="km-item">
-                                <span className="km-label">EPS</span>
-                                <span className="km-value">{metrics?.eps?.toFixed(2) || '–'}</span>
-                            </div>
-                            <div className="km-item">
-                                <span className="km-label">Div Yield</span>
-                                <span className="km-value text-green">{metrics?.dividend_yield || '–'}</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     );
 };
 
 export default Dashboard;
+
 

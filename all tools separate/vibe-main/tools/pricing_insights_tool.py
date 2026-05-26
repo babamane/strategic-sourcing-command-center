@@ -48,6 +48,27 @@ def get_pricing_insights(company: str) -> str:
         else:
             response_text = str(result)
         
+        response_text = response_text.strip()
+        
+        # Clean markdown code block markers
+        import re
+        cleaned = re.sub(r'^```json\s*', '', response_text, flags=re.IGNORECASE | re.MULTILINE)
+        cleaned = re.sub(r'^```\s*', '', cleaned, flags=re.IGNORECASE | re.MULTILINE)
+        cleaned = re.sub(r'\s*```$', '', cleaned, flags=re.IGNORECASE | re.MULTILINE)
+        cleaned = cleaned.strip()
+
+        # Try to parse the entire response as a structured JSON object
+        try:
+            parsed_json = json.loads(cleaned)
+            if isinstance(parsed_json, dict) and "content" in parsed_json:
+                return json.dumps({
+                    "content": parsed_json.get("content", ""),
+                    "sources": parsed_json.get("sources", [])
+                })
+        except Exception:
+            pass
+
+        # If it doesn't parse directly as a JSON dict, fall back to older parsing rules
         # Parse the response to separate content and sources
         if "---SOURCES---" in response_text:
             parts = response_text.split("---SOURCES---")

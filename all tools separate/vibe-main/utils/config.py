@@ -26,7 +26,8 @@ class Config:
     DEFAULT_TEMPERATURE = float(os.getenv('TEMPERATURE', '0.3'))
  
     # for ollama
-    OLLAMA_LOCAL_HOST = os.getenv('OLLAMA_LOCAL_HOST', 'http://localhost:11434')
+    OLLAMA_LOCAL_HOST = os.getenv('OLLAMA_LOCAL_HOST', 'http://127.0.0.1:11434')
+    OLLAMA_TIMEOUT = int(os.getenv('OLLAMA_TIMEOUT', '60'))
     
     # Agent Settings
     MAX_ITERATIONS = int(os.getenv('MAX_ITERATIONS', '10'))
@@ -39,6 +40,9 @@ class Config:
     # Tavily API Key
     TAVILY_API_KEY = os.getenv('TAVILY_API_KEY')
     
+    # Offline Mode
+    OFFLINE_MODE = os.getenv('OFFLINE_MODE', 'False').lower() == 'true'
+    
     # Paths
     BASE_DIR = Path(__file__).parent.parent
     PROMPTS_DIR = BASE_DIR / 'prompts'
@@ -48,6 +52,10 @@ class Config:
     @classmethod
     def validate(cls):
         """Validate critical configuration"""
+        if cls.OFFLINE_MODE:
+            print("INFO: Running in OFFLINE_MODE. API key validation skipped.")
+            return
+
         if cls.LLM_PROVIDER == 'google' and not cls.GOOGLE_API_KEY:
             raise ValueError("GOOGLE_API_KEY is missing in .env file")
         if cls.LLM_PROVIDER == 'openai' and not cls.OPENAI_API_KEY:

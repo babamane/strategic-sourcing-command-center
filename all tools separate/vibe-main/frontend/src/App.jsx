@@ -1,16 +1,45 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Sidebar from './components/Sidebar';
 import CompanySelector from './components/CompanySelector';
 import Dashboard from './components/Dashboard';
 import ChatWidget from './components/ChatWidget';
-import { companies } from './data/companies';
+import { companies as defaultCompanies } from './data/companies';
 import './App.css';
 
 function App() {
   const [selectedCompany, setSelectedCompany] = useState(null);
   const [currentPage, setCurrentPage] = useState('Highlights and Takeaways');
-  const [activeHighlightTab, setActiveHighlightTab] = useState('vendor_topics');
-  const [isHighlightsExpanded, setIsHighlightsExpanded] = useState(false);
+  const [activeHighlightTab, setActiveHighlightTab] = useState('leadership');
+  const [companiesList, setCompaniesList] = useState([]);
+
+  // Load companies from localStorage or default
+  useEffect(() => {
+    const savedCompanies = localStorage.getItem('vibe_companies');
+    if (savedCompanies) {
+      try {
+        setCompaniesList(JSON.parse(savedCompanies));
+      } catch (e) {
+        setCompaniesList(defaultCompanies);
+      }
+    } else {
+      setCompaniesList(defaultCompanies);
+    }
+  }, []);
+
+  // Save companies to localStorage
+  useEffect(() => {
+    if (companiesList.length > 0) {
+      localStorage.setItem('vibe_companies', JSON.stringify(companiesList));
+    }
+  }, [companiesList]);
+
+  const handleAddCompany = (newCompany) => {
+    setCompaniesList(prev => [...prev, { ...newCompany, id: newCompany.name.toLowerCase().replace(/\s+/g, '-') }]);
+  };
+
+  const handleDeleteCompany = (companyId) => {
+    setCompaniesList(prev => prev.filter(c => c.id !== companyId));
+  };
 
   const handleCompanySelect = (company) => {
     setSelectedCompany(company);
@@ -22,19 +51,6 @@ function App() {
   };
 
   const handleNavigate = (page) => {
-    // Toggle highlights expansion when clicking on Highlights (only if already on Highlights page)
-    if (page === 'Highlights and Takeaways') {
-      if (currentPage === 'Highlights and Takeaways') {
-        // Already on Highlights page - toggle expansion
-        setIsHighlightsExpanded(prev => !prev);
-      } else {
-        // Coming from another page - expand it
-        setIsHighlightsExpanded(true);
-      }
-    } else {
-      // Navigating away from Highlights - collapse
-      setIsHighlightsExpanded(false);
-    }
     setCurrentPage(page);
   };
 
@@ -42,7 +58,12 @@ function App() {
     <div className="app-container">
       {!selectedCompany ? (
         <div className="selection-view">
-          <CompanySelector companies={companies} onSelect={handleCompanySelect} />
+          <CompanySelector 
+            companies={companiesList} 
+            onSelect={handleCompanySelect}
+            onAdd={handleAddCompany}
+            onDelete={handleDeleteCompany}
+          />
         </div>
       ) : (
         <div className="dashboard-view">
@@ -53,7 +74,6 @@ function App() {
             onBack={handleBack}
             activeHighlightTab={activeHighlightTab}
             setActiveHighlightTab={setActiveHighlightTab}
-            isHighlightsExpanded={isHighlightsExpanded}
           />
           <main className="main-content">
             <Dashboard

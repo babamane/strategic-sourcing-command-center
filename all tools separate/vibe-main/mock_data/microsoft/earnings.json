@@ -1,0 +1,10 @@
+{
+    "content": "## Overview\nMicrosoft reported a stellar Q3 FY24 with revenue of $61.9B (up 17% YoY) and an EPS of $2.94, beating estimates of $2.82. The quarter was defined by massive AI-driven acceleration in Azure and the successful broad deployment of Copilot across the enterprise ecosystem.\n\n## Key Takeaways\n- Total revenue of $61.9B, marking 17% YoY growth\n- Intelligent Cloud revenue reached $26.7B (up 21% YoY)\n- Azure revenue grew 31% YoY, with 7 points of growth directly attributed to AI services\n- Productivity and Business Processes revenue grew 12% YoY to $19.6B\n\n## Highlights\n- Capital expenditures soared to $14B to support surging cloud and AI infrastructure demand\n- Over 65% of Fortune 500 companies now use Azure OpenAI Service\n- GitHub Copilot surpassed 1.8 million paid subscribers, a 35% quarter-over-quarter increase\n\n## Investment Focus Areas\n- **Products**: Microsoft 365 Copilot, Azure OpenAI, Dynamics 365 AI tools\n- **AI & Cloud**: Global data center expansion, custom Maia AI accelerators\n- **Strategic Priorities**: Embedding Copilot in every product surface and leading the enterprise AI platform shift",
+    "sources": [
+        {
+            "title": "Microsoft Q3 FY24 Earnings",
+            "url": "https://www.microsoft.com/en-us/investor",
+            "date": "April 2024"
+        }
+    ]
+}

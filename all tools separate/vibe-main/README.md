@@ -1,6 +1,7 @@
-# VIBE
+# Vendor Intelligence & Briefing Engine (VIBE)
 
-A modern, AI-powered dashboard for analyzing company earnings calls with real-time insights, pricing analysis, and product updates.
+A powerful, AI-driven platform for comprehensive vendor analysis, combining real-time earnings insights with an intelligent chat assistant for deep-dive queries.
+
 
 ## 🚀 Tech Stack
 
@@ -31,14 +32,22 @@ A modern, AI-powered dashboard for analyzing company earnings calls with real-ti
   - Vendor Briefing Documents
   - Earnings Summary
 
+- **💬 AI Chat Assistant**
+  - Real-time interactive Q&A about vendor performance
+  - Deep-dive into historical data and market sentiment
+  - Context-aware responses based on latest earnings calls
+
 - **Export Functionality**
   - Export reports to Word (.doc) format
   - Formatted with proper headings and lists
 
+
 ### 🔍 AI-Powered Insights
 - **Pricing Insights**: Real-time pricing changes with sources
 - **Product Features**: New launches, deprecations, and regulatory risks
+- **AI Chat Assistant**: Ask specific questions and get immediate, data-backed answers
 - **Sources Modal**: Click info (i) button to view sources for AI-generated content
+
 
 ## 📋 Prerequisites
 
@@ -105,6 +114,7 @@ vibe/
 │   │   ├── components/         # React components
 │   │   │   ├── Dashboard.jsx   # Main dashboard
 │   │   │   ├── Sidebar.jsx     # Navigation sidebar
+│   │   │   ├── ChatWidget.jsx  # AI Chat interface
 │   │   │   ├── Hero.jsx        # Landing page
 │   │   │   └── ...
 │   │   ├── App.jsx             # Main app component
@@ -114,8 +124,10 @@ vibe/
 │
 ├── agents/                      # AI agents
 │   ├── highlights_agent.py     # Highlights coordinator
+│   ├── chatbot_agent.py        # AI Chat assistant agent
 │   ├── tavily_search_agent.py  # Tavily search agent
 │   └── ...
+
 │
 ├── tools/                       # LangChain tools
 │   ├── pricing_insights_tool.py      # Pricing insights
@@ -210,9 +222,11 @@ server: {
 - `POST /stock-data` - Get real-time stock data
 - `POST /company-metrics` - Get company metrics
 - `POST /earnings` - Get earnings data
+- `POST /chatbot` - Interactive AI assistant for company queries
 - `POST /qbr` - Generate QBR report
 - `POST /briefing` - Generate briefing document
 - `POST /summary` - Get earnings summary
+
 
 ## 🐛 Troubleshooting
 

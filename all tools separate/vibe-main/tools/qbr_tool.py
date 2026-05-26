@@ -1,58 +1,72 @@
-"""
-QBR (Quarterly Business Review) Tool
-Generates QBR reports for companies
-"""
 from langchain.tools import tool
+from utils.llm_client import LLMClient
+from langchain_core.messages import HumanMessage
+import logging
 
+logger = logging.getLogger(__name__)
 
 @tool
-def get_qbr_report(company: str) -> str:
+def get_qbr_report(company: str, transcript_text: str = "") -> str:
     """
     Generate a Quarterly Business Review (QBR) report for a company.
+    If transcript_text is provided, uses LLM to generate a dynamic report.
     
     Args:
-        company: Name of the company (e.g., "Microsoft", "Apple")
+        company: Name of the company
+        transcript_text: Optional raw transcript text to analyze
         
     Returns:
         QBR report as formatted text
     """
-    company_lower = company.lower()
+    llm = LLMClient().get_llm()
     
-    if company_lower == "microsoft":
-        return """**Quarterly Business Review - Microsoft**
+    # If no transcript is provided, we might still try to generate something general or use search
+    # but the current architecture expects the agent to fetch the transcript.
+    if not transcript_text or len(transcript_text) < 500:
+        logger.warning(f"No sufficient transcript data for {company}. Attempting general summary.")
+        transcript_text = "No transcript available. Generate based on general knowledge of recent performance."
+
+    prompt = f"""You are a senior business analyst. Your task is to generate a comprehensive "Quarterly Business Review (QBR)" report for {company} based on the provided earnings call transcript.
+
+THE REPORT MUST FOLLOW THIS EXACT STRUCTURE AND STYLE:
+
+**Quarterly Business Review - [Company Name]**
 
 **Business Performance Overview**
-- Microsoft delivered strong, broad-based performance in FY26 Q1 with continued momentum across Cloud, AI, and Productivity segments.
-- Azure remained the primary driver of revenue growth as enterprises expanded cloud workloads and infrastructure modernization programs.
-- Microsoft 365 and Windows OEM showed steady demand, while Gaming and Xbox content also contributed positively to quarterly results.
-- Management emphasized that AI is embedded across the product portfolio, but enterprise adoption patterns remain uneven, requiring ongoing customer education and deployment support.
+- [3-4 bullet points about general performance, segment growth, and momentum]
 
 **Key Financial Highlights**
-- Intelligent Cloud was the standout segment, benefiting from Azure consumption growth and increased enterprise workloads.
-- Higher cloud infrastructure investment continues to pressure gross margins but supports long-term capacity for AI and hyperscale demand.
-- Commercial cloud revenue grew meaningfully year-over-year, supported by Microsoft 365, Dynamics, and Azure AI services.
-- Cost controls and efficiency measures helped offset infrastructure spending, enabling strong overall operating income performance.
+- [3-4 bullet points about revenue, margins, specific segment standouts, and efficiency]
 
 **AI, Cloud, and Product Priorities**
-- Expansion of Copilot features across Microsoft 365, Power Platform, Dynamics, and Windows remains a central strategy.
-- Microsoft is aligning its go-to-market around AI-driven transformation scenarios, helping customers operationalize AI beyond pilots.
-- The company is refining enterprise packaging for AI services after slower-than-expected adoption in some areas, focusing on clearer value realization and easier integration paths.
-- Azure continues to scale foundational AI infrastructure, positioning Microsoft as a leading cloud provider for training, inference, and industry-specific AI models.
+- [3-4 bullet points about AI strategy, cloud infrastructure, and core product updates]
 
 **Market and Customer Insights**
-- Enterprises are increasing cloud investments but remain cautious on large-scale AI rollouts until ROI and integration costs are clearer.
-- Longer deployment cycles for advanced AI products have led Microsoft to focus more on solution architecture, migration tooling, and customer enablement programs.
-- Public sector and regulated industries show growing interest in secure AI deployments, driving demand for governance and compliance capabilities built into Microsoft Cloud.
+- [3-4 bullet points about customer adoption, ROI concerns, and market sentiment]
 
 **Key Risks and Watch Areas**
-- Rising cloud infrastructure spend may continue to affect margins as Microsoft scales data centers for AI.
-- Competitive pressure in cloud and AI markets remains high, requiring sustained innovation and pricing discipline.
-- Execution risk around enterprise AI adoption persists if customers delay large-scale deployments.
+- [3-4 bullet points about competitive pressure, infrastructure costs, and execution risks]
 
 **Strategic Outlook**
-- Microsoft projects continued strength across cloud workloads and steady adoption of AI-assisted productivity tools.
-- Leadership signals sustained investment in AI infrastructure, developer tools, and enterprise integration frameworks.
-- The focus for the coming quarters is helping customers convert AI vision into operational value, improving time-to-adoption and lowering integration friction."""
-    
-    else:
-        return f"QBR report not available for {company}."
+- [2-3 bullet points about future guidance, investment focus, and long-term vision]
+
+---
+TRANSCRIPT DATA:
+{transcript_text[:50000]}  # Limit to 50k chars to stay within context limits
+---
+
+Instructions:
+1. Be professional, analytical, and data-driven.
+2. Use the provided transcript as the primary source of truth.
+3. Keep the bullet points concise but informative.
+4. Ensure the output is valid Markdown.
+5. Do not include any preamble or conversational text, only the report.
+"""
+
+    try:
+        response = llm.invoke([HumanMessage(content=prompt)])
+        report_content = response.content.strip()
+        return report_content
+    except Exception as e:
+        logger.error(f"LLM QBR generation failed: {e}")
+        return f"Error generating QBR report for {company}: {str(e)}"

@@ -72,3 +72,13 @@ def create_products_features_agent():
 def create_ai_cloud_productivity_agent():
     """Create agent for AI/cloud/productivity using ai_cloud_productivity_prompt.txt"""
     return create_tavily_agent("ai_cloud_productivity_prompt.txt")
+
+
+def create_vendor_topics_agent():
+    """Create agent for vendor discussion topics using vendor_topics_prompt.txt"""
+    return create_tavily_agent("vendor_topics_prompt.txt")
+
+
+def create_leadership_agent():
+    """Create agent for leadership using leadership_prompt.txt"""
+    return create_tavily_agent("leadership_prompt.txt")

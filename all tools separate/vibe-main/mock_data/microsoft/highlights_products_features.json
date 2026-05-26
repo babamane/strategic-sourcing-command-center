@@ -1,0 +1,25 @@
+{
+  "content": "## Microsoft Product and Feature Updates (Last 6-12 Months)\n\nMicrosoft focuses on expanding its Copilot AI portfolio across operating systems and developer suites, while optimizing commercial hybrid cloud pipelines.\n\n## New Product Launches\nMicrosoft launched customized enterprise agent developer portals and local small language models in early 2024.\n- Copilot Studio: High-control platform enabling custom agent creation launched in January 2024\n- Phi-3: Small footprint local language models optimized for low-compute mobile devices\n- GitHub Copilot Workspace: Fully conversational developer workspace released in May 2024\n\n## Major Feature Updates\nExpanded automated insights and system assistance capabilities across commercial baseline tools.\n- Teams Intelligent Recap: Natural language meeting notes generation deployed in June 2024\n- Excel Copilot: Python integration allowing complex data visualization using plain text\n- Azure OpenAI GPT-4o: Deployed GPT-4o with double the inference speed in May 2024\n\n## Platform Enhancements\nTransitioned core Copilot pricing models to flat enterprise subscriptions with no seat minimums, alongside advanced security logging inside Purview.\n\n## Product Deprecations\n- Windows 10 Home and Pro end-of-support planning: October 2025\n- Azure API Management developer portal classic version retiring: March 2024\n\n## Regulatory Updates\nMaintained compliance with transatlantic data privacy standards. No new regulatory concerns flagged.",
+  "sources": [
+    {
+      "title": "Microsoft Copilot Studio Launch Details",
+      "url": "https://www.microsoft.com/en-us/investor",
+      "date": "2024-01-15"
+    },
+    {
+      "title": "Phi-3 Small Language Models Release Notes",
+      "url": "https://azure.microsoft.com/blog",
+      "date": "2024-04-23"
+    },
+    {
+      "title": "Azure OpenAI GPT-4o Integration Roadmap",
+      "url": "https://azure.microsoft.com/blog",
+      "date": "2024-05-13"
+    },
+    {
+      "title": "Microsoft Product Lifecycle and Sunsets Guide",
+      "url": "https://support.microsoft.com/lifecycle",
+      "date": "2024-03-01"
+    }
+  ]
+}

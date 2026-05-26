@@ -1,0 +1,50 @@
+Research {company} AI, Cloud, and Productivity updates
+
+Return ONLY valid JSON (no markdown blocks): {"content": "your markdown content", "sources": [{"title": "...", "url": "..."}]}
+
+IMPORTANT: Tailor sections to what {company} actually offers
+
+If {company} does NOT have cloud infrastructure services, skip cloud revenue/market share sections
+
+Only include sections relevant to {company}'s actual business and product ecosystem
+
+DO NOT include pricing information or pricing changes
+
+Remove irrelevant enterprise/cloud terminology if not applicable
+
+FORMAT the content like this:
+
+## {company} AI, Cloud, and Productivity Updates
+
+Brief 1-2 sentence intro on AI/productivity strategy.
+
+## Cloud Revenue & Market Position (ONLY if applicable to {company})
+Cloud revenue: $XXB, up XX% YoY
+Market share: XX% (position vs competitors)
+Key growth driver with specific metric
+
+NOTE: Skip this section entirely for companies without cloud infrastructure/services (e.g., OpenAI, Salesforce CRM, Adobe Creative).
+
+## AI Product Launches
+Product name: user count or adoption metric
+Another AI product: key capability and reach
+Third product with adoption numbers
+
+## Productivity Updates
+Feature added to productivity suite
+Integration or enhancement
+User adoption or engagement metric
+
+## Enterprise Features
+Security/compliance feature added
+Enterprise capability with specifics
+New enterprise integrations or partnerships
+
+RULES:
+1. Use ## for headers, - for bullets
+2. NO bold (**) in body text
+3. Include SPECIFIC numbers: $, %, users, dates
+4. Maximum 350 words
+5. 3-5 credible sources with URLs
+6. SKIP sections that don't apply to {company}
+7. DO NOT include pricing changes or price information

@@ -1,0 +1,25 @@
+{
+  "content": "## Salesforce Product and Feature Updates (Last 6-12 Months)\n\nSalesforce's product strategy emphasizes building autonomous, low-code AI agents that execute complex customer service workflows directly on active enterprise customer files.\n\n## New Product Launches\nSalesforce launched autonomous service agent systems and custom prompt builders in early 2024.\n- Agentforce: Low-code autonomous agents platform officially launched in March 2024\n- Einstein Copilot: Natural language CRM assistant made generally available in February 2024\n- Prompt Builder: Custom prompt engineering workspace launched in February 2024\n\n## Major Feature Updates\nOptimized team collaboration and customer data pipelines within the Customer 360 platform.\n- Slack AI summaries: Deployed automated thread and channel indexers in March 2024\n- Data Cloud Zero Copy: Streamlined real-time connections to Snowflake and Databricks in April 2024\n- Service Cloud Einstein: Proactive customer care recommendation engine launched in January 2024\n\n## Platform Enhancements\nIntroduced flat-rate per-user licenses for premium Einstein features and established the Einstein Trust Layer for prompt privacy governance.\n\n## Product Deprecations\n- Legacy Workflow Rules automatic migrations starting: March 2024\n- Salesforce Audience Studio retiring: June 2024\n\n## Regulatory Updates\nAchieved FedRAMP High Authorization standards for core generative CRM models. No new regulatory concerns.",
+  "sources": [
+    {
+      "title": "Salesforce Agentforce Platform Release Details",
+      "url": "https://www.salesforce.com/news",
+      "date": "2024-03-05"
+    },
+    {
+      "title": "Einstein Copilot CRM GA Announcement",
+      "url": "https://investor.salesforce.com",
+      "date": "2024-02-27"
+    },
+    {
+      "title": "Slack AI Global Integration Rollout",
+      "url": "https://slack.com/blog",
+      "date": "2024-03-12"
+    },
+    {
+      "title": "Salesforce Trust and Security Compliance Portal",
+      "url": "https://trust.salesforce.com",
+      "date": "2024-04-10"
+    }
+  ]
+}

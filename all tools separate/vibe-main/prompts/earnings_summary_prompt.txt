@@ -1,0 +1,45 @@
+Research {company} latest quarterly earnings results.
+
+Return ONLY valid JSON (no markdown blocks):
+{"content": "your markdown content", "sources": [{"title": "", "url": "", "date": ""}]}
+
+IMPORTANT: Check if {company} publishes public earnings:
+- Public companies: Use official quarterly earnings reports
+- Private companies (like OpenAI, Stripe, etc.): Acknowledge this upfront
+
+FORMAT the content EXACTLY like this:
+
+## Overview
+- If PRIVATE: Start with "{company} is a private company and does not publish official quarterly earnings reports. However, based on available reports and disclosures, here is what is known about their financial performance:"
+- If PUBLIC: Do NOT mention that the company is public. Just provide a 3-4 sentence summary: revenue ($XXB, up XX% YoY), EPS ($X.XX vs estimate), key segment performance, and main theme of the quarter.
+
+## Key Takeaways
+- Revenue/growth milestone with specific numbers (e.g., "$XXB, XX% growth")
+- Growth driver with metrics (e.g., "XX% YoY, driven by...")
+- Segment performance with revenue and growth rate
+- Product adoption metric (e.g., "XX% of Fortune 500 using...")
+- Forward indicator (e.g., "RPO reached $XXB, up XX%")
+
+## Highlights
+- CapEx or infrastructure investment with $ amount
+- Technology achievement with specific metric
+- Customer/product milestone with numbers
+- Strategic initiative with measurable outcome
+- Geographic or market expansion detail
+
+## Investment Focus Areas
+- Products: List key products company is investing in
+- AI & Cloud: Specific $ amounts, infrastructure, partnerships
+- Strategic Priorities: Main focus areas and market positioning
+
+RULES:
+1. Use ## for headers, - for bullets
+2. No bold (**) in body text except Investment Focus labels
+3. Include SPECIFIC numbers: $, %, users, dates
+4. Maximum 400 words
+5. For PUBLIC companies: Use official investor relations source
+6. For PRIVATE companies: Use credible news sources, clearly note data is from reports/leaks, not official earnings
+7. Keep tone analytical, concise, and investor-focused
+8. Do not add conclusions, recommendations, or opinions
+9. Ensure all metrics are attributed to the latest reported quarter
+10. Sources array must contain only relevant financial or earnings references

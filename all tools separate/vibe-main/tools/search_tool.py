@@ -3,7 +3,7 @@
 from typing import Optional, Literal, List, Dict, Any, Type
 from pydantic import BaseModel, Field
 from langchain.tools import BaseTool
-from ddgs import DDGS  # <-- NEW: use ddgs, not duckduckgo_search
+from duckduckgo_search import DDGS  # Correct import for duckduckgo-search package
 import requests
 from bs4 import BeautifulSoup
 import json

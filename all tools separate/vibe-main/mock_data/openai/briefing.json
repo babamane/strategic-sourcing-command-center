@@ -1,0 +1,16 @@
+{
+  "account_summary": {
+    "company_overview": "OpenAI provides frontier AI models, ChatGPT products, and developer APIs for enterprise automation and productivity. Procurement discussions should focus on governance, usage predictability, and secure integration.",
+    "key_highlights": ["Strong enterprise demand for ChatGPT and API-based automation.", "Model capability and roadmap pace are differentiators.", "Costs can scale quickly without token and seat governance."]
+  },
+  "business_performance": {
+    "strengths": ["Leading brand in generative AI.", "Strong developer and enterprise ecosystem.", "Broad applicability across functions."],
+    "challenges": ["Private-company financial transparency is limited.", "High dependency on compute capacity.", "Rapid product changes can complicate governance."]
+  },
+  "opportunities_risks": {
+    "opportunities": ["Automate knowledge work and support workflows.", "Improve developer productivity.", "Use pilots to identify high-ROI enterprise use cases."],
+    "risks": ["Uncontrolled token usage and premium model access can create budget surprises.", "Data governance terms must be reviewed carefully.", "Vendor lock-in risk if workflows are tightly coupled to one model provider."]
+  },
+  "recommended_actions": ["Define approved use cases before expansion.", "Negotiate usage caps and enterprise support SLAs.", "Require clear data-retention and no-training terms."],
+  "financial_health": "OpenAI is private, so standard public financial metrics are unavailable. Vendor assessment should rely on funding strength, strategic partnerships, enterprise traction, and contractual protections."
+}

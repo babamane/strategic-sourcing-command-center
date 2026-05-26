@@ -1,0 +1,16 @@
+{
+  "account_summary": {
+    "company_overview": "Meta Platforms is a leading social, messaging, advertising, and AI platform company. Enterprise relevance often centers on advertising ROI, business messaging, AI experimentation, and brand safety.",
+    "key_highlights": ["Massive advertising and social platform reach.", "Large AI infrastructure and Llama model investments.", "Business messaging is a key enterprise engagement opportunity."]
+  },
+  "business_performance": {
+    "strengths": ["Global user scale and advertising reach.", "Strong AI recommendation and ad optimization capabilities.", "Broad consumer app ecosystem."],
+    "challenges": ["Regulatory and privacy scrutiny.", "Reality Labs investment drag.", "Ad performance sensitivity to measurement and auction dynamics."]
+  },
+  "opportunities_risks": {
+    "opportunities": ["Improve customer engagement through WhatsApp Business.", "Use AI creative tools for marketing productivity.", "Experiment with Llama models for internal AI use cases."],
+    "risks": ["Brand safety concerns.", "Privacy and consent obligations.", "Variable ad costs and attribution quality."]
+  },
+  "recommended_actions": ["Define advertising ROI and brand safety KPIs.", "Review WhatsApp Business pricing and consent workflows.", "Evaluate Llama usage under internal AI governance standards."],
+  "financial_health": "Meta has a strong advertising-driven financial base and significant AI infrastructure investment capacity, balanced by regulatory risk and Reality Labs spending."
+}

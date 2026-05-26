@@ -1,0 +1,16 @@
+{
+  "account_summary": {
+    "company_overview": "Tata Group is a diversified conglomerate; vendor evaluation should specify the exact Tata entity and service line. For technology sourcing, TCS and Tata Communications are typically the most relevant.",
+    "key_highlights": ["Broad global delivery scale.", "Strong India-based technology services footprint.", "Entity-specific scope must be clarified before negotiation."]
+  },
+  "business_performance": {
+    "strengths": ["Large enterprise delivery capacity.", "Strong brand and balance of industry coverage.", "Ability to support multi-year transformation programs."],
+    "challenges": ["Complex group structure can create scope ambiguity.", "Service quality depends on governance and team composition.", "Change requests can increase costs if scope is vague."]
+  },
+  "opportunities_risks": {
+    "opportunities": ["Cloud migration and managed services consolidation.", "Network modernization through Tata Communications.", "Automation-led productivity improvements."],
+    "risks": ["Wrong legal entity or service tower selection.", "Underdefined SLAs and transformation commitments.", "Vendor lock-in in long managed service contracts."]
+  },
+  "recommended_actions": ["Clarify Tata entity and scope before demo use.", "Benchmark pricing against Infosys, Wipro, HCLTech, and Cognizant.", "Add productivity and SLA commitments into any multi-year deal."],
+  "financial_health": "Tata Group has substantial scale and diversified operations, but financial health should be assessed at the specific operating-company level."
+}

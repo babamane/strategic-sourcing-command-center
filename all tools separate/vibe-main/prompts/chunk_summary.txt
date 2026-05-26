@@ -6,4 +6,4 @@ TEXT:
 {chunk_text}
 
 Summarize the given chunk text exactly and objectively.
-Dnt include irrelevant information and dnt make assumptions if information is not present
+Don't include irrelevant information and dnt make assumptions if information is not present

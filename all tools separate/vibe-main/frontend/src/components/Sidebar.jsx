@@ -10,19 +10,17 @@ import {
 } from 'lucide-react';
 import './Sidebar.css';
 
-const Sidebar = ({ onNavigate, currentPage, onBack, company, activeHighlightTab, setActiveHighlightTab, isHighlightsExpanded }) => {
+const Sidebar = ({ onNavigate, currentPage, onBack, company, activeHighlightTab, setActiveHighlightTab }) => {
   const highlightTabs = [
+    { id: 'leadership', label: 'Leadership' },
     { id: 'vendor_topics', label: 'Vendor Discussion Topics' },
     { id: 'pricing_insights', label: 'Pricing Insights' },
     { id: 'products_features', label: 'Products and Features' },
-    { id: 'ai_cloud_productivity', label: 'AI, Cloud and Productivity' },
-    { id: 'meta_synergies', label: 'Vendor Synergies' },
-    { id: 'meta_spend_metrics', label: 'Vendor Spend and Metrics' }
+    { id: 'ai_cloud_productivity', label: 'AI, Cloud and Productivity' }
   ];
   const menuItems = [
     { id: 'Highlights and Takeaways', icon: Sparkles, label: 'Highlights' },
     { id: 'Earnings', icon: TrendingUp, label: 'Earnings' },
-    { id: 'QBR', icon: Calendar, label: 'QBR' },
     { id: 'Briefing Docs', icon: FileText, label: 'Briefing Docs' },
   ];
 
@@ -50,7 +48,6 @@ const Sidebar = ({ onNavigate, currentPage, onBack, company, activeHighlightTab,
             const Icon = item.icon;
             const isHighlights = item.id === 'Highlights and Takeaways';
             const isActive = currentPage === item.id;
-            const showDropdown = isHighlights && isActive && isHighlightsExpanded;
 
             return (
               <div key={item.id}>
@@ -60,32 +57,7 @@ const Sidebar = ({ onNavigate, currentPage, onBack, company, activeHighlightTab,
                 >
                   <Icon size={18} />
                   <span>{item.label}</span>
-                  {isHighlights && isActive && (
-                    <span className="nav-item-chevron">
-                      {isHighlightsExpanded ? (
-                        <ChevronDown size={16} />
-                      ) : (
-                        <ChevronRight size={16} />
-                      )}
-                    </span>
-                  )}
                 </button>
-                {showDropdown && (
-                  <div className="highlights-dropdown-wrapper">
-                    <select
-                      className="highlights-dropdown"
-                      value={activeHighlightTab}
-                      onChange={(e) => setActiveHighlightTab(e.target.value)}
-                    >
-                      {highlightTabs.map(tab => (
-                        <option key={tab.id} value={tab.id}>
-                          {tab.label}
-                        </option>
-                      ))}
-                    </select>
-                    <ChevronDown className="dropdown-icon" size={18} />
-                  </div>
-                )}
               </div>
             );
           })}

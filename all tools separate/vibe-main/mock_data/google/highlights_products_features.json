@@ -1,0 +1,25 @@
+{
+  "content": "## Google Product and Feature Updates (Last 6-12 Months)\n\nGoogle's product development is centered around scaling multimodality through its Gemini models, integrating AI assistants cross-platform, and optimizing machine learning infrastructure.\n\n## New Product Launches\nGemini 1.5 Pro and Gemini 1.5 Flash were officially launched in mid-2024 to enhance long-context developer and enterprise operations.\n- Gemini 1.5 Pro: Supports up to 2 million token input processing with multimodality\n- Gemini 1.5 Flash: Offers high-speed, cost-efficient inference for high-frequency workflows\n- Imagen 3: Professional text-to-image engine with advanced brand-safe controls\n\n## Major Feature Updates\nGoogle Workspace received significant upgrades to embed conversational AI into daily operations.\n- Gemini Side Panel: Integrated directly inside Google Docs and Gmail in June 2024\n- Google Sheets Smart Fill: Automated data preparation pipelines launched in April 2024\n- Vertex AI Search: Grounding upgrades allowing zero-copy connections to internal data\n\n## Platform Enhancements\nIntroduced unified pricing for enterprise API tokens alongside commitment-based Vertex AI developer subscription discounts and multi-region data residency controls.\n\n## Product Deprecations\n- Google Universal Analytics end-of-support: July 2024\n- Legacy Google Play Movies retiring: January 2024\n\n## Regulatory Updates\nAddressed compliance requirements in accordance with the EU AI Act guidelines across all cloud deployments. No new regulatory concerns flagged this quarter.",
+  "sources": [
+    {
+      "title": "Google I/O 2024 Developer Announcements",
+      "url": "https://blog.google/technology/developers/",
+      "date": "2024-05-14"
+    },
+    {
+      "title": "Google Workspace Gemini Panel Release",
+      "url": "https://workspace.google.com/blog",
+      "date": "2024-06-25"
+    },
+    {
+      "title": "Google Cloud Vertex AI Platform Pricing",
+      "url": "https://cloud.google.com/blog",
+      "date": "2024-06-14"
+    },
+    {
+      "title": "EU AI Act Compliance and Google Cloud Roadmap",
+      "url": "https://cloud.google.com/security/compliance",
+      "date": "2024-08-01"
+    }
+  ]
+}

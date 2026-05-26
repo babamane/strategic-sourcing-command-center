@@ -1,0 +1,17 @@
+{
+  "content": "## Microsoft AI, Cloud, and Productivity Updates\n\nMicrosoft is scaling enterprise productivity by embedding Copilot throughout Microsoft 365, Windows, and GitHub, backed by its commercial Azure AI infrastructure.\n\n## Cloud Revenue & Market Position\nCloud revenue: $26.7B in Q3 FY24, up 21% YoY\nMarket share: 25% globally, maintaining a strong second place behind AWS\nKey growth driver: Azure AI services customer base growing to over 53,000 active accounts\n\n## AI Product Launches\n- Copilot for Microsoft 365: Generative assistant launched to over 10 million enterprise subscribers\n- GitHub Copilot Workspace: AI-native developer environment for complete code reviews\n- Phi-3: Family of open small language models optimized for local enterprise deployment\n\n## Productivity Updates\n- Copilot in Excel: Natural language data modeling and automatic pivot table generation\n- Microsoft Teams Intelligent Recap: Automatic meeting notes and action items deployed in June 2024\n- Windows 11 Copilot: System-level AI assistant available across 150 million compatible PCs\n\n## Enterprise Features\n- Azure OpenAI Service: Compliance certified under HIPAA and SOC 2 guidelines\n- Purview Copilot Integration: Automated data governance and compliance discovery\n- Strategic Partnership: Deployed unified commercial AI platforms under a multi-billion deal with Coca-Cola",
+  "sources": [
+    {
+      "title": "Microsoft Fiscal Year 2024 Third Quarter Earnings",
+      "url": "https://www.microsoft.com/en-us/investor"
+    },
+    {
+      "title": "Azure AI Enterprise Growth Metrics",
+      "url": "https://azure.microsoft.com/blog"
+    },
+    {
+      "title": "Microsoft 365 Copilot Adoption Index",
+      "url": "https://www.microsoft.com/en-us/worklab"
+    }
+  ]
+}

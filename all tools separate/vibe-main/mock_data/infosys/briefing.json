@@ -1,0 +1,16 @@
+{
+  "account_summary": {
+    "company_overview": "Infosys is a major global IT services vendor with strengths in digital transformation, cloud modernization, AI services, and managed delivery. It is well suited for enterprise modernization programs where governance and cost control are mature.",
+    "key_highlights": ["Strong global delivery and offshore scale.", "AI and cloud positioning through Topaz and Cobalt.", "Pricing leverage exists through competitive benchmarking."]
+  },
+  "business_performance": {
+    "strengths": ["Large skilled delivery base.", "Strong enterprise client relationships.", "Mature managed service and transformation capabilities."],
+    "challenges": ["Margin pressure can influence staffing and pricing behavior.", "Transformation scope must be tightly governed.", "Differentiation can overlap with peer IT services firms."]
+  },
+  "opportunities_risks": {
+    "opportunities": ["Application modernization and cloud migration.", "AI-led productivity improvements.", "Managed services consolidation."],
+    "risks": ["Scope creep and change-request costs.", "Insufficient automation commitments.", "Dependency on offshore delivery quality and governance."]
+  },
+  "recommended_actions": ["Benchmark against TCS, Wipro, Cognizant, and HCLTech.", "Negotiate productivity commitments into managed service contracts.", "Run a focused Topaz/Cobalt pilot before enterprise rollout."],
+  "financial_health": "Infosys is a large public IT services company with a mature operating model. For procurement, evaluate recent growth, margins, large-deal momentum, attrition, and cash generation."
+}

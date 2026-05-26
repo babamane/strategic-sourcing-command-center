@@ -1,0 +1,20 @@
+{
+  "content": "## Juniper Product and Feature Updates (Last 6-12 Months)\n\nJuniper's product development focuses on scaling its Mist AI networking engine to automate network maintenance and eliminate physical downtime.\n\n## New Product Launches\nJuniper launched automated network diagnostic simulators and campus architectures in early 2024.\n- Marvis Minis: Automated digital twin network troubleshooting simulator released in Q1 2024\n- AI-Native Campus Fabric: Cloud-based campus routing platform released in mid-2024\n- Mist Wireless Access Point AP45: Next-generation Wi-Fi 6E intelligent access point\n\n## Major Feature Updates\nImproved troubleshooting automation and optimized video diagnostic systems.\n- Marvis Conversational Assistant: Plain text network health queries deployed in January 2024\n- Marvis for Zoom: Telemetry data correlation to track meeting call drops released in March 2024\n- Mist Wired Assurance: Automated switch diagnostic updates deployed in March 2024\n\n## Platform Enhancements\nAchieved FedRAMP Moderate cloud authorization and bundled hardware switch purchases with Mist licensing subscriptions.\n\n## Product Deprecations\n- Juniper SRX Series branch firewalls end-of-sale planning: June 2024\n- Legacy Mist Classic dashboard interface retiring: December 2023\n\n## Regulatory Updates\nNo new regulatory concerns. All cloud network management portals conform to moderate security authorization standards.",
+  "sources": [
+    {
+      "title": "Juniper Networks Mist AI and Marvis Updates",
+      "url": "https://newsroom.juniper.net",
+      "date": "2024-01-10"
+    },
+    {
+      "title": "Juniper Networks Marvis Minis Launch Details",
+      "url": "https://newsroom.juniper.net",
+      "date": "2024-02-20"
+    },
+    {
+      "title": "HPE-Juniper Product Alignment and Integration News",
+      "url": "https://www.hpe.com/us/en/newsroom",
+      "date": "2024-03-15"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+    "content": "## Overview\nJuniper Networks reported quarterly revenue of $1.15B and an EPS of $0.29. The quarter was heavily influenced by the pending acquisition by Hewlett Packard Enterprise (HPE) and saw temporary pauses in enterprise spending, though AI-native networking solutions continued to show robust demand.\n\n## Key Takeaways\n- Total revenue of $1.15B, down 16% YoY due to customer inventory digestion\n- Enterprise revenue declined 8% YoY but remains the largest customer vertical\n- Software and related services revenue accounted for nearly 30% of total revenue\n- ARR (Annualized Recurring Revenue) grew steadily despite hardware headwinds\n\n## Highlights\n- Mist AI platform continued to see double-digit growth in new logo acquisitions\n- Deployed 400G and 800G AI data center solutions for major tier-1 cloud providers\n- Pending $14B acquisition by HPE remains on track to close by late 2024/early 2025\n\n## Investment Focus Areas\n- **Products**: Mist AI, Apstra data center automation, PTX Series routers\n- **AI & Cloud**: Expanding AI-Native Networking Platform capabilities\n- **Strategic Priorities**: Managing the transition to HPE and maintaining enterprise market share",
+    "sources": [
+        {
+            "title": "Juniper Networks Q1 2024 Financial Results",
+            "url": "https://investor.juniper.net",
+            "date": "April 2024"
+        }
+    ]
+}

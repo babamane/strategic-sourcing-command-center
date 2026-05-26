@@ -21,16 +21,20 @@ class VectorDBManager:
         if Config.LLM_PROVIDER == "google":
             # Use local model (embeddinggemma is gated, so we use MiniLM)
             from langchain_huggingface import HuggingFaceEmbeddings
+            os.environ.setdefault("HF_HUB_OFFLINE", "1")
             self.embeddings = HuggingFaceEmbeddings(
-                model_name="sentence-transformers/all-MiniLM-L6-v2"
+                model_name="sentence-transformers/all-MiniLM-L6-v2",
+                model_kwargs={"local_files_only": True},
             )
         elif Config.LLM_PROVIDER == "openai":
             self.embeddings = OpenAIEmbeddings(api_key=Config.OPENAI_API_KEY)
         else:
             # Fallback to local model
             from langchain_huggingface import HuggingFaceEmbeddings
+            os.environ.setdefault("HF_HUB_OFFLINE", "1")
             self.embeddings = HuggingFaceEmbeddings(
-                model_name="sentence-transformers/all-MiniLM-L6-v2"
+                model_name="sentence-transformers/all-MiniLM-L6-v2",
+                model_kwargs={"local_files_only": True},
             )
 
     # ---------------------------------------------------------------------

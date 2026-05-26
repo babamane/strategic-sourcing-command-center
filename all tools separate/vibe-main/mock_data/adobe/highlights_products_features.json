@@ -1,0 +1,25 @@
+{
+  "content": "## Adobe Product and Feature Updates (Last 6-12 Months)\n\nAdobe's strategy prioritizes deploying safe generative models within creative software tools to optimize production times while guaranteeing digital asset safety.\n\n## New Product Launches\nAdobe launched professional generative credit models and specialized text-to-vector engines in late 2023.\n- Firefly Vector Model: Industry first graphic design vector generator released in October 2023\n- Firefly Design Model: Custom templates engine launched in early 2024\n- Firefly Audio Model: Experimental sound effects editing environment announced in mid-2024\n\n## Major Feature Updates\nEmbedded generative capabilities into professional photo and layout software suites.\n- Photoshop Generative Fill: Deployed with three times faster processing speed in May 2024\n- Acrobat AI Assistant: Automated document summarization deployed to all users in April 2024\n- Illustrator Text to Vector: Seamless geometric design pipelines launched in November 2023\n\n## Platform Enhancements\nImplemented commercial credit billing systems across all plans alongside standard Content Credentials metadata for provenance tracking.\n\n## Product Deprecations\n- Adobe XD standalone sales discontinued: June 2023\n- Legacy Creative Cloud Synced files end-of-support: February 2024\n\n## Regulatory Updates\nNo new regulatory concerns. Adobe Firefly models are commercially safe and fully compliant with international IP standards.",
+  "sources": [
+    {
+      "title": "Adobe Max 2023 Product Keynote",
+      "url": "https://www.adobe.com/investor-relations.html",
+      "date": "2023-10-10"
+    },
+    {
+      "title": "Adobe Acrobat AI Assistant Commercial Launch",
+      "url": "https://news.adobe.com",
+      "date": "2024-04-15"
+    },
+    {
+      "title": "Creative Cloud Synced Files Deprecation Notice",
+      "url": "https://helpx.adobe.com",
+      "date": "2024-01-08"
+    },
+    {
+      "title": "Content Authenticity Initiative Provenance Tracking",
+      "url": "https://contentauthenticity.org",
+      "date": "2024-02-14"
+    }
+  ]
+}

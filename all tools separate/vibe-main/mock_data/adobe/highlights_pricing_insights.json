@@ -1,0 +1,20 @@
+{
+  "content": "## Adobe Pricing Updates\n\nAdobe has introduced generative credit consumption metrics alongside its subscription plans to limit heavy computing overhead from AI design generations.\n\n## Key Price Changes\n- Creative Cloud All Apps: 9% increase, $82.49 -> $89.99/user/month (effective November 2023)\n- Adobe Firefly Generative Credits: $4.99/100 credits add-on package (effective January 2024)\n- Photoshop Single App: 10% increase, $20.99 -> $22.99/user/month (effective November 2023)\n\n## Business Impact\n- Shifts enterprise budgets from flat creative fees to variable usage metrics\n- Increases annual creative suite licensing fees by approximately 8.5% across typical operations\n- Drives mid-market customer searches for alternative non-AI editing applications\n\n## What This Means\n- Track active enterprise credit consumption to prevent unexpected overage fees\n- Consolidate active Creative Cloud licenses down to essential users prior to contract renewal\n- Renegotiate bulk contract renewals by packaging credit bundles with core software licenses",
+  "sources": [
+    {
+      "title": "Adobe Creative Cloud Pricing Adjustments 2023",
+      "url": "https://www.adobe.com/investor-relations.html",
+      "date": "2023-09-14"
+    },
+    {
+      "title": "Firefly Generative Credits Subscription Details",
+      "url": "https://blog.adobe.com",
+      "date": "2023-11-01"
+    },
+    {
+      "title": "Photoshop Single App Price Modification Guide",
+      "url": "https://news.adobe.com",
+      "date": "2023-09-20"
+    }
+  ]
+}

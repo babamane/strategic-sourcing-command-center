@@ -1,0 +1,16 @@
+{
+  "account_summary": {
+    "company_overview": "Agivant is included as a demo profile for AI consulting and productivity automation. Treat this as placeholder vendor intelligence until verified company data is added.",
+    "key_highlights": ["Useful for AI pilot and automation demo scenarios.", "Requires reference validation and delivery due diligence.", "Contracts should be milestone and outcome oriented."]
+  },
+  "business_performance": {
+    "strengths": ["Focused AI implementation positioning.", "Potentially flexible delivery model.", "Suitable for proof-of-value engagements."],
+    "challenges": ["Limited public financial and leadership data in this demo profile.", "Delivery quality must be validated through references.", "Scope creep risk in AI implementation projects."]
+  },
+  "opportunities_risks": {
+    "opportunities": ["Run targeted productivity pilots.", "Automate document-heavy workflows.", "Create reusable internal AI assistants."],
+    "risks": ["Insufficient security controls for sensitive data.", "Unclear acceptance criteria.", "Dependency on custom implementation knowledge."]
+  },
+  "recommended_actions": ["Use Agivant for demo add-vendor validation.", "Request references and sample deliverables.", "Start with a fixed-scope pilot before broader rollout."],
+  "financial_health": "Public financial information is not included in this demo profile. Use references, project history, and contract protections for diligence."
+}

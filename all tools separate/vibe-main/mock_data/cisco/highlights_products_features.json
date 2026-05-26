@@ -1,0 +1,25 @@
+{
+  "content": "## Cisco Product and Feature Updates (Last 6-12 Months)\n\nCisco is focusing on integrating security operations post-Splunk and deploying AI assistants to simplify corporate network management.\n\n## New Product Launches\nCisco launched custom threat security platforms and intelligent low-bandwidth codecs in early 2024.\n- Cisco HyperShield: AI-native security shielding for data centers launched in April 2024\n- Cisco AI Assistant for Security: Plain text networking security generator released in Q1 2024\n- Webex AI Codec: Next-generation compression codec for ultra-low bandwidth calls\n\n## Major Feature Updates\nImproved observability pipelines and simplified video conference coordination tools.\n- Webex Meeting Recaps: Deployed automated multi-language meeting summarization in February 2024\n- Splunk Cloud Observability: Unified data ingestion linking network telemetry to security logs\n- ThousandEyes WAN Insights: Proactive traffic routing recommendation engine released in March 2024\n\n## Platform Enhancements\nUnified Cisco and Splunk commercial packages under consolidated enterprise licensing agreements.\n\n## Product Deprecations\n- Cisco Prime Infrastructure end-of-sale: June 2024\n- Legacy Webex Meetings desktop client version 42 end-of-support: March 2024\n\n## Regulatory Updates\nNo new regulatory concerns. Security systems fully conform to global NIS2 digital security requirements.",
+  "sources": [
+    {
+      "title": "Cisco HyperShield Launch Event",
+      "url": "https://newsroom.cisco.com",
+      "date": "2024-04-18"
+    },
+    {
+      "title": "Cisco Duo and Webex Product Enhancements 2024",
+      "url": "https://investor.cisco.com",
+      "date": "2024-02-05"
+    },
+    {
+      "title": "Webex AI Codec and Video Platform Release Guide",
+      "url": "https://blog.webex.com",
+      "date": "2024-01-30"
+    },
+    {
+      "title": "Cisco NIS2 Compliance and Security Guidance",
+      "url": "https://trustportal.cisco.com",
+      "date": "2024-05-12"
+    }
+  ]
+}

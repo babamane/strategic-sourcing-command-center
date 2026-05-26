@@ -10,8 +10,8 @@
 
 .app-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    border-color: #4a4d5a;
+    box-shadow: 0 1px 3px 0 rgba(60,64,67,0.3), 0 4px 8px 3px rgba(60,64,67,0.15);
+    border-color: #dadce0;
 }
 
 .card-image-wrapper {
@@ -110,7 +110,7 @@
 
 .card-description {
     font-size: 0.875rem;
-    color: #d0d0d0;
+    color: var(--text-secondary);
     margin-bottom: 1rem;
     line-height: 1.5;
     display: -webkit-box;
@@ -133,4 +133,5 @@
     color: var(--text-secondary);
     padding: 0.25rem 0.5rem;
     border-radius: 4px;
+    border: none;
 }

@@ -1,0 +1,15 @@
+{
+  "content": "## Salesforce Pricing Updates\n\nSalesforce has updated standard list prices across major cloud suites to offset the high developer research and development costs of autonomous AI agents.\n\n## Key Price Changes\n- Salesforce Sales Cloud Enterprise: 9% increase, $150.00 -> $165.00/user/month (effective August 2023)\n- Service Cloud Unlimited: 9% increase, $300.00 -> $325.00/user/month (effective August 2023)\n- Einstein Copilot Add-On: $50.00/user/month flat premium licensing (effective March 2024)\n\n## Business Impact\n- Represents the first major base license list price increase in seven years across core suites\n- Raises enterprise customer total cost of ownership across Customer 360 systems\n- Sets high entry margins for next-generation generative workflow pilots\n\n## What This Means\n- Review low-usage CRM seats for cancellation before next renewal cycle\n- Seek long-term multi-year price locks on base product offerings during contract discussions\n- Demand measurable ROI verification before rolling out the premium Einstein add-ons to workforce",
+  "sources": [
+    {
+      "title": "Salesforce Pricing Increases Across Core Clouds",
+      "url": "https://investor.salesforce.com",
+      "date": "2023-07-11"
+    },
+    {
+      "title": "Einstein Copilot Enterprise Licensing Launch",
+      "url": "https://www.salesforce.com/news",
+      "date": "2024-03-05"
+    }
+  ]
+}

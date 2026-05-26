@@ -1,0 +1,20 @@
+{
+  "content": "## Cisco Pricing Updates\n\nCisco is consolidating security and networking packages post-Splunk to offer highly-integrated unified enterprise licensing agreements.\n\n## Key Price Changes\n- Cisco Duo Advantage: 8% increase, $6.00 -> $6.50/user/month (effective March 2024)\n- Splunk Cloud Developer Tier: 12% price reduction on standard data ingestion rates (effective May 2024)\n- Webex Suite Enterprise Package: $11.95/user/month unified bundle pricing (effective February 2024)\n\n## Business Impact\n- Incentivizes consolidated platform buying over standalone point solutions across security stacks\n- Promotes rapid security scaling by simplifying user-based billing structures\n- Lowers data storage cost barriers for enterprise observability pipelines\n\n## What This Means\n- Leverage unified ELA agreements to bundle legacy Cisco products with newly acquired Splunk features\n- Transition standalone meeting software contracts to Cisco's cheaper unified suite where applicable\n- Baseline ELA commitments against historical telemetry usage to avoid paying for unused headroom",
+  "sources": [
+    {
+      "title": "Cisco Duo Multi-Factor Authentication Pricing Updates",
+      "url": "https://investor.cisco.com",
+      "date": "2024-01-20"
+    },
+    {
+      "title": "Splunk Ingestion Pricing Optimization Details",
+      "url": "https://newsroom.cisco.com",
+      "date": "2024-04-18"
+    },
+    {
+      "title": "Webex Unified Suite Launch And Bundling Rates",
+      "url": "https://blog.webex.com",
+      "date": "2024-02-05"
+    }
+  ]
+}
