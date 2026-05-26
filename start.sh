@@ -83,16 +83,16 @@ kill_port() {
   done
 }
 
-# ── Wait for TCP port ─────────────────────────────────────────────────────────
+# ── Wait for TCP port (netstat-based: works for IPv4 and IPv6) ───────────────
 wait_port() {
   local port="$1" label="$2" timeout="${3:-90}"
   local elapsed=0
   while (( elapsed < timeout )); do
-    if bash -c "echo >/dev/tcp/127.0.0.1/$port" 2>/dev/null; then
+    if netstat -ano 2>/dev/null | grep -q ":${port}[[:space:]].*LISTENING" 2>/dev/null; then
       ok "$label  →  http://localhost:$port"
       return 0
     fi
-    sleep 1; (( elapsed++ ))
+    sleep 2; (( elapsed += 2 ))
   done
   warn "$label not ready after ${timeout}s — check .logs/"
   return 1
@@ -142,11 +142,12 @@ for p in 3000 5000 5173 5174 7860 8000 8010 8020 8090 8501 8503 9001; do
 done
 echo ""
 
-# ── npm install for all frontends (once, skipped if already done) ─────────────
+# ── npm install for all frontends in parallel (skipped if already done) ──────
 banner "Checking frontend dependencies…"
-ensure_npm "$REPO/frontend"                                    "dashboard"
-ensure_npm "$TOOLS/vibe-main/frontend"                        "vibe"
-ensure_npm "$TOOLS/Saas_managment/frontend"                   "saas"
+ensure_npm "$REPO/frontend"                 "dashboard" &
+ensure_npm "$TOOLS/vibe-main/frontend"      "vibe"      &
+ensure_npm "$TOOLS/Saas_managment/frontend" "saas"      &
+wait   # block until all npm installs finish
 echo ""
 
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -181,13 +182,13 @@ start_service "vendor_risk" "$RISK_DIR" "$RISK_PY" backend.py
 VIBE_DIR="$TOOLS/vibe-main"
 VIBE_PY="$(resolve_python "$VIBE_DIR" "vibe_env")"
 start_service "vibe_backend"  "$VIBE_DIR"          "$VIBE_PY" -m uvicorn backend_api:app --host 0.0.0.0 --port 9001
-start_service "vibe_frontend" "$VIBE_DIR/frontend"  npm run dev -- --port 5173 --no-open
+start_service "vibe_frontend" "$VIBE_DIR/frontend"  npm run dev -- --port 5173 --host 0.0.0.0 --no-open
 
 # 6. SaaS Management (8010 + 5174)
 SAAS_DIR="$TOOLS/Saas_managment"
 SAAS_PY="$(resolve_python "$SAAS_DIR")"
-start_service "saas_api"      "$SAAS_DIR"          "$SAAS_PY" -m uvicorn api.main:app --host 127.0.0.1 --port 8010
-start_service "saas_frontend" "$SAAS_DIR/frontend"  npm run dev -- --port 5174 --no-open
+start_service "saas_api"      "$SAAS_DIR"          "$SAAS_PY" -m uvicorn api.main:app --host 0.0.0.0 --port 8010
+start_service "saas_frontend" "$SAAS_DIR/frontend"  npm run dev -- --port 5174 --host 0.0.0.0 --no-open
 
 # 7. Risk Intelligence (8020 + 8503)
 INTEL_DIR="$TOOLS/risk-intelligence-platform"
@@ -199,7 +200,7 @@ start_service "riskintel_streamlit" "$INTEL_DIR/streamlit_app" "$INTEL_PY" -m st
   --server.port 8503 --server.headless true
 
 # 8. Main Dashboard (3000)
-start_service "dashboard" "$REPO/frontend" npm run dev -- --port 3000 --no-open
+start_service "dashboard" "$REPO/frontend" npm run dev -- --port 3000 --host 0.0.0.0 --no-open
 
 # ── Wait for critical services ────────────────────────────────────────────────
 echo ""
