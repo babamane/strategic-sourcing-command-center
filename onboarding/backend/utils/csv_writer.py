@@ -95,12 +95,30 @@ def append_vendor_row(
     # Vendor display name — prefer discovery company name if available
     vendor = vendor_name.strip().title()
 
-    # SKU — use first product from discovery, or "API Platform", or generic
-    sku = "API Platform"
+    # SKU — build a meaningful label from discovery data
+    # Priority: product name + short description > product name > business_model > generic
+    sku = "Enterprise Platform"
     if discovery_data:
-        products = discovery_data.get("products") or []
+        products     = discovery_data.get("products") or []
+        descriptions = discovery_data.get("product_descriptions") or {}
+        biz_model    = (discovery_data.get("business_model") or "").strip()
+        mkt_segment  = (discovery_data.get("market_segment") or "").strip()
+
         if products:
-            sku = products[0][:40]  # cap length
+            primary = products[0].strip()
+            desc    = descriptions.get(primary, "")
+            # If description exists, extract a concise label (first 6 words max)
+            if desc:
+                short_desc = " ".join(desc.split()[:6]).rstrip(".,;:")
+                sku = f"{primary} — {short_desc}"
+            else:
+                sku = primary
+        elif biz_model and biz_model.lower() != "saas subscription":
+            sku = biz_model
+        elif mkt_segment:
+            sku = f"{mkt_segment} Suite"
+
+        sku = sku[:60]   # cap at 60 chars
 
     seat_type         = "Full"
     contract_group_id = _contract_group_id(vendor, sku)
