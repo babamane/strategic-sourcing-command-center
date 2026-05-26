@@ -15,12 +15,12 @@ import {
 // --- CONSTANTS & MOCK DATA ---
 
 const ACTIVE_AGENTS = [
-    { id: 'demand',   name: 'Spend Intelligence',    icon: TrendingUp,  color: 'text-blue-500',    bg: 'bg-blue-50',    pillar: '01 Demand Planning',           route: 'http://localhost:7860' },
+    { id: 'saas',     name: 'SaaS Health & Spend',   icon: Database,    color: 'text-blue-500',    bg: 'bg-blue-50',    pillar: '01 Overall SaaS Health',       route: 'http://localhost:5174' },
     { id: 'vendor',   name: 'Vendor Intelligence',   icon: Users,       color: 'text-amber-500',   bg: 'bg-amber-50',   pillar: '02 Supplier Sourcing',         route: 'http://localhost:5173' },
     { id: 'risk',     name: 'Risk Governance',       icon: ShieldAlert, color: 'text-emerald-500', bg: 'bg-emerald-50', pillar: '03 Risk & Compliance',         route: 'http://localhost:5000' },
     { id: 'contract', name: 'Contract Execution',    icon: FileText,    color: 'text-red-500',     bg: 'bg-red-50',     pillar: '04 Negotiation & Contracting', route: 'http://localhost:8501' },
-    { id: 'saas',     name: 'SaaS Management',       icon: Database,    color: 'text-purple-500',  bg: 'bg-purple-50',  pillar: '05 SaaS Spend & Renewals',    route: 'http://localhost:5174' },
-    { id: 'intel',    name: 'Risk Intelligence',     icon: Globe,       color: 'text-indigo-500',  bg: 'bg-indigo-50',  pillar: '06 Vendor Risk Intelligence',  route: 'http://localhost:8503' },
+    { id: 'intel',    name: 'Risk Intelligence',     icon: Globe,       color: 'text-indigo-500',  bg: 'bg-indigo-50',  pillar: '05 Vendor Risk Intelligence',  route: 'http://localhost:8503' },
+    { id: 'onboard',  name: 'Vendor Onboarding',     icon: Building2,   color: 'text-purple-500',  bg: 'bg-purple-50',  pillar: '06 Vendor Lifecycle',          route: 'onboarding' },
 ];
 
 const SENTINEL_ALERTS = [
@@ -1231,7 +1231,7 @@ const App = () => {
                                     {ACTIVE_AGENTS.map((agent) => {
                                         const AgentIcon = agent.icon;
                                         return (
-                                            <div key={agent.id} className="group relative bg-white p-10 rounded-[3rem] border border-slate-100 shadow-sm hover:shadow-2xl transition-all cursor-pointer" onClick={() => setView(agent.route)}>
+                                            <div key={agent.id} className="group relative bg-white p-10 rounded-[3rem] border border-slate-100 shadow-sm hover:shadow-2xl transition-all cursor-pointer" onClick={() => agent.route === 'onboarding' ? handleNewOnboarding() : setView(agent.route)}>
                                                 <div className="absolute top-8 right-10 flex space-x-2"><Radio size={14} className="text-emerald-500 animate-pulse" /></div>
                                                 <div className={`p-5 rounded-3xl shadow-inner mb-8 w-fit ${agent.bg} ${agent.color} shadow-lg transition-transform group-hover:rotate-6`}>
                                                     <AgentIcon size={40} />

@@ -137,7 +137,7 @@ echo -e "  ${GRAY}Python: $PYTHON${NC}\n"
 
 # ── Free ports ────────────────────────────────────────────────────────────────
 info "Clearing ports…"
-for p in 3000 5000 5173 5174 7860 8000 8010 8020 8090 8501 8503 9001; do
+for p in 3000 5000 5173 5174 8000 8010 8020 8090 8501 8503 9001; do
   kill_port "$p"
 done
 echo ""
@@ -167,12 +167,6 @@ start_service "cra_backend"   "$CRA_DIR" "$CRA_PY" -m uvicorn main:app --host 0.
 start_service "cra_dashboard" "$CRA_DIR" "$CRA_PY" -m streamlit run app_v9.py \
   --server.port 8501 --server.headless true
 
-# 3. SAFE (7860)
-SAFE_DIR="$TOOLS/safe_new_case"
-SAFE_PY="$(resolve_python "$SAFE_DIR" "safe")"
-start_service "safe" "$SAFE_DIR" "$SAFE_PY" app_v3.py
-
-# 4. Vendor Risk (5000)
 RISK_DIR="$TOOLS/vendor-risk-analyze"
 RISK_PY="$(resolve_python "$TOOLS" "sourcing_tool")"
 [[ "$RISK_PY" == *"sourcing_tool"* ]] || RISK_PY="$(resolve_python "$RISK_DIR")"
@@ -210,7 +204,6 @@ echo ""
 wait_port 8090 "Vendor Onboarding API    " 60
 wait_port 8000 "CRA Backend              " 60
 wait_port 8501 "CRA Dashboard            " 90
-wait_port 7860 "SAFE App                 " 90
 wait_port 5000 "Vendor Risk Analyzer     " 60
 wait_port 9001 "VIBE Backend             " 60
 wait_port 5173 "VIBE Frontend            " 120
@@ -233,7 +226,6 @@ echo -e "${CYAN}  ╠═══════════════════�
 echo -e "${CYAN}  ║${NC}  Vendor Onboarding API     http://localhost:8090/docs     ${CYAN}║${NC}"
 echo -e "${CYAN}  ║${NC}  CRA Backend               http://localhost:8000/docs     ${CYAN}║${NC}"
 echo -e "${CYAN}  ║${NC}  CRA Dashboard             http://localhost:8501          ${CYAN}║${NC}"
-echo -e "${CYAN}  ║${NC}  SAFE Forecasting          http://localhost:7860          ${CYAN}║${NC}"
 echo -e "${CYAN}  ║${NC}  Vendor Risk Analyzer      http://localhost:5000          ${CYAN}║${NC}"
 echo -e "${CYAN}  ║${NC}  VIBE Backend              http://localhost:9001/docs     ${CYAN}║${NC}"
 echo -e "${CYAN}  ║${NC}  VIBE Frontend             http://localhost:5173          ${CYAN}║${NC}"
