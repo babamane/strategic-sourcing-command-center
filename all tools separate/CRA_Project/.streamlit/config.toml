@@ -2,7 +2,14 @@
 headless = true
 enableCORS = false
 enableXsrfProtection = false
+maxUploadSize = 200
 
 [browser]
 serverAddress = "localhost"
 gatherUsageStats = false
+
+[theme]
+base = "light"
+
+[runner]
+fastReruns = true

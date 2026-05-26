@@ -58,6 +58,23 @@ def overview_chip_fn(history, session_id):
 # 🎨 CSS
 # -------------------------------
 css = """
+/* ── Fill the iframe viewport ── */
+html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 100% !important;
+    overflow: hidden !important;
+}
+.gradio-container {
+    max-width: 100% !important;
+    width: 100% !important;
+    min-height: 100vh !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+footer.svelte-1ax1toq, footer { display: none !important; }
+#component-0 > .gap, .gap { gap: 0 !important; }
+
 #float-btn {
     position: fixed !important;
     bottom: 25px !important;
@@ -150,8 +167,14 @@ with gr.Blocks() as demo:
     # --- Dashboard ---
 
     gr.HTML("""
-    <iframe src="https://public.tableau.com/views/SAFE_v3/SAFE?:embed=true&:showVizHome=no&:toolbar=no"
-            width="100%" height="800" frameborder="0"></iframe>
+    <style>
+      #tableau-wrap { position: relative; width: 100%; height: calc(100vh - 8px); }
+      #tableau-wrap iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+    </style>
+    <div id="tableau-wrap">
+      <iframe src="https://public.tableau.com/views/SAFE_v3/SAFE?:embed=true&:showVizHome=no&:toolbar=no"
+              allowfullscreen></iframe>
+    </div>
     """)
 
     # --- Floating button ---

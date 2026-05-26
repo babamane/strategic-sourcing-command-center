@@ -96,18 +96,18 @@ const MISSIONS = {
 // --- UNIVERSAL SHARED COMPONENTS ---
 
 const AppHeader = ({ title, subtitle, icon: Icon, colorClass, onBack }) => (
-    <header className="h-20 bg-white border-b border-slate-200 px-8 flex items-center justify-between sticky top-0 z-10">
-        <div className="flex items-center space-x-6">
-            <button onClick={onBack} className="p-3 hover:bg-slate-100 rounded-2xl transition-colors text-slate-400 hover:text-slate-900 flex items-center space-x-2 group">
-                <ArrowLeft size={20} />
-                <span className="text-xs font-black uppercase tracking-widest hidden md:block">Back to Strategic Sourcing Command Center</span>
+    <header className="h-12 bg-white border-b border-slate-200 px-4 flex items-center justify-between flex-shrink-0 z-10">
+        <div className="flex items-center space-x-3">
+            <button onClick={onBack} className="p-2 hover:bg-slate-100 rounded-xl transition-colors text-slate-400 hover:text-slate-900 flex items-center space-x-2 group">
+                <ArrowLeft size={16} />
+                <span className="text-[10px] font-black uppercase tracking-widest hidden md:block">Back to Strategic Sourcing Command Center</span>
             </button>
-            <div className="h-8 w-px bg-slate-100 mx-2"></div>
-            <div className="flex items-center space-x-3">
-                <div className={`p-2.5 ${colorClass} text-white rounded-xl shadow-lg`}><Icon size={24} /></div>
+            <div className="h-5 w-px bg-slate-200"></div>
+            <div className="flex items-center space-x-2">
+                <div className={`p-1.5 ${colorClass} text-white rounded-lg shadow`}><Icon size={16} /></div>
                 <div>
-                    <h1 className="text-xl font-black text-slate-800 tracking-tight leading-none">{title}</h1>
-                    <p className="text-[10px] font-black opacity-50 uppercase tracking-widest mt-1">{subtitle}</p>
+                    <h1 className="text-sm font-black text-slate-800 tracking-tight leading-none">{title}</h1>
+                    <p className="text-[9px] font-black opacity-40 uppercase tracking-widest">{subtitle}</p>
                 </div>
             </div>
         </div>
@@ -129,11 +129,15 @@ const StatCard = ({ title, value, subValue, trend, colorClass = "text-slate-800"
 );
 
 const IframeApp = ({ title, subtitle, icon: Icon, colorClass, url, onBack }) => (
-    <div className="min-h-screen bg-slate-50 flex flex-col animate-in fade-in duration-500 w-full h-screen absolute top-0 left-0 z-50">
+    <div className="flex flex-col w-screen h-screen overflow-hidden absolute top-0 left-0 z-50 bg-white">
         <AppHeader title={title} subtitle={subtitle} icon={Icon} colorClass={colorClass} onBack={onBack} />
-        <main className="flex-1 w-full bg-white relative">
-            <iframe src={url} className="w-full h-full border-0 absolute inset-0" title={title} allowFullScreen />
-        </main>
+        <iframe
+            src={url}
+            className="flex-1 w-full border-0 block"
+            title={title}
+            allowFullScreen
+            style={{ minHeight: 0 }}
+        />
     </div>
 );
 
