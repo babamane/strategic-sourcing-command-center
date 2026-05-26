@@ -92,7 +92,7 @@ wait_port() {
       ok "$label  →  http://localhost:$port"
       return 0
     fi
-    sleep 2; (( elapsed += 2 ))
+    sleep 1; (( elapsed++ ))
   done
   warn "$label not ready after ${timeout}s — check .logs/"
   return 1
@@ -153,11 +153,10 @@ echo ""
 # ═══════════════════════════════════════════════════════════════════════════════
 banner "Starting services…"
 
-# 1. Vendor Onboarding (8090)
+# 1. Vendor Onboarding (8090) — run migration in background, start API immediately
 ONBOARD_DIR="$REPO/onboarding"
 ONBOARD_PY="$(resolve_python "$ONBOARD_DIR")"
-info "[1] DB migration…"
-(cd "$ONBOARD_DIR" && "$ONBOARD_PY" migrations/init_db.py >> "$LOGS/onboarding_migration.log" 2>&1) || true
+(cd "$ONBOARD_DIR" && "$ONBOARD_PY" migrations/init_db.py >> "$LOGS/onboarding_migration.log" 2>&1) &
 start_service "onboarding" "$ONBOARD_DIR" \
   "$ONBOARD_PY" -m uvicorn backend.main:app --host 0.0.0.0 --port 8090
 
@@ -193,8 +192,9 @@ start_service "saas_frontend" "$SAAS_DIR/frontend"  npm run dev -- --port 5174 -
 # 7. Risk Intelligence (8020 + 8503)
 INTEL_DIR="$TOOLS/risk-intelligence-platform"
 INTEL_PY="$(resolve_python "$INTEL_DIR")"
-# Ensure fpdf2 is installed (required by streamlit app)
-"$INTEL_PY" -m pip install fpdf2 --quiet >> "$LOGS/riskintel_deps.log" 2>&1 || true
+# Install fpdf2 only if missing (skip if already installed — saves 10-30s)
+"$INTEL_PY" -c "import fpdf" 2>/dev/null || \
+  "$INTEL_PY" -m pip install fpdf2 --quiet >> "$LOGS/riskintel_deps.log" 2>&1 || true
 start_service "riskintel_api"       "$INTEL_DIR/backend"       "$INTEL_PY" -m uvicorn main:app --host 0.0.0.0 --port 8020
 start_service "riskintel_streamlit" "$INTEL_DIR/streamlit_app" "$INTEL_PY" -m streamlit run app.py \
   --server.port 8503 --server.headless true
