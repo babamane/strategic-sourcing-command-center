@@ -15,10 +15,12 @@ import {
 // --- CONSTANTS & MOCK DATA ---
 
 const ACTIVE_AGENTS = [
-    { id: 'demand', name: 'Spend Intelligence', icon: TrendingUp, color: 'text-blue-500', bg: 'bg-blue-50', pillar: '01 Demand Planning', route: 'http://localhost:7860' },
-    { id: 'vendor', name: 'Vendor Intelligence', icon: Users, color: 'text-amber-500', bg: 'bg-amber-50', pillar: '02 Supplier Sourcing', route: 'http://localhost:5173' },
-    { id: 'risk', name: 'Risk Governance', icon: ShieldAlert, color: 'text-emerald-500', bg: 'bg-emerald-50', pillar: '03 Risk & Compliance', route: 'http://localhost:5000' },
-    { id: 'contract', name: 'Contract Execution', icon: FileText, color: 'text-red-500', bg: 'bg-red-50', pillar: '04 Negotiation & Contracting', route: 'http://localhost:8501' },
+    { id: 'demand',   name: 'Spend Intelligence',    icon: TrendingUp,  color: 'text-blue-500',    bg: 'bg-blue-50',    pillar: '01 Demand Planning',           route: 'http://localhost:7860' },
+    { id: 'vendor',   name: 'Vendor Intelligence',   icon: Users,       color: 'text-amber-500',   bg: 'bg-amber-50',   pillar: '02 Supplier Sourcing',         route: 'http://localhost:5173' },
+    { id: 'risk',     name: 'Risk Governance',       icon: ShieldAlert, color: 'text-emerald-500', bg: 'bg-emerald-50', pillar: '03 Risk & Compliance',         route: 'http://localhost:5000' },
+    { id: 'contract', name: 'Contract Execution',    icon: FileText,    color: 'text-red-500',     bg: 'bg-red-50',     pillar: '04 Negotiation & Contracting', route: 'http://localhost:8501' },
+    { id: 'saas',     name: 'SaaS Management',       icon: Database,    color: 'text-purple-500',  bg: 'bg-purple-50',  pillar: '05 SaaS Spend & Renewals',    route: 'http://localhost:5174' },
+    { id: 'intel',    name: 'Risk Intelligence',     icon: Globe,       color: 'text-indigo-500',  bg: 'bg-indigo-50',  pillar: '06 Vendor Risk Intelligence',  route: 'http://localhost:8503' },
 ];
 
 const SENTINEL_ALERTS = [
@@ -1225,7 +1227,7 @@ const App = () => {
                                     </div>
                                 </header>
 
-                                <div className="grid grid-cols-2 gap-6 pb-20">
+                                <div className="grid grid-cols-3 gap-6 pb-20">
                                     {ACTIVE_AGENTS.map((agent) => {
                                         const AgentIcon = agent.icon;
                                         return (
