@@ -373,7 +373,7 @@ if run_analysis:
         try:
             # Domain and Ticker are resolved dynamically on the backend
             response = requests.post(
-                "http://127.0.0.1:8000/analyze",
+                "http://127.0.0.1:8020/analyze",
                 json={
                     "company_name": company_name,
                     "services": services,

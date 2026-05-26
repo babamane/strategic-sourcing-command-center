@@ -36,7 +36,13 @@ DATA_DIR         = os.getenv("DATA_DIR", "data")
 STATE_FILE       = os.path.join(DATA_DIR, "agent_state.json")
 TRIGGER_LOG_FILE = os.path.join(DATA_DIR, "trigger_log.json")
 EMAIL_STATE_FILE = os.path.join(DATA_DIR, "email_state.json")
-CSV_FILE         = os.path.join(DATA_DIR, "merged_dataset_FINAL_fabricated_1341_util_adjusted.csv")
+_CSV_CANDIDATES  = [
+    os.path.join(DATA_DIR, "renewal_drafts", "merged_dataset_FINAL_fabricated_1341_util_adjusted.csv"),
+    os.path.join(DATA_DIR, "merged_dataset_FINAL_fabricated_1341_util_adjusted.csv"),
+    os.path.join(DATA_DIR, "renewal_drafts", "merged_dataset_FINAL_fabricated_1341_util1_adjusted.csv"),
+    os.path.join(DATA_DIR, "merged_dataset_FINAL_fabricated_1341_util1_adjusted.csv"),
+]
+CSV_FILE         = next((p for p in _CSV_CANDIDATES if os.path.exists(p)), _CSV_CANDIDATES[0])
 BACKEND_URL      = os.getenv("BASE_URL", "http://localhost:8001")
 FONT             = "'Inter','Segoe UI',system-ui,sans-serif"
 
@@ -269,7 +275,7 @@ section[data-testid="stSidebar"],[data-testid="stHeader"],footer,#MainMenu{{disp
 .vf-topbar{{background:{t['card']}dd;border-bottom:1px solid {t['border']};
   backdrop-filter:blur(16px);padding:.7rem 1.6rem;
   display:flex;align-items:center;justify-content:space-between;
-  position:sticky;top:0;z-index:100;}}
+  position:relative;z-index:100;}}
 .vf-topbar-title{{font-size:1rem;font-weight:700;color:{t['text']};margin:0;}}
 .vf-topbar-sub{{font-size:.66rem;color:{t['muted']};margin:1px 0 0;}}
 

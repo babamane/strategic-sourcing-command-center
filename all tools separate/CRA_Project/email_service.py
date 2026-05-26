@@ -28,7 +28,15 @@ load_dotenv()
 
 # ── Paths ──────────────────────────────────────────────────────────────────────
 DATA_DIR         = os.getenv("DATA_DIR", "data")
-CSV_FILE         = os.path.join(DATA_DIR, "merged_dataset_FINAL_fabricated_1341_util_adjusted.csv")
+# CSV lives in the renewal_drafts subfolder
+_CSV_CANDIDATES = [
+    os.path.join(DATA_DIR, "renewal_drafts", "merged_dataset_FINAL_fabricated_1341_util_adjusted.csv"),
+    os.path.join(DATA_DIR, "merged_dataset_FINAL_fabricated_1341_util_adjusted.csv"),
+    os.path.join(DATA_DIR, "renewal_drafts", "merged_dataset_FINAL_fabricated_1341_util1_adjusted.csv"),
+    os.path.join(DATA_DIR, "merged_dataset_FINAL_fabricated_1341_util1_adjusted.csv"),
+]
+CSV_FILE = next((p for p in _CSV_CANDIDATES if os.path.exists(p)),
+                _CSV_CANDIDATES[0])  # fallback keeps original behaviour
 EMAIL_STATE_FILE = os.path.join(DATA_DIR, "email_state.json")
 TRIGGER_LOG_FILE = os.path.join(DATA_DIR, "trigger_log.json")
 ROTATION_STATE_FILE = os.path.join(DATA_DIR, "rotation_state.json")

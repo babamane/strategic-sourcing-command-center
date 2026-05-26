@@ -698,10 +698,28 @@ def build_context(intent: str, vendor: str, months: list, splits: list = None) -
 # 🤖 GEMINI / OLLAMA RESPONSE
 # -------------------------------
 def get_gemini_response(user_message: str, history: list, db_context: str) -> str:
-    llm = ChatOllama(
-        model="gemma2:9b",
-        temperature=0.2,
-    )
+    # Try Ollama first; fall back to Gemini if Ollama isn't running
+    llm = None
+    try:
+        import requests as _req
+        _req.get("http://localhost:11434/api/tags", timeout=2)   # quick health check
+        llm = ChatOllama(model="gemma2:9b", temperature=0.2)
+    except Exception:
+        pass
+
+    if llm is None and GEMINI_API_KEY:
+        try:
+            llm = ChatGoogleGenerativeAI(
+                model="gemini-1.5-flash",
+                google_api_key=GEMINI_API_KEY,
+                temperature=0.2,
+            )
+        except Exception:
+            pass
+
+    if llm is None:
+        return ("⚠️ AI backend unavailable. "
+                "Please start Ollama (`ollama serve`) or set GEMINI_API_KEY in the .env file.")
 
     system_prompt = f"""You are SAFE AI, an intelligent assistant for the Software Assets Forecasting Engine (SAFE) dashboard.
 You help procurement and IT teams understand SaaS license costs, renewals, forecasts, and at-risk users.
