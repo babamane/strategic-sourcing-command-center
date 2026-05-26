@@ -242,4 +242,4 @@ with gr.Blocks() as demo:
 
 # --- Launch ---
 
-demo.launch(inbrowser=False, css=css)
+demo.launch(inbrowser=False, css=css, server_port=7860, server_name="127.0.0.1")

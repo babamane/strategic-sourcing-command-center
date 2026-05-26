@@ -396,3 +396,4 @@ V3-OF-130,Nexaflow,Mobile Access,Collaborator,NXF-MA-COLL-EXP1,250,2.35,01-10-20
 V3-OF-131,Nexaflow,Mobile Access,Collaborator,NXF-MA-COLL-EXP1,270,2.35,01-04-2025,01-04-2026,31-01-2026,TRUE,TRUE,snapshot,superseded,V3-OF-130,renewal,0,1020
 V3-OF-132,Nexaflow,Mobile Access,Collaborator,NXF-MA-COLL-EXP1,350,2.35,01-04-2026,01-04-2027,02-03-2027,TRUE,FALSE,snapshot,active,V3-OF-131,upsell,80,1020
 V3-OF-133,Open Ai,GPT-4o,Full,OPEAI-GPT-BASE,0,0,26-05-2026,15-05-2028,16-03-2028,TRUE,FALSE,snapshot,active,,new,0,0
+V3-OF-134,Open Ai,GPT-4o,Full,OPEAI-GPT-BASE,0,0,26-05-2026,15-05-2028,16-03-2028,TRUE,FALSE,snapshot,active,,new,0,0

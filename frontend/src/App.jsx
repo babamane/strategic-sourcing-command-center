@@ -15,12 +15,12 @@ import {
 // --- CONSTANTS & MOCK DATA ---
 
 const ACTIVE_AGENTS = [
-    { id: 'saas',     name: 'SaaS Health & Spend',   icon: Database,    color: 'text-blue-500',    bg: 'bg-blue-50',    pillar: '01 Overall SaaS Health',       route: 'http://localhost:5174' },
-    { id: 'vendor',   name: 'Vendor Intelligence',   icon: Users,       color: 'text-amber-500',   bg: 'bg-amber-50',   pillar: '02 Supplier Sourcing',         route: 'http://localhost:5173' },
-    { id: 'risk',     name: 'Risk Governance',       icon: ShieldAlert, color: 'text-emerald-500', bg: 'bg-emerald-50', pillar: '03 Risk & Compliance',         route: 'http://localhost:5000' },
+    { id: 'onboard',  name: 'Vendor Onboarding',     icon: Building2,   color: 'text-purple-500',  bg: 'bg-purple-50',  pillar: '01 Vendor Lifecycle',          route: 'onboarding' },
+    { id: 'spend',    name: 'Spend Analytics',        icon: PieChart,    color: 'text-blue-500',    bg: 'bg-blue-50',    pillar: '02 Demand & Spend Planning',   route: 'http://localhost:7860' },
+    { id: 'vendor',   name: 'Vendor Intelligence',   icon: Users,       color: 'text-amber-500',   bg: 'bg-amber-50',   pillar: '03 Supplier Sourcing',         route: 'http://localhost:5173' },
     { id: 'contract', name: 'Contract Execution',    icon: FileText,    color: 'text-red-500',     bg: 'bg-red-50',     pillar: '04 Negotiation & Contracting', route: 'http://localhost:8501' },
     { id: 'intel',    name: 'Risk Intelligence',     icon: Globe,       color: 'text-indigo-500',  bg: 'bg-indigo-50',  pillar: '05 Vendor Risk Intelligence',  route: 'http://localhost:8503' },
-    { id: 'onboard',  name: 'Vendor Onboarding',     icon: Building2,   color: 'text-purple-500',  bg: 'bg-purple-50',  pillar: '06 Vendor Lifecycle',          route: 'onboarding' },
+    { id: 'saas',     name: 'SaaS Management',       icon: Database,    color: 'text-emerald-500', bg: 'bg-emerald-50', pillar: '06 Overall SaaS Health',       route: 'http://localhost:5174' },
 ];
 
 const SENTINEL_ALERTS = [
@@ -1208,10 +1208,12 @@ const App = () => {
 
                         <div className="flex-1 space-y-6">
                             <h2 className="text-[11px] font-black text-slate-400 uppercase tracking-[0.2em] px-1">Mission Controller</h2>
-                            <div onClick={handleNewOnboarding} className={`p-5 rounded-3xl border transition-all cursor-pointer bg-white ${activeMissionKey === 'onboarding' ? 'border-amber-400 ring-4 ring-amber-50 shadow-xl' : 'border-slate-100 hover:border-slate-300'}`}>
-                                <div className="flex justify-between items-center mb-2"><span className="text-[10px] font-black text-amber-500 uppercase tracking-[0.1em]">New Onboarding</span><Plus size={18} className="text-amber-500" /></div>
-                                <h3 className="text-sm font-black text-slate-800">Launch Lifecycle Discovery</h3>
-                            </div>
+                            {SENTINEL_ALERTS.map(alert => (
+                                <div key={`mc-${alert.id}`} onClick={() => handleAlertClick(alert)} className={`p-5 rounded-3xl border transition-all cursor-pointer bg-white ${activeMissionKey === alert.id ? 'border-blue-400 ring-4 ring-blue-50 shadow-xl' : 'border-slate-100 hover:border-slate-300'}`}>
+                                    <div className="flex justify-between items-center mb-2"><span className={`text-[10px] font-black uppercase tracking-[0.1em] ${alert.color}`}>{alert.agent}</span><ChevronRight size={14} className="text-slate-300" /></div>
+                                    <h3 className="text-sm font-black text-slate-800">{alert.msg}</h3>
+                                </div>
+                            ))}
                         </div>
                     </section>
 

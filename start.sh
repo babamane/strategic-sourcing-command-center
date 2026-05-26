@@ -137,7 +137,7 @@ echo -e "  ${GRAY}Python: $PYTHON${NC}\n"
 
 # ── Free ports ────────────────────────────────────────────────────────────────
 info "Clearing ports…"
-for p in 3000 5000 5173 5174 8000 8010 8020 8090 8501 8503 9001; do
+for p in 3000 5000 5173 5174 7860 8000 8010 8020 8090 8501 8503 9001; do
   kill_port "$p"
 done
 echo ""
@@ -160,7 +160,12 @@ info "[1] DB migration…"
 start_service "onboarding" "$ONBOARD_DIR" \
   "$ONBOARD_PY" -m uvicorn backend.main:app --host 0.0.0.0 --port 8090
 
-# 2. CRA Project — Contract Renewal Agent (8000 + 8501)
+# 2. SAFE — Spend Analytics / Demand Planning (7860)
+SAFE_DIR="$TOOLS/safe_new_case"
+SAFE_PY="$(resolve_python "$SAFE_DIR")"
+start_service "safe_spend" "$SAFE_DIR" "$SAFE_PY" app_v3.py
+
+# 3. CRA Project — Contract Renewal Agent (8000 + 8501)
 CRA_DIR="$TOOLS/CRA_Project"
 CRA_PY="$(resolve_python "$CRA_DIR" "cra_env")"
 start_service "cra_backend"   "$CRA_DIR" "$CRA_PY" -m uvicorn main:app --host 0.0.0.0 --port 8000
@@ -202,6 +207,7 @@ banner "Waiting for services…"
 echo ""
 
 wait_port 8090 "Vendor Onboarding API    " 60
+wait_port 7860 "Spend Analytics (SAFE)   " 90
 wait_port 8000 "CRA Backend              " 60
 wait_port 8501 "CRA Dashboard            " 90
 wait_port 5000 "Vendor Risk Analyzer     " 60
@@ -224,6 +230,7 @@ echo -e "${CYAN}${BOLD}  ╠═════════════════�
 echo -e "${CYAN}  ║${NC}  ${BOLD}Main Dashboard${NC}            http://localhost:3000          ${CYAN}║${NC}"
 echo -e "${CYAN}  ╠══════════════════════════════════════════════════════════╣${NC}"
 echo -e "${CYAN}  ║${NC}  Vendor Onboarding API     http://localhost:8090/docs     ${CYAN}║${NC}"
+echo -e "${CYAN}  ║${NC}  Spend Analytics (SAFE)    http://localhost:7860          ${CYAN}║${NC}"
 echo -e "${CYAN}  ║${NC}  CRA Backend               http://localhost:8000/docs     ${CYAN}║${NC}"
 echo -e "${CYAN}  ║${NC}  CRA Dashboard             http://localhost:8501          ${CYAN}║${NC}"
 echo -e "${CYAN}  ║${NC}  Vendor Risk Analyzer      http://localhost:5000          ${CYAN}║${NC}"
