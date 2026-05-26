@@ -180,13 +180,13 @@ start_service "vendor_risk" "$RISK_DIR" "$RISK_PY" backend.py
 VIBE_DIR="$TOOLS/vibe-main"
 VIBE_PY="$(resolve_python "$VIBE_DIR" "vibe_env")"
 start_service "vibe_backend"  "$VIBE_DIR"          "$VIBE_PY" -m uvicorn backend_api:app --host 0.0.0.0 --port 9001
-start_service "vibe_frontend" "$VIBE_DIR/frontend"  npm run dev -- --port 5173 --open false
+start_service "vibe_frontend" "$VIBE_DIR/frontend"  npm run dev -- --port 5173 --no-open
 
 # 6. SaaS Management (8010 + 5174)
 SAAS_DIR="$TOOLS/Saas_managment"
 SAAS_PY="$(resolve_python "$SAAS_DIR")"
 start_service "saas_api"      "$SAAS_DIR"          "$SAAS_PY" -m uvicorn api.main:app --host 127.0.0.1 --port 8010
-start_service "saas_frontend" "$SAAS_DIR/frontend"  npm run dev -- --port 5174 --open false
+start_service "saas_frontend" "$SAAS_DIR/frontend"  npm run dev -- --port 5174 --no-open
 
 # 7. Risk Intelligence (8020 + 8503)
 INTEL_DIR="$TOOLS/risk-intelligence-platform"
@@ -196,7 +196,7 @@ start_service "riskintel_streamlit" "$INTEL_DIR/streamlit_app" "$INTEL_PY" -m st
   --server.port 8503 --server.headless true
 
 # 8. Main Dashboard (3000)
-start_service "dashboard" "$REPO/frontend" npm run dev -- --port 3000 --open false
+start_service "dashboard" "$REPO/frontend" npm run dev -- --port 3000 --no-open
 
 # ── Wait for critical services ────────────────────────────────────────────────
 echo ""
