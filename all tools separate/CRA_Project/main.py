@@ -15,6 +15,7 @@ import json
 import pandas as pd
 from fastapi import FastAPI, Request, HTTPException
 from fastapi.responses import JSONResponse
+from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
 from dotenv import load_dotenv
 
@@ -39,6 +40,13 @@ app = FastAPI(
     title="VendorFlow AI — Contract Renewal Agent",
     description="CRA orchestration backend: triggers, stage transitions, status API.",
     version="3.0.0",
+)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 agent = ContractAgent()
