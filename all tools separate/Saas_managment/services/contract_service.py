@@ -117,15 +117,13 @@ def get_entitlement(vendor: Optional[str] = None, version: Optional[int] = None)
                 for row in connection.execute(query, params).fetchall()
             )
             if row.get("vendor") and row.get("sku") and row.get("seat_type")
+            and row.get("effective_total_seats", 0) > 0   # skip zero-seat rows
         ]
     finally:
         connection.close()
 
     _validate_dedup(rows)
-    if rows:
-        if any(row["effective_total_seats"] <= 0 for row in rows):
-            raise ValueError("effective_total_seats must be positive")
-    elif vendor is None:
+    if not rows and vendor is None:
         raise DataNotReadyError("No active entitlement rows are available.")
     return [
         {

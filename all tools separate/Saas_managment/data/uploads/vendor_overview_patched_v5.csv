@@ -1,399 +1,399 @@
-of_id,vendor,sku,seat_type,contract_group_id,contracted_seats,unit_price,contract_start,contract_expiry,notice_deadline,auto_renewal,true_down_rights,measurement_method,contract_status,predecessor_of_id,contract_event_type,seat_delta,effective_total_seats
-V1-OF-001,Atlassify,Project Suite,Full,ATL-PS-BASE,75,24,01-01-2020,01-01-2021,02-11-2020,TRUE,FALSE,peak,superseded,,new,75,155
-V1-OF-002,Atlassify,Project Suite,Full,ATL-PS-BASE,75,26.6,01-01-2021,01-01-2022,02-12-2021,TRUE,FALSE,peak,superseded,V1-OF-001,renewal,0,155
-V1-OF-003,Atlassify,Project Suite,Full,ATL-PS-BASE,75,26.6,01-01-2022,01-07-2022,02-04-2022,TRUE,FALSE,peak,superseded,V1-OF-002,renewal,0,155
-V1-OF-004,Atlassify,Project Suite,Full,ATL-PS-BASE,75,26.6,01-07-2022,01-01-2023,03-10-2022,TRUE,TRUE,peak,superseded,V1-OF-003,renewal,0,155
-V1-OF-005,Atlassify,Project Suite,Full,ATL-PS-BASE,65,26.6,01-01-2023,01-01-2024,02-11-2023,FALSE,TRUE,peak,superseded,V1-OF-004,renewal,0,155
-V1-OF-006,Atlassify,Project Suite,Full,ATL-PS-BASE,75,26.6,01-01-2024,01-01-2025,02-12-2024,TRUE,FALSE,peak,superseded,V1-OF-005,upsell,10,155
-V1-OF-007,Atlassify,Project Suite,Full,ATL-PS-BASE,80,26.85,01-01-2025,01-01-2026,03-10-2025,FALSE,FALSE,peak,superseded,V1-OF-006,renewal,0,155
-V1-OF-008,Atlassify,Project Suite,Full,ATL-PS-BASE,85,26.85,01-01-2026,01-01-2027,03-10-2026,TRUE,TRUE,peak,active,V1-OF-007,renewal,0,155
-V1-OF-001,Atlassify,Project Suite,Contributor,ATL-PS-BASE,130,9.9,01-01-2020,01-01-2021,02-11-2020,TRUE,FALSE,peak,superseded,,new,130,375
-V1-OF-002,Atlassify,Project Suite,Contributor,ATL-PS-BASE,145,10.77,01-01-2021,01-01-2022,02-12-2021,FALSE,TRUE,peak,superseded,V1-OF-001,renewal,0,375
-V1-OF-003,Atlassify,Project Suite,Contributor,ATL-PS-BASE,180,10.77,01-01-2022,01-07-2022,02-04-2022,TRUE,FALSE,peak,superseded,V1-OF-002,upsell,35,375
-V1-OF-004,Atlassify,Project Suite,Contributor,ATL-PS-BASE,185,10.77,01-07-2022,01-01-2023,03-10-2022,FALSE,FALSE,peak,superseded,V1-OF-003,renewal,0,375
-V1-OF-005,Atlassify,Project Suite,Contributor,ATL-PS-BASE,195,10.77,01-01-2023,01-01-2024,02-11-2023,TRUE,FALSE,peak,superseded,V1-OF-004,renewal,0,375
-V1-OF-006,Atlassify,Project Suite,Contributor,ATL-PS-BASE,200,10.77,01-01-2024,01-01-2025,02-12-2024,FALSE,TRUE,peak,superseded,V1-OF-005,renewal,0,375
-V1-OF-007,Atlassify,Project Suite,Contributor,ATL-PS-BASE,240,10.77,01-01-2025,01-01-2026,03-10-2025,FALSE,FALSE,peak,superseded,V1-OF-006,upsell,40,375
-V1-OF-008,Atlassify,Project Suite,Contributor,ATL-PS-BASE,240,10.77,01-01-2026,01-01-2027,03-10-2026,FALSE,TRUE,peak,active,V1-OF-007,renewal,0,375
-V1-OF-001,Atlassify,Project Suite,Collaborator,ATL-PS-BASE,320,2.25,01-01-2020,01-01-2021,02-11-2020,FALSE,FALSE,peak,superseded,,new,320,1240
-V1-OF-002,Atlassify,Project Suite,Collaborator,ATL-PS-BASE,350,2.32,01-01-2021,01-01-2022,02-12-2021,FALSE,FALSE,peak,superseded,V1-OF-001,renewal,0,1240
-V1-OF-003,Atlassify,Project Suite,Collaborator,ATL-PS-BASE,360,2.45,01-01-2022,01-07-2022,02-04-2022,TRUE,TRUE,peak,superseded,V1-OF-002,renewal,0,1240
-V1-OF-004,Atlassify,Project Suite,Collaborator,ATL-PS-BASE,400,2.45,01-07-2022,01-01-2023,03-10-2022,TRUE,TRUE,peak,superseded,V1-OF-003,renewal,0,1240
-V1-OF-005,Atlassify,Project Suite,Collaborator,ATL-PS-BASE,530,2.45,01-01-2023,01-01-2024,02-11-2023,TRUE,FALSE,peak,superseded,V1-OF-004,amendment,130,1240
-V1-OF-006,Atlassify,Project Suite,Collaborator,ATL-PS-BASE,570,2.45,01-01-2024,01-01-2025,02-12-2024,FALSE,FALSE,peak,superseded,V1-OF-005,renewal,0,1240
-V1-OF-007,Atlassify,Project Suite,Collaborator,ATL-PS-BASE,710,2.45,01-01-2025,01-01-2026,03-10-2025,TRUE,FALSE,peak,superseded,V1-OF-006,upsell,140,1240
-V1-OF-008,Atlassify,Project Suite,Collaborator,ATL-PS-BASE,790,2.5,01-01-2026,01-01-2027,03-10-2026,TRUE,FALSE,peak,active,V1-OF-007,renewal,0,1240
-V1-OF-010,Atlassify,Project Suite,Full,ATL-PS-FULL-EXP1,45,24,01-07-2021,01-07-2022,02-04-2022,TRUE,FALSE,peak,superseded,,new,45,155
-V1-OF-011,Atlassify,Project Suite,Full,ATL-PS-FULL-EXP1,45,25.2,01-07-2022,01-01-2023,02-12-2022,FALSE,FALSE,peak,superseded,V1-OF-010,renewal,0,155
-V1-OF-012,Atlassify,Project Suite,Full,ATL-PS-FULL-EXP1,50,25.2,01-01-2023,01-07-2023,02-04-2023,FALSE,TRUE,peak,superseded,V1-OF-011,renewal,0,155
-V1-OF-013,Atlassify,Project Suite,Full,ATL-PS-FULL-EXP1,45,25.95,01-07-2023,01-07-2024,02-04-2024,FALSE,TRUE,peak,superseded,V1-OF-012,renewal,0,155
-V1-OF-014,Atlassify,Project Suite,Full,ATL-PS-FULL-EXP1,55,25.95,01-07-2024,01-10-2024,02-08-2024,TRUE,FALSE,peak,superseded,V1-OF-013,upsell,10,155
-V1-OF-015,Atlassify,Project Suite,Full,ATL-PS-FULL-EXP1,55,26.29,01-10-2024,01-01-2025,03-10-2024,FALSE,FALSE,peak,superseded,V1-OF-014,renewal,0,155
-V1-OF-016,Atlassify,Project Suite,Full,ATL-PS-FULL-EXP1,55,26.29,01-01-2025,01-07-2025,02-04-2025,TRUE,FALSE,peak,superseded,V1-OF-015,renewal,0,155
-V1-OF-017,Atlassify,Project Suite,Full,ATL-PS-FULL-EXP1,55,26.29,01-07-2025,01-07-2026,02-05-2026,TRUE,TRUE,peak,superseded,V1-OF-016,renewal,0,155
-V1-OF-018,Atlassify,Project Suite,Full,ATL-PS-FULL-EXP1,70,26.29,01-07-2026,01-01-2027,03-10-2026,FALSE,FALSE,peak,active,V1-OF-017,amendment,15,155
-V1-OF-022,Atlassify,Project Suite,Contributor,ATL-PS-CONT-EXP1,110,9.9,01-07-2021,01-01-2022,03-10-2021,FALSE,FALSE,peak,superseded,,new,110,375
-V1-OF-023,Atlassify,Project Suite,Contributor,ATL-PS-CONT-EXP1,110,10.96,01-01-2022,01-04-2022,01-01-2022,FALSE,TRUE,peak,superseded,V1-OF-022,renewal,0,375
-V1-OF-024,Atlassify,Project Suite,Contributor,ATL-PS-CONT-EXP1,110,10.96,01-04-2022,01-10-2022,02-08-2022,FALSE,FALSE,peak,superseded,V1-OF-023,renewal,0,375
-V1-OF-025,Atlassify,Project Suite,Contributor,ATL-PS-CONT-EXP1,115,10.96,01-10-2022,01-10-2023,02-08-2023,TRUE,FALSE,peak,superseded,V1-OF-024,renewal,0,375
-V1-OF-026,Atlassify,Project Suite,Contributor,ATL-PS-CONT-EXP1,120,11.02,01-10-2023,01-10-2024,01-09-2024,TRUE,FALSE,peak,superseded,V1-OF-025,renewal,0,375
-V1-OF-027,Atlassify,Project Suite,Contributor,ATL-PS-CONT-EXP1,125,11.02,01-10-2024,01-04-2025,01-01-2025,FALSE,FALSE,peak,superseded,V1-OF-026,renewal,0,375
-V1-OF-028,Atlassify,Project Suite,Contributor,ATL-PS-CONT-EXP1,125,11.02,01-04-2025,01-04-2026,31-01-2026,TRUE,TRUE,peak,superseded,V1-OF-027,renewal,0,375
-V1-OF-029,Atlassify,Project Suite,Contributor,ATL-PS-CONT-EXP1,135,11.02,01-04-2026,01-04-2027,01-01-2027,FALSE,FALSE,peak,active,V1-OF-028,renewal,0,375
-V1-OF-032,Atlassify,Project Suite,Collaborator,ATL-PS-COLL-EXP1,290,2.25,01-07-2021,01-01-2022,02-12-2021,TRUE,FALSE,peak,superseded,,new,290,1240
-V1-OF-033,Atlassify,Project Suite,Collaborator,ATL-PS-COLL-EXP1,290,2.48,01-01-2022,01-07-2022,02-05-2022,TRUE,FALSE,peak,superseded,V1-OF-032,renewal,0,1240
-V1-OF-034,Atlassify,Project Suite,Collaborator,ATL-PS-COLL-EXP1,300,2.51,01-07-2022,01-07-2023,02-05-2023,FALSE,FALSE,peak,superseded,V1-OF-033,renewal,0,1240
-V1-OF-035,Atlassify,Project Suite,Collaborator,ATL-PS-COLL-EXP1,390,2.51,01-07-2023,01-01-2024,02-11-2023,FALSE,FALSE,peak,superseded,V1-OF-034,upsell,90,1240
-V1-OF-036,Atlassify,Project Suite,Collaborator,ATL-PS-COLL-EXP1,430,2.51,01-01-2024,01-07-2024,01-06-2024,TRUE,FALSE,peak,superseded,V1-OF-035,renewal,0,1240
-V1-OF-037,Atlassify,Project Suite,Collaborator,ATL-PS-COLL-EXP1,470,2.51,01-07-2024,01-07-2025,02-04-2025,FALSE,FALSE,peak,superseded,V1-OF-036,renewal,0,1240
-V1-OF-038,Atlassify,Project Suite,Collaborator,ATL-PS-COLL-EXP1,520,2.51,01-07-2025,01-10-2025,03-07-2025,FALSE,TRUE,peak,superseded,V1-OF-037,renewal,0,1240
-V1-OF-039,Atlassify,Project Suite,Collaborator,ATL-PS-COLL-EXP1,420,2.51,01-10-2025,01-10-2026,02-08-2026,FALSE,FALSE,peak,superseded,V1-OF-038,renewal,0,1240
-V1-OF-040,Atlassify,Project Suite,Collaborator,ATL-PS-COLL-EXP1,450,2.51,01-10-2026,01-04-2027,02-03-2027,FALSE,FALSE,peak,active,V1-OF-039,renewal,0,1240
-V1-OF-043,Atlassify,Wiki Lite,Full,ATL-WL-BASE,60,18,01-01-2020,01-01-2021,02-12-2020,FALSE,FALSE,average,superseded,,new,60,130
-V1-OF-044,Atlassify,Wiki Lite,Full,ATL-WL-BASE,65,19.15,01-01-2021,01-01-2022,03-10-2021,TRUE,FALSE,average,superseded,V1-OF-043,renewal,0,130
-V1-OF-045,Atlassify,Wiki Lite,Full,ATL-WL-BASE,65,19.89,01-01-2022,01-01-2023,03-10-2022,TRUE,TRUE,average,superseded,V1-OF-044,renewal,0,130
-V1-OF-046,Atlassify,Wiki Lite,Full,ATL-WL-BASE,80,19.89,01-01-2023,01-07-2023,01-06-2023,TRUE,FALSE,average,superseded,V1-OF-045,upsell,15,130
-V1-OF-047,Atlassify,Wiki Lite,Full,ATL-WL-BASE,85,19.89,01-07-2023,01-07-2024,01-06-2024,FALSE,FALSE,average,superseded,V1-OF-046,renewal,0,130
-V1-OF-048,Atlassify,Wiki Lite,Full,ATL-WL-BASE,85,19.89,01-07-2024,01-10-2024,02-08-2024,TRUE,FALSE,average,superseded,V1-OF-047,renewal,0,130
-V1-OF-049,Atlassify,Wiki Lite,Full,ATL-WL-BASE,105,19.89,01-10-2024,01-10-2025,03-07-2025,TRUE,FALSE,average,superseded,V1-OF-048,amendment,20,130
-V1-OF-050,Atlassify,Wiki Lite,Full,ATL-WL-BASE,105,19.89,01-10-2025,01-04-2026,01-01-2026,FALSE,FALSE,average,superseded,V1-OF-049,renewal,0,130
-V1-OF-051,Atlassify,Wiki Lite,Full,ATL-WL-BASE,125,19.98,01-04-2026,01-07-2026,02-04-2026,FALSE,FALSE,average,superseded,V1-OF-050,upsell,20,130
-V1-OF-052,Atlassify,Wiki Lite,Full,ATL-WL-BASE,130,19.98,01-07-2026,01-07-2027,02-05-2027,FALSE,TRUE,average,active,V1-OF-051,renewal,0,130
-V1-OF-043,Atlassify,Wiki Lite,Contributor,ATL-WL-BASE,130,8,01-01-2020,01-01-2021,02-12-2020,TRUE,FALSE,average,superseded,,new,130,230
-V1-OF-044,Atlassify,Wiki Lite,Contributor,ATL-WL-BASE,135,8.28,01-01-2021,01-01-2022,03-10-2021,FALSE,TRUE,average,superseded,V1-OF-043,renewal,0,230
-V1-OF-045,Atlassify,Wiki Lite,Contributor,ATL-WL-BASE,145,8.95,01-01-2022,01-01-2023,03-10-2022,FALSE,FALSE,average,superseded,V1-OF-044,renewal,0,230
-V1-OF-046,Atlassify,Wiki Lite,Contributor,ATL-WL-BASE,180,8.95,01-01-2023,01-07-2023,01-06-2023,FALSE,FALSE,average,superseded,V1-OF-045,upsell,35,230
-V1-OF-047,Atlassify,Wiki Lite,Contributor,ATL-WL-BASE,190,8.95,01-07-2023,01-07-2024,01-06-2024,TRUE,FALSE,average,superseded,V1-OF-046,renewal,0,230
-V1-OF-048,Atlassify,Wiki Lite,Contributor,ATL-WL-BASE,195,8.95,01-07-2024,01-10-2024,02-08-2024,FALSE,FALSE,average,superseded,V1-OF-047,renewal,0,230
-V1-OF-049,Atlassify,Wiki Lite,Contributor,ATL-WL-BASE,200,8.95,01-10-2024,01-10-2025,03-07-2025,TRUE,TRUE,average,superseded,V1-OF-048,renewal,0,230
-V1-OF-050,Atlassify,Wiki Lite,Contributor,ATL-WL-BASE,205,8.95,01-10-2025,01-04-2026,01-01-2026,FALSE,FALSE,average,superseded,V1-OF-049,renewal,0,230
-V1-OF-051,Atlassify,Wiki Lite,Contributor,ATL-WL-BASE,215,8.95,01-04-2026,01-07-2026,02-04-2026,TRUE,TRUE,average,superseded,V1-OF-050,renewal,0,230
-V1-OF-052,Atlassify,Wiki Lite,Contributor,ATL-WL-BASE,230,8.95,01-07-2026,01-07-2027,02-05-2027,FALSE,FALSE,average,active,V1-OF-051,renewal,0,230
-V1-OF-043,Atlassify,Wiki Lite,Collaborator,ATL-WL-BASE,320,1.7,01-01-2020,01-01-2021,02-12-2020,TRUE,FALSE,average,superseded,,new,320,420
-V1-OF-044,Atlassify,Wiki Lite,Collaborator,ATL-WL-BASE,320,1.8,01-01-2021,01-01-2022,03-10-2021,TRUE,FALSE,average,superseded,V1-OF-043,renewal,0,420
-V1-OF-045,Atlassify,Wiki Lite,Collaborator,ATL-WL-BASE,340,1.8,01-01-2022,01-01-2023,03-10-2022,TRUE,FALSE,average,superseded,V1-OF-044,renewal,0,420
-V1-OF-046,Atlassify,Wiki Lite,Collaborator,ATL-WL-BASE,360,1.8,01-01-2023,01-07-2023,01-06-2023,TRUE,FALSE,average,superseded,V1-OF-045,renewal,0,420
-V1-OF-047,Atlassify,Wiki Lite,Collaborator,ATL-WL-BASE,360,1.81,01-07-2023,01-07-2024,01-06-2024,TRUE,FALSE,average,superseded,V1-OF-046,renewal,0,420
-V1-OF-048,Atlassify,Wiki Lite,Collaborator,ATL-WL-BASE,450,1.81,01-07-2024,01-10-2024,02-08-2024,FALSE,FALSE,average,superseded,V1-OF-047,upsell,90,420
-V1-OF-049,Atlassify,Wiki Lite,Collaborator,ATL-WL-BASE,450,1.81,01-10-2024,01-10-2025,03-07-2025,FALSE,TRUE,average,superseded,V1-OF-048,renewal,0,420
-V1-OF-050,Atlassify,Wiki Lite,Collaborator,ATL-WL-BASE,490,1.81,01-10-2025,01-04-2026,01-01-2026,FALSE,FALSE,average,superseded,V1-OF-049,renewal,0,420
-V1-OF-051,Atlassify,Wiki Lite,Collaborator,ATL-WL-BASE,490,1.81,01-04-2026,01-07-2026,02-04-2026,FALSE,TRUE,average,superseded,V1-OF-050,renewal,0,420
-V1-OF-052,Atlassify,Wiki Lite,Collaborator,ATL-WL-BASE,420,1.81,01-07-2026,01-07-2027,02-05-2027,FALSE,TRUE,average,active,V1-OF-051,renewal,0,420
-V1-OF-054,Atlassify,Reporting Add-on,Full,ATL-RA-BASE,55,14,01-01-2020,01-01-2021,02-12-2020,TRUE,FALSE,snapshot,superseded,,new,55,90
-V1-OF-055,Atlassify,Reporting Add-on,Full,ATL-RA-BASE,55,14.88,01-01-2021,01-01-2022,03-10-2021,TRUE,FALSE,snapshot,superseded,V1-OF-054,renewal,0,90
-V1-OF-056,Atlassify,Reporting Add-on,Full,ATL-RA-BASE,55,15.08,01-01-2022,01-01-2023,03-10-2022,FALSE,FALSE,snapshot,superseded,V1-OF-055,renewal,0,90
-V1-OF-057,Atlassify,Reporting Add-on,Full,ATL-RA-BASE,70,15.08,01-01-2023,01-07-2023,02-04-2023,TRUE,FALSE,snapshot,superseded,V1-OF-056,amendment,15,90
-V1-OF-058,Atlassify,Reporting Add-on,Full,ATL-RA-BASE,75,15.08,01-07-2023,01-07-2024,01-06-2024,FALSE,FALSE,snapshot,superseded,V1-OF-057,renewal,0,90
-V1-OF-059,Atlassify,Reporting Add-on,Full,ATL-RA-BASE,80,15.14,01-07-2024,01-01-2025,03-10-2024,TRUE,FALSE,snapshot,superseded,V1-OF-058,renewal,0,90
-V1-OF-060,Atlassify,Reporting Add-on,Full,ATL-RA-BASE,80,15.14,01-01-2025,01-07-2025,02-05-2025,TRUE,TRUE,snapshot,superseded,V1-OF-059,renewal,0,90
-V1-OF-061,Atlassify,Reporting Add-on,Full,ATL-RA-BASE,85,15.14,01-07-2025,01-07-2026,02-04-2026,TRUE,TRUE,snapshot,superseded,V1-OF-060,renewal,0,90
-V1-OF-062,Atlassify,Reporting Add-on,Full,ATL-RA-BASE,90,15.14,01-07-2026,01-07-2027,02-04-2027,FALSE,TRUE,snapshot,active,V1-OF-061,renewal,0,90
-V1-OF-054,Atlassify,Reporting Add-on,Contributor,ATL-RA-BASE,130,5.85,01-01-2020,01-01-2021,02-12-2020,FALSE,FALSE,snapshot,superseded,,new,130,225
-V1-OF-055,Atlassify,Reporting Add-on,Contributor,ATL-RA-BASE,135,6.26,01-01-2021,01-01-2022,03-10-2021,TRUE,FALSE,snapshot,superseded,V1-OF-054,renewal,0,225
-V1-OF-056,Atlassify,Reporting Add-on,Contributor,ATL-RA-BASE,145,6.53,01-01-2022,01-01-2023,03-10-2022,TRUE,FALSE,snapshot,superseded,V1-OF-055,renewal,0,225
-V1-OF-057,Atlassify,Reporting Add-on,Contributor,ATL-RA-BASE,150,6.53,01-01-2023,01-07-2023,02-04-2023,FALSE,FALSE,snapshot,superseded,V1-OF-056,renewal,0,225
-V1-OF-058,Atlassify,Reporting Add-on,Contributor,ATL-RA-BASE,190,6.53,01-07-2023,01-07-2024,01-06-2024,TRUE,FALSE,snapshot,superseded,V1-OF-057,amendment,40,225
-V1-OF-059,Atlassify,Reporting Add-on,Contributor,ATL-RA-BASE,195,6.53,01-07-2024,01-01-2025,03-10-2024,TRUE,FALSE,snapshot,superseded,V1-OF-058,renewal,0,225
-V1-OF-060,Atlassify,Reporting Add-on,Contributor,ATL-RA-BASE,215,6.53,01-01-2025,01-07-2025,02-05-2025,TRUE,FALSE,snapshot,superseded,V1-OF-059,renewal,0,225
-V1-OF-061,Atlassify,Reporting Add-on,Contributor,ATL-RA-BASE,220,6.53,01-07-2025,01-07-2026,02-04-2026,FALSE,TRUE,snapshot,superseded,V1-OF-060,renewal,0,225
-V1-OF-062,Atlassify,Reporting Add-on,Contributor,ATL-RA-BASE,225,6.53,01-07-2026,01-07-2027,02-04-2027,FALSE,TRUE,snapshot,active,V1-OF-061,renewal,0,225
-V1-OF-054,Atlassify,Reporting Add-on,Collaborator,ATL-RA-BASE,280,1.17,01-01-2020,01-01-2021,02-12-2020,TRUE,FALSE,snapshot,superseded,,new,280,220
-V1-OF-055,Atlassify,Reporting Add-on,Collaborator,ATL-RA-BASE,290,1.27,01-01-2021,01-01-2022,03-10-2021,FALSE,FALSE,snapshot,superseded,V1-OF-054,renewal,0,220
-V1-OF-056,Atlassify,Reporting Add-on,Collaborator,ATL-RA-BASE,290,1.29,01-01-2022,01-01-2023,03-10-2022,TRUE,FALSE,snapshot,superseded,V1-OF-055,renewal,0,220
-V1-OF-057,Atlassify,Reporting Add-on,Collaborator,ATL-RA-BASE,300,1.29,01-01-2023,01-07-2023,02-04-2023,TRUE,TRUE,snapshot,superseded,V1-OF-056,renewal,0,220
-V1-OF-058,Atlassify,Reporting Add-on,Collaborator,ATL-RA-BASE,300,1.29,01-07-2023,01-07-2024,01-06-2024,FALSE,TRUE,snapshot,superseded,V1-OF-057,renewal,0,220
-V1-OF-059,Atlassify,Reporting Add-on,Collaborator,ATL-RA-BASE,250,1.29,01-07-2024,01-01-2025,03-10-2024,FALSE,TRUE,snapshot,superseded,V1-OF-058,renewal,0,220
-V1-OF-060,Atlassify,Reporting Add-on,Collaborator,ATL-RA-BASE,200,1.38,01-01-2025,01-07-2025,02-05-2025,TRUE,FALSE,snapshot,superseded,V1-OF-059,renewal,0,220
-V1-OF-061,Atlassify,Reporting Add-on,Collaborator,ATL-RA-BASE,210,1.46,01-07-2025,01-07-2026,02-04-2026,TRUE,FALSE,snapshot,superseded,V1-OF-060,renewal,0,220
-V1-OF-062,Atlassify,Reporting Add-on,Collaborator,ATL-RA-BASE,220,1.46,01-07-2026,01-07-2027,02-04-2027,FALSE,FALSE,snapshot,active,V1-OF-061,renewal,0,220
-V2-OF-001,Cloudora,Cloud Infra Core,Full,CLD-CI-BASE,40,55,01-01-2020,01-01-2021,02-11-2020,TRUE,FALSE,peak,superseded,,new,40,220
-V2-OF-002,Cloudora,Cloud Infra Core,Full,CLD-CI-BASE,40,57.45,01-01-2021,01-01-2022,02-12-2021,TRUE,TRUE,peak,superseded,V2-OF-001,renewal,0,220
-V2-OF-003,Cloudora,Cloud Infra Core,Full,CLD-CI-BASE,40,57.45,01-01-2022,01-01-2023,03-10-2022,TRUE,FALSE,peak,superseded,V2-OF-002,renewal,0,220
-V2-OF-004,Cloudora,Cloud Infra Core,Full,CLD-CI-BASE,45,60.73,01-01-2023,01-01-2024,02-11-2023,FALSE,TRUE,peak,superseded,V2-OF-003,renewal,0,220
-V2-OF-005,Cloudora,Cloud Infra Core,Full,CLD-CI-BASE,40,60.73,01-01-2024,01-01-2025,03-10-2024,TRUE,FALSE,peak,superseded,V2-OF-004,renewal,0,220
-V2-OF-006,Cloudora,Cloud Infra Core,Full,CLD-CI-BASE,40,60.73,01-01-2025,01-01-2026,02-11-2025,TRUE,FALSE,peak,superseded,V2-OF-005,renewal,0,220
-V2-OF-007,Cloudora,Cloud Infra Core,Full,CLD-CI-BASE,40,60.73,01-01-2026,01-01-2028,02-11-2027,TRUE,FALSE,peak,active,V2-OF-006,renewal,0,220
-V2-OF-001,Cloudora,Cloud Infra Core,Contributor,CLD-CI-BASE,85,20.4,01-01-2020,01-01-2021,02-11-2020,TRUE,FALSE,peak,superseded,,new,85,495
-V2-OF-002,Cloudora,Cloud Infra Core,Contributor,CLD-CI-BASE,85,22.75,01-01-2021,01-01-2022,02-12-2021,TRUE,FALSE,peak,superseded,V2-OF-001,renewal,0,495
-V2-OF-003,Cloudora,Cloud Infra Core,Contributor,CLD-CI-BASE,105,22.75,01-01-2022,01-01-2023,03-10-2022,FALSE,FALSE,peak,superseded,V2-OF-002,amendment,20,495
-V2-OF-004,Cloudora,Cloud Infra Core,Contributor,CLD-CI-BASE,110,22.75,01-01-2023,01-01-2024,02-11-2023,TRUE,TRUE,peak,superseded,V2-OF-003,renewal,0,495
-V2-OF-005,Cloudora,Cloud Infra Core,Contributor,CLD-CI-BASE,120,22.75,01-01-2024,01-01-2025,03-10-2024,FALSE,TRUE,peak,superseded,V2-OF-004,renewal,0,495
-V2-OF-006,Cloudora,Cloud Infra Core,Contributor,CLD-CI-BASE,145,22.75,01-01-2025,01-01-2026,02-11-2025,TRUE,FALSE,peak,superseded,V2-OF-005,upsell,25,495
-V2-OF-007,Cloudora,Cloud Infra Core,Contributor,CLD-CI-BASE,155,22.75,01-01-2026,01-01-2028,02-11-2027,FALSE,FALSE,peak,active,V2-OF-006,renewal,0,495
-V2-OF-001,Cloudora,Cloud Infra Core,Collaborator,CLD-CI-BASE,290,4.32,01-01-2020,01-01-2021,02-11-2020,TRUE,FALSE,peak,superseded,,new,290,1220
-V2-OF-002,Cloudora,Cloud Infra Core,Collaborator,CLD-CI-BASE,320,4.6,01-01-2021,01-01-2022,02-12-2021,FALSE,FALSE,peak,superseded,V2-OF-001,renewal,0,1220
-V2-OF-003,Cloudora,Cloud Infra Core,Collaborator,CLD-CI-BASE,410,4.6,01-01-2022,01-01-2023,03-10-2022,TRUE,FALSE,peak,superseded,V2-OF-002,amendment,90,1220
-V2-OF-004,Cloudora,Cloud Infra Core,Collaborator,CLD-CI-BASE,430,4.6,01-01-2023,01-01-2024,02-11-2023,FALSE,TRUE,peak,superseded,V2-OF-003,renewal,0,1220
-V2-OF-005,Cloudora,Cloud Infra Core,Collaborator,CLD-CI-BASE,470,4.7,01-01-2024,01-01-2025,03-10-2024,FALSE,TRUE,peak,superseded,V2-OF-004,renewal,0,1220
-V2-OF-006,Cloudora,Cloud Infra Core,Collaborator,CLD-CI-BASE,490,4.7,01-01-2025,01-01-2026,02-11-2025,TRUE,FALSE,peak,superseded,V2-OF-005,renewal,0,1220
-V2-OF-007,Cloudora,Cloud Infra Core,Collaborator,CLD-CI-BASE,610,4.7,01-01-2026,01-01-2028,02-11-2027,TRUE,FALSE,peak,active,V2-OF-006,amendment,120,1220
-V2-OF-008,Cloudora,Cloud Infra Core,Full,CLD-CI-FULL-EXP1,55,55,01-07-2021,01-10-2021,01-09-2021,FALSE,FALSE,peak,superseded,,new,55,220
-V2-OF-009,Cloudora,Cloud Infra Core,Full,CLD-CI-FULL-EXP1,55,60.09,01-10-2021,01-10-2022,02-08-2022,TRUE,FALSE,peak,superseded,V2-OF-008,renewal,0,220
-V2-OF-010,Cloudora,Cloud Infra Core,Full,CLD-CI-FULL-EXP1,65,60.09,01-10-2022,01-04-2023,01-01-2023,TRUE,FALSE,peak,superseded,V2-OF-009,upsell,10,220
-V2-OF-011,Cloudora,Cloud Infra Core,Full,CLD-CI-FULL-EXP1,70,60.57,01-04-2023,01-10-2023,01-09-2023,TRUE,TRUE,peak,superseded,V2-OF-010,renewal,0,220
-V2-OF-012,Cloudora,Cloud Infra Core,Full,CLD-CI-FULL-EXP1,85,60.57,01-10-2023,01-01-2024,03-10-2023,FALSE,FALSE,peak,superseded,V2-OF-011,upsell,15,220
-V2-OF-013,Cloudora,Cloud Infra Core,Full,CLD-CI-FULL-EXP1,90,60.57,01-01-2024,01-04-2024,01-02-2024,TRUE,TRUE,peak,superseded,V2-OF-012,renewal,0,220
-V2-OF-014,Cloudora,Cloud Infra Core,Full,CLD-CI-FULL-EXP1,110,60.57,01-04-2024,01-07-2024,02-04-2024,TRUE,FALSE,peak,superseded,V2-OF-013,upsell,20,220
-V2-OF-015,Cloudora,Cloud Infra Core,Full,CLD-CI-FULL-EXP1,115,60.57,01-07-2024,01-01-2025,02-11-2024,TRUE,FALSE,peak,superseded,V2-OF-014,renewal,0,220
-V2-OF-016,Cloudora,Cloud Infra Core,Full,CLD-CI-FULL-EXP1,125,60.57,01-01-2025,01-04-2025,02-03-2025,TRUE,TRUE,peak,superseded,V2-OF-015,renewal,0,220
-V2-OF-017,Cloudora,Cloud Infra Core,Full,CLD-CI-FULL-EXP1,130,60.57,01-04-2025,01-10-2025,01-09-2025,FALSE,TRUE,peak,superseded,V2-OF-016,renewal,0,220
-V2-OF-018,Cloudora,Cloud Infra Core,Full,CLD-CI-FULL-EXP1,135,60.57,01-10-2025,01-04-2026,31-01-2026,TRUE,FALSE,peak,superseded,V2-OF-017,renewal,0,220
-V2-OF-019,Cloudora,Cloud Infra Core,Full,CLD-CI-FULL-EXP1,140,60.57,01-04-2026,01-07-2026,02-04-2026,FALSE,FALSE,peak,superseded,V2-OF-018,renewal,0,220
-V2-OF-020,Cloudora,Cloud Infra Core,Full,CLD-CI-FULL-EXP1,145,60.57,01-07-2026,01-07-2027,01-06-2027,FALSE,FALSE,peak,active,V2-OF-019,renewal,0,220
-V2-OF-021,Cloudora,Cloud Infra Core,Contributor,CLD-CI-CONT-EXP1,90,20.4,01-07-2021,01-01-2022,02-11-2021,TRUE,FALSE,peak,superseded,,new,90,495
-V2-OF-022,Cloudora,Cloud Infra Core,Contributor,CLD-CI-CONT-EXP1,95,21.43,01-01-2022,01-01-2023,02-11-2022,FALSE,FALSE,peak,superseded,V2-OF-021,renewal,0,495
-V2-OF-023,Cloudora,Cloud Infra Core,Contributor,CLD-CI-CONT-EXP1,105,22.04,01-01-2023,01-07-2023,01-06-2023,TRUE,TRUE,peak,superseded,V2-OF-022,renewal,0,495
-V2-OF-024,Cloudora,Cloud Infra Core,Contributor,CLD-CI-CONT-EXP1,90,22.39,01-07-2023,01-10-2023,02-08-2023,TRUE,TRUE,peak,superseded,V2-OF-023,renewal,0,495
-V2-OF-025,Cloudora,Cloud Infra Core,Contributor,CLD-CI-CONT-EXP1,95,22.39,01-10-2023,01-04-2024,02-03-2024,FALSE,FALSE,peak,superseded,V2-OF-024,renewal,0,495
-V2-OF-026,Cloudora,Cloud Infra Core,Contributor,CLD-CI-CONT-EXP1,100,22.39,01-04-2024,01-04-2025,01-01-2025,TRUE,FALSE,peak,superseded,V2-OF-025,renewal,0,495
-V2-OF-027,Cloudora,Cloud Infra Core,Contributor,CLD-CI-CONT-EXP1,105,22.39,01-04-2025,01-07-2025,02-05-2025,TRUE,TRUE,peak,superseded,V2-OF-026,renewal,0,495
-V2-OF-028,Cloudora,Cloud Infra Core,Contributor,CLD-CI-CONT-EXP1,125,22.39,01-07-2025,01-01-2026,02-11-2025,TRUE,FALSE,peak,superseded,V2-OF-027,amendment,20,495
-V2-OF-029,Cloudora,Cloud Infra Core,Contributor,CLD-CI-CONT-EXP1,130,22.39,01-01-2026,01-04-2026,31-01-2026,FALSE,FALSE,peak,superseded,V2-OF-028,renewal,0,495
-V2-OF-030,Cloudora,Cloud Infra Core,Contributor,CLD-CI-CONT-EXP1,140,22.39,01-04-2026,01-07-2026,02-05-2026,FALSE,FALSE,peak,superseded,V2-OF-029,renewal,0,495
-V2-OF-031,Cloudora,Cloud Infra Core,Contributor,CLD-CI-CONT-EXP1,170,22.39,01-07-2026,01-10-2026,02-08-2026,TRUE,FALSE,peak,superseded,V2-OF-030,upsell,30,495
-V2-OF-032,Cloudora,Cloud Infra Core,Contributor,CLD-CI-CONT-EXP1,175,22.39,01-10-2026,01-04-2027,31-01-2027,TRUE,TRUE,peak,active,V2-OF-031,renewal,0,495
-V2-OF-033,Cloudora,Cloud Infra Core,Collaborator,CLD-CI-COLL-EXP1,200,4.32,01-07-2021,01-10-2021,02-08-2021,TRUE,FALSE,peak,superseded,,new,200,1220
-V2-OF-034,Cloudora,Cloud Infra Core,Collaborator,CLD-CI-COLL-EXP1,210,4.75,01-10-2021,01-04-2022,01-01-2022,FALSE,FALSE,peak,superseded,V2-OF-033,renewal,0,1220
-V2-OF-035,Cloudora,Cloud Infra Core,Collaborator,CLD-CI-COLL-EXP1,230,4.83,01-04-2022,01-10-2022,02-08-2022,FALSE,TRUE,peak,superseded,V2-OF-034,renewal,0,1220
-V2-OF-036,Cloudora,Cloud Infra Core,Collaborator,CLD-CI-COLL-EXP1,230,4.83,01-10-2022,01-04-2023,02-03-2023,FALSE,FALSE,peak,superseded,V2-OF-035,renewal,0,1220
-V2-OF-037,Cloudora,Cloud Infra Core,Collaborator,CLD-CI-COLL-EXP1,240,4.83,01-04-2023,01-07-2023,02-05-2023,TRUE,FALSE,peak,superseded,V2-OF-036,renewal,0,1220
-V2-OF-038,Cloudora,Cloud Infra Core,Collaborator,CLD-CI-COLL-EXP1,250,4.83,01-07-2023,01-07-2024,01-06-2024,TRUE,FALSE,peak,superseded,V2-OF-037,renewal,0,1220
-V2-OF-039,Cloudora,Cloud Infra Core,Collaborator,CLD-CI-COLL-EXP1,280,4.83,01-07-2024,01-01-2025,03-10-2024,TRUE,TRUE,peak,superseded,V2-OF-038,renewal,0,1220
-V2-OF-040,Cloudora,Cloud Infra Core,Collaborator,CLD-CI-COLL-EXP1,310,4.83,01-01-2025,01-04-2025,02-03-2025,FALSE,FALSE,peak,superseded,V2-OF-039,renewal,0,1220
-V2-OF-041,Cloudora,Cloud Infra Core,Collaborator,CLD-CI-COLL-EXP1,320,4.83,01-04-2025,01-10-2025,01-09-2025,FALSE,TRUE,peak,superseded,V2-OF-040,renewal,0,1220
-V2-OF-042,Cloudora,Cloud Infra Core,Collaborator,CLD-CI-COLL-EXP1,330,4.83,01-10-2025,01-01-2026,03-10-2025,FALSE,FALSE,peak,superseded,V2-OF-041,renewal,0,1220
-V2-OF-043,Cloudora,Cloud Infra Core,Collaborator,CLD-CI-COLL-EXP1,330,4.83,01-01-2026,01-01-2027,03-10-2026,FALSE,FALSE,peak,active,V2-OF-042,renewal,0,1220
-V2-OF-044,Cloudora,Cloud Infra Core,Full,CLD-CI-FULL-PROJ1,30,55,01-01-2022,01-04-2022,31-01-2022,TRUE,FALSE,peak,superseded,,new,30,220
-V2-OF-045,Cloudora,Cloud Infra Core,Full,CLD-CI-FULL-PROJ1,30,57.29,01-04-2022,01-07-2022,02-04-2022,FALSE,TRUE,peak,superseded,V2-OF-044,renewal,0,220
-V2-OF-046,Cloudora,Cloud Infra Core,Full,CLD-CI-FULL-PROJ1,30,60.97,01-07-2022,01-10-2022,01-09-2022,TRUE,FALSE,peak,superseded,V2-OF-045,renewal,0,220
-V2-OF-047,Cloudora,Cloud Infra Core,Full,CLD-CI-FULL-PROJ1,35,60.97,01-10-2022,01-01-2023,02-12-2022,TRUE,FALSE,peak,active,V2-OF-046,amendment,5,220
-V2-OF-048,Cloudora,Cloud Infra Core,Contributor,CLD-CI-CONT-PROJ1,120,20.4,01-01-2022,01-04-2022,02-03-2022,FALSE,FALSE,peak,superseded,,new,120,495
-V2-OF-049,Cloudora,Cloud Infra Core,Contributor,CLD-CI-CONT-PROJ1,130,22.07,01-04-2022,01-07-2022,01-06-2022,FALSE,FALSE,peak,superseded,V2-OF-048,renewal,0,495
-V2-OF-050,Cloudora,Cloud Infra Core,Contributor,CLD-CI-CONT-PROJ1,165,22.07,01-07-2022,01-10-2022,02-08-2022,FALSE,FALSE,peak,superseded,V2-OF-049,amendment,35,495
-V2-OF-051,Cloudora,Cloud Infra Core,Contributor,CLD-CI-CONT-PROJ1,165,22.07,01-10-2022,01-01-2023,02-12-2022,TRUE,FALSE,peak,active,V2-OF-050,renewal,0,495
-V2-OF-052,Cloudora,Cloud Infra Core,Collaborator,CLD-CI-COLL-PROJ1,250,4.32,01-01-2022,01-04-2022,01-01-2022,TRUE,FALSE,peak,superseded,,new,250,1220
-V2-OF-053,Cloudora,Cloud Infra Core,Collaborator,CLD-CI-COLL-PROJ1,280,4.49,01-04-2022,01-07-2022,02-05-2022,TRUE,TRUE,peak,superseded,V2-OF-052,renewal,0,1220
-V2-OF-054,Cloudora,Cloud Infra Core,Collaborator,CLD-CI-COLL-PROJ1,230,4.58,01-07-2022,01-10-2022,01-09-2022,FALSE,FALSE,peak,superseded,V2-OF-053,renewal,0,1220
-V2-OF-055,Cloudora,Cloud Infra Core,Collaborator,CLD-CI-COLL-PROJ1,280,4.74,01-10-2022,01-01-2023,03-10-2022,TRUE,FALSE,peak,active,V2-OF-054,upsell,50,1220
-V2-OF-056,Cloudora,DevOps Toolkit,Full,CLD-DT-BASE,55,38,01-01-2020,01-01-2021,02-11-2020,TRUE,FALSE,average,superseded,,new,55,65
-V2-OF-057,Cloudora,DevOps Toolkit,Full,CLD-DT-BASE,55,40.17,01-01-2021,01-01-2022,02-11-2021,TRUE,FALSE,average,superseded,V2-OF-056,renewal,0,65
-V2-OF-058,Cloudora,DevOps Toolkit,Full,CLD-DT-BASE,55,41.69,01-01-2022,01-01-2023,02-12-2022,TRUE,FALSE,average,superseded,V2-OF-057,renewal,0,65
-V2-OF-059,Cloudora,DevOps Toolkit,Full,CLD-DT-BASE,60,41.9,01-01-2023,01-07-2023,01-06-2023,FALSE,TRUE,average,superseded,V2-OF-058,renewal,0,65
-V2-OF-060,Cloudora,DevOps Toolkit,Full,CLD-DT-BASE,55,42.09,01-07-2023,01-07-2024,01-06-2024,FALSE,TRUE,average,superseded,V2-OF-059,renewal,0,65
-V2-OF-061,Cloudora,DevOps Toolkit,Full,CLD-DT-BASE,55,42.09,01-07-2024,01-07-2025,02-04-2025,FALSE,FALSE,average,superseded,V2-OF-060,renewal,0,65
-V2-OF-062,Cloudora,DevOps Toolkit,Full,CLD-DT-BASE,60,42.09,01-07-2025,01-07-2026,02-04-2026,TRUE,FALSE,average,superseded,V2-OF-061,renewal,0,65
-V2-OF-063,Cloudora,DevOps Toolkit,Full,CLD-DT-BASE,65,42.09,01-07-2026,01-07-2027,01-06-2027,TRUE,FALSE,average,active,V2-OF-062,renewal,0,65
-V2-OF-056,Cloudora,DevOps Toolkit,Contributor,CLD-DT-BASE,165,14.4,01-01-2020,01-01-2021,02-11-2020,FALSE,FALSE,average,superseded,,new,165,245
-V2-OF-057,Cloudora,DevOps Toolkit,Contributor,CLD-DT-BASE,170,15.77,01-01-2021,01-01-2022,02-11-2021,FALSE,FALSE,average,superseded,V2-OF-056,renewal,0,245
-V2-OF-058,Cloudora,DevOps Toolkit,Contributor,CLD-DT-BASE,170,15.77,01-01-2022,01-01-2023,02-12-2022,FALSE,FALSE,average,superseded,V2-OF-057,renewal,0,245
-V2-OF-059,Cloudora,DevOps Toolkit,Contributor,CLD-DT-BASE,175,15.83,01-01-2023,01-07-2023,01-06-2023,FALSE,TRUE,average,superseded,V2-OF-058,renewal,0,245
-V2-OF-060,Cloudora,DevOps Toolkit,Contributor,CLD-DT-BASE,210,15.83,01-07-2023,01-07-2024,01-06-2024,FALSE,FALSE,average,superseded,V2-OF-059,upsell,35,245
-V2-OF-061,Cloudora,DevOps Toolkit,Contributor,CLD-DT-BASE,225,15.83,01-07-2024,01-07-2025,02-04-2025,TRUE,FALSE,average,superseded,V2-OF-060,renewal,0,245
-V2-OF-062,Cloudora,DevOps Toolkit,Contributor,CLD-DT-BASE,235,15.83,01-07-2025,01-07-2026,02-04-2026,TRUE,TRUE,average,superseded,V2-OF-061,renewal,0,245
-V2-OF-063,Cloudora,DevOps Toolkit,Contributor,CLD-DT-BASE,245,15.83,01-07-2026,01-07-2027,01-06-2027,TRUE,FALSE,average,active,V2-OF-062,renewal,0,245
-V2-OF-056,Cloudora,DevOps Toolkit,Collaborator,CLD-DT-BASE,220,3,01-01-2020,01-01-2021,02-11-2020,FALSE,FALSE,average,superseded,,new,220,230
-V2-OF-057,Cloudora,DevOps Toolkit,Collaborator,CLD-DT-BASE,230,3.24,01-01-2021,01-01-2022,02-11-2021,FALSE,FALSE,average,superseded,V2-OF-056,renewal,0,230
-V2-OF-058,Cloudora,DevOps Toolkit,Collaborator,CLD-DT-BASE,250,3.27,01-01-2022,01-01-2023,02-12-2022,TRUE,TRUE,average,superseded,V2-OF-057,renewal,0,230
-V2-OF-059,Cloudora,DevOps Toolkit,Collaborator,CLD-DT-BASE,200,3.33,01-01-2023,01-07-2023,01-06-2023,FALSE,TRUE,average,superseded,V2-OF-058,renewal,0,230
-V2-OF-060,Cloudora,DevOps Toolkit,Collaborator,CLD-DT-BASE,160,3.64,01-07-2023,01-07-2024,01-06-2024,FALSE,FALSE,average,superseded,V2-OF-059,renewal,0,230
-V2-OF-061,Cloudora,DevOps Toolkit,Collaborator,CLD-DT-BASE,170,3.64,01-07-2024,01-07-2025,02-04-2025,FALSE,FALSE,average,superseded,V2-OF-060,renewal,0,230
-V2-OF-062,Cloudora,DevOps Toolkit,Collaborator,CLD-DT-BASE,220,3.64,01-07-2025,01-07-2026,02-04-2026,TRUE,FALSE,average,superseded,V2-OF-061,upsell,50,230
-V2-OF-063,Cloudora,DevOps Toolkit,Collaborator,CLD-DT-BASE,230,3.64,01-07-2026,01-07-2027,01-06-2027,TRUE,FALSE,average,active,V2-OF-062,renewal,0,230
-V3-OF-001,Nexaflow,Flow Automation,Full,NXF-FA-BASE,65,42,01-01-2019,01-01-2020,03-10-2019,TRUE,FALSE,peak,superseded,,new,65,100
-V3-OF-002,Nexaflow,Flow Automation,Full,NXF-FA-BASE,65,46.86,01-01-2020,01-01-2021,03-10-2020,TRUE,TRUE,peak,superseded,V3-OF-001,renewal,0,100
-V3-OF-003,Nexaflow,Flow Automation,Full,NXF-FA-BASE,65,46.86,01-01-2021,01-01-2022,02-12-2021,FALSE,FALSE,peak,superseded,V3-OF-002,renewal,0,100
-V3-OF-004,Nexaflow,Flow Automation,Full,NXF-FA-BASE,70,46.86,01-01-2022,01-01-2023,02-11-2022,FALSE,FALSE,peak,superseded,V3-OF-003,renewal,0,100
-V3-OF-005,Nexaflow,Flow Automation,Full,NXF-FA-BASE,75,46.86,01-01-2023,01-01-2024,02-11-2023,FALSE,TRUE,peak,superseded,V3-OF-004,renewal,0,100
-V3-OF-006,Nexaflow,Flow Automation,Full,NXF-FA-BASE,80,46.86,01-01-2024,01-07-2024,02-04-2024,TRUE,TRUE,peak,superseded,V3-OF-005,renewal,0,100
-V3-OF-007,Nexaflow,Flow Automation,Full,NXF-FA-BASE,100,46.86,01-07-2024,01-07-2025,02-04-2025,FALSE,FALSE,peak,superseded,V3-OF-006,amendment,20,100
-V3-OF-008,Nexaflow,Flow Automation,Full,NXF-FA-BASE,100,46.86,01-07-2025,01-07-2027,02-04-2027,FALSE,FALSE,peak,active,V3-OF-007,renewal,0,100
-V3-OF-001,Nexaflow,Flow Automation,Contributor,NXF-FA-BASE,175,15.3,01-01-2019,01-01-2020,03-10-2019,TRUE,FALSE,peak,superseded,,new,175,255
-V3-OF-002,Nexaflow,Flow Automation,Contributor,NXF-FA-BASE,185,16.96,01-01-2020,01-01-2021,03-10-2020,TRUE,FALSE,peak,superseded,V3-OF-001,renewal,0,255
-V3-OF-003,Nexaflow,Flow Automation,Contributor,NXF-FA-BASE,235,16.96,01-01-2021,01-01-2022,02-12-2021,FALSE,FALSE,peak,superseded,V3-OF-002,upsell,50,255
-V3-OF-004,Nexaflow,Flow Automation,Contributor,NXF-FA-BASE,255,16.96,01-01-2022,01-01-2023,02-11-2022,FALSE,TRUE,peak,superseded,V3-OF-003,renewal,0,255
-V3-OF-005,Nexaflow,Flow Automation,Contributor,NXF-FA-BASE,265,16.96,01-01-2023,01-01-2024,02-11-2023,FALSE,TRUE,peak,superseded,V3-OF-004,renewal,0,255
-V3-OF-006,Nexaflow,Flow Automation,Contributor,NXF-FA-BASE,275,16.96,01-01-2024,01-07-2024,02-04-2024,FALSE,FALSE,peak,superseded,V3-OF-005,renewal,0,255
-V3-OF-007,Nexaflow,Flow Automation,Contributor,NXF-FA-BASE,295,16.96,01-07-2024,01-07-2025,02-04-2025,FALSE,TRUE,peak,superseded,V3-OF-006,renewal,0,255
-V3-OF-008,Nexaflow,Flow Automation,Contributor,NXF-FA-BASE,255,16.96,01-07-2025,01-07-2027,02-04-2027,TRUE,FALSE,peak,active,V3-OF-007,renewal,0,255
-V3-OF-001,Nexaflow,Flow Automation,Collaborator,NXF-FA-BASE,210,3.69,01-01-2019,01-01-2020,03-10-2019,TRUE,FALSE,peak,superseded,,new,210,350
-V3-OF-002,Nexaflow,Flow Automation,Collaborator,NXF-FA-BASE,230,3.82,01-01-2020,01-01-2021,03-10-2020,TRUE,FALSE,peak,superseded,V3-OF-001,renewal,0,350
-V3-OF-003,Nexaflow,Flow Automation,Collaborator,NXF-FA-BASE,250,3.82,01-01-2021,01-01-2022,02-12-2021,TRUE,FALSE,peak,superseded,V3-OF-002,renewal,0,350
-V3-OF-004,Nexaflow,Flow Automation,Collaborator,NXF-FA-BASE,260,3.82,01-01-2022,01-01-2023,02-11-2022,FALSE,TRUE,peak,superseded,V3-OF-003,renewal,0,350
-V3-OF-005,Nexaflow,Flow Automation,Collaborator,NXF-FA-BASE,290,3.82,01-01-2023,01-01-2024,02-11-2023,FALSE,FALSE,peak,superseded,V3-OF-004,renewal,0,350
-V3-OF-006,Nexaflow,Flow Automation,Collaborator,NXF-FA-BASE,320,3.82,01-01-2024,01-07-2024,02-04-2024,TRUE,TRUE,peak,superseded,V3-OF-005,renewal,0,350
-V3-OF-007,Nexaflow,Flow Automation,Collaborator,NXF-FA-BASE,320,3.82,01-07-2024,01-07-2025,02-04-2025,TRUE,FALSE,peak,superseded,V3-OF-006,renewal,0,350
-V3-OF-008,Nexaflow,Flow Automation,Collaborator,NXF-FA-BASE,350,3.82,01-07-2025,01-07-2027,02-04-2027,TRUE,FALSE,peak,active,V3-OF-007,renewal,0,350
-V3-OF-010,Nexaflow,Flow Lite,Full,NXF-FL-BASE,80,28,01-01-2019,01-01-2020,02-12-2019,FALSE,FALSE,average,superseded,,new,80,135
-V3-OF-011,Nexaflow,Flow Lite,Full,NXF-FL-BASE,85,29.51,01-01-2020,01-07-2020,02-05-2020,TRUE,TRUE,average,superseded,V3-OF-010,renewal,0,135
-V3-OF-012,Nexaflow,Flow Lite,Full,NXF-FL-BASE,85,29.58,01-07-2020,01-10-2020,03-07-2020,TRUE,TRUE,average,superseded,V3-OF-011,renewal,0,135
-V3-OF-013,Nexaflow,Flow Lite,Full,NXF-FL-BASE,90,29.58,01-10-2020,01-10-2021,03-07-2021,TRUE,FALSE,average,superseded,V3-OF-012,renewal,0,135
-V3-OF-014,Nexaflow,Flow Lite,Full,NXF-FL-BASE,95,29.94,01-10-2021,01-10-2022,01-09-2022,FALSE,FALSE,average,superseded,V3-OF-013,renewal,0,135
-V3-OF-015,Nexaflow,Flow Lite,Full,NXF-FL-BASE,100,29.94,01-10-2022,01-04-2023,02-03-2023,FALSE,TRUE,average,superseded,V3-OF-014,renewal,0,135
-V3-OF-016,Nexaflow,Flow Lite,Full,NXF-FL-BASE,90,30.55,01-04-2023,01-04-2024,02-03-2024,TRUE,FALSE,average,superseded,V3-OF-015,renewal,0,135
-V3-OF-017,Nexaflow,Flow Lite,Full,NXF-FL-BASE,95,31.23,01-04-2024,01-10-2024,02-08-2024,TRUE,FALSE,average,superseded,V3-OF-016,renewal,0,135
-V3-OF-018,Nexaflow,Flow Lite,Full,NXF-FL-BASE,100,31.23,01-10-2024,01-10-2025,02-08-2025,TRUE,FALSE,average,superseded,V3-OF-017,renewal,0,135
-V3-OF-019,Nexaflow,Flow Lite,Full,NXF-FL-BASE,110,31.23,01-10-2025,01-10-2026,02-08-2026,FALSE,TRUE,average,superseded,V3-OF-018,renewal,0,135
-V3-OF-020,Nexaflow,Flow Lite,Full,NXF-FL-BASE,135,31.23,01-10-2026,01-04-2027,31-01-2027,FALSE,FALSE,average,active,V3-OF-019,amendment,25,135
-V3-OF-010,Nexaflow,Flow Lite,Contributor,NXF-FL-BASE,240,12,01-01-2019,01-01-2020,02-12-2019,FALSE,FALSE,average,superseded,,new,240,365
-V3-OF-011,Nexaflow,Flow Lite,Contributor,NXF-FL-BASE,260,13.4,01-01-2020,01-07-2020,02-05-2020,FALSE,FALSE,average,superseded,V3-OF-010,renewal,0,365
-V3-OF-012,Nexaflow,Flow Lite,Contributor,NXF-FL-BASE,275,13.4,01-07-2020,01-10-2020,03-07-2020,TRUE,TRUE,average,superseded,V3-OF-011,renewal,0,365
-V3-OF-013,Nexaflow,Flow Lite,Contributor,NXF-FL-BASE,280,13.4,01-10-2020,01-10-2021,03-07-2021,FALSE,TRUE,average,superseded,V3-OF-012,renewal,0,365
-V3-OF-014,Nexaflow,Flow Lite,Contributor,NXF-FL-BASE,330,13.4,01-10-2021,01-10-2022,01-09-2022,TRUE,FALSE,average,superseded,V3-OF-013,upsell,50,365
-V3-OF-015,Nexaflow,Flow Lite,Contributor,NXF-FL-BASE,345,13.4,01-10-2022,01-04-2023,02-03-2023,FALSE,FALSE,average,superseded,V3-OF-014,renewal,0,365
-V3-OF-016,Nexaflow,Flow Lite,Contributor,NXF-FL-BASE,370,13.4,01-04-2023,01-04-2024,02-03-2024,TRUE,TRUE,average,superseded,V3-OF-015,renewal,0,365
-V3-OF-017,Nexaflow,Flow Lite,Contributor,NXF-FL-BASE,310,13.4,01-04-2024,01-10-2024,02-08-2024,FALSE,FALSE,average,superseded,V3-OF-016,renewal,0,365
-V3-OF-018,Nexaflow,Flow Lite,Contributor,NXF-FL-BASE,325,13.4,01-10-2024,01-10-2025,02-08-2025,TRUE,FALSE,average,superseded,V3-OF-017,renewal,0,365
-V3-OF-019,Nexaflow,Flow Lite,Contributor,NXF-FL-BASE,355,13.4,01-10-2025,01-10-2026,02-08-2026,TRUE,FALSE,average,superseded,V3-OF-018,renewal,0,365
-V3-OF-020,Nexaflow,Flow Lite,Contributor,NXF-FL-BASE,365,13.4,01-10-2026,01-04-2027,31-01-2027,TRUE,TRUE,average,active,V3-OF-019,renewal,0,365
-V3-OF-010,Nexaflow,Flow Lite,Collaborator,NXF-FL-BASE,290,3,01-01-2019,01-01-2020,02-12-2019,FALSE,FALSE,average,superseded,,new,290,470
-V3-OF-011,Nexaflow,Flow Lite,Collaborator,NXF-FL-BASE,310,3,01-01-2020,01-07-2020,02-05-2020,FALSE,TRUE,average,superseded,V3-OF-010,renewal,0,470
-V3-OF-012,Nexaflow,Flow Lite,Collaborator,NXF-FL-BASE,260,3.25,01-07-2020,01-10-2020,03-07-2020,FALSE,FALSE,average,superseded,V3-OF-011,renewal,0,470
-V3-OF-013,Nexaflow,Flow Lite,Collaborator,NXF-FL-BASE,280,3.25,01-10-2020,01-10-2021,03-07-2021,TRUE,FALSE,average,superseded,V3-OF-012,renewal,0,470
-V3-OF-014,Nexaflow,Flow Lite,Collaborator,NXF-FL-BASE,360,3.25,01-10-2021,01-10-2022,01-09-2022,FALSE,FALSE,average,superseded,V3-OF-013,amendment,80,470
-V3-OF-015,Nexaflow,Flow Lite,Collaborator,NXF-FL-BASE,370,3.25,01-10-2022,01-04-2023,02-03-2023,TRUE,TRUE,average,superseded,V3-OF-014,renewal,0,470
-V3-OF-016,Nexaflow,Flow Lite,Collaborator,NXF-FL-BASE,310,3.25,01-04-2023,01-04-2024,02-03-2024,FALSE,FALSE,average,superseded,V3-OF-015,renewal,0,470
-V3-OF-017,Nexaflow,Flow Lite,Collaborator,NXF-FL-BASE,400,3.25,01-04-2024,01-10-2024,02-08-2024,TRUE,FALSE,average,superseded,V3-OF-016,upsell,90,470
-V3-OF-018,Nexaflow,Flow Lite,Collaborator,NXF-FL-BASE,420,3.25,01-10-2024,01-10-2025,02-08-2025,TRUE,FALSE,average,superseded,V3-OF-017,renewal,0,470
-V3-OF-019,Nexaflow,Flow Lite,Collaborator,NXF-FL-BASE,440,3.25,01-10-2025,01-10-2026,02-08-2026,FALSE,TRUE,average,superseded,V3-OF-018,renewal,0,470
-V3-OF-020,Nexaflow,Flow Lite,Collaborator,NXF-FL-BASE,470,3.25,01-10-2026,01-04-2027,31-01-2027,TRUE,FALSE,average,active,V3-OF-019,renewal,0,470
-V3-OF-022,Nexaflow,Analytics Engine,Full,NXF-AE-BASE,40,32,01-01-2019,01-01-2020,02-11-2019,TRUE,FALSE,peak,superseded,,new,40,220
-V3-OF-023,Nexaflow,Analytics Engine,Full,NXF-AE-BASE,40,33.77,01-01-2020,01-01-2021,02-11-2020,FALSE,FALSE,peak,superseded,V3-OF-022,renewal,0,220
-V3-OF-024,Nexaflow,Analytics Engine,Full,NXF-AE-BASE,45,34.09,01-01-2021,01-01-2022,03-10-2021,TRUE,FALSE,peak,superseded,V3-OF-023,renewal,0,220
-V3-OF-025,Nexaflow,Analytics Engine,Full,NXF-AE-BASE,55,34.09,01-01-2022,01-01-2023,02-11-2022,TRUE,FALSE,peak,superseded,V3-OF-024,amendment,10,220
-V3-OF-026,Nexaflow,Analytics Engine,Full,NXF-AE-BASE,55,34.09,01-01-2023,01-01-2024,02-12-2023,TRUE,FALSE,peak,superseded,V3-OF-025,renewal,0,220
-V3-OF-027,Nexaflow,Analytics Engine,Full,NXF-AE-BASE,60,34.44,01-01-2024,01-01-2025,02-11-2024,FALSE,TRUE,peak,superseded,V3-OF-026,renewal,0,220
-V3-OF-028,Nexaflow,Analytics Engine,Full,NXF-AE-BASE,65,34.44,01-01-2025,01-07-2025,02-05-2025,FALSE,TRUE,peak,superseded,V3-OF-027,renewal,0,220
-V3-OF-029,Nexaflow,Analytics Engine,Full,NXF-AE-BASE,65,35.31,01-07-2025,01-07-2026,02-05-2026,FALSE,FALSE,peak,superseded,V3-OF-028,renewal,0,220
-V3-OF-030,Nexaflow,Analytics Engine,Full,NXF-AE-BASE,80,35.31,01-07-2026,01-07-2027,02-04-2027,FALSE,FALSE,peak,active,V3-OF-029,amendment,15,220
-V3-OF-022,Nexaflow,Analytics Engine,Contributor,NXF-AE-BASE,150,11.2,01-01-2019,01-01-2020,02-11-2019,TRUE,FALSE,peak,superseded,,new,150,595
-V3-OF-023,Nexaflow,Analytics Engine,Contributor,NXF-AE-BASE,160,12.32,01-01-2020,01-01-2021,02-11-2020,FALSE,TRUE,peak,superseded,V3-OF-022,renewal,0,595
-V3-OF-024,Nexaflow,Analytics Engine,Contributor,NXF-AE-BASE,170,12.32,01-01-2021,01-01-2022,03-10-2021,TRUE,TRUE,peak,superseded,V3-OF-023,renewal,0,595
-V3-OF-025,Nexaflow,Analytics Engine,Contributor,NXF-AE-BASE,145,13.67,01-01-2022,01-01-2023,02-11-2022,FALSE,FALSE,peak,superseded,V3-OF-024,renewal,0,595
-V3-OF-026,Nexaflow,Analytics Engine,Contributor,NXF-AE-BASE,155,13.67,01-01-2023,01-01-2024,02-12-2023,TRUE,FALSE,peak,superseded,V3-OF-025,renewal,0,595
-V3-OF-027,Nexaflow,Analytics Engine,Contributor,NXF-AE-BASE,170,13.67,01-01-2024,01-01-2025,02-11-2024,FALSE,TRUE,peak,superseded,V3-OF-026,renewal,0,595
-V3-OF-028,Nexaflow,Analytics Engine,Contributor,NXF-AE-BASE,180,13.67,01-01-2025,01-07-2025,02-05-2025,TRUE,FALSE,peak,superseded,V3-OF-027,renewal,0,595
-V3-OF-029,Nexaflow,Analytics Engine,Contributor,NXF-AE-BASE,220,13.67,01-07-2025,01-07-2026,02-05-2026,TRUE,FALSE,peak,superseded,V3-OF-028,amendment,40,595
-V3-OF-030,Nexaflow,Analytics Engine,Contributor,NXF-AE-BASE,240,13.67,01-07-2026,01-07-2027,02-04-2027,FALSE,FALSE,peak,active,V3-OF-029,renewal,0,595
-V3-OF-022,Nexaflow,Analytics Engine,Collaborator,NXF-AE-BASE,250,2.73,01-01-2019,01-01-2020,02-11-2019,FALSE,FALSE,peak,superseded,,new,250,1440
-V3-OF-023,Nexaflow,Analytics Engine,Collaborator,NXF-AE-BASE,270,2.88,01-01-2020,01-01-2021,02-11-2020,FALSE,TRUE,peak,superseded,V3-OF-022,renewal,0,1440
-V3-OF-024,Nexaflow,Analytics Engine,Collaborator,NXF-AE-BASE,280,2.93,01-01-2021,01-01-2022,03-10-2021,TRUE,TRUE,peak,superseded,V3-OF-023,renewal,0,1440
-V3-OF-025,Nexaflow,Analytics Engine,Collaborator,NXF-AE-BASE,370,2.93,01-01-2022,01-01-2023,02-11-2022,TRUE,FALSE,peak,superseded,V3-OF-024,amendment,90,1440
-V3-OF-026,Nexaflow,Analytics Engine,Collaborator,NXF-AE-BASE,400,2.93,01-01-2023,01-01-2024,02-12-2023,FALSE,FALSE,peak,superseded,V3-OF-025,renewal,0,1440
-V3-OF-027,Nexaflow,Analytics Engine,Collaborator,NXF-AE-BASE,400,2.93,01-01-2024,01-01-2025,02-11-2024,TRUE,FALSE,peak,superseded,V3-OF-026,renewal,0,1440
-V3-OF-028,Nexaflow,Analytics Engine,Collaborator,NXF-AE-BASE,480,2.95,01-01-2025,01-07-2025,02-05-2025,FALSE,FALSE,peak,superseded,V3-OF-027,upsell,80,1440
-V3-OF-029,Nexaflow,Analytics Engine,Collaborator,NXF-AE-BASE,530,3.03,01-07-2025,01-07-2026,02-05-2026,TRUE,FALSE,peak,superseded,V3-OF-028,renewal,0,1440
-V3-OF-030,Nexaflow,Analytics Engine,Collaborator,NXF-AE-BASE,680,3.03,01-07-2026,01-07-2027,02-04-2027,FALSE,FALSE,peak,active,V3-OF-029,amendment,150,1440
-V3-OF-032,Nexaflow,Analytics Engine,Full,NXF-AE-FULL-EXP1,45,32,01-07-2020,01-10-2020,01-09-2020,TRUE,FALSE,peak,superseded,,new,45,220
-V3-OF-033,Nexaflow,Analytics Engine,Full,NXF-AE-FULL-EXP1,45,35.79,01-10-2020,01-04-2021,01-01-2021,FALSE,TRUE,peak,superseded,V3-OF-032,renewal,0,220
-V3-OF-034,Nexaflow,Analytics Engine,Full,NXF-AE-FULL-EXP1,45,35.79,01-04-2021,01-04-2022,31-01-2022,FALSE,FALSE,peak,superseded,V3-OF-033,renewal,0,220
-V3-OF-035,Nexaflow,Analytics Engine,Full,NXF-AE-FULL-EXP1,45,35.79,01-04-2022,01-10-2022,03-07-2022,TRUE,FALSE,peak,superseded,V3-OF-034,renewal,0,220
-V3-OF-036,Nexaflow,Analytics Engine,Full,NXF-AE-FULL-EXP1,45,35.79,01-10-2022,01-04-2023,31-01-2023,FALSE,FALSE,peak,superseded,V3-OF-035,renewal,0,220
-V3-OF-037,Nexaflow,Analytics Engine,Full,NXF-AE-FULL-EXP1,45,35.79,01-04-2023,01-07-2023,01-06-2023,TRUE,TRUE,peak,superseded,V3-OF-036,renewal,0,220
-V3-OF-038,Nexaflow,Analytics Engine,Full,NXF-AE-FULL-EXP1,55,35.79,01-07-2023,01-10-2023,02-08-2023,TRUE,FALSE,peak,superseded,V3-OF-037,amendment,10,220
-V3-OF-039,Nexaflow,Analytics Engine,Full,NXF-AE-FULL-EXP1,55,35.79,01-10-2023,01-04-2024,02-03-2024,FALSE,FALSE,peak,superseded,V3-OF-038,renewal,0,220
-V3-OF-040,Nexaflow,Analytics Engine,Full,NXF-AE-FULL-EXP1,70,35.79,01-04-2024,01-10-2024,03-07-2024,FALSE,FALSE,peak,superseded,V3-OF-039,upsell,15,220
-V3-OF-041,Nexaflow,Analytics Engine,Full,NXF-AE-FULL-EXP1,75,35.79,01-10-2024,01-04-2025,31-01-2025,TRUE,TRUE,peak,superseded,V3-OF-040,renewal,0,220
-V3-OF-042,Nexaflow,Analytics Engine,Full,NXF-AE-FULL-EXP1,90,35.79,01-04-2025,01-10-2025,01-09-2025,FALSE,FALSE,peak,superseded,V3-OF-041,amendment,15,220
-V3-OF-043,Nexaflow,Analytics Engine,Full,NXF-AE-FULL-EXP1,90,35.79,01-10-2025,01-04-2026,31-01-2026,FALSE,TRUE,peak,superseded,V3-OF-042,renewal,0,220
-V3-OF-044,Nexaflow,Analytics Engine,Full,NXF-AE-FULL-EXP1,95,35.79,01-04-2026,01-10-2026,01-09-2026,TRUE,FALSE,peak,superseded,V3-OF-043,renewal,0,220
-V3-OF-045,Nexaflow,Analytics Engine,Full,NXF-AE-FULL-EXP1,95,35.79,01-10-2026,01-10-2027,03-07-2027,FALSE,FALSE,peak,active,V3-OF-044,renewal,0,220
-V3-OF-047,Nexaflow,Analytics Engine,Contributor,NXF-AE-CONT-EXP1,125,12.6,01-07-2020,01-01-2021,02-12-2020,FALSE,FALSE,peak,superseded,,new,125,595
-V3-OF-048,Nexaflow,Analytics Engine,Contributor,NXF-AE-CONT-EXP1,130,12.98,01-01-2021,01-04-2021,02-03-2021,TRUE,TRUE,peak,superseded,V3-OF-047,renewal,0,595
-V3-OF-049,Nexaflow,Analytics Engine,Contributor,NXF-AE-CONT-EXP1,135,13.91,01-04-2021,01-07-2021,02-05-2021,TRUE,FALSE,peak,superseded,V3-OF-048,renewal,0,595
-V3-OF-050,Nexaflow,Analytics Engine,Contributor,NXF-AE-CONT-EXP1,145,13.91,01-07-2021,01-07-2022,02-05-2022,TRUE,FALSE,peak,superseded,V3-OF-049,renewal,0,595
-V3-OF-051,Nexaflow,Analytics Engine,Contributor,NXF-AE-CONT-EXP1,185,13.91,01-07-2022,01-07-2023,01-06-2023,TRUE,FALSE,peak,superseded,V3-OF-050,upsell,40,595
-V3-OF-052,Nexaflow,Analytics Engine,Contributor,NXF-AE-CONT-EXP1,185,13.91,01-07-2023,01-01-2024,03-10-2023,TRUE,FALSE,peak,superseded,V3-OF-051,renewal,0,595
-V3-OF-053,Nexaflow,Analytics Engine,Contributor,NXF-AE-CONT-EXP1,190,13.91,01-01-2024,01-07-2024,02-05-2024,FALSE,TRUE,peak,superseded,V3-OF-052,renewal,0,595
-V3-OF-054,Nexaflow,Analytics Engine,Contributor,NXF-AE-CONT-EXP1,195,13.91,01-07-2024,01-01-2025,02-11-2024,TRUE,FALSE,peak,superseded,V3-OF-053,renewal,0,595
-V3-OF-055,Nexaflow,Analytics Engine,Contributor,NXF-AE-CONT-EXP1,210,13.91,01-01-2025,01-07-2025,02-05-2025,TRUE,TRUE,peak,superseded,V3-OF-054,renewal,0,595
-V3-OF-056,Nexaflow,Analytics Engine,Contributor,NXF-AE-CONT-EXP1,175,13.91,01-07-2025,01-01-2026,03-10-2025,FALSE,FALSE,peak,superseded,V3-OF-055,renewal,0,595
-V3-OF-057,Nexaflow,Analytics Engine,Contributor,NXF-AE-CONT-EXP1,220,13.91,01-01-2026,01-04-2026,01-01-2026,TRUE,FALSE,peak,superseded,V3-OF-056,amendment,45,595
-V3-OF-058,Nexaflow,Analytics Engine,Contributor,NXF-AE-CONT-EXP1,240,13.91,01-04-2026,01-04-2027,31-01-2027,FALSE,FALSE,peak,active,V3-OF-057,renewal,0,595
-V3-OF-060,Nexaflow,Analytics Engine,Collaborator,NXF-AE-COLL-EXP1,160,2.73,01-07-2020,01-01-2021,03-10-2020,FALSE,FALSE,peak,superseded,,new,160,1440
-V3-OF-061,Nexaflow,Analytics Engine,Collaborator,NXF-AE-COLL-EXP1,170,2.99,01-01-2021,01-01-2022,02-11-2021,TRUE,TRUE,peak,superseded,V3-OF-060,renewal,0,1440
-V3-OF-062,Nexaflow,Analytics Engine,Collaborator,NXF-AE-COLL-EXP1,210,3.05,01-01-2022,01-04-2022,01-01-2022,TRUE,FALSE,peak,superseded,V3-OF-061,upsell,40,1440
-V3-OF-063,Nexaflow,Analytics Engine,Collaborator,NXF-AE-COLL-EXP1,230,3.05,01-04-2022,01-10-2022,02-08-2022,TRUE,FALSE,peak,superseded,V3-OF-062,renewal,0,1440
-V3-OF-064,Nexaflow,Analytics Engine,Collaborator,NXF-AE-COLL-EXP1,250,3.05,01-10-2022,01-04-2023,02-03-2023,FALSE,FALSE,peak,superseded,V3-OF-063,renewal,0,1440
-V3-OF-065,Nexaflow,Analytics Engine,Collaborator,NXF-AE-COLL-EXP1,310,3.05,01-04-2023,01-10-2023,02-08-2023,TRUE,FALSE,peak,superseded,V3-OF-064,upsell,60,1440
-V3-OF-066,Nexaflow,Analytics Engine,Collaborator,NXF-AE-COLL-EXP1,330,3.05,01-10-2023,01-10-2024,03-07-2024,FALSE,FALSE,peak,superseded,V3-OF-065,renewal,0,1440
-V3-OF-067,Nexaflow,Analytics Engine,Collaborator,NXF-AE-COLL-EXP1,370,3.05,01-10-2024,01-10-2025,02-08-2025,FALSE,TRUE,peak,superseded,V3-OF-066,renewal,0,1440
-V3-OF-068,Nexaflow,Analytics Engine,Collaborator,NXF-AE-COLL-EXP1,300,3.05,01-10-2025,01-01-2026,02-12-2025,TRUE,TRUE,peak,superseded,V3-OF-067,renewal,0,1440
-V3-OF-069,Nexaflow,Analytics Engine,Collaborator,NXF-AE-COLL-EXP1,310,3.05,01-01-2026,01-07-2026,01-06-2026,FALSE,TRUE,peak,superseded,V3-OF-068,renewal,0,1440
-V3-OF-070,Nexaflow,Analytics Engine,Collaborator,NXF-AE-COLL-EXP1,340,3.05,01-07-2026,01-07-2027,02-05-2027,TRUE,FALSE,peak,active,V3-OF-069,renewal,0,1440
-V3-OF-072,Nexaflow,Analytics Engine,Full,NXF-AE-FULL-PROJ1,35,32,01-01-2021,01-04-2021,02-03-2021,TRUE,FALSE,peak,superseded,,new,35,220
-V3-OF-073,Nexaflow,Analytics Engine,Full,NXF-AE-FULL-PROJ1,35,34.27,01-04-2021,01-07-2021,02-04-2021,FALSE,FALSE,peak,superseded,V3-OF-072,renewal,0,220
-V3-OF-074,Nexaflow,Analytics Engine,Full,NXF-AE-FULL-PROJ1,45,34.27,01-07-2021,01-10-2021,01-09-2021,FALSE,FALSE,peak,superseded,V3-OF-073,amendment,10,220
-V3-OF-075,Nexaflow,Analytics Engine,Full,NXF-AE-FULL-PROJ1,45,34.27,01-10-2021,01-01-2022,03-10-2021,FALSE,TRUE,peak,active,V3-OF-074,renewal,0,220
-V3-OF-076,Nexaflow,Analytics Engine,Contributor,NXF-AE-CONT-PROJ1,100,12.6,01-01-2021,01-04-2021,01-01-2021,FALSE,FALSE,peak,superseded,,new,100,595
-V3-OF-077,Nexaflow,Analytics Engine,Contributor,NXF-AE-CONT-PROJ1,105,13.88,01-04-2021,01-07-2021,01-06-2021,FALSE,TRUE,peak,superseded,V3-OF-076,renewal,0,595
-V3-OF-078,Nexaflow,Analytics Engine,Contributor,NXF-AE-CONT-PROJ1,90,13.88,01-07-2021,01-10-2021,01-09-2021,TRUE,FALSE,peak,superseded,V3-OF-077,renewal,0,595
-V3-OF-079,Nexaflow,Analytics Engine,Contributor,NXF-AE-CONT-PROJ1,115,13.88,01-10-2021,01-01-2022,02-12-2021,TRUE,FALSE,peak,active,V3-OF-078,amendment,25,595
-V3-OF-080,Nexaflow,Analytics Engine,Collaborator,NXF-AE-COLL-PROJ1,260,2.73,01-01-2021,01-04-2021,31-01-2021,FALSE,FALSE,peak,superseded,,new,260,1440
-V3-OF-081,Nexaflow,Analytics Engine,Collaborator,NXF-AE-COLL-PROJ1,290,3.05,01-04-2021,01-07-2021,01-06-2021,FALSE,FALSE,peak,superseded,V3-OF-080,renewal,0,1440
-V3-OF-082,Nexaflow,Analytics Engine,Collaborator,NXF-AE-COLL-PROJ1,320,3.05,01-07-2021,01-10-2021,03-07-2021,TRUE,TRUE,peak,superseded,V3-OF-081,renewal,0,1440
-V3-OF-083,Nexaflow,Analytics Engine,Collaborator,NXF-AE-COLL-PROJ1,420,3.05,01-10-2021,01-01-2022,02-11-2021,TRUE,FALSE,peak,active,V3-OF-082,amendment,100,1440
-V3-OF-084,Nexaflow,Mobile Access,Full,NXF-MA-BASE,60,20,01-01-2019,01-01-2020,02-12-2019,TRUE,FALSE,snapshot,superseded,,new,60,160
-V3-OF-085,Nexaflow,Mobile Access,Full,NXF-MA-BASE,65,21.21,01-01-2020,01-04-2020,01-02-2020,FALSE,FALSE,snapshot,superseded,V3-OF-084,renewal,0,160
-V3-OF-086,Nexaflow,Mobile Access,Full,NXF-MA-BASE,70,21.21,01-04-2020,01-04-2021,02-03-2021,FALSE,FALSE,snapshot,superseded,V3-OF-085,renewal,0,160
-V3-OF-087,Nexaflow,Mobile Access,Full,NXF-MA-BASE,75,21.38,01-04-2021,01-04-2022,01-01-2022,FALSE,FALSE,snapshot,superseded,V3-OF-086,renewal,0,160
-V3-OF-088,Nexaflow,Mobile Access,Full,NXF-MA-BASE,80,22.04,01-04-2022,01-10-2022,01-09-2022,TRUE,FALSE,snapshot,superseded,V3-OF-087,renewal,0,160
-V3-OF-089,Nexaflow,Mobile Access,Full,NXF-MA-BASE,85,22.04,01-10-2022,01-10-2023,03-07-2023,TRUE,FALSE,snapshot,superseded,V3-OF-088,renewal,0,160
-V3-OF-090,Nexaflow,Mobile Access,Full,NXF-MA-BASE,85,22.04,01-10-2023,01-10-2024,02-08-2024,TRUE,TRUE,snapshot,superseded,V3-OF-089,renewal,0,160
-V3-OF-091,Nexaflow,Mobile Access,Full,NXF-MA-BASE,75,22.04,01-10-2024,01-10-2025,03-07-2025,TRUE,TRUE,snapshot,superseded,V3-OF-090,renewal,0,160
-V3-OF-092,Nexaflow,Mobile Access,Full,NXF-MA-BASE,65,22.04,01-10-2025,01-10-2026,03-07-2026,TRUE,TRUE,snapshot,superseded,V3-OF-091,renewal,0,160
-V3-OF-093,Nexaflow,Mobile Access,Full,NXF-MA-BASE,60,22.23,01-10-2026,01-10-2027,03-07-2027,FALSE,FALSE,snapshot,active,V3-OF-092,renewal,0,160
-V3-OF-084,Nexaflow,Mobile Access,Contributor,NXF-MA-BASE,120,9,01-01-2019,01-01-2020,02-12-2019,TRUE,FALSE,snapshot,superseded,,new,120,565
-V3-OF-085,Nexaflow,Mobile Access,Contributor,NXF-MA-BASE,125,9.33,01-01-2020,01-04-2020,01-02-2020,TRUE,TRUE,snapshot,superseded,V3-OF-084,renewal,0,565
-V3-OF-086,Nexaflow,Mobile Access,Contributor,NXF-MA-BASE,125,9.36,01-04-2020,01-04-2021,02-03-2021,FALSE,FALSE,snapshot,superseded,V3-OF-085,renewal,0,565
-V3-OF-087,Nexaflow,Mobile Access,Contributor,NXF-MA-BASE,135,9.54,01-04-2021,01-04-2022,01-01-2022,FALSE,FALSE,snapshot,superseded,V3-OF-086,renewal,0,565
-V3-OF-088,Nexaflow,Mobile Access,Contributor,NXF-MA-BASE,170,9.54,01-04-2022,01-10-2022,01-09-2022,TRUE,FALSE,snapshot,superseded,V3-OF-087,upsell,35,565
-V3-OF-089,Nexaflow,Mobile Access,Contributor,NXF-MA-BASE,175,9.54,01-10-2022,01-10-2023,03-07-2023,FALSE,FALSE,snapshot,superseded,V3-OF-088,renewal,0,565
-V3-OF-090,Nexaflow,Mobile Access,Contributor,NXF-MA-BASE,185,9.67,01-10-2023,01-10-2024,02-08-2024,TRUE,TRUE,snapshot,superseded,V3-OF-089,renewal,0,565
-V3-OF-091,Nexaflow,Mobile Access,Contributor,NXF-MA-BASE,190,9.67,01-10-2024,01-10-2025,03-07-2025,FALSE,FALSE,snapshot,superseded,V3-OF-090,renewal,0,565
-V3-OF-092,Nexaflow,Mobile Access,Contributor,NXF-MA-BASE,200,9.67,01-10-2025,01-10-2026,03-07-2026,FALSE,TRUE,snapshot,superseded,V3-OF-091,renewal,0,565
-V3-OF-093,Nexaflow,Mobile Access,Contributor,NXF-MA-BASE,215,9.67,01-10-2026,01-10-2027,03-07-2027,TRUE,FALSE,snapshot,active,V3-OF-092,renewal,0,565
-V3-OF-084,Nexaflow,Mobile Access,Collaborator,NXF-MA-BASE,350,2.12,01-01-2019,01-01-2020,02-12-2019,TRUE,FALSE,snapshot,superseded,,new,350,1020
-V3-OF-085,Nexaflow,Mobile Access,Collaborator,NXF-MA-BASE,390,2.32,01-01-2020,01-04-2020,01-02-2020,FALSE,FALSE,snapshot,superseded,V3-OF-084,renewal,0,1020
-V3-OF-086,Nexaflow,Mobile Access,Collaborator,NXF-MA-BASE,420,2.32,01-04-2020,01-04-2021,02-03-2021,FALSE,TRUE,snapshot,superseded,V3-OF-085,renewal,0,1020
-V3-OF-087,Nexaflow,Mobile Access,Collaborator,NXF-MA-BASE,450,2.32,01-04-2021,01-04-2022,01-01-2022,FALSE,FALSE,snapshot,superseded,V3-OF-086,renewal,0,1020
-V3-OF-088,Nexaflow,Mobile Access,Collaborator,NXF-MA-BASE,490,2.32,01-04-2022,01-10-2022,01-09-2022,TRUE,FALSE,snapshot,superseded,V3-OF-087,renewal,0,1020
-V3-OF-089,Nexaflow,Mobile Access,Collaborator,NXF-MA-BASE,520,2.32,01-10-2022,01-10-2023,03-07-2023,TRUE,FALSE,snapshot,superseded,V3-OF-088,renewal,0,1020
-V3-OF-090,Nexaflow,Mobile Access,Collaborator,NXF-MA-BASE,560,2.32,01-10-2023,01-10-2024,02-08-2024,TRUE,TRUE,snapshot,superseded,V3-OF-089,renewal,0,1020
-V3-OF-091,Nexaflow,Mobile Access,Collaborator,NXF-MA-BASE,620,2.32,01-10-2024,01-10-2025,03-07-2025,TRUE,FALSE,snapshot,superseded,V3-OF-090,renewal,0,1020
-V3-OF-092,Nexaflow,Mobile Access,Collaborator,NXF-MA-BASE,650,2.32,01-10-2025,01-10-2026,03-07-2026,TRUE,TRUE,snapshot,superseded,V3-OF-091,renewal,0,1020
-V3-OF-093,Nexaflow,Mobile Access,Collaborator,NXF-MA-BASE,670,2.32,01-10-2026,01-10-2027,03-07-2027,TRUE,FALSE,snapshot,active,V3-OF-092,renewal,0,1020
-V3-OF-095,Nexaflow,Mobile Access,Full,NXF-MA-FULL-EXP1,50,20,01-07-2020,01-01-2021,02-11-2020,TRUE,FALSE,snapshot,superseded,,new,50,160
-V3-OF-096,Nexaflow,Mobile Access,Full,NXF-MA-FULL-EXP1,55,21.55,01-01-2021,01-04-2021,02-03-2021,FALSE,FALSE,snapshot,superseded,V3-OF-095,renewal,0,160
-V3-OF-097,Nexaflow,Mobile Access,Full,NXF-MA-FULL-EXP1,60,21.55,01-04-2021,01-10-2021,03-07-2021,FALSE,FALSE,snapshot,superseded,V3-OF-096,renewal,0,160
-V3-OF-098,Nexaflow,Mobile Access,Full,NXF-MA-FULL-EXP1,75,21.55,01-10-2021,01-10-2022,03-07-2022,FALSE,FALSE,snapshot,superseded,V3-OF-097,upsell,15,160
-V3-OF-099,Nexaflow,Mobile Access,Full,NXF-MA-FULL-EXP1,75,21.55,01-10-2022,01-04-2023,31-01-2023,TRUE,FALSE,snapshot,superseded,V3-OF-098,renewal,0,160
-V3-OF-100,Nexaflow,Mobile Access,Full,NXF-MA-FULL-EXP1,80,21.55,01-04-2023,01-04-2024,02-01-2024,TRUE,TRUE,snapshot,superseded,V3-OF-099,renewal,0,160
-V3-OF-101,Nexaflow,Mobile Access,Full,NXF-MA-FULL-EXP1,85,22.4,01-04-2024,01-07-2024,02-05-2024,TRUE,FALSE,snapshot,superseded,V3-OF-100,renewal,0,160
-V3-OF-102,Nexaflow,Mobile Access,Full,NXF-MA-FULL-EXP1,90,22.4,01-07-2024,01-01-2025,02-11-2024,TRUE,TRUE,snapshot,superseded,V3-OF-101,renewal,0,160
-V3-OF-103,Nexaflow,Mobile Access,Full,NXF-MA-FULL-EXP1,95,22.4,01-01-2025,01-01-2026,02-12-2025,FALSE,TRUE,snapshot,superseded,V3-OF-102,renewal,0,160
-V3-OF-104,Nexaflow,Mobile Access,Full,NXF-MA-FULL-EXP1,100,22.4,01-01-2026,01-01-2027,03-10-2026,FALSE,TRUE,snapshot,active,V3-OF-103,renewal,0,160
-V3-OF-108,Nexaflow,Mobile Access,Contributor,NXF-MA-CONT-EXP1,135,9,01-07-2020,01-01-2021,03-10-2020,TRUE,FALSE,snapshot,superseded,,new,135,565
-V3-OF-109,Nexaflow,Mobile Access,Contributor,NXF-MA-CONT-EXP1,145,10.07,01-01-2021,01-07-2021,02-05-2021,TRUE,FALSE,snapshot,superseded,V3-OF-108,renewal,0,565
-V3-OF-110,Nexaflow,Mobile Access,Contributor,NXF-MA-CONT-EXP1,185,10.07,01-07-2021,01-10-2021,01-09-2021,FALSE,FALSE,snapshot,superseded,V3-OF-109,amendment,40,565
-V3-OF-111,Nexaflow,Mobile Access,Contributor,NXF-MA-CONT-EXP1,200,10.07,01-10-2021,01-04-2022,31-01-2022,TRUE,FALSE,snapshot,superseded,V3-OF-110,renewal,0,565
-V3-OF-112,Nexaflow,Mobile Access,Contributor,NXF-MA-CONT-EXP1,215,10.07,01-04-2022,01-07-2022,01-06-2022,TRUE,FALSE,snapshot,superseded,V3-OF-111,renewal,0,565
-V3-OF-113,Nexaflow,Mobile Access,Contributor,NXF-MA-CONT-EXP1,220,10.07,01-07-2022,01-01-2023,02-12-2022,FALSE,TRUE,snapshot,superseded,V3-OF-112,renewal,0,565
-V3-OF-114,Nexaflow,Mobile Access,Contributor,NXF-MA-CONT-EXP1,255,10.07,01-01-2023,01-07-2023,01-06-2023,TRUE,FALSE,snapshot,superseded,V3-OF-113,upsell,35,565
-V3-OF-115,Nexaflow,Mobile Access,Contributor,NXF-MA-CONT-EXP1,265,10.07,01-07-2023,01-07-2024,02-04-2024,TRUE,TRUE,snapshot,superseded,V3-OF-114,renewal,0,565
-V3-OF-116,Nexaflow,Mobile Access,Contributor,NXF-MA-CONT-EXP1,330,10.07,01-07-2024,01-01-2025,02-11-2024,TRUE,FALSE,snapshot,superseded,V3-OF-115,upsell,65,565
-V3-OF-117,Nexaflow,Mobile Access,Contributor,NXF-MA-CONT-EXP1,340,10.07,01-01-2025,01-04-2025,01-01-2025,TRUE,TRUE,snapshot,superseded,V3-OF-116,renewal,0,565
-V3-OF-118,Nexaflow,Mobile Access,Contributor,NXF-MA-CONT-EXP1,280,10.07,01-04-2025,01-10-2025,01-09-2025,FALSE,FALSE,snapshot,superseded,V3-OF-117,renewal,0,565
-V3-OF-119,Nexaflow,Mobile Access,Contributor,NXF-MA-CONT-EXP1,290,10.07,01-10-2025,01-04-2026,02-03-2026,TRUE,TRUE,snapshot,superseded,V3-OF-118,renewal,0,565
-V3-OF-120,Nexaflow,Mobile Access,Contributor,NXF-MA-CONT-EXP1,350,10.07,01-04-2026,01-07-2026,01-06-2026,FALSE,FALSE,snapshot,superseded,V3-OF-119,upsell,60,565
-V3-OF-121,Nexaflow,Mobile Access,Contributor,NXF-MA-CONT-EXP1,350,10.07,01-07-2026,01-01-2027,03-10-2026,FALSE,FALSE,snapshot,active,V3-OF-120,renewal,0,565
-V3-OF-124,Nexaflow,Mobile Access,Collaborator,NXF-MA-COLL-EXP1,280,2.12,01-07-2020,01-07-2021,02-05-2021,TRUE,FALSE,snapshot,superseded,,new,280,1020
-V3-OF-125,Nexaflow,Mobile Access,Collaborator,NXF-MA-COLL-EXP1,310,2.21,01-07-2021,01-07-2022,02-04-2022,TRUE,FALSE,snapshot,superseded,V3-OF-124,renewal,0,1020
-V3-OF-126,Nexaflow,Mobile Access,Collaborator,NXF-MA-COLL-EXP1,310,2.31,01-07-2022,01-07-2023,02-04-2023,FALSE,TRUE,snapshot,superseded,V3-OF-125,renewal,0,1020
-V3-OF-127,Nexaflow,Mobile Access,Collaborator,NXF-MA-COLL-EXP1,260,2.32,01-07-2023,01-01-2024,02-12-2023,TRUE,FALSE,snapshot,superseded,V3-OF-126,renewal,0,1020
-V3-OF-128,Nexaflow,Mobile Access,Collaborator,NXF-MA-COLL-EXP1,280,2.32,01-01-2024,01-07-2024,01-06-2024,FALSE,TRUE,snapshot,superseded,V3-OF-127,renewal,0,1020
-V3-OF-129,Nexaflow,Mobile Access,Collaborator,NXF-MA-COLL-EXP1,230,2.32,01-07-2024,01-10-2024,02-08-2024,FALSE,FALSE,snapshot,superseded,V3-OF-128,renewal,0,1020
-V3-OF-130,Nexaflow,Mobile Access,Collaborator,NXF-MA-COLL-EXP1,250,2.35,01-10-2024,01-04-2025,31-01-2025,TRUE,FALSE,snapshot,superseded,V3-OF-129,renewal,0,1020
-V3-OF-131,Nexaflow,Mobile Access,Collaborator,NXF-MA-COLL-EXP1,270,2.35,01-04-2025,01-04-2026,31-01-2026,TRUE,TRUE,snapshot,superseded,V3-OF-130,renewal,0,1020
-V3-OF-132,Nexaflow,Mobile Access,Collaborator,NXF-MA-COLL-EXP1,350,2.35,01-04-2026,01-04-2027,02-03-2027,TRUE,FALSE,snapshot,active,V3-OF-131,upsell,80,1020
-V3-OF-133,Open Ai,GPT-4o,Full,OPEAI-GPT-BASE,0,0,26-05-2026,15-05-2028,16-03-2028,TRUE,FALSE,snapshot,active,,new,0,0
-V3-OF-134,Open Ai,GPT-4o,Full,OPEAI-GPT-BASE,0,0,26-05-2026,15-05-2028,16-03-2028,TRUE,FALSE,snapshot,active,,new,0,0
+"of_id","vendor","sku","seat_type","contract_group_id","contracted_seats","unit_price","contract_start","contract_expiry","notice_deadline","auto_renewal","true_down_rights","measurement_method","contract_status","predecessor_of_id","contract_event_type","seat_delta","effective_total_seats"
+"V1-OF-001","Atlassify","Project Suite","Full","ATL-PS-BASE","75","24","01-01-2020","01-01-2021","02-11-2020","TRUE","FALSE","peak","superseded","","new","75","155"
+"V1-OF-002","Atlassify","Project Suite","Full","ATL-PS-BASE","75","26.6","01-01-2021","01-01-2022","02-12-2021","TRUE","FALSE","peak","superseded","V1-OF-001","renewal","0","155"
+"V1-OF-003","Atlassify","Project Suite","Full","ATL-PS-BASE","75","26.6","01-01-2022","01-07-2022","02-04-2022","TRUE","FALSE","peak","superseded","V1-OF-002","renewal","0","155"
+"V1-OF-004","Atlassify","Project Suite","Full","ATL-PS-BASE","75","26.6","01-07-2022","01-01-2023","03-10-2022","TRUE","TRUE","peak","superseded","V1-OF-003","renewal","0","155"
+"V1-OF-005","Atlassify","Project Suite","Full","ATL-PS-BASE","65","26.6","01-01-2023","01-01-2024","02-11-2023","FALSE","TRUE","peak","superseded","V1-OF-004","renewal","0","155"
+"V1-OF-006","Atlassify","Project Suite","Full","ATL-PS-BASE","75","26.6","01-01-2024","01-01-2025","02-12-2024","TRUE","FALSE","peak","superseded","V1-OF-005","upsell","10","155"
+"V1-OF-007","Atlassify","Project Suite","Full","ATL-PS-BASE","80","26.85","01-01-2025","01-01-2026","03-10-2025","FALSE","FALSE","peak","superseded","V1-OF-006","renewal","0","155"
+"V1-OF-008","Atlassify","Project Suite","Full","ATL-PS-BASE","85","26.85","01-01-2026","01-01-2027","03-10-2026","TRUE","TRUE","peak","active","V1-OF-007","renewal","0","155"
+"V1-OF-001","Atlassify","Project Suite","Contributor","ATL-PS-BASE","130","9.9","01-01-2020","01-01-2021","02-11-2020","TRUE","FALSE","peak","superseded","","new","130","375"
+"V1-OF-002","Atlassify","Project Suite","Contributor","ATL-PS-BASE","145","10.77","01-01-2021","01-01-2022","02-12-2021","FALSE","TRUE","peak","superseded","V1-OF-001","renewal","0","375"
+"V1-OF-003","Atlassify","Project Suite","Contributor","ATL-PS-BASE","180","10.77","01-01-2022","01-07-2022","02-04-2022","TRUE","FALSE","peak","superseded","V1-OF-002","upsell","35","375"
+"V1-OF-004","Atlassify","Project Suite","Contributor","ATL-PS-BASE","185","10.77","01-07-2022","01-01-2023","03-10-2022","FALSE","FALSE","peak","superseded","V1-OF-003","renewal","0","375"
+"V1-OF-005","Atlassify","Project Suite","Contributor","ATL-PS-BASE","195","10.77","01-01-2023","01-01-2024","02-11-2023","TRUE","FALSE","peak","superseded","V1-OF-004","renewal","0","375"
+"V1-OF-006","Atlassify","Project Suite","Contributor","ATL-PS-BASE","200","10.77","01-01-2024","01-01-2025","02-12-2024","FALSE","TRUE","peak","superseded","V1-OF-005","renewal","0","375"
+"V1-OF-007","Atlassify","Project Suite","Contributor","ATL-PS-BASE","240","10.77","01-01-2025","01-01-2026","03-10-2025","FALSE","FALSE","peak","superseded","V1-OF-006","upsell","40","375"
+"V1-OF-008","Atlassify","Project Suite","Contributor","ATL-PS-BASE","240","10.77","01-01-2026","01-01-2027","03-10-2026","FALSE","TRUE","peak","active","V1-OF-007","renewal","0","375"
+"V1-OF-001","Atlassify","Project Suite","Collaborator","ATL-PS-BASE","320","2.25","01-01-2020","01-01-2021","02-11-2020","FALSE","FALSE","peak","superseded","","new","320","1240"
+"V1-OF-002","Atlassify","Project Suite","Collaborator","ATL-PS-BASE","350","2.32","01-01-2021","01-01-2022","02-12-2021","FALSE","FALSE","peak","superseded","V1-OF-001","renewal","0","1240"
+"V1-OF-003","Atlassify","Project Suite","Collaborator","ATL-PS-BASE","360","2.45","01-01-2022","01-07-2022","02-04-2022","TRUE","TRUE","peak","superseded","V1-OF-002","renewal","0","1240"
+"V1-OF-004","Atlassify","Project Suite","Collaborator","ATL-PS-BASE","400","2.45","01-07-2022","01-01-2023","03-10-2022","TRUE","TRUE","peak","superseded","V1-OF-003","renewal","0","1240"
+"V1-OF-005","Atlassify","Project Suite","Collaborator","ATL-PS-BASE","530","2.45","01-01-2023","01-01-2024","02-11-2023","TRUE","FALSE","peak","superseded","V1-OF-004","amendment","130","1240"
+"V1-OF-006","Atlassify","Project Suite","Collaborator","ATL-PS-BASE","570","2.45","01-01-2024","01-01-2025","02-12-2024","FALSE","FALSE","peak","superseded","V1-OF-005","renewal","0","1240"
+"V1-OF-007","Atlassify","Project Suite","Collaborator","ATL-PS-BASE","710","2.45","01-01-2025","01-01-2026","03-10-2025","TRUE","FALSE","peak","superseded","V1-OF-006","upsell","140","1240"
+"V1-OF-008","Atlassify","Project Suite","Collaborator","ATL-PS-BASE","790","2.5","01-01-2026","01-01-2027","03-10-2026","TRUE","FALSE","peak","active","V1-OF-007","renewal","0","1240"
+"V1-OF-010","Atlassify","Project Suite","Full","ATL-PS-FULL-EXP1","45","24","01-07-2021","01-07-2022","02-04-2022","TRUE","FALSE","peak","superseded","","new","45","155"
+"V1-OF-011","Atlassify","Project Suite","Full","ATL-PS-FULL-EXP1","45","25.2","01-07-2022","01-01-2023","02-12-2022","FALSE","FALSE","peak","superseded","V1-OF-010","renewal","0","155"
+"V1-OF-012","Atlassify","Project Suite","Full","ATL-PS-FULL-EXP1","50","25.2","01-01-2023","01-07-2023","02-04-2023","FALSE","TRUE","peak","superseded","V1-OF-011","renewal","0","155"
+"V1-OF-013","Atlassify","Project Suite","Full","ATL-PS-FULL-EXP1","45","25.95","01-07-2023","01-07-2024","02-04-2024","FALSE","TRUE","peak","superseded","V1-OF-012","renewal","0","155"
+"V1-OF-014","Atlassify","Project Suite","Full","ATL-PS-FULL-EXP1","55","25.95","01-07-2024","01-10-2024","02-08-2024","TRUE","FALSE","peak","superseded","V1-OF-013","upsell","10","155"
+"V1-OF-015","Atlassify","Project Suite","Full","ATL-PS-FULL-EXP1","55","26.29","01-10-2024","01-01-2025","03-10-2024","FALSE","FALSE","peak","superseded","V1-OF-014","renewal","0","155"
+"V1-OF-016","Atlassify","Project Suite","Full","ATL-PS-FULL-EXP1","55","26.29","01-01-2025","01-07-2025","02-04-2025","TRUE","FALSE","peak","superseded","V1-OF-015","renewal","0","155"
+"V1-OF-017","Atlassify","Project Suite","Full","ATL-PS-FULL-EXP1","55","26.29","01-07-2025","01-07-2026","02-05-2026","TRUE","TRUE","peak","superseded","V1-OF-016","renewal","0","155"
+"V1-OF-018","Atlassify","Project Suite","Full","ATL-PS-FULL-EXP1","70","26.29","01-07-2026","01-01-2027","03-10-2026","FALSE","FALSE","peak","active","V1-OF-017","amendment","15","155"
+"V1-OF-022","Atlassify","Project Suite","Contributor","ATL-PS-CONT-EXP1","110","9.9","01-07-2021","01-01-2022","03-10-2021","FALSE","FALSE","peak","superseded","","new","110","375"
+"V1-OF-023","Atlassify","Project Suite","Contributor","ATL-PS-CONT-EXP1","110","10.96","01-01-2022","01-04-2022","01-01-2022","FALSE","TRUE","peak","superseded","V1-OF-022","renewal","0","375"
+"V1-OF-024","Atlassify","Project Suite","Contributor","ATL-PS-CONT-EXP1","110","10.96","01-04-2022","01-10-2022","02-08-2022","FALSE","FALSE","peak","superseded","V1-OF-023","renewal","0","375"
+"V1-OF-025","Atlassify","Project Suite","Contributor","ATL-PS-CONT-EXP1","115","10.96","01-10-2022","01-10-2023","02-08-2023","TRUE","FALSE","peak","superseded","V1-OF-024","renewal","0","375"
+"V1-OF-026","Atlassify","Project Suite","Contributor","ATL-PS-CONT-EXP1","120","11.02","01-10-2023","01-10-2024","01-09-2024","TRUE","FALSE","peak","superseded","V1-OF-025","renewal","0","375"
+"V1-OF-027","Atlassify","Project Suite","Contributor","ATL-PS-CONT-EXP1","125","11.02","01-10-2024","01-04-2025","01-01-2025","FALSE","FALSE","peak","superseded","V1-OF-026","renewal","0","375"
+"V1-OF-028","Atlassify","Project Suite","Contributor","ATL-PS-CONT-EXP1","125","11.02","01-04-2025","01-04-2026","31-01-2026","TRUE","TRUE","peak","superseded","V1-OF-027","renewal","0","375"
+"V1-OF-029","Atlassify","Project Suite","Contributor","ATL-PS-CONT-EXP1","135","11.02","01-04-2026","01-04-2027","01-01-2027","FALSE","FALSE","peak","active","V1-OF-028","renewal","0","375"
+"V1-OF-032","Atlassify","Project Suite","Collaborator","ATL-PS-COLL-EXP1","290","2.25","01-07-2021","01-01-2022","02-12-2021","TRUE","FALSE","peak","superseded","","new","290","1240"
+"V1-OF-033","Atlassify","Project Suite","Collaborator","ATL-PS-COLL-EXP1","290","2.48","01-01-2022","01-07-2022","02-05-2022","TRUE","FALSE","peak","superseded","V1-OF-032","renewal","0","1240"
+"V1-OF-034","Atlassify","Project Suite","Collaborator","ATL-PS-COLL-EXP1","300","2.51","01-07-2022","01-07-2023","02-05-2023","FALSE","FALSE","peak","superseded","V1-OF-033","renewal","0","1240"
+"V1-OF-035","Atlassify","Project Suite","Collaborator","ATL-PS-COLL-EXP1","390","2.51","01-07-2023","01-01-2024","02-11-2023","FALSE","FALSE","peak","superseded","V1-OF-034","upsell","90","1240"
+"V1-OF-036","Atlassify","Project Suite","Collaborator","ATL-PS-COLL-EXP1","430","2.51","01-01-2024","01-07-2024","01-06-2024","TRUE","FALSE","peak","superseded","V1-OF-035","renewal","0","1240"
+"V1-OF-037","Atlassify","Project Suite","Collaborator","ATL-PS-COLL-EXP1","470","2.51","01-07-2024","01-07-2025","02-04-2025","FALSE","FALSE","peak","superseded","V1-OF-036","renewal","0","1240"
+"V1-OF-038","Atlassify","Project Suite","Collaborator","ATL-PS-COLL-EXP1","520","2.51","01-07-2025","01-10-2025","03-07-2025","FALSE","TRUE","peak","superseded","V1-OF-037","renewal","0","1240"
+"V1-OF-039","Atlassify","Project Suite","Collaborator","ATL-PS-COLL-EXP1","420","2.51","01-10-2025","01-10-2026","02-08-2026","FALSE","FALSE","peak","superseded","V1-OF-038","renewal","0","1240"
+"V1-OF-040","Atlassify","Project Suite","Collaborator","ATL-PS-COLL-EXP1","450","2.51","01-10-2026","01-04-2027","02-03-2027","FALSE","FALSE","peak","active","V1-OF-039","renewal","0","1240"
+"V1-OF-043","Atlassify","Wiki Lite","Full","ATL-WL-BASE","60","18","01-01-2020","01-01-2021","02-12-2020","FALSE","FALSE","average","superseded","","new","60","130"
+"V1-OF-044","Atlassify","Wiki Lite","Full","ATL-WL-BASE","65","19.15","01-01-2021","01-01-2022","03-10-2021","TRUE","FALSE","average","superseded","V1-OF-043","renewal","0","130"
+"V1-OF-045","Atlassify","Wiki Lite","Full","ATL-WL-BASE","65","19.89","01-01-2022","01-01-2023","03-10-2022","TRUE","TRUE","average","superseded","V1-OF-044","renewal","0","130"
+"V1-OF-046","Atlassify","Wiki Lite","Full","ATL-WL-BASE","80","19.89","01-01-2023","01-07-2023","01-06-2023","TRUE","FALSE","average","superseded","V1-OF-045","upsell","15","130"
+"V1-OF-047","Atlassify","Wiki Lite","Full","ATL-WL-BASE","85","19.89","01-07-2023","01-07-2024","01-06-2024","FALSE","FALSE","average","superseded","V1-OF-046","renewal","0","130"
+"V1-OF-048","Atlassify","Wiki Lite","Full","ATL-WL-BASE","85","19.89","01-07-2024","01-10-2024","02-08-2024","TRUE","FALSE","average","superseded","V1-OF-047","renewal","0","130"
+"V1-OF-049","Atlassify","Wiki Lite","Full","ATL-WL-BASE","105","19.89","01-10-2024","01-10-2025","03-07-2025","TRUE","FALSE","average","superseded","V1-OF-048","amendment","20","130"
+"V1-OF-050","Atlassify","Wiki Lite","Full","ATL-WL-BASE","105","19.89","01-10-2025","01-04-2026","01-01-2026","FALSE","FALSE","average","superseded","V1-OF-049","renewal","0","130"
+"V1-OF-051","Atlassify","Wiki Lite","Full","ATL-WL-BASE","125","19.98","01-04-2026","01-07-2026","02-04-2026","FALSE","FALSE","average","superseded","V1-OF-050","upsell","20","130"
+"V1-OF-052","Atlassify","Wiki Lite","Full","ATL-WL-BASE","130","19.98","01-07-2026","01-07-2027","02-05-2027","FALSE","TRUE","average","active","V1-OF-051","renewal","0","130"
+"V1-OF-043","Atlassify","Wiki Lite","Contributor","ATL-WL-BASE","130","8","01-01-2020","01-01-2021","02-12-2020","TRUE","FALSE","average","superseded","","new","130","230"
+"V1-OF-044","Atlassify","Wiki Lite","Contributor","ATL-WL-BASE","135","8.28","01-01-2021","01-01-2022","03-10-2021","FALSE","TRUE","average","superseded","V1-OF-043","renewal","0","230"
+"V1-OF-045","Atlassify","Wiki Lite","Contributor","ATL-WL-BASE","145","8.95","01-01-2022","01-01-2023","03-10-2022","FALSE","FALSE","average","superseded","V1-OF-044","renewal","0","230"
+"V1-OF-046","Atlassify","Wiki Lite","Contributor","ATL-WL-BASE","180","8.95","01-01-2023","01-07-2023","01-06-2023","FALSE","FALSE","average","superseded","V1-OF-045","upsell","35","230"
+"V1-OF-047","Atlassify","Wiki Lite","Contributor","ATL-WL-BASE","190","8.95","01-07-2023","01-07-2024","01-06-2024","TRUE","FALSE","average","superseded","V1-OF-046","renewal","0","230"
+"V1-OF-048","Atlassify","Wiki Lite","Contributor","ATL-WL-BASE","195","8.95","01-07-2024","01-10-2024","02-08-2024","FALSE","FALSE","average","superseded","V1-OF-047","renewal","0","230"
+"V1-OF-049","Atlassify","Wiki Lite","Contributor","ATL-WL-BASE","200","8.95","01-10-2024","01-10-2025","03-07-2025","TRUE","TRUE","average","superseded","V1-OF-048","renewal","0","230"
+"V1-OF-050","Atlassify","Wiki Lite","Contributor","ATL-WL-BASE","205","8.95","01-10-2025","01-04-2026","01-01-2026","FALSE","FALSE","average","superseded","V1-OF-049","renewal","0","230"
+"V1-OF-051","Atlassify","Wiki Lite","Contributor","ATL-WL-BASE","215","8.95","01-04-2026","01-07-2026","02-04-2026","TRUE","TRUE","average","superseded","V1-OF-050","renewal","0","230"
+"V1-OF-052","Atlassify","Wiki Lite","Contributor","ATL-WL-BASE","230","8.95","01-07-2026","01-07-2027","02-05-2027","FALSE","FALSE","average","active","V1-OF-051","renewal","0","230"
+"V1-OF-043","Atlassify","Wiki Lite","Collaborator","ATL-WL-BASE","320","1.7","01-01-2020","01-01-2021","02-12-2020","TRUE","FALSE","average","superseded","","new","320","420"
+"V1-OF-044","Atlassify","Wiki Lite","Collaborator","ATL-WL-BASE","320","1.8","01-01-2021","01-01-2022","03-10-2021","TRUE","FALSE","average","superseded","V1-OF-043","renewal","0","420"
+"V1-OF-045","Atlassify","Wiki Lite","Collaborator","ATL-WL-BASE","340","1.8","01-01-2022","01-01-2023","03-10-2022","TRUE","FALSE","average","superseded","V1-OF-044","renewal","0","420"
+"V1-OF-046","Atlassify","Wiki Lite","Collaborator","ATL-WL-BASE","360","1.8","01-01-2023","01-07-2023","01-06-2023","TRUE","FALSE","average","superseded","V1-OF-045","renewal","0","420"
+"V1-OF-047","Atlassify","Wiki Lite","Collaborator","ATL-WL-BASE","360","1.81","01-07-2023","01-07-2024","01-06-2024","TRUE","FALSE","average","superseded","V1-OF-046","renewal","0","420"
+"V1-OF-048","Atlassify","Wiki Lite","Collaborator","ATL-WL-BASE","450","1.81","01-07-2024","01-10-2024","02-08-2024","FALSE","FALSE","average","superseded","V1-OF-047","upsell","90","420"
+"V1-OF-049","Atlassify","Wiki Lite","Collaborator","ATL-WL-BASE","450","1.81","01-10-2024","01-10-2025","03-07-2025","FALSE","TRUE","average","superseded","V1-OF-048","renewal","0","420"
+"V1-OF-050","Atlassify","Wiki Lite","Collaborator","ATL-WL-BASE","490","1.81","01-10-2025","01-04-2026","01-01-2026","FALSE","FALSE","average","superseded","V1-OF-049","renewal","0","420"
+"V1-OF-051","Atlassify","Wiki Lite","Collaborator","ATL-WL-BASE","490","1.81","01-04-2026","01-07-2026","02-04-2026","FALSE","TRUE","average","superseded","V1-OF-050","renewal","0","420"
+"V1-OF-052","Atlassify","Wiki Lite","Collaborator","ATL-WL-BASE","420","1.81","01-07-2026","01-07-2027","02-05-2027","FALSE","TRUE","average","active","V1-OF-051","renewal","0","420"
+"V1-OF-054","Atlassify","Reporting Add-on","Full","ATL-RA-BASE","55","14","01-01-2020","01-01-2021","02-12-2020","TRUE","FALSE","snapshot","superseded","","new","55","90"
+"V1-OF-055","Atlassify","Reporting Add-on","Full","ATL-RA-BASE","55","14.88","01-01-2021","01-01-2022","03-10-2021","TRUE","FALSE","snapshot","superseded","V1-OF-054","renewal","0","90"
+"V1-OF-056","Atlassify","Reporting Add-on","Full","ATL-RA-BASE","55","15.08","01-01-2022","01-01-2023","03-10-2022","FALSE","FALSE","snapshot","superseded","V1-OF-055","renewal","0","90"
+"V1-OF-057","Atlassify","Reporting Add-on","Full","ATL-RA-BASE","70","15.08","01-01-2023","01-07-2023","02-04-2023","TRUE","FALSE","snapshot","superseded","V1-OF-056","amendment","15","90"
+"V1-OF-058","Atlassify","Reporting Add-on","Full","ATL-RA-BASE","75","15.08","01-07-2023","01-07-2024","01-06-2024","FALSE","FALSE","snapshot","superseded","V1-OF-057","renewal","0","90"
+"V1-OF-059","Atlassify","Reporting Add-on","Full","ATL-RA-BASE","80","15.14","01-07-2024","01-01-2025","03-10-2024","TRUE","FALSE","snapshot","superseded","V1-OF-058","renewal","0","90"
+"V1-OF-060","Atlassify","Reporting Add-on","Full","ATL-RA-BASE","80","15.14","01-01-2025","01-07-2025","02-05-2025","TRUE","TRUE","snapshot","superseded","V1-OF-059","renewal","0","90"
+"V1-OF-061","Atlassify","Reporting Add-on","Full","ATL-RA-BASE","85","15.14","01-07-2025","01-07-2026","02-04-2026","TRUE","TRUE","snapshot","superseded","V1-OF-060","renewal","0","90"
+"V1-OF-062","Atlassify","Reporting Add-on","Full","ATL-RA-BASE","90","15.14","01-07-2026","01-07-2027","02-04-2027","FALSE","TRUE","snapshot","active","V1-OF-061","renewal","0","90"
+"V1-OF-054","Atlassify","Reporting Add-on","Contributor","ATL-RA-BASE","130","5.85","01-01-2020","01-01-2021","02-12-2020","FALSE","FALSE","snapshot","superseded","","new","130","225"
+"V1-OF-055","Atlassify","Reporting Add-on","Contributor","ATL-RA-BASE","135","6.26","01-01-2021","01-01-2022","03-10-2021","TRUE","FALSE","snapshot","superseded","V1-OF-054","renewal","0","225"
+"V1-OF-056","Atlassify","Reporting Add-on","Contributor","ATL-RA-BASE","145","6.53","01-01-2022","01-01-2023","03-10-2022","TRUE","FALSE","snapshot","superseded","V1-OF-055","renewal","0","225"
+"V1-OF-057","Atlassify","Reporting Add-on","Contributor","ATL-RA-BASE","150","6.53","01-01-2023","01-07-2023","02-04-2023","FALSE","FALSE","snapshot","superseded","V1-OF-056","renewal","0","225"
+"V1-OF-058","Atlassify","Reporting Add-on","Contributor","ATL-RA-BASE","190","6.53","01-07-2023","01-07-2024","01-06-2024","TRUE","FALSE","snapshot","superseded","V1-OF-057","amendment","40","225"
+"V1-OF-059","Atlassify","Reporting Add-on","Contributor","ATL-RA-BASE","195","6.53","01-07-2024","01-01-2025","03-10-2024","TRUE","FALSE","snapshot","superseded","V1-OF-058","renewal","0","225"
+"V1-OF-060","Atlassify","Reporting Add-on","Contributor","ATL-RA-BASE","215","6.53","01-01-2025","01-07-2025","02-05-2025","TRUE","FALSE","snapshot","superseded","V1-OF-059","renewal","0","225"
+"V1-OF-061","Atlassify","Reporting Add-on","Contributor","ATL-RA-BASE","220","6.53","01-07-2025","01-07-2026","02-04-2026","FALSE","TRUE","snapshot","superseded","V1-OF-060","renewal","0","225"
+"V1-OF-062","Atlassify","Reporting Add-on","Contributor","ATL-RA-BASE","225","6.53","01-07-2026","01-07-2027","02-04-2027","FALSE","TRUE","snapshot","active","V1-OF-061","renewal","0","225"
+"V1-OF-054","Atlassify","Reporting Add-on","Collaborator","ATL-RA-BASE","280","1.17","01-01-2020","01-01-2021","02-12-2020","TRUE","FALSE","snapshot","superseded","","new","280","220"
+"V1-OF-055","Atlassify","Reporting Add-on","Collaborator","ATL-RA-BASE","290","1.27","01-01-2021","01-01-2022","03-10-2021","FALSE","FALSE","snapshot","superseded","V1-OF-054","renewal","0","220"
+"V1-OF-056","Atlassify","Reporting Add-on","Collaborator","ATL-RA-BASE","290","1.29","01-01-2022","01-01-2023","03-10-2022","TRUE","FALSE","snapshot","superseded","V1-OF-055","renewal","0","220"
+"V1-OF-057","Atlassify","Reporting Add-on","Collaborator","ATL-RA-BASE","300","1.29","01-01-2023","01-07-2023","02-04-2023","TRUE","TRUE","snapshot","superseded","V1-OF-056","renewal","0","220"
+"V1-OF-058","Atlassify","Reporting Add-on","Collaborator","ATL-RA-BASE","300","1.29","01-07-2023","01-07-2024","01-06-2024","FALSE","TRUE","snapshot","superseded","V1-OF-057","renewal","0","220"
+"V1-OF-059","Atlassify","Reporting Add-on","Collaborator","ATL-RA-BASE","250","1.29","01-07-2024","01-01-2025","03-10-2024","FALSE","TRUE","snapshot","superseded","V1-OF-058","renewal","0","220"
+"V1-OF-060","Atlassify","Reporting Add-on","Collaborator","ATL-RA-BASE","200","1.38","01-01-2025","01-07-2025","02-05-2025","TRUE","FALSE","snapshot","superseded","V1-OF-059","renewal","0","220"
+"V1-OF-061","Atlassify","Reporting Add-on","Collaborator","ATL-RA-BASE","210","1.46","01-07-2025","01-07-2026","02-04-2026","TRUE","FALSE","snapshot","superseded","V1-OF-060","renewal","0","220"
+"V1-OF-062","Atlassify","Reporting Add-on","Collaborator","ATL-RA-BASE","220","1.46","01-07-2026","01-07-2027","02-04-2027","FALSE","FALSE","snapshot","active","V1-OF-061","renewal","0","220"
+"V2-OF-001","Cloudora","Cloud Infra Core","Full","CLD-CI-BASE","40","55","01-01-2020","01-01-2021","02-11-2020","TRUE","FALSE","peak","superseded","","new","40","220"
+"V2-OF-002","Cloudora","Cloud Infra Core","Full","CLD-CI-BASE","40","57.45","01-01-2021","01-01-2022","02-12-2021","TRUE","TRUE","peak","superseded","V2-OF-001","renewal","0","220"
+"V2-OF-003","Cloudora","Cloud Infra Core","Full","CLD-CI-BASE","40","57.45","01-01-2022","01-01-2023","03-10-2022","TRUE","FALSE","peak","superseded","V2-OF-002","renewal","0","220"
+"V2-OF-004","Cloudora","Cloud Infra Core","Full","CLD-CI-BASE","45","60.73","01-01-2023","01-01-2024","02-11-2023","FALSE","TRUE","peak","superseded","V2-OF-003","renewal","0","220"
+"V2-OF-005","Cloudora","Cloud Infra Core","Full","CLD-CI-BASE","40","60.73","01-01-2024","01-01-2025","03-10-2024","TRUE","FALSE","peak","superseded","V2-OF-004","renewal","0","220"
+"V2-OF-006","Cloudora","Cloud Infra Core","Full","CLD-CI-BASE","40","60.73","01-01-2025","01-01-2026","02-11-2025","TRUE","FALSE","peak","superseded","V2-OF-005","renewal","0","220"
+"V2-OF-007","Cloudora","Cloud Infra Core","Full","CLD-CI-BASE","40","60.73","01-01-2026","01-01-2028","02-11-2027","TRUE","FALSE","peak","active","V2-OF-006","renewal","0","220"
+"V2-OF-001","Cloudora","Cloud Infra Core","Contributor","CLD-CI-BASE","85","20.4","01-01-2020","01-01-2021","02-11-2020","TRUE","FALSE","peak","superseded","","new","85","495"
+"V2-OF-002","Cloudora","Cloud Infra Core","Contributor","CLD-CI-BASE","85","22.75","01-01-2021","01-01-2022","02-12-2021","TRUE","FALSE","peak","superseded","V2-OF-001","renewal","0","495"
+"V2-OF-003","Cloudora","Cloud Infra Core","Contributor","CLD-CI-BASE","105","22.75","01-01-2022","01-01-2023","03-10-2022","FALSE","FALSE","peak","superseded","V2-OF-002","amendment","20","495"
+"V2-OF-004","Cloudora","Cloud Infra Core","Contributor","CLD-CI-BASE","110","22.75","01-01-2023","01-01-2024","02-11-2023","TRUE","TRUE","peak","superseded","V2-OF-003","renewal","0","495"
+"V2-OF-005","Cloudora","Cloud Infra Core","Contributor","CLD-CI-BASE","120","22.75","01-01-2024","01-01-2025","03-10-2024","FALSE","TRUE","peak","superseded","V2-OF-004","renewal","0","495"
+"V2-OF-006","Cloudora","Cloud Infra Core","Contributor","CLD-CI-BASE","145","22.75","01-01-2025","01-01-2026","02-11-2025","TRUE","FALSE","peak","superseded","V2-OF-005","upsell","25","495"
+"V2-OF-007","Cloudora","Cloud Infra Core","Contributor","CLD-CI-BASE","155","22.75","01-01-2026","01-01-2028","02-11-2027","FALSE","FALSE","peak","active","V2-OF-006","renewal","0","495"
+"V2-OF-001","Cloudora","Cloud Infra Core","Collaborator","CLD-CI-BASE","290","4.32","01-01-2020","01-01-2021","02-11-2020","TRUE","FALSE","peak","superseded","","new","290","1220"
+"V2-OF-002","Cloudora","Cloud Infra Core","Collaborator","CLD-CI-BASE","320","4.6","01-01-2021","01-01-2022","02-12-2021","FALSE","FALSE","peak","superseded","V2-OF-001","renewal","0","1220"
+"V2-OF-003","Cloudora","Cloud Infra Core","Collaborator","CLD-CI-BASE","410","4.6","01-01-2022","01-01-2023","03-10-2022","TRUE","FALSE","peak","superseded","V2-OF-002","amendment","90","1220"
+"V2-OF-004","Cloudora","Cloud Infra Core","Collaborator","CLD-CI-BASE","430","4.6","01-01-2023","01-01-2024","02-11-2023","FALSE","TRUE","peak","superseded","V2-OF-003","renewal","0","1220"
+"V2-OF-005","Cloudora","Cloud Infra Core","Collaborator","CLD-CI-BASE","470","4.7","01-01-2024","01-01-2025","03-10-2024","FALSE","TRUE","peak","superseded","V2-OF-004","renewal","0","1220"
+"V2-OF-006","Cloudora","Cloud Infra Core","Collaborator","CLD-CI-BASE","490","4.7","01-01-2025","01-01-2026","02-11-2025","TRUE","FALSE","peak","superseded","V2-OF-005","renewal","0","1220"
+"V2-OF-007","Cloudora","Cloud Infra Core","Collaborator","CLD-CI-BASE","610","4.7","01-01-2026","01-01-2028","02-11-2027","TRUE","FALSE","peak","active","V2-OF-006","amendment","120","1220"
+"V2-OF-008","Cloudora","Cloud Infra Core","Full","CLD-CI-FULL-EXP1","55","55","01-07-2021","01-10-2021","01-09-2021","FALSE","FALSE","peak","superseded","","new","55","220"
+"V2-OF-009","Cloudora","Cloud Infra Core","Full","CLD-CI-FULL-EXP1","55","60.09","01-10-2021","01-10-2022","02-08-2022","TRUE","FALSE","peak","superseded","V2-OF-008","renewal","0","220"
+"V2-OF-010","Cloudora","Cloud Infra Core","Full","CLD-CI-FULL-EXP1","65","60.09","01-10-2022","01-04-2023","01-01-2023","TRUE","FALSE","peak","superseded","V2-OF-009","upsell","10","220"
+"V2-OF-011","Cloudora","Cloud Infra Core","Full","CLD-CI-FULL-EXP1","70","60.57","01-04-2023","01-10-2023","01-09-2023","TRUE","TRUE","peak","superseded","V2-OF-010","renewal","0","220"
+"V2-OF-012","Cloudora","Cloud Infra Core","Full","CLD-CI-FULL-EXP1","85","60.57","01-10-2023","01-01-2024","03-10-2023","FALSE","FALSE","peak","superseded","V2-OF-011","upsell","15","220"
+"V2-OF-013","Cloudora","Cloud Infra Core","Full","CLD-CI-FULL-EXP1","90","60.57","01-01-2024","01-04-2024","01-02-2024","TRUE","TRUE","peak","superseded","V2-OF-012","renewal","0","220"
+"V2-OF-014","Cloudora","Cloud Infra Core","Full","CLD-CI-FULL-EXP1","110","60.57","01-04-2024","01-07-2024","02-04-2024","TRUE","FALSE","peak","superseded","V2-OF-013","upsell","20","220"
+"V2-OF-015","Cloudora","Cloud Infra Core","Full","CLD-CI-FULL-EXP1","115","60.57","01-07-2024","01-01-2025","02-11-2024","TRUE","FALSE","peak","superseded","V2-OF-014","renewal","0","220"
+"V2-OF-016","Cloudora","Cloud Infra Core","Full","CLD-CI-FULL-EXP1","125","60.57","01-01-2025","01-04-2025","02-03-2025","TRUE","TRUE","peak","superseded","V2-OF-015","renewal","0","220"
+"V2-OF-017","Cloudora","Cloud Infra Core","Full","CLD-CI-FULL-EXP1","130","60.57","01-04-2025","01-10-2025","01-09-2025","FALSE","TRUE","peak","superseded","V2-OF-016","renewal","0","220"
+"V2-OF-018","Cloudora","Cloud Infra Core","Full","CLD-CI-FULL-EXP1","135","60.57","01-10-2025","01-04-2026","31-01-2026","TRUE","FALSE","peak","superseded","V2-OF-017","renewal","0","220"
+"V2-OF-019","Cloudora","Cloud Infra Core","Full","CLD-CI-FULL-EXP1","140","60.57","01-04-2026","01-07-2026","02-04-2026","FALSE","FALSE","peak","superseded","V2-OF-018","renewal","0","220"
+"V2-OF-020","Cloudora","Cloud Infra Core","Full","CLD-CI-FULL-EXP1","145","60.57","01-07-2026","01-07-2027","01-06-2027","FALSE","FALSE","peak","active","V2-OF-019","renewal","0","220"
+"V2-OF-021","Cloudora","Cloud Infra Core","Contributor","CLD-CI-CONT-EXP1","90","20.4","01-07-2021","01-01-2022","02-11-2021","TRUE","FALSE","peak","superseded","","new","90","495"
+"V2-OF-022","Cloudora","Cloud Infra Core","Contributor","CLD-CI-CONT-EXP1","95","21.43","01-01-2022","01-01-2023","02-11-2022","FALSE","FALSE","peak","superseded","V2-OF-021","renewal","0","495"
+"V2-OF-023","Cloudora","Cloud Infra Core","Contributor","CLD-CI-CONT-EXP1","105","22.04","01-01-2023","01-07-2023","01-06-2023","TRUE","TRUE","peak","superseded","V2-OF-022","renewal","0","495"
+"V2-OF-024","Cloudora","Cloud Infra Core","Contributor","CLD-CI-CONT-EXP1","90","22.39","01-07-2023","01-10-2023","02-08-2023","TRUE","TRUE","peak","superseded","V2-OF-023","renewal","0","495"
+"V2-OF-025","Cloudora","Cloud Infra Core","Contributor","CLD-CI-CONT-EXP1","95","22.39","01-10-2023","01-04-2024","02-03-2024","FALSE","FALSE","peak","superseded","V2-OF-024","renewal","0","495"
+"V2-OF-026","Cloudora","Cloud Infra Core","Contributor","CLD-CI-CONT-EXP1","100","22.39","01-04-2024","01-04-2025","01-01-2025","TRUE","FALSE","peak","superseded","V2-OF-025","renewal","0","495"
+"V2-OF-027","Cloudora","Cloud Infra Core","Contributor","CLD-CI-CONT-EXP1","105","22.39","01-04-2025","01-07-2025","02-05-2025","TRUE","TRUE","peak","superseded","V2-OF-026","renewal","0","495"
+"V2-OF-028","Cloudora","Cloud Infra Core","Contributor","CLD-CI-CONT-EXP1","125","22.39","01-07-2025","01-01-2026","02-11-2025","TRUE","FALSE","peak","superseded","V2-OF-027","amendment","20","495"
+"V2-OF-029","Cloudora","Cloud Infra Core","Contributor","CLD-CI-CONT-EXP1","130","22.39","01-01-2026","01-04-2026","31-01-2026","FALSE","FALSE","peak","superseded","V2-OF-028","renewal","0","495"
+"V2-OF-030","Cloudora","Cloud Infra Core","Contributor","CLD-CI-CONT-EXP1","140","22.39","01-04-2026","01-07-2026","02-05-2026","FALSE","FALSE","peak","superseded","V2-OF-029","renewal","0","495"
+"V2-OF-031","Cloudora","Cloud Infra Core","Contributor","CLD-CI-CONT-EXP1","170","22.39","01-07-2026","01-10-2026","02-08-2026","TRUE","FALSE","peak","superseded","V2-OF-030","upsell","30","495"
+"V2-OF-032","Cloudora","Cloud Infra Core","Contributor","CLD-CI-CONT-EXP1","175","22.39","01-10-2026","01-04-2027","31-01-2027","TRUE","TRUE","peak","active","V2-OF-031","renewal","0","495"
+"V2-OF-033","Cloudora","Cloud Infra Core","Collaborator","CLD-CI-COLL-EXP1","200","4.32","01-07-2021","01-10-2021","02-08-2021","TRUE","FALSE","peak","superseded","","new","200","1220"
+"V2-OF-034","Cloudora","Cloud Infra Core","Collaborator","CLD-CI-COLL-EXP1","210","4.75","01-10-2021","01-04-2022","01-01-2022","FALSE","FALSE","peak","superseded","V2-OF-033","renewal","0","1220"
+"V2-OF-035","Cloudora","Cloud Infra Core","Collaborator","CLD-CI-COLL-EXP1","230","4.83","01-04-2022","01-10-2022","02-08-2022","FALSE","TRUE","peak","superseded","V2-OF-034","renewal","0","1220"
+"V2-OF-036","Cloudora","Cloud Infra Core","Collaborator","CLD-CI-COLL-EXP1","230","4.83","01-10-2022","01-04-2023","02-03-2023","FALSE","FALSE","peak","superseded","V2-OF-035","renewal","0","1220"
+"V2-OF-037","Cloudora","Cloud Infra Core","Collaborator","CLD-CI-COLL-EXP1","240","4.83","01-04-2023","01-07-2023","02-05-2023","TRUE","FALSE","peak","superseded","V2-OF-036","renewal","0","1220"
+"V2-OF-038","Cloudora","Cloud Infra Core","Collaborator","CLD-CI-COLL-EXP1","250","4.83","01-07-2023","01-07-2024","01-06-2024","TRUE","FALSE","peak","superseded","V2-OF-037","renewal","0","1220"
+"V2-OF-039","Cloudora","Cloud Infra Core","Collaborator","CLD-CI-COLL-EXP1","280","4.83","01-07-2024","01-01-2025","03-10-2024","TRUE","TRUE","peak","superseded","V2-OF-038","renewal","0","1220"
+"V2-OF-040","Cloudora","Cloud Infra Core","Collaborator","CLD-CI-COLL-EXP1","310","4.83","01-01-2025","01-04-2025","02-03-2025","FALSE","FALSE","peak","superseded","V2-OF-039","renewal","0","1220"
+"V2-OF-041","Cloudora","Cloud Infra Core","Collaborator","CLD-CI-COLL-EXP1","320","4.83","01-04-2025","01-10-2025","01-09-2025","FALSE","TRUE","peak","superseded","V2-OF-040","renewal","0","1220"
+"V2-OF-042","Cloudora","Cloud Infra Core","Collaborator","CLD-CI-COLL-EXP1","330","4.83","01-10-2025","01-01-2026","03-10-2025","FALSE","FALSE","peak","superseded","V2-OF-041","renewal","0","1220"
+"V2-OF-043","Cloudora","Cloud Infra Core","Collaborator","CLD-CI-COLL-EXP1","330","4.83","01-01-2026","01-01-2027","03-10-2026","FALSE","FALSE","peak","active","V2-OF-042","renewal","0","1220"
+"V2-OF-044","Cloudora","Cloud Infra Core","Full","CLD-CI-FULL-PROJ1","30","55","01-01-2022","01-04-2022","31-01-2022","TRUE","FALSE","peak","superseded","","new","30","220"
+"V2-OF-045","Cloudora","Cloud Infra Core","Full","CLD-CI-FULL-PROJ1","30","57.29","01-04-2022","01-07-2022","02-04-2022","FALSE","TRUE","peak","superseded","V2-OF-044","renewal","0","220"
+"V2-OF-046","Cloudora","Cloud Infra Core","Full","CLD-CI-FULL-PROJ1","30","60.97","01-07-2022","01-10-2022","01-09-2022","TRUE","FALSE","peak","superseded","V2-OF-045","renewal","0","220"
+"V2-OF-047","Cloudora","Cloud Infra Core","Full","CLD-CI-FULL-PROJ1","35","60.97","01-10-2022","01-01-2023","02-12-2022","TRUE","FALSE","peak","active","V2-OF-046","amendment","5","220"
+"V2-OF-048","Cloudora","Cloud Infra Core","Contributor","CLD-CI-CONT-PROJ1","120","20.4","01-01-2022","01-04-2022","02-03-2022","FALSE","FALSE","peak","superseded","","new","120","495"
+"V2-OF-049","Cloudora","Cloud Infra Core","Contributor","CLD-CI-CONT-PROJ1","130","22.07","01-04-2022","01-07-2022","01-06-2022","FALSE","FALSE","peak","superseded","V2-OF-048","renewal","0","495"
+"V2-OF-050","Cloudora","Cloud Infra Core","Contributor","CLD-CI-CONT-PROJ1","165","22.07","01-07-2022","01-10-2022","02-08-2022","FALSE","FALSE","peak","superseded","V2-OF-049","amendment","35","495"
+"V2-OF-051","Cloudora","Cloud Infra Core","Contributor","CLD-CI-CONT-PROJ1","165","22.07","01-10-2022","01-01-2023","02-12-2022","TRUE","FALSE","peak","active","V2-OF-050","renewal","0","495"
+"V2-OF-052","Cloudora","Cloud Infra Core","Collaborator","CLD-CI-COLL-PROJ1","250","4.32","01-01-2022","01-04-2022","01-01-2022","TRUE","FALSE","peak","superseded","","new","250","1220"
+"V2-OF-053","Cloudora","Cloud Infra Core","Collaborator","CLD-CI-COLL-PROJ1","280","4.49","01-04-2022","01-07-2022","02-05-2022","TRUE","TRUE","peak","superseded","V2-OF-052","renewal","0","1220"
+"V2-OF-054","Cloudora","Cloud Infra Core","Collaborator","CLD-CI-COLL-PROJ1","230","4.58","01-07-2022","01-10-2022","01-09-2022","FALSE","FALSE","peak","superseded","V2-OF-053","renewal","0","1220"
+"V2-OF-055","Cloudora","Cloud Infra Core","Collaborator","CLD-CI-COLL-PROJ1","280","4.74","01-10-2022","01-01-2023","03-10-2022","TRUE","FALSE","peak","active","V2-OF-054","upsell","50","1220"
+"V2-OF-056","Cloudora","DevOps Toolkit","Full","CLD-DT-BASE","55","38","01-01-2020","01-01-2021","02-11-2020","TRUE","FALSE","average","superseded","","new","55","65"
+"V2-OF-057","Cloudora","DevOps Toolkit","Full","CLD-DT-BASE","55","40.17","01-01-2021","01-01-2022","02-11-2021","TRUE","FALSE","average","superseded","V2-OF-056","renewal","0","65"
+"V2-OF-058","Cloudora","DevOps Toolkit","Full","CLD-DT-BASE","55","41.69","01-01-2022","01-01-2023","02-12-2022","TRUE","FALSE","average","superseded","V2-OF-057","renewal","0","65"
+"V2-OF-059","Cloudora","DevOps Toolkit","Full","CLD-DT-BASE","60","41.9","01-01-2023","01-07-2023","01-06-2023","FALSE","TRUE","average","superseded","V2-OF-058","renewal","0","65"
+"V2-OF-060","Cloudora","DevOps Toolkit","Full","CLD-DT-BASE","55","42.09","01-07-2023","01-07-2024","01-06-2024","FALSE","TRUE","average","superseded","V2-OF-059","renewal","0","65"
+"V2-OF-061","Cloudora","DevOps Toolkit","Full","CLD-DT-BASE","55","42.09","01-07-2024","01-07-2025","02-04-2025","FALSE","FALSE","average","superseded","V2-OF-060","renewal","0","65"
+"V2-OF-062","Cloudora","DevOps Toolkit","Full","CLD-DT-BASE","60","42.09","01-07-2025","01-07-2026","02-04-2026","TRUE","FALSE","average","superseded","V2-OF-061","renewal","0","65"
+"V2-OF-063","Cloudora","DevOps Toolkit","Full","CLD-DT-BASE","65","42.09","01-07-2026","01-07-2027","01-06-2027","TRUE","FALSE","average","active","V2-OF-062","renewal","0","65"
+"V2-OF-056","Cloudora","DevOps Toolkit","Contributor","CLD-DT-BASE","165","14.4","01-01-2020","01-01-2021","02-11-2020","FALSE","FALSE","average","superseded","","new","165","245"
+"V2-OF-057","Cloudora","DevOps Toolkit","Contributor","CLD-DT-BASE","170","15.77","01-01-2021","01-01-2022","02-11-2021","FALSE","FALSE","average","superseded","V2-OF-056","renewal","0","245"
+"V2-OF-058","Cloudora","DevOps Toolkit","Contributor","CLD-DT-BASE","170","15.77","01-01-2022","01-01-2023","02-12-2022","FALSE","FALSE","average","superseded","V2-OF-057","renewal","0","245"
+"V2-OF-059","Cloudora","DevOps Toolkit","Contributor","CLD-DT-BASE","175","15.83","01-01-2023","01-07-2023","01-06-2023","FALSE","TRUE","average","superseded","V2-OF-058","renewal","0","245"
+"V2-OF-060","Cloudora","DevOps Toolkit","Contributor","CLD-DT-BASE","210","15.83","01-07-2023","01-07-2024","01-06-2024","FALSE","FALSE","average","superseded","V2-OF-059","upsell","35","245"
+"V2-OF-061","Cloudora","DevOps Toolkit","Contributor","CLD-DT-BASE","225","15.83","01-07-2024","01-07-2025","02-04-2025","TRUE","FALSE","average","superseded","V2-OF-060","renewal","0","245"
+"V2-OF-062","Cloudora","DevOps Toolkit","Contributor","CLD-DT-BASE","235","15.83","01-07-2025","01-07-2026","02-04-2026","TRUE","TRUE","average","superseded","V2-OF-061","renewal","0","245"
+"V2-OF-063","Cloudora","DevOps Toolkit","Contributor","CLD-DT-BASE","245","15.83","01-07-2026","01-07-2027","01-06-2027","TRUE","FALSE","average","active","V2-OF-062","renewal","0","245"
+"V2-OF-056","Cloudora","DevOps Toolkit","Collaborator","CLD-DT-BASE","220","3","01-01-2020","01-01-2021","02-11-2020","FALSE","FALSE","average","superseded","","new","220","230"
+"V2-OF-057","Cloudora","DevOps Toolkit","Collaborator","CLD-DT-BASE","230","3.24","01-01-2021","01-01-2022","02-11-2021","FALSE","FALSE","average","superseded","V2-OF-056","renewal","0","230"
+"V2-OF-058","Cloudora","DevOps Toolkit","Collaborator","CLD-DT-BASE","250","3.27","01-01-2022","01-01-2023","02-12-2022","TRUE","TRUE","average","superseded","V2-OF-057","renewal","0","230"
+"V2-OF-059","Cloudora","DevOps Toolkit","Collaborator","CLD-DT-BASE","200","3.33","01-01-2023","01-07-2023","01-06-2023","FALSE","TRUE","average","superseded","V2-OF-058","renewal","0","230"
+"V2-OF-060","Cloudora","DevOps Toolkit","Collaborator","CLD-DT-BASE","160","3.64","01-07-2023","01-07-2024","01-06-2024","FALSE","FALSE","average","superseded","V2-OF-059","renewal","0","230"
+"V2-OF-061","Cloudora","DevOps Toolkit","Collaborator","CLD-DT-BASE","170","3.64","01-07-2024","01-07-2025","02-04-2025","FALSE","FALSE","average","superseded","V2-OF-060","renewal","0","230"
+"V2-OF-062","Cloudora","DevOps Toolkit","Collaborator","CLD-DT-BASE","220","3.64","01-07-2025","01-07-2026","02-04-2026","TRUE","FALSE","average","superseded","V2-OF-061","upsell","50","230"
+"V2-OF-063","Cloudora","DevOps Toolkit","Collaborator","CLD-DT-BASE","230","3.64","01-07-2026","01-07-2027","01-06-2027","TRUE","FALSE","average","active","V2-OF-062","renewal","0","230"
+"V3-OF-001","Nexaflow","Flow Automation","Full","NXF-FA-BASE","65","42","01-01-2019","01-01-2020","03-10-2019","TRUE","FALSE","peak","superseded","","new","65","100"
+"V3-OF-002","Nexaflow","Flow Automation","Full","NXF-FA-BASE","65","46.86","01-01-2020","01-01-2021","03-10-2020","TRUE","TRUE","peak","superseded","V3-OF-001","renewal","0","100"
+"V3-OF-003","Nexaflow","Flow Automation","Full","NXF-FA-BASE","65","46.86","01-01-2021","01-01-2022","02-12-2021","FALSE","FALSE","peak","superseded","V3-OF-002","renewal","0","100"
+"V3-OF-004","Nexaflow","Flow Automation","Full","NXF-FA-BASE","70","46.86","01-01-2022","01-01-2023","02-11-2022","FALSE","FALSE","peak","superseded","V3-OF-003","renewal","0","100"
+"V3-OF-005","Nexaflow","Flow Automation","Full","NXF-FA-BASE","75","46.86","01-01-2023","01-01-2024","02-11-2023","FALSE","TRUE","peak","superseded","V3-OF-004","renewal","0","100"
+"V3-OF-006","Nexaflow","Flow Automation","Full","NXF-FA-BASE","80","46.86","01-01-2024","01-07-2024","02-04-2024","TRUE","TRUE","peak","superseded","V3-OF-005","renewal","0","100"
+"V3-OF-007","Nexaflow","Flow Automation","Full","NXF-FA-BASE","100","46.86","01-07-2024","01-07-2025","02-04-2025","FALSE","FALSE","peak","superseded","V3-OF-006","amendment","20","100"
+"V3-OF-008","Nexaflow","Flow Automation","Full","NXF-FA-BASE","100","46.86","01-07-2025","01-07-2027","02-04-2027","FALSE","FALSE","peak","active","V3-OF-007","renewal","0","100"
+"V3-OF-001","Nexaflow","Flow Automation","Contributor","NXF-FA-BASE","175","15.3","01-01-2019","01-01-2020","03-10-2019","TRUE","FALSE","peak","superseded","","new","175","255"
+"V3-OF-002","Nexaflow","Flow Automation","Contributor","NXF-FA-BASE","185","16.96","01-01-2020","01-01-2021","03-10-2020","TRUE","FALSE","peak","superseded","V3-OF-001","renewal","0","255"
+"V3-OF-003","Nexaflow","Flow Automation","Contributor","NXF-FA-BASE","235","16.96","01-01-2021","01-01-2022","02-12-2021","FALSE","FALSE","peak","superseded","V3-OF-002","upsell","50","255"
+"V3-OF-004","Nexaflow","Flow Automation","Contributor","NXF-FA-BASE","255","16.96","01-01-2022","01-01-2023","02-11-2022","FALSE","TRUE","peak","superseded","V3-OF-003","renewal","0","255"
+"V3-OF-005","Nexaflow","Flow Automation","Contributor","NXF-FA-BASE","265","16.96","01-01-2023","01-01-2024","02-11-2023","FALSE","TRUE","peak","superseded","V3-OF-004","renewal","0","255"
+"V3-OF-006","Nexaflow","Flow Automation","Contributor","NXF-FA-BASE","275","16.96","01-01-2024","01-07-2024","02-04-2024","FALSE","FALSE","peak","superseded","V3-OF-005","renewal","0","255"
+"V3-OF-007","Nexaflow","Flow Automation","Contributor","NXF-FA-BASE","295","16.96","01-07-2024","01-07-2025","02-04-2025","FALSE","TRUE","peak","superseded","V3-OF-006","renewal","0","255"
+"V3-OF-008","Nexaflow","Flow Automation","Contributor","NXF-FA-BASE","255","16.96","01-07-2025","01-07-2027","02-04-2027","TRUE","FALSE","peak","active","V3-OF-007","renewal","0","255"
+"V3-OF-001","Nexaflow","Flow Automation","Collaborator","NXF-FA-BASE","210","3.69","01-01-2019","01-01-2020","03-10-2019","TRUE","FALSE","peak","superseded","","new","210","350"
+"V3-OF-002","Nexaflow","Flow Automation","Collaborator","NXF-FA-BASE","230","3.82","01-01-2020","01-01-2021","03-10-2020","TRUE","FALSE","peak","superseded","V3-OF-001","renewal","0","350"
+"V3-OF-003","Nexaflow","Flow Automation","Collaborator","NXF-FA-BASE","250","3.82","01-01-2021","01-01-2022","02-12-2021","TRUE","FALSE","peak","superseded","V3-OF-002","renewal","0","350"
+"V3-OF-004","Nexaflow","Flow Automation","Collaborator","NXF-FA-BASE","260","3.82","01-01-2022","01-01-2023","02-11-2022","FALSE","TRUE","peak","superseded","V3-OF-003","renewal","0","350"
+"V3-OF-005","Nexaflow","Flow Automation","Collaborator","NXF-FA-BASE","290","3.82","01-01-2023","01-01-2024","02-11-2023","FALSE","FALSE","peak","superseded","V3-OF-004","renewal","0","350"
+"V3-OF-006","Nexaflow","Flow Automation","Collaborator","NXF-FA-BASE","320","3.82","01-01-2024","01-07-2024","02-04-2024","TRUE","TRUE","peak","superseded","V3-OF-005","renewal","0","350"
+"V3-OF-007","Nexaflow","Flow Automation","Collaborator","NXF-FA-BASE","320","3.82","01-07-2024","01-07-2025","02-04-2025","TRUE","FALSE","peak","superseded","V3-OF-006","renewal","0","350"
+"V3-OF-008","Nexaflow","Flow Automation","Collaborator","NXF-FA-BASE","350","3.82","01-07-2025","01-07-2027","02-04-2027","TRUE","FALSE","peak","active","V3-OF-007","renewal","0","350"
+"V3-OF-010","Nexaflow","Flow Lite","Full","NXF-FL-BASE","80","28","01-01-2019","01-01-2020","02-12-2019","FALSE","FALSE","average","superseded","","new","80","135"
+"V3-OF-011","Nexaflow","Flow Lite","Full","NXF-FL-BASE","85","29.51","01-01-2020","01-07-2020","02-05-2020","TRUE","TRUE","average","superseded","V3-OF-010","renewal","0","135"
+"V3-OF-012","Nexaflow","Flow Lite","Full","NXF-FL-BASE","85","29.58","01-07-2020","01-10-2020","03-07-2020","TRUE","TRUE","average","superseded","V3-OF-011","renewal","0","135"
+"V3-OF-013","Nexaflow","Flow Lite","Full","NXF-FL-BASE","90","29.58","01-10-2020","01-10-2021","03-07-2021","TRUE","FALSE","average","superseded","V3-OF-012","renewal","0","135"
+"V3-OF-014","Nexaflow","Flow Lite","Full","NXF-FL-BASE","95","29.94","01-10-2021","01-10-2022","01-09-2022","FALSE","FALSE","average","superseded","V3-OF-013","renewal","0","135"
+"V3-OF-015","Nexaflow","Flow Lite","Full","NXF-FL-BASE","100","29.94","01-10-2022","01-04-2023","02-03-2023","FALSE","TRUE","average","superseded","V3-OF-014","renewal","0","135"
+"V3-OF-016","Nexaflow","Flow Lite","Full","NXF-FL-BASE","90","30.55","01-04-2023","01-04-2024","02-03-2024","TRUE","FALSE","average","superseded","V3-OF-015","renewal","0","135"
+"V3-OF-017","Nexaflow","Flow Lite","Full","NXF-FL-BASE","95","31.23","01-04-2024","01-10-2024","02-08-2024","TRUE","FALSE","average","superseded","V3-OF-016","renewal","0","135"
+"V3-OF-018","Nexaflow","Flow Lite","Full","NXF-FL-BASE","100","31.23","01-10-2024","01-10-2025","02-08-2025","TRUE","FALSE","average","superseded","V3-OF-017","renewal","0","135"
+"V3-OF-019","Nexaflow","Flow Lite","Full","NXF-FL-BASE","110","31.23","01-10-2025","01-10-2026","02-08-2026","FALSE","TRUE","average","superseded","V3-OF-018","renewal","0","135"
+"V3-OF-020","Nexaflow","Flow Lite","Full","NXF-FL-BASE","135","31.23","01-10-2026","01-04-2027","31-01-2027","FALSE","FALSE","average","active","V3-OF-019","amendment","25","135"
+"V3-OF-010","Nexaflow","Flow Lite","Contributor","NXF-FL-BASE","240","12","01-01-2019","01-01-2020","02-12-2019","FALSE","FALSE","average","superseded","","new","240","365"
+"V3-OF-011","Nexaflow","Flow Lite","Contributor","NXF-FL-BASE","260","13.4","01-01-2020","01-07-2020","02-05-2020","FALSE","FALSE","average","superseded","V3-OF-010","renewal","0","365"
+"V3-OF-012","Nexaflow","Flow Lite","Contributor","NXF-FL-BASE","275","13.4","01-07-2020","01-10-2020","03-07-2020","TRUE","TRUE","average","superseded","V3-OF-011","renewal","0","365"
+"V3-OF-013","Nexaflow","Flow Lite","Contributor","NXF-FL-BASE","280","13.4","01-10-2020","01-10-2021","03-07-2021","FALSE","TRUE","average","superseded","V3-OF-012","renewal","0","365"
+"V3-OF-014","Nexaflow","Flow Lite","Contributor","NXF-FL-BASE","330","13.4","01-10-2021","01-10-2022","01-09-2022","TRUE","FALSE","average","superseded","V3-OF-013","upsell","50","365"
+"V3-OF-015","Nexaflow","Flow Lite","Contributor","NXF-FL-BASE","345","13.4","01-10-2022","01-04-2023","02-03-2023","FALSE","FALSE","average","superseded","V3-OF-014","renewal","0","365"
+"V3-OF-016","Nexaflow","Flow Lite","Contributor","NXF-FL-BASE","370","13.4","01-04-2023","01-04-2024","02-03-2024","TRUE","TRUE","average","superseded","V3-OF-015","renewal","0","365"
+"V3-OF-017","Nexaflow","Flow Lite","Contributor","NXF-FL-BASE","310","13.4","01-04-2024","01-10-2024","02-08-2024","FALSE","FALSE","average","superseded","V3-OF-016","renewal","0","365"
+"V3-OF-018","Nexaflow","Flow Lite","Contributor","NXF-FL-BASE","325","13.4","01-10-2024","01-10-2025","02-08-2025","TRUE","FALSE","average","superseded","V3-OF-017","renewal","0","365"
+"V3-OF-019","Nexaflow","Flow Lite","Contributor","NXF-FL-BASE","355","13.4","01-10-2025","01-10-2026","02-08-2026","TRUE","FALSE","average","superseded","V3-OF-018","renewal","0","365"
+"V3-OF-020","Nexaflow","Flow Lite","Contributor","NXF-FL-BASE","365","13.4","01-10-2026","01-04-2027","31-01-2027","TRUE","TRUE","average","active","V3-OF-019","renewal","0","365"
+"V3-OF-010","Nexaflow","Flow Lite","Collaborator","NXF-FL-BASE","290","3","01-01-2019","01-01-2020","02-12-2019","FALSE","FALSE","average","superseded","","new","290","470"
+"V3-OF-011","Nexaflow","Flow Lite","Collaborator","NXF-FL-BASE","310","3","01-01-2020","01-07-2020","02-05-2020","FALSE","TRUE","average","superseded","V3-OF-010","renewal","0","470"
+"V3-OF-012","Nexaflow","Flow Lite","Collaborator","NXF-FL-BASE","260","3.25","01-07-2020","01-10-2020","03-07-2020","FALSE","FALSE","average","superseded","V3-OF-011","renewal","0","470"
+"V3-OF-013","Nexaflow","Flow Lite","Collaborator","NXF-FL-BASE","280","3.25","01-10-2020","01-10-2021","03-07-2021","TRUE","FALSE","average","superseded","V3-OF-012","renewal","0","470"
+"V3-OF-014","Nexaflow","Flow Lite","Collaborator","NXF-FL-BASE","360","3.25","01-10-2021","01-10-2022","01-09-2022","FALSE","FALSE","average","superseded","V3-OF-013","amendment","80","470"
+"V3-OF-015","Nexaflow","Flow Lite","Collaborator","NXF-FL-BASE","370","3.25","01-10-2022","01-04-2023","02-03-2023","TRUE","TRUE","average","superseded","V3-OF-014","renewal","0","470"
+"V3-OF-016","Nexaflow","Flow Lite","Collaborator","NXF-FL-BASE","310","3.25","01-04-2023","01-04-2024","02-03-2024","FALSE","FALSE","average","superseded","V3-OF-015","renewal","0","470"
+"V3-OF-017","Nexaflow","Flow Lite","Collaborator","NXF-FL-BASE","400","3.25","01-04-2024","01-10-2024","02-08-2024","TRUE","FALSE","average","superseded","V3-OF-016","upsell","90","470"
+"V3-OF-018","Nexaflow","Flow Lite","Collaborator","NXF-FL-BASE","420","3.25","01-10-2024","01-10-2025","02-08-2025","TRUE","FALSE","average","superseded","V3-OF-017","renewal","0","470"
+"V3-OF-019","Nexaflow","Flow Lite","Collaborator","NXF-FL-BASE","440","3.25","01-10-2025","01-10-2026","02-08-2026","FALSE","TRUE","average","superseded","V3-OF-018","renewal","0","470"
+"V3-OF-020","Nexaflow","Flow Lite","Collaborator","NXF-FL-BASE","470","3.25","01-10-2026","01-04-2027","31-01-2027","TRUE","FALSE","average","active","V3-OF-019","renewal","0","470"
+"V3-OF-022","Nexaflow","Analytics Engine","Full","NXF-AE-BASE","40","32","01-01-2019","01-01-2020","02-11-2019","TRUE","FALSE","peak","superseded","","new","40","220"
+"V3-OF-023","Nexaflow","Analytics Engine","Full","NXF-AE-BASE","40","33.77","01-01-2020","01-01-2021","02-11-2020","FALSE","FALSE","peak","superseded","V3-OF-022","renewal","0","220"
+"V3-OF-024","Nexaflow","Analytics Engine","Full","NXF-AE-BASE","45","34.09","01-01-2021","01-01-2022","03-10-2021","TRUE","FALSE","peak","superseded","V3-OF-023","renewal","0","220"
+"V3-OF-025","Nexaflow","Analytics Engine","Full","NXF-AE-BASE","55","34.09","01-01-2022","01-01-2023","02-11-2022","TRUE","FALSE","peak","superseded","V3-OF-024","amendment","10","220"
+"V3-OF-026","Nexaflow","Analytics Engine","Full","NXF-AE-BASE","55","34.09","01-01-2023","01-01-2024","02-12-2023","TRUE","FALSE","peak","superseded","V3-OF-025","renewal","0","220"
+"V3-OF-027","Nexaflow","Analytics Engine","Full","NXF-AE-BASE","60","34.44","01-01-2024","01-01-2025","02-11-2024","FALSE","TRUE","peak","superseded","V3-OF-026","renewal","0","220"
+"V3-OF-028","Nexaflow","Analytics Engine","Full","NXF-AE-BASE","65","34.44","01-01-2025","01-07-2025","02-05-2025","FALSE","TRUE","peak","superseded","V3-OF-027","renewal","0","220"
+"V3-OF-029","Nexaflow","Analytics Engine","Full","NXF-AE-BASE","65","35.31","01-07-2025","01-07-2026","02-05-2026","FALSE","FALSE","peak","superseded","V3-OF-028","renewal","0","220"
+"V3-OF-030","Nexaflow","Analytics Engine","Full","NXF-AE-BASE","80","35.31","01-07-2026","01-07-2027","02-04-2027","FALSE","FALSE","peak","active","V3-OF-029","amendment","15","220"
+"V3-OF-022","Nexaflow","Analytics Engine","Contributor","NXF-AE-BASE","150","11.2","01-01-2019","01-01-2020","02-11-2019","TRUE","FALSE","peak","superseded","","new","150","595"
+"V3-OF-023","Nexaflow","Analytics Engine","Contributor","NXF-AE-BASE","160","12.32","01-01-2020","01-01-2021","02-11-2020","FALSE","TRUE","peak","superseded","V3-OF-022","renewal","0","595"
+"V3-OF-024","Nexaflow","Analytics Engine","Contributor","NXF-AE-BASE","170","12.32","01-01-2021","01-01-2022","03-10-2021","TRUE","TRUE","peak","superseded","V3-OF-023","renewal","0","595"
+"V3-OF-025","Nexaflow","Analytics Engine","Contributor","NXF-AE-BASE","145","13.67","01-01-2022","01-01-2023","02-11-2022","FALSE","FALSE","peak","superseded","V3-OF-024","renewal","0","595"
+"V3-OF-026","Nexaflow","Analytics Engine","Contributor","NXF-AE-BASE","155","13.67","01-01-2023","01-01-2024","02-12-2023","TRUE","FALSE","peak","superseded","V3-OF-025","renewal","0","595"
+"V3-OF-027","Nexaflow","Analytics Engine","Contributor","NXF-AE-BASE","170","13.67","01-01-2024","01-01-2025","02-11-2024","FALSE","TRUE","peak","superseded","V3-OF-026","renewal","0","595"
+"V3-OF-028","Nexaflow","Analytics Engine","Contributor","NXF-AE-BASE","180","13.67","01-01-2025","01-07-2025","02-05-2025","TRUE","FALSE","peak","superseded","V3-OF-027","renewal","0","595"
+"V3-OF-029","Nexaflow","Analytics Engine","Contributor","NXF-AE-BASE","220","13.67","01-07-2025","01-07-2026","02-05-2026","TRUE","FALSE","peak","superseded","V3-OF-028","amendment","40","595"
+"V3-OF-030","Nexaflow","Analytics Engine","Contributor","NXF-AE-BASE","240","13.67","01-07-2026","01-07-2027","02-04-2027","FALSE","FALSE","peak","active","V3-OF-029","renewal","0","595"
+"V3-OF-022","Nexaflow","Analytics Engine","Collaborator","NXF-AE-BASE","250","2.73","01-01-2019","01-01-2020","02-11-2019","FALSE","FALSE","peak","superseded","","new","250","1440"
+"V3-OF-023","Nexaflow","Analytics Engine","Collaborator","NXF-AE-BASE","270","2.88","01-01-2020","01-01-2021","02-11-2020","FALSE","TRUE","peak","superseded","V3-OF-022","renewal","0","1440"
+"V3-OF-024","Nexaflow","Analytics Engine","Collaborator","NXF-AE-BASE","280","2.93","01-01-2021","01-01-2022","03-10-2021","TRUE","TRUE","peak","superseded","V3-OF-023","renewal","0","1440"
+"V3-OF-025","Nexaflow","Analytics Engine","Collaborator","NXF-AE-BASE","370","2.93","01-01-2022","01-01-2023","02-11-2022","TRUE","FALSE","peak","superseded","V3-OF-024","amendment","90","1440"
+"V3-OF-026","Nexaflow","Analytics Engine","Collaborator","NXF-AE-BASE","400","2.93","01-01-2023","01-01-2024","02-12-2023","FALSE","FALSE","peak","superseded","V3-OF-025","renewal","0","1440"
+"V3-OF-027","Nexaflow","Analytics Engine","Collaborator","NXF-AE-BASE","400","2.93","01-01-2024","01-01-2025","02-11-2024","TRUE","FALSE","peak","superseded","V3-OF-026","renewal","0","1440"
+"V3-OF-028","Nexaflow","Analytics Engine","Collaborator","NXF-AE-BASE","480","2.95","01-01-2025","01-07-2025","02-05-2025","FALSE","FALSE","peak","superseded","V3-OF-027","upsell","80","1440"
+"V3-OF-029","Nexaflow","Analytics Engine","Collaborator","NXF-AE-BASE","530","3.03","01-07-2025","01-07-2026","02-05-2026","TRUE","FALSE","peak","superseded","V3-OF-028","renewal","0","1440"
+"V3-OF-030","Nexaflow","Analytics Engine","Collaborator","NXF-AE-BASE","680","3.03","01-07-2026","01-07-2027","02-04-2027","FALSE","FALSE","peak","active","V3-OF-029","amendment","150","1440"
+"V3-OF-032","Nexaflow","Analytics Engine","Full","NXF-AE-FULL-EXP1","45","32","01-07-2020","01-10-2020","01-09-2020","TRUE","FALSE","peak","superseded","","new","45","220"
+"V3-OF-033","Nexaflow","Analytics Engine","Full","NXF-AE-FULL-EXP1","45","35.79","01-10-2020","01-04-2021","01-01-2021","FALSE","TRUE","peak","superseded","V3-OF-032","renewal","0","220"
+"V3-OF-034","Nexaflow","Analytics Engine","Full","NXF-AE-FULL-EXP1","45","35.79","01-04-2021","01-04-2022","31-01-2022","FALSE","FALSE","peak","superseded","V3-OF-033","renewal","0","220"
+"V3-OF-035","Nexaflow","Analytics Engine","Full","NXF-AE-FULL-EXP1","45","35.79","01-04-2022","01-10-2022","03-07-2022","TRUE","FALSE","peak","superseded","V3-OF-034","renewal","0","220"
+"V3-OF-036","Nexaflow","Analytics Engine","Full","NXF-AE-FULL-EXP1","45","35.79","01-10-2022","01-04-2023","31-01-2023","FALSE","FALSE","peak","superseded","V3-OF-035","renewal","0","220"
+"V3-OF-037","Nexaflow","Analytics Engine","Full","NXF-AE-FULL-EXP1","45","35.79","01-04-2023","01-07-2023","01-06-2023","TRUE","TRUE","peak","superseded","V3-OF-036","renewal","0","220"
+"V3-OF-038","Nexaflow","Analytics Engine","Full","NXF-AE-FULL-EXP1","55","35.79","01-07-2023","01-10-2023","02-08-2023","TRUE","FALSE","peak","superseded","V3-OF-037","amendment","10","220"
+"V3-OF-039","Nexaflow","Analytics Engine","Full","NXF-AE-FULL-EXP1","55","35.79","01-10-2023","01-04-2024","02-03-2024","FALSE","FALSE","peak","superseded","V3-OF-038","renewal","0","220"
+"V3-OF-040","Nexaflow","Analytics Engine","Full","NXF-AE-FULL-EXP1","70","35.79","01-04-2024","01-10-2024","03-07-2024","FALSE","FALSE","peak","superseded","V3-OF-039","upsell","15","220"
+"V3-OF-041","Nexaflow","Analytics Engine","Full","NXF-AE-FULL-EXP1","75","35.79","01-10-2024","01-04-2025","31-01-2025","TRUE","TRUE","peak","superseded","V3-OF-040","renewal","0","220"
+"V3-OF-042","Nexaflow","Analytics Engine","Full","NXF-AE-FULL-EXP1","90","35.79","01-04-2025","01-10-2025","01-09-2025","FALSE","FALSE","peak","superseded","V3-OF-041","amendment","15","220"
+"V3-OF-043","Nexaflow","Analytics Engine","Full","NXF-AE-FULL-EXP1","90","35.79","01-10-2025","01-04-2026","31-01-2026","FALSE","TRUE","peak","superseded","V3-OF-042","renewal","0","220"
+"V3-OF-044","Nexaflow","Analytics Engine","Full","NXF-AE-FULL-EXP1","95","35.79","01-04-2026","01-10-2026","01-09-2026","TRUE","FALSE","peak","superseded","V3-OF-043","renewal","0","220"
+"V3-OF-045","Nexaflow","Analytics Engine","Full","NXF-AE-FULL-EXP1","95","35.79","01-10-2026","01-10-2027","03-07-2027","FALSE","FALSE","peak","active","V3-OF-044","renewal","0","220"
+"V3-OF-047","Nexaflow","Analytics Engine","Contributor","NXF-AE-CONT-EXP1","125","12.6","01-07-2020","01-01-2021","02-12-2020","FALSE","FALSE","peak","superseded","","new","125","595"
+"V3-OF-048","Nexaflow","Analytics Engine","Contributor","NXF-AE-CONT-EXP1","130","12.98","01-01-2021","01-04-2021","02-03-2021","TRUE","TRUE","peak","superseded","V3-OF-047","renewal","0","595"
+"V3-OF-049","Nexaflow","Analytics Engine","Contributor","NXF-AE-CONT-EXP1","135","13.91","01-04-2021","01-07-2021","02-05-2021","TRUE","FALSE","peak","superseded","V3-OF-048","renewal","0","595"
+"V3-OF-050","Nexaflow","Analytics Engine","Contributor","NXF-AE-CONT-EXP1","145","13.91","01-07-2021","01-07-2022","02-05-2022","TRUE","FALSE","peak","superseded","V3-OF-049","renewal","0","595"
+"V3-OF-051","Nexaflow","Analytics Engine","Contributor","NXF-AE-CONT-EXP1","185","13.91","01-07-2022","01-07-2023","01-06-2023","TRUE","FALSE","peak","superseded","V3-OF-050","upsell","40","595"
+"V3-OF-052","Nexaflow","Analytics Engine","Contributor","NXF-AE-CONT-EXP1","185","13.91","01-07-2023","01-01-2024","03-10-2023","TRUE","FALSE","peak","superseded","V3-OF-051","renewal","0","595"
+"V3-OF-053","Nexaflow","Analytics Engine","Contributor","NXF-AE-CONT-EXP1","190","13.91","01-01-2024","01-07-2024","02-05-2024","FALSE","TRUE","peak","superseded","V3-OF-052","renewal","0","595"
+"V3-OF-054","Nexaflow","Analytics Engine","Contributor","NXF-AE-CONT-EXP1","195","13.91","01-07-2024","01-01-2025","02-11-2024","TRUE","FALSE","peak","superseded","V3-OF-053","renewal","0","595"
+"V3-OF-055","Nexaflow","Analytics Engine","Contributor","NXF-AE-CONT-EXP1","210","13.91","01-01-2025","01-07-2025","02-05-2025","TRUE","TRUE","peak","superseded","V3-OF-054","renewal","0","595"
+"V3-OF-056","Nexaflow","Analytics Engine","Contributor","NXF-AE-CONT-EXP1","175","13.91","01-07-2025","01-01-2026","03-10-2025","FALSE","FALSE","peak","superseded","V3-OF-055","renewal","0","595"
+"V3-OF-057","Nexaflow","Analytics Engine","Contributor","NXF-AE-CONT-EXP1","220","13.91","01-01-2026","01-04-2026","01-01-2026","TRUE","FALSE","peak","superseded","V3-OF-056","amendment","45","595"
+"V3-OF-058","Nexaflow","Analytics Engine","Contributor","NXF-AE-CONT-EXP1","240","13.91","01-04-2026","01-04-2027","31-01-2027","FALSE","FALSE","peak","active","V3-OF-057","renewal","0","595"
+"V3-OF-060","Nexaflow","Analytics Engine","Collaborator","NXF-AE-COLL-EXP1","160","2.73","01-07-2020","01-01-2021","03-10-2020","FALSE","FALSE","peak","superseded","","new","160","1440"
+"V3-OF-061","Nexaflow","Analytics Engine","Collaborator","NXF-AE-COLL-EXP1","170","2.99","01-01-2021","01-01-2022","02-11-2021","TRUE","TRUE","peak","superseded","V3-OF-060","renewal","0","1440"
+"V3-OF-062","Nexaflow","Analytics Engine","Collaborator","NXF-AE-COLL-EXP1","210","3.05","01-01-2022","01-04-2022","01-01-2022","TRUE","FALSE","peak","superseded","V3-OF-061","upsell","40","1440"
+"V3-OF-063","Nexaflow","Analytics Engine","Collaborator","NXF-AE-COLL-EXP1","230","3.05","01-04-2022","01-10-2022","02-08-2022","TRUE","FALSE","peak","superseded","V3-OF-062","renewal","0","1440"
+"V3-OF-064","Nexaflow","Analytics Engine","Collaborator","NXF-AE-COLL-EXP1","250","3.05","01-10-2022","01-04-2023","02-03-2023","FALSE","FALSE","peak","superseded","V3-OF-063","renewal","0","1440"
+"V3-OF-065","Nexaflow","Analytics Engine","Collaborator","NXF-AE-COLL-EXP1","310","3.05","01-04-2023","01-10-2023","02-08-2023","TRUE","FALSE","peak","superseded","V3-OF-064","upsell","60","1440"
+"V3-OF-066","Nexaflow","Analytics Engine","Collaborator","NXF-AE-COLL-EXP1","330","3.05","01-10-2023","01-10-2024","03-07-2024","FALSE","FALSE","peak","superseded","V3-OF-065","renewal","0","1440"
+"V3-OF-067","Nexaflow","Analytics Engine","Collaborator","NXF-AE-COLL-EXP1","370","3.05","01-10-2024","01-10-2025","02-08-2025","FALSE","TRUE","peak","superseded","V3-OF-066","renewal","0","1440"
+"V3-OF-068","Nexaflow","Analytics Engine","Collaborator","NXF-AE-COLL-EXP1","300","3.05","01-10-2025","01-01-2026","02-12-2025","TRUE","TRUE","peak","superseded","V3-OF-067","renewal","0","1440"
+"V3-OF-069","Nexaflow","Analytics Engine","Collaborator","NXF-AE-COLL-EXP1","310","3.05","01-01-2026","01-07-2026","01-06-2026","FALSE","TRUE","peak","superseded","V3-OF-068","renewal","0","1440"
+"V3-OF-070","Nexaflow","Analytics Engine","Collaborator","NXF-AE-COLL-EXP1","340","3.05","01-07-2026","01-07-2027","02-05-2027","TRUE","FALSE","peak","active","V3-OF-069","renewal","0","1440"
+"V3-OF-072","Nexaflow","Analytics Engine","Full","NXF-AE-FULL-PROJ1","35","32","01-01-2021","01-04-2021","02-03-2021","TRUE","FALSE","peak","superseded","","new","35","220"
+"V3-OF-073","Nexaflow","Analytics Engine","Full","NXF-AE-FULL-PROJ1","35","34.27","01-04-2021","01-07-2021","02-04-2021","FALSE","FALSE","peak","superseded","V3-OF-072","renewal","0","220"
+"V3-OF-074","Nexaflow","Analytics Engine","Full","NXF-AE-FULL-PROJ1","45","34.27","01-07-2021","01-10-2021","01-09-2021","FALSE","FALSE","peak","superseded","V3-OF-073","amendment","10","220"
+"V3-OF-075","Nexaflow","Analytics Engine","Full","NXF-AE-FULL-PROJ1","45","34.27","01-10-2021","01-01-2022","03-10-2021","FALSE","TRUE","peak","active","V3-OF-074","renewal","0","220"
+"V3-OF-076","Nexaflow","Analytics Engine","Contributor","NXF-AE-CONT-PROJ1","100","12.6","01-01-2021","01-04-2021","01-01-2021","FALSE","FALSE","peak","superseded","","new","100","595"
+"V3-OF-077","Nexaflow","Analytics Engine","Contributor","NXF-AE-CONT-PROJ1","105","13.88","01-04-2021","01-07-2021","01-06-2021","FALSE","TRUE","peak","superseded","V3-OF-076","renewal","0","595"
+"V3-OF-078","Nexaflow","Analytics Engine","Contributor","NXF-AE-CONT-PROJ1","90","13.88","01-07-2021","01-10-2021","01-09-2021","TRUE","FALSE","peak","superseded","V3-OF-077","renewal","0","595"
+"V3-OF-079","Nexaflow","Analytics Engine","Contributor","NXF-AE-CONT-PROJ1","115","13.88","01-10-2021","01-01-2022","02-12-2021","TRUE","FALSE","peak","active","V3-OF-078","amendment","25","595"
+"V3-OF-080","Nexaflow","Analytics Engine","Collaborator","NXF-AE-COLL-PROJ1","260","2.73","01-01-2021","01-04-2021","31-01-2021","FALSE","FALSE","peak","superseded","","new","260","1440"
+"V3-OF-081","Nexaflow","Analytics Engine","Collaborator","NXF-AE-COLL-PROJ1","290","3.05","01-04-2021","01-07-2021","01-06-2021","FALSE","FALSE","peak","superseded","V3-OF-080","renewal","0","1440"
+"V3-OF-082","Nexaflow","Analytics Engine","Collaborator","NXF-AE-COLL-PROJ1","320","3.05","01-07-2021","01-10-2021","03-07-2021","TRUE","TRUE","peak","superseded","V3-OF-081","renewal","0","1440"
+"V3-OF-083","Nexaflow","Analytics Engine","Collaborator","NXF-AE-COLL-PROJ1","420","3.05","01-10-2021","01-01-2022","02-11-2021","TRUE","FALSE","peak","active","V3-OF-082","amendment","100","1440"
+"V3-OF-084","Nexaflow","Mobile Access","Full","NXF-MA-BASE","60","20","01-01-2019","01-01-2020","02-12-2019","TRUE","FALSE","snapshot","superseded","","new","60","160"
+"V3-OF-085","Nexaflow","Mobile Access","Full","NXF-MA-BASE","65","21.21","01-01-2020","01-04-2020","01-02-2020","FALSE","FALSE","snapshot","superseded","V3-OF-084","renewal","0","160"
+"V3-OF-086","Nexaflow","Mobile Access","Full","NXF-MA-BASE","70","21.21","01-04-2020","01-04-2021","02-03-2021","FALSE","FALSE","snapshot","superseded","V3-OF-085","renewal","0","160"
+"V3-OF-087","Nexaflow","Mobile Access","Full","NXF-MA-BASE","75","21.38","01-04-2021","01-04-2022","01-01-2022","FALSE","FALSE","snapshot","superseded","V3-OF-086","renewal","0","160"
+"V3-OF-088","Nexaflow","Mobile Access","Full","NXF-MA-BASE","80","22.04","01-04-2022","01-10-2022","01-09-2022","TRUE","FALSE","snapshot","superseded","V3-OF-087","renewal","0","160"
+"V3-OF-089","Nexaflow","Mobile Access","Full","NXF-MA-BASE","85","22.04","01-10-2022","01-10-2023","03-07-2023","TRUE","FALSE","snapshot","superseded","V3-OF-088","renewal","0","160"
+"V3-OF-090","Nexaflow","Mobile Access","Full","NXF-MA-BASE","85","22.04","01-10-2023","01-10-2024","02-08-2024","TRUE","TRUE","snapshot","superseded","V3-OF-089","renewal","0","160"
+"V3-OF-091","Nexaflow","Mobile Access","Full","NXF-MA-BASE","75","22.04","01-10-2024","01-10-2025","03-07-2025","TRUE","TRUE","snapshot","superseded","V3-OF-090","renewal","0","160"
+"V3-OF-092","Nexaflow","Mobile Access","Full","NXF-MA-BASE","65","22.04","01-10-2025","01-10-2026","03-07-2026","TRUE","TRUE","snapshot","superseded","V3-OF-091","renewal","0","160"
+"V3-OF-093","Nexaflow","Mobile Access","Full","NXF-MA-BASE","60","22.23","01-10-2026","01-10-2027","03-07-2027","FALSE","FALSE","snapshot","active","V3-OF-092","renewal","0","160"
+"V3-OF-084","Nexaflow","Mobile Access","Contributor","NXF-MA-BASE","120","9","01-01-2019","01-01-2020","02-12-2019","TRUE","FALSE","snapshot","superseded","","new","120","565"
+"V3-OF-085","Nexaflow","Mobile Access","Contributor","NXF-MA-BASE","125","9.33","01-01-2020","01-04-2020","01-02-2020","TRUE","TRUE","snapshot","superseded","V3-OF-084","renewal","0","565"
+"V3-OF-086","Nexaflow","Mobile Access","Contributor","NXF-MA-BASE","125","9.36","01-04-2020","01-04-2021","02-03-2021","FALSE","FALSE","snapshot","superseded","V3-OF-085","renewal","0","565"
+"V3-OF-087","Nexaflow","Mobile Access","Contributor","NXF-MA-BASE","135","9.54","01-04-2021","01-04-2022","01-01-2022","FALSE","FALSE","snapshot","superseded","V3-OF-086","renewal","0","565"
+"V3-OF-088","Nexaflow","Mobile Access","Contributor","NXF-MA-BASE","170","9.54","01-04-2022","01-10-2022","01-09-2022","TRUE","FALSE","snapshot","superseded","V3-OF-087","upsell","35","565"
+"V3-OF-089","Nexaflow","Mobile Access","Contributor","NXF-MA-BASE","175","9.54","01-10-2022","01-10-2023","03-07-2023","FALSE","FALSE","snapshot","superseded","V3-OF-088","renewal","0","565"
+"V3-OF-090","Nexaflow","Mobile Access","Contributor","NXF-MA-BASE","185","9.67","01-10-2023","01-10-2024","02-08-2024","TRUE","TRUE","snapshot","superseded","V3-OF-089","renewal","0","565"
+"V3-OF-091","Nexaflow","Mobile Access","Contributor","NXF-MA-BASE","190","9.67","01-10-2024","01-10-2025","03-07-2025","FALSE","FALSE","snapshot","superseded","V3-OF-090","renewal","0","565"
+"V3-OF-092","Nexaflow","Mobile Access","Contributor","NXF-MA-BASE","200","9.67","01-10-2025","01-10-2026","03-07-2026","FALSE","TRUE","snapshot","superseded","V3-OF-091","renewal","0","565"
+"V3-OF-093","Nexaflow","Mobile Access","Contributor","NXF-MA-BASE","215","9.67","01-10-2026","01-10-2027","03-07-2027","TRUE","FALSE","snapshot","active","V3-OF-092","renewal","0","565"
+"V3-OF-084","Nexaflow","Mobile Access","Collaborator","NXF-MA-BASE","350","2.12","01-01-2019","01-01-2020","02-12-2019","TRUE","FALSE","snapshot","superseded","","new","350","1020"
+"V3-OF-085","Nexaflow","Mobile Access","Collaborator","NXF-MA-BASE","390","2.32","01-01-2020","01-04-2020","01-02-2020","FALSE","FALSE","snapshot","superseded","V3-OF-084","renewal","0","1020"
+"V3-OF-086","Nexaflow","Mobile Access","Collaborator","NXF-MA-BASE","420","2.32","01-04-2020","01-04-2021","02-03-2021","FALSE","TRUE","snapshot","superseded","V3-OF-085","renewal","0","1020"
+"V3-OF-087","Nexaflow","Mobile Access","Collaborator","NXF-MA-BASE","450","2.32","01-04-2021","01-04-2022","01-01-2022","FALSE","FALSE","snapshot","superseded","V3-OF-086","renewal","0","1020"
+"V3-OF-088","Nexaflow","Mobile Access","Collaborator","NXF-MA-BASE","490","2.32","01-04-2022","01-10-2022","01-09-2022","TRUE","FALSE","snapshot","superseded","V3-OF-087","renewal","0","1020"
+"V3-OF-089","Nexaflow","Mobile Access","Collaborator","NXF-MA-BASE","520","2.32","01-10-2022","01-10-2023","03-07-2023","TRUE","FALSE","snapshot","superseded","V3-OF-088","renewal","0","1020"
+"V3-OF-090","Nexaflow","Mobile Access","Collaborator","NXF-MA-BASE","560","2.32","01-10-2023","01-10-2024","02-08-2024","TRUE","TRUE","snapshot","superseded","V3-OF-089","renewal","0","1020"
+"V3-OF-091","Nexaflow","Mobile Access","Collaborator","NXF-MA-BASE","620","2.32","01-10-2024","01-10-2025","03-07-2025","TRUE","FALSE","snapshot","superseded","V3-OF-090","renewal","0","1020"
+"V3-OF-092","Nexaflow","Mobile Access","Collaborator","NXF-MA-BASE","650","2.32","01-10-2025","01-10-2026","03-07-2026","TRUE","TRUE","snapshot","superseded","V3-OF-091","renewal","0","1020"
+"V3-OF-093","Nexaflow","Mobile Access","Collaborator","NXF-MA-BASE","670","2.32","01-10-2026","01-10-2027","03-07-2027","TRUE","FALSE","snapshot","active","V3-OF-092","renewal","0","1020"
+"V3-OF-095","Nexaflow","Mobile Access","Full","NXF-MA-FULL-EXP1","50","20","01-07-2020","01-01-2021","02-11-2020","TRUE","FALSE","snapshot","superseded","","new","50","160"
+"V3-OF-096","Nexaflow","Mobile Access","Full","NXF-MA-FULL-EXP1","55","21.55","01-01-2021","01-04-2021","02-03-2021","FALSE","FALSE","snapshot","superseded","V3-OF-095","renewal","0","160"
+"V3-OF-097","Nexaflow","Mobile Access","Full","NXF-MA-FULL-EXP1","60","21.55","01-04-2021","01-10-2021","03-07-2021","FALSE","FALSE","snapshot","superseded","V3-OF-096","renewal","0","160"
+"V3-OF-098","Nexaflow","Mobile Access","Full","NXF-MA-FULL-EXP1","75","21.55","01-10-2021","01-10-2022","03-07-2022","FALSE","FALSE","snapshot","superseded","V3-OF-097","upsell","15","160"
+"V3-OF-099","Nexaflow","Mobile Access","Full","NXF-MA-FULL-EXP1","75","21.55","01-10-2022","01-04-2023","31-01-2023","TRUE","FALSE","snapshot","superseded","V3-OF-098","renewal","0","160"
+"V3-OF-100","Nexaflow","Mobile Access","Full","NXF-MA-FULL-EXP1","80","21.55","01-04-2023","01-04-2024","02-01-2024","TRUE","TRUE","snapshot","superseded","V3-OF-099","renewal","0","160"
+"V3-OF-101","Nexaflow","Mobile Access","Full","NXF-MA-FULL-EXP1","85","22.4","01-04-2024","01-07-2024","02-05-2024","TRUE","FALSE","snapshot","superseded","V3-OF-100","renewal","0","160"
+"V3-OF-102","Nexaflow","Mobile Access","Full","NXF-MA-FULL-EXP1","90","22.4","01-07-2024","01-01-2025","02-11-2024","TRUE","TRUE","snapshot","superseded","V3-OF-101","renewal","0","160"
+"V3-OF-103","Nexaflow","Mobile Access","Full","NXF-MA-FULL-EXP1","95","22.4","01-01-2025","01-01-2026","02-12-2025","FALSE","TRUE","snapshot","superseded","V3-OF-102","renewal","0","160"
+"V3-OF-104","Nexaflow","Mobile Access","Full","NXF-MA-FULL-EXP1","100","22.4","01-01-2026","01-01-2027","03-10-2026","FALSE","TRUE","snapshot","active","V3-OF-103","renewal","0","160"
+"V3-OF-108","Nexaflow","Mobile Access","Contributor","NXF-MA-CONT-EXP1","135","9","01-07-2020","01-01-2021","03-10-2020","TRUE","FALSE","snapshot","superseded","","new","135","565"
+"V3-OF-109","Nexaflow","Mobile Access","Contributor","NXF-MA-CONT-EXP1","145","10.07","01-01-2021","01-07-2021","02-05-2021","TRUE","FALSE","snapshot","superseded","V3-OF-108","renewal","0","565"
+"V3-OF-110","Nexaflow","Mobile Access","Contributor","NXF-MA-CONT-EXP1","185","10.07","01-07-2021","01-10-2021","01-09-2021","FALSE","FALSE","snapshot","superseded","V3-OF-109","amendment","40","565"
+"V3-OF-111","Nexaflow","Mobile Access","Contributor","NXF-MA-CONT-EXP1","200","10.07","01-10-2021","01-04-2022","31-01-2022","TRUE","FALSE","snapshot","superseded","V3-OF-110","renewal","0","565"
+"V3-OF-112","Nexaflow","Mobile Access","Contributor","NXF-MA-CONT-EXP1","215","10.07","01-04-2022","01-07-2022","01-06-2022","TRUE","FALSE","snapshot","superseded","V3-OF-111","renewal","0","565"
+"V3-OF-113","Nexaflow","Mobile Access","Contributor","NXF-MA-CONT-EXP1","220","10.07","01-07-2022","01-01-2023","02-12-2022","FALSE","TRUE","snapshot","superseded","V3-OF-112","renewal","0","565"
+"V3-OF-114","Nexaflow","Mobile Access","Contributor","NXF-MA-CONT-EXP1","255","10.07","01-01-2023","01-07-2023","01-06-2023","TRUE","FALSE","snapshot","superseded","V3-OF-113","upsell","35","565"
+"V3-OF-115","Nexaflow","Mobile Access","Contributor","NXF-MA-CONT-EXP1","265","10.07","01-07-2023","01-07-2024","02-04-2024","TRUE","TRUE","snapshot","superseded","V3-OF-114","renewal","0","565"
+"V3-OF-116","Nexaflow","Mobile Access","Contributor","NXF-MA-CONT-EXP1","330","10.07","01-07-2024","01-01-2025","02-11-2024","TRUE","FALSE","snapshot","superseded","V3-OF-115","upsell","65","565"
+"V3-OF-117","Nexaflow","Mobile Access","Contributor","NXF-MA-CONT-EXP1","340","10.07","01-01-2025","01-04-2025","01-01-2025","TRUE","TRUE","snapshot","superseded","V3-OF-116","renewal","0","565"
+"V3-OF-118","Nexaflow","Mobile Access","Contributor","NXF-MA-CONT-EXP1","280","10.07","01-04-2025","01-10-2025","01-09-2025","FALSE","FALSE","snapshot","superseded","V3-OF-117","renewal","0","565"
+"V3-OF-119","Nexaflow","Mobile Access","Contributor","NXF-MA-CONT-EXP1","290","10.07","01-10-2025","01-04-2026","02-03-2026","TRUE","TRUE","snapshot","superseded","V3-OF-118","renewal","0","565"
+"V3-OF-120","Nexaflow","Mobile Access","Contributor","NXF-MA-CONT-EXP1","350","10.07","01-04-2026","01-07-2026","01-06-2026","FALSE","FALSE","snapshot","superseded","V3-OF-119","upsell","60","565"
+"V3-OF-121","Nexaflow","Mobile Access","Contributor","NXF-MA-CONT-EXP1","350","10.07","01-07-2026","01-01-2027","03-10-2026","FALSE","FALSE","snapshot","active","V3-OF-120","renewal","0","565"
+"V3-OF-124","Nexaflow","Mobile Access","Collaborator","NXF-MA-COLL-EXP1","280","2.12","01-07-2020","01-07-2021","02-05-2021","TRUE","FALSE","snapshot","superseded","","new","280","1020"
+"V3-OF-125","Nexaflow","Mobile Access","Collaborator","NXF-MA-COLL-EXP1","310","2.21","01-07-2021","01-07-2022","02-04-2022","TRUE","FALSE","snapshot","superseded","V3-OF-124","renewal","0","1020"
+"V3-OF-126","Nexaflow","Mobile Access","Collaborator","NXF-MA-COLL-EXP1","310","2.31","01-07-2022","01-07-2023","02-04-2023","FALSE","TRUE","snapshot","superseded","V3-OF-125","renewal","0","1020"
+"V3-OF-127","Nexaflow","Mobile Access","Collaborator","NXF-MA-COLL-EXP1","260","2.32","01-07-2023","01-01-2024","02-12-2023","TRUE","FALSE","snapshot","superseded","V3-OF-126","renewal","0","1020"
+"V3-OF-128","Nexaflow","Mobile Access","Collaborator","NXF-MA-COLL-EXP1","280","2.32","01-01-2024","01-07-2024","01-06-2024","FALSE","TRUE","snapshot","superseded","V3-OF-127","renewal","0","1020"
+"V3-OF-129","Nexaflow","Mobile Access","Collaborator","NXF-MA-COLL-EXP1","230","2.32","01-07-2024","01-10-2024","02-08-2024","FALSE","FALSE","snapshot","superseded","V3-OF-128","renewal","0","1020"
+"V3-OF-130","Nexaflow","Mobile Access","Collaborator","NXF-MA-COLL-EXP1","250","2.35","01-10-2024","01-04-2025","31-01-2025","TRUE","FALSE","snapshot","superseded","V3-OF-129","renewal","0","1020"
+"V3-OF-131","Nexaflow","Mobile Access","Collaborator","NXF-MA-COLL-EXP1","270","2.35","01-04-2025","01-04-2026","31-01-2026","TRUE","TRUE","snapshot","superseded","V3-OF-130","renewal","0","1020"
+"V3-OF-132","Nexaflow","Mobile Access","Collaborator","NXF-MA-COLL-EXP1","350","2.35","01-04-2026","01-04-2027","02-03-2027","TRUE","FALSE","snapshot","active","V3-OF-131","upsell","80","1020"
+"V3-OF-133","Open Ai","GPT-4o","Full","OPEAI-GPT-BASE","0","0","26-05-2026","15-05-2028","16-03-2028","TRUE","FALSE","snapshot","active","","new","0","50"
+"V3-OF-134","Open Ai","GPT-4o","Full","OPEAI-GPT-BASE","0","0","26-05-2026","15-05-2028","16-03-2028","TRUE","FALSE","snapshot","active","","new","0","50"
