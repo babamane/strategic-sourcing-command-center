@@ -163,6 +163,11 @@ start_service "onboarding" "$ONBOARD_DIR" \
 # 2. SAFE — Spend Analytics / Demand Planning (7860)
 SAFE_DIR="$TOOLS/safe_new_case"
 SAFE_PY="$(resolve_python "$SAFE_DIR")"
+# Build SQLite DB if missing (one-time, ~5s)
+if [[ ! -f "$SAFE_DIR/data/saas_data.db" ]]; then
+  info "Building SAFE database (first run)…"
+  (cd "$SAFE_DIR" && "$SAFE_PY" build_db.py >> "$LOGS/safe_build_db.log" 2>&1) || true
+fi
 start_service "safe_spend" "$SAFE_DIR" "$SAFE_PY" app_v3.py
 
 # 3. CRA Project — Contract Renewal Agent (8000 + 8501)
