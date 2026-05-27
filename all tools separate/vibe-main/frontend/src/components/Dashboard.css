@@ -1079,6 +1079,11 @@
     }
 }
 
+/* Recommended Actions spans full row width */
+.actions-card {
+    grid-column: 1 / -1;
+}
+
 /* Card Styling */
 .briefing-card {
     background: var(--secondary-bg);

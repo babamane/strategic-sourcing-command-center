@@ -718,8 +718,13 @@ def get_gemini_response(user_message: str, history: list, db_context: str) -> st
             pass
 
     if llm is None:
-        return ("⚠️ AI backend unavailable. "
-                "Please start Ollama (`ollama serve`) or set GEMINI_API_KEY in the .env file.")
+        # No LLM available — return the raw queried data, formatted clearly
+        if db_context and db_context.strip():
+            return (
+                "📊 **Query Results** *(AI summary unavailable — showing raw data)*\n\n"
+                + db_context
+            )
+        return "No data found for your query. Please check the vendor name and month, then try again."
 
     system_prompt = f"""You are SAFE AI, an intelligent assistant for the Software Assets Forecasting Engine (SAFE) dashboard.
 You help procurement and IT teams understand SaaS license costs, renewals, forecasts, and at-risk users.

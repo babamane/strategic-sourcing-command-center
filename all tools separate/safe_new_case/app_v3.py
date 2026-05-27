@@ -190,8 +190,8 @@ with gr.Blocks() as demo:
       .fy-label input[type=checkbox] { cursor: pointer; accent-color: #4f46e5; }
       .fy-label.checked { background: #4f46e5; color: #fff; border-color: #4f46e5; }
       #fy-status { font-size: 11px; color: #9ca3af; margin-left: auto; }
-      #tableau-wrap { width: 100%; height: calc(100vh - 52px); }
-      #tViz { width: 100%; height: 100%; display: block; }
+      #tableau-wrap { width: 100%; height: calc(100vh - 52px); overflow: hidden; }
+      #tViz { width: 100%; height: 100%; display: block; min-height: 900px; }
     </style>
 
     <div id="fy-bar">
@@ -215,7 +215,9 @@ with gr.Blocks() as demo:
       <tableau-viz id="tViz"
         src="https://public.tableau.com/views/SAFE_v3/SAFE"
         toolbar="hidden"
-        hide-tabs>
+        hide-tabs
+        width="100%"
+        height="900">
       </tableau-viz>
     </div>
 
