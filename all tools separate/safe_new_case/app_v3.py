@@ -164,17 +164,100 @@ with gr.Blocks() as demo:
     state = gr.State([])
     session_id = gr.State("user_session_1")  # can be dynamic per user if needed
 
-    # --- Dashboard ---
+    # --- Dashboard (Tableau Embedding API v3 with multi-select Fiscal Year) ---
 
     gr.HTML("""
     <style>
-      #tableau-wrap { position: relative; width: 100%; height: calc(100vh - 8px); }
-      #tableau-wrap iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+      #fy-bar {
+        display: flex; align-items: center; gap: 14px;
+        padding: 8px 18px; background: #f0f4ff;
+        border-bottom: 2px solid #d0d8f0;
+        font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+        position: sticky; top: 0; z-index: 100;
+      }
+      #fy-bar .fy-title {
+        font-weight: 800; font-size: 11px; color: #4b5563;
+        text-transform: uppercase; letter-spacing: .08em;
+      }
+      .fy-label {
+        display: flex; align-items: center; gap: 5px;
+        font-size: 13px; color: #374151; cursor: pointer;
+        padding: 3px 10px; border-radius: 20px;
+        border: 1px solid #c7d2fe; background: #fff;
+        transition: all .15s;
+      }
+      .fy-label:hover { background: #e0e7ff; }
+      .fy-label input[type=checkbox] { cursor: pointer; accent-color: #4f46e5; }
+      .fy-label.checked { background: #4f46e5; color: #fff; border-color: #4f46e5; }
+      #fy-status { font-size: 11px; color: #9ca3af; margin-left: auto; }
+      #tableau-wrap { width: 100%; height: calc(100vh - 52px); }
+      #tViz { width: 100%; height: 100%; display: block; }
     </style>
-    <div id="tableau-wrap">
-      <iframe src="https://public.tableau.com/views/SAFE_v3/SAFE?:embed=true&:showVizHome=no&:toolbar=no"
-              allowfullscreen></iframe>
+
+    <div id="fy-bar">
+      <span class="fy-title">Fiscal Year</span>
+      <label class="fy-label" id="lbl-2024">
+        <input type="checkbox" class="fy-cb" value="2024" onchange="applyFY(this)"> 2024
+      </label>
+      <label class="fy-label" id="lbl-2025">
+        <input type="checkbox" class="fy-cb" value="2025" onchange="applyFY(this)"> 2025
+      </label>
+      <label class="fy-label checked" id="lbl-2026">
+        <input type="checkbox" class="fy-cb" value="2026" checked onchange="applyFY(this)"> 2026
+      </label>
+      <span id="fy-status">⏳ Loading viz…</span>
     </div>
+
+    <div id="tableau-wrap">
+      <script type="module"
+        src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js">
+      </script>
+      <tableau-viz id="tViz"
+        src="https://public.tableau.com/views/SAFE_v3/SAFE"
+        toolbar="hidden"
+        hide-tabs>
+      </tableau-viz>
+    </div>
+
+    <script>
+      const vizEl = document.getElementById('tViz');
+      let vizReady = false;
+
+      // Sync chip highlight with checkbox state
+      function syncChips() {
+        document.querySelectorAll('.fy-cb').forEach(cb => {
+          const lbl = document.getElementById('lbl-' + cb.value);
+          if (lbl) lbl.classList.toggle('checked', cb.checked);
+        });
+      }
+
+      // Apply multi-select filter to Tableau
+      async function applyFY(changed) {
+        syncChips();
+        if (!vizReady) return;
+        const years = [...document.querySelectorAll('.fy-cb:checked')].map(c => c.value);
+        if (!years.length) {
+          if (changed) changed.checked = true;   // prevent unchecking all
+          syncChips();
+          return;
+        }
+        try {
+          const sheet = vizEl.workbook.activeSheet;
+          await sheet.applyFilterAsync('Fiscal Year', years, 'replace');
+          document.getElementById('fy-status').textContent = '✔ ' + years.join(', ');
+        } catch(e) {
+          console.error('Tableau filter error:', e);
+          document.getElementById('fy-status').textContent = '⚠ filter error';
+        }
+      }
+
+      // Wait for viz to be fully interactive before applying filters
+      vizEl.addEventListener('firstinteractive', async () => {
+        vizReady = true;
+        document.getElementById('fy-status').textContent = '✔ 2026';
+        await applyFY(null);
+      });
+    </script>
     """)
 
     # --- Floating button ---
